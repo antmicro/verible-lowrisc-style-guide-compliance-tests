@@ -1,0 +1,46 @@
+.. |hr| raw:: html
+
+   <hr />
+
+.. |br| raw:: html
+
+   <br />
+
+Contents
+========
+
+.. note::
+
+   Generated on Thu Aug  5 10:57:50 2021 UTC |br|
+
+.. note::
+
+   Verible version:
+   v0.0-1213-g9e5c085b |br|
+   Commit	2021-05-04 |br|
+   Built	2021-06-17T12:11:44Z |br|
+
+.. note::
+
+   OpenTitan info: |br|
+   Commit: 8551f3fd98628a37451f9fd4acf3728b85b6c814 |br|
+   Commited date: Thu Aug  5 10:45:22 2021 |br|
+   Authored date: Tue Aug  3 16:33:27 2021 |br|
+
+.. note::
+
+   Style Tester (Verible) version:
+   v0.0-1046-g7411001 |br|
+   Commit	2021-04-08 |br|
+   Built	2021-04-11T10:48:58Z |br|
+
+.. toctree::
+   :maxdepth: 3
+
+   ot
+   style
+   verible_zero_effort
+   examined_confirmed
+   error
+   examined_bugs
+   examined_unconfirmed

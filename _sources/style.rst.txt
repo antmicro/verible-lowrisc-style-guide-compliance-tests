@@ -1,0 +1,833 @@
+.. |hr| raw:: html
+
+    <hr />
+
+LowRISC style compliance report
+===============================
+Constraint blocks
+-----------------
+
+Expand expression containing brackets (if-statement)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   constraint c_iv {
+     if (fixed_iv_en) {
+       aes_iv == fixed_iv
+     };
+   }
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     constraint c_iv {
+       if (fixed_iv_en)
+       {aes_iv == fixed_iv};
+     }
+     
+
+
+
+|hr|
+
+Expand expression containing brackets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   constraint data_size_c {
+     data.size() inside {[1:65536]};
+   }
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     constraint data_size_c {data.size() inside {[1 : 65536]};}
+     
+
+
+
+|hr|
+
+Expand blocks with two or more expressions (two statements)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   constraint param_c {
+     a_param == 0;
+     d_param == 0;
+   }
+   
+
+
+
+|hr|
+
+Compact constraint blocks with one expression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   constraint only_vec_instr_c {soft only_vec_instr == 0;}
+   
+
+
+
+|hr|
+
+Compact blocks with one expression (column limited to 40)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   constraint only_vec_instr_c {soft only_vec_instr == 0;}
+   
+
+
+
+|hr|
+
+Compact blocks with one expression (function call)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   constraint mask_contiguous_c {
+     $countones(a_mask ^ {a_mask[MaskWidth-2:0], 1'b0}) <= 2;
+   }
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     constraint mask_contiguous_c {
+       $countones(
+           a_mask ^ {a_mask[MaskWidth-2:0], 1'b0}
+       ) <= 2;
+     }
+     
+
+
+
+|hr|
+
+Compact blocks with one expression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   constraint d_opcode_c {
+     d_opcode inside {AccessAckData, AccessAck};
+   }
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     constraint d_opcode_c {d_opcode inside {AccessAckData, AccessAck};}
+     
+
+
+
+|hr|
+
+Functional coverage
+-------------------
+
+.. code-block:: systemverilog
+
+   covergroup intr_cg (uint num_interrupts) with function sample(uint intr,
+                                                                 bit intr_en,
+                                                                 bit intr_state);
+   endgroup
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     covergroup intr_cg(
+         uint num_interrupts
+     ) with function sample (
+         uint intr, bit intr_en, bit intr_state
+     );
+     endgroup
+     
+
+
+
+|hr|
+
+Import declarations
+-------------------
+
+Import declarations
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   import "DPI-C"
+   function chandle spidpi_create(input string name, input int mode,
+                                  input int loglevel);
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     import "DPI-C" function chandle spidpi_create(input string name, input int mode,
+                                                   input int loglevel);
+     
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   import "DPI-C"
+   function void dmidpi_tick(input chandle ctx, output bit dmi_req_valid,
+                             input bit dmi_req_ready, output bit [6:0] dmi_req_addr,
+                             output bit [1:0] dmi_req_op, output bit [31:0] dmi_req_data,
+                             input bit dmi_rsp_valid, output bit dmi_rsp_ready,
+                             input bit [31:0] dmi_rsp_data, input bit [1:0] dmi_rsp_resp,
+                             output bit dmi_rst_n);
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     import "DPI-C" function void dmidpi_tick(
+         input chandle ctx, output bit dmi_req_valid, input bit dmi_req_ready,
+         output bit [6:0] dmi_req_addr, output bit [1:0] dmi_req_op, output bit [31:0] dmi_req_data,
+         input bit dmi_rsp_valid, output bit dmi_rsp_ready, input bit [31:0] dmi_rsp_data,
+         input bit [1:0] dmi_rsp_resp, output bit dmi_rst_n);
+     
+
+
+
+|hr|
+
+Continuous assignments
+----------------------
+
+Continuous assignment should be in one line (if fits)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   assign d2p = {spi_device_sdo_i, spi_device_sdo_en_i};
+   
+
+
+
+|hr|
+
+Continuous assignment (column limited to 40)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   assign d2p = {
+     spi_device_sdo_i,
+     spi_device_sdo_en_i
+   };
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     assign d2p = {spi_device_sdo_i, spi_device_sdo_en_i};
+     
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   assign d2p = {spi_device_sdo_i, spi_device_sdo_en_i};
+   
+
+
+
+|hr|
+
+Module declaration
+------------------
+
+Module parameters
+^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   module spidpi #(
+       parameter string NAME      = "spi0",
+       parameter        MODE      = 0,
+       parameter        LOG_LEVEL = 9
+   );
+   endmodule
+   
+
+
+
+|hr|
+
+Module port list
+^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   module spidpi (
+       input  logic clk_i,
+       input  logic rst_ni,
+       output logic spi_device_sck_o,
+       output logic spi_device_csb_o,
+       output logic spi_device_sdi_o,
+       input  logic spi_device_sdo_i,
+       input  logic spi_device_sdo_en_i
+   );
+   endmodule
+   
+
+
+
+|hr|
+
+Module with ports and parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: systemverilog
+
+   module spidpi #(
+     parameter string NAME      = "spi0",
+     parameter        MODE      = 0,
+     parameter        LOG_LEVEL = 9
+   ) (
+     input  logic clk_i,
+     input  logic rst_ni,
+     output logic spi_device_sck_o,
+     output logic spi_device_csb_o,
+     output logic spi_device_sdi_o,
+     input  logic spi_device_sdo_i,
+     input  logic spi_device_sdo_en_i
+   );
+   endmodule
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     module spidpi #(
+         parameter string NAME      = "spi0",
+         parameter        MODE      = 0,
+         parameter        LOG_LEVEL = 9
+     ) (
+         input  logic clk_i,
+         input  logic rst_ni,
+         output logic spi_device_sck_o,
+         output logic spi_device_csb_o,
+         output logic spi_device_sdi_o,
+         input  logic spi_device_sdo_i,
+         input  logic spi_device_sdo_en_i
+     );
+     endmodule
+     
+
+
+
+|hr|
+
+Binary operators
+----------------
+
+Binary operators
+^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   parameter
+       int KMAC_REQ_DATA_WIDTH = keymgr_pkg::KmacDataIfWidth + keymgr_pkg::KmacDataIfWidth / 8 + 1;
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   parameter
+       int KMAC_REQ_DATA_WIDTH = keymgr_pkg::KmacDataIfWidth + keymgr_pkg::KmacDataIfWidth / 8 + 1;
+   
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   class csr_aliasing_seq extends csr_base_seq;
+     virtual task body();
+         foreach (all_csrs[j]) begin
+           if (is_excl(all_csrs[j], CsrExclInitCheck, CsrAliasingTest) ||
+               is_excl(all_csrs[j], CsrExclWriteCheck, CsrAliasingTest)) begin
+           end
+       end
+     endtask
+   endclass
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     class csr_aliasing_seq extends csr_base_seq;
+       virtual task body();
+         foreach (all_csrs[j]) begin
+           if (is_excl(
+                   all_csrs[j], CsrExclInitCheck, CsrAliasingTest
+               ) || is_excl(
+                   all_csrs[j], CsrExclWriteCheck, CsrAliasingTest
+               )) begin
+           end
+         end
+       endtask
+     endclass
+     
+
+
+
+|hr|
+
+Ternary operators
+-----------------
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class esc_receiver_driver extends alert_esc_base_driver;
+     virtual task drive_esc_resp(alert_esc_seq_item req);
+       int toggle_cycle = req.int_err ? cfg.ping_timeout_cycle / 2 : 1;
+     endtask
+   endclass
+   
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   class alert_receiver_driver extends alert_esc_base_driver;
+     virtual task drive_alert_ping(alert_esc_seq_item req);
+       int unsigned ping_delay = (cfg.use_seq_item_ping_delay) ? req.ping_delay :
+                                  $urandom_range(cfg.ping_delay_max, cfg.ping_delay_min);
+     endtask
+   endclass
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     class alert_receiver_driver extends alert_esc_base_driver;
+       virtual task drive_alert_ping(alert_esc_seq_item req);
+         int unsigned ping_delay = (cfg.use_seq_item_ping_delay) ? req.ping_delay : $urandom_range(
+             cfg.ping_delay_max, cfg.ping_delay_min
+         );
+       endtask
+     endclass
+     
+
+
+
+|hr|
+
+Labels
+------
+
+When labeling code blocks, add one space before and after the colon.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   package push_pull_agent_pkg;
+   endpackage : push_pull_agent_pkg
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class dv_base_monitor;
+     virtual task watchdog_ok_to_end(uvm_phase run_phase);
+       fork
+         begin : isolation_fork
+         end : isolation_fork
+       join
+     endtask
+   endclass
+   
+
+
+
+|hr|
+
+Line wrapping
+-------------
+
+Open syntax characters such as { or ( that end one line of a multi-line expression should be terminated with close characters (}, )) on their own line.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class push_pull_item;
+     virtual function string convert2string();
+       return {
+         $sformatf("h_data = 0x%0x ", h_data),
+         $sformatf("d_data = 0x%0x ", d_data),
+         $sformatf("host_delay = 0x%0x ", host_delay),
+         $sformatf("device_delay = 0x%0x ", device_delay)
+       };
+     endfunction
+   endclass
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class uart_agent_cov;
+     covergroup uart_reset_cg;
+       cp_dir: coverpoint dir;
+       cp_rst_pos: coverpoint bit_position {bins values[] = {[0 : NUM_UART_XFER_BITS_WO_PARITY]};}
+       cross cp_dir, cp_rst_pos;
+     endgroup
+   endclass
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class uart_agent_cov;
+     covergroup uart_reset_cg;
+       cp_dir: coverpoint dir;
+       cp_rst_pos: coverpoint bit_position {bins values[] = {[0 : NUM_UART_XFER_BITS_WO_PARITY]};}
+       cross cp_dir, cp_rst_pos;
+     endgroup
+   endclass
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class uart_agent_cov;
+     covergroup uart_reset_cg;
+       cp_dir: coverpoint dir;
+       cp_rst_pos: coverpoint bit_position {bins values[] = {[0 : NUM_UART_XFER_BITS_WO_PARITY]};}
+       cross cp_dir, cp_rst_pos;
+     endgroup
+   endclass
+   
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   covergroup intr_test_cg;  cross cp_intr, cp_intr_test, cp_intr_en, cp_intr_state {
+       illegal_bins test_1_state_0 = binsof(cp_intr_test) intersect {1} &&
+                                     binsof(cp_intr_state) intersect {0};
+     }
+   endgroup
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     covergroup intr_test_cg;
+       cross cp_intr, cp_intr_test, cp_intr_en, cp_intr_state{
+         illegal_bins test_1_state_0 = binsof (cp_intr_test) intersect {
+           1
+         } && binsof (cp_intr_state) intersect {
+           0
+         };
+       }
+     endgroup
+     
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   string sha_file_list[] = {
+     "vectors/sha/sha256/SHA256ShortMsg.rsp", "vectors/sha/sha256/SHA256LongMsg.rsp"
+   };
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   string sha_file_list[] = {
+     "vectors/sha/sha256/SHA256ShortMsg.rsp", "vectors/sha/sha256/SHA256LongMsg.rsp"
+   };
+   
+
+
+
+|hr|
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   class tl_host_seq;
+     virtual function void randomize_req(REQ req, int idx);
+       if (!(req.randomize() with {a_valid_delay inside {[min_req_delay : max_req_delay]};})) begin
+         `uvm_fatal(`gfn, "Cannot randomize req")
+       end
+     endfunction
+   endclass
+   
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   class tl_host_seq;
+     virtual function void randomize_req(REQ req, int idx);
+       if (!(req.randomize() with {
+             a_valid_delay inside {[min_req_delay : max_req_delay]};})) begin
+         `uvm_fatal(`gfn, "Cannot randomize req")
+       end
+     endfunction
+   endclass
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     class tl_host_seq;
+       virtual function void randomize_req(REQ req, int idx);
+         if (!(req.randomize() with {a_valid_delay inside {[min_req_delay : max_req_delay]};})) begin
+           `uvm_fatal(`gfn, "Cannot randomize req")
+         end
+       endfunction
+     endclass
+     
+
+
+
+|hr|
+
+Nested function calls
+---------------------
+
+
+Example code:
+
+.. code-block:: systemverilog
+
+   `uvm_info(`gtn, $sformatf("Verifying reset value of register %0s", test_csrs[i].get_full_name()),
+             UVM_MEDIUM)
+   
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   `uvm_info(`gtn, $sformatf("Verifying reset value of register %0s",
+                             test_csrs[i].get_full_name()), UVM_MEDIUM)
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     `uvm_info(`gtn, $sformatf("Verifying reset value of register %0s", test_csrs[i].get_full_name()),
+               UVM_MEDIUM)
+     
+
+
+
+|hr|
+
+Alignment
+---------
+
+.. code-block:: systemverilog
+
+   class csr_bit_bash_seq extends csr_base_seq;
+     task bash_kth_bit;
+       repeat (2) begin
+         csr_rd_check(.ptr           (rg),
+                      .blocking      (0),
+                      .compare       (!external_checker),
+                      .compare_vs_ral(1'b1),
+                      .compare_mask  (~mask),
+                      .err_msg       (err_msg));
+       end
+     endtask: bash_kth_bit
+   endclass
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     class csr_bit_bash_seq extends csr_base_seq;
+       task bash_kth_bit;
+         repeat (2) begin
+           csr_rd_check(.ptr(rg), .blocking(0), .compare(!external_checker), .compare_vs_ral(1'b1),
+                        .compare_mask(~mask), .err_msg(err_msg));
+         end
+       endtask : bash_kth_bit
+     endclass
+     
+
+
+
+|hr|
+
+.. code-block:: systemverilog
+
+   class kmac_app_device_seq extends kmac_app_base_seq;
+     virtual function void randomize_item(REQ item);
+       `DV_CHECK_RANDOMIZE_WITH_FATAL(
+           item,
+           if (cfg.zero_delays) {
+             rsp_delay == 0;
+           } else {
+             rsp_delay inside {[cfg.rsp_delay_min : cfg.rsp_delay_max]};
+           }
+           is_kmac_rsp_err dist {1 :/ cfg.error_rsp_pct,
+                                 0 :/ 100 - cfg.error_rsp_pct};)
+     endfunction
+   endclass
+   
+
+.. error::
+    Formatter generated output:
+
+  .. code-block:: systemverilog
+
+     class kmac_app_device_seq extends kmac_app_base_seq;
+       virtual function void randomize_item(REQ item);
+         `DV_CHECK_RANDOMIZE_WITH_FATAL(item,
+                                        if (cfg.zero_delays) {
+             rsp_delay == 0;
+           } else {
+             rsp_delay inside {[cfg.rsp_delay_min : cfg.rsp_delay_max]};
+           }
+           is_kmac_rsp_err dist {1 :/ cfg.error_rsp_pct,
+                                 0 :/ 100 - cfg.error_rsp_pct};)
+       endfunction
+     endclass
+     
+
+
+
+|hr|
+

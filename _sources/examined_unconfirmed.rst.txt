@@ -1,0 +1,2868 @@
+Unconfirmed formatting (119 entries)
+====================================
+
+================================================================= ==============================
+Filename                                                          Related
+================================================================= ==============================
+:ref:`hw_ip_aes_rtl_aes_mix_columns_sv`                           
+:ref:`hw_ip_usb_fs_nb_pe_rtl_usb_fs_tx_mux_sv`                    
+:ref:`hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_if_sv`        
+:ref:`hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_item_sv`      
+:ref:`hw_ip_rom_ctrl_rtl_rom_ctrl_pkg_sv`                         
+:ref:`hw_ip_kmac_dv_env_seq_lib_kmac_stress_all_vseq_sv`          
+:ref:`hw_ip_pattgen_rtl_pattgen_ctrl_pkg_sv`                      
+:ref:`hw_dv_sv_cip_lib_cip_base_test_sv`                          
+:ref:`hw_dv_sv_rng_agent_rng_monitor_sv`                          
+:ref:`hw_dv_sv_rng_agent_seq_lib_rng_base_seq_sv`                 
+:ref:`hw_dv_sv_pwm_agent_pwm_monitor_sv`                          
+:ref:`hw_dv_sv_kmac_app_agent_seq_lib_kmac_app_base_seq_sv`       
+:ref:`hw_dv_sv_csrng_agent_csrng_sequencer_sv`                    
+:ref:`hw_dv_sv_csrng_agent_seq_lib_csrng_base_seq_sv`             
+:ref:`hw_dv_sv_uart_agent_seq_lib_uart_base_seq_sv`               
+:ref:`hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_agent_sv`     
+:ref:`hw_ip_otbn_dv_uvm_env_otbn_trace_monitor_sv`                
+:ref:`hw_dv_sv_rng_agent_rng_agent_sv`                            
+:ref:`hw_dv_sv_pattgen_agent_pattgen_agent_sv`                    
+:ref:`hw_dv_sv_pwm_agent_pwm_agent_sv`                            
+:ref:`hw_dv_sv_push_pull_agent_push_pull_agent_cov_sv`            
+:ref:`hw_ip_otbn_dv_uvm_env_otbn_env_sv`                          
+:ref:`hw_ip_aes_dv_env_aes_env_sv`                                
+:ref:`hw_ip_pattgen_dv_env_pattgen_env_sv`                        
+:ref:`hw_ip_hmac_dv_env_hmac_env_sv`                              
+:ref:`hw_dv_sv_jtag_riscv_agent_jtag_riscv_agent_sv`              
+:ref:`hw_dv_sv_jtag_agent_jtag_agent_sv`                          
+:ref:`hw_dv_sv_push_pull_agent_push_pull_sequencer_sv`            
+:ref:`hw_dv_sv_dv_lib_dv_base_seq_sv`                             
+:ref:`hw_dv_sv_tl_agent_tl_agent_sv`                              
+:ref:`hw_dv_sv_dv_lib_dv_base_virtual_sequencer_sv`               
+:ref:`hw_dv_sv_uart_agent_uart_agent_sv`                          
+:ref:`hw_ip_edn_dv_tests_edn_base_test_sv`                        
+:ref:`hw_ip_edn_dv_env_edn_virtual_sequencer_sv`                  
+:ref:`hw_ip_lc_ctrl_dv_env_lc_ctrl_virtual_sequencer_sv`          
+:ref:`hw_dv_sv_push_pull_agent_seq_lib_push_pull_base_seq_sv`     
+:ref:`hw_ip_kmac_dv_env_kmac_sideload_if_sv`                      
+:ref:`hw_ip_trial1_dv_bus_pkg_sv`                                 
+:ref:`hw_ip_prim_rtl_prim_esc_pkg_sv`                             
+:ref:`hw_ip_prim_rtl_prim_alert_pkg_sv`                           
+:ref:`hw_ip_keymgr_dv_env_keymgr_env_pkg_sv`                      
+:ref:`hw_dv_sv_jtag_riscv_agent_jtag_riscv_agent_cfg_sv`          
+:ref:`hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_agent_cfg_sv` 
+:ref:`hw_dv_sv_scoreboard_scoreboard_pkg_sv`                      
+:ref:`hw_ip_otbn_dv_uvm_env_seq_lib_otbn_smoke_vseq_sv`           
+:ref:`hw_ip_pattgen_rtl_pattgen_sv`                               
+:ref:`hw_ip_pwm_dv_env_seq_lib_pwm_common_vseq_sv`                
+:ref:`hw_ip_pattgen_dv_env_seq_lib_pattgen_common_vseq_sv`        
+:ref:`hw_dv_sv_common_ifs_clk_if_sv`                              
+:ref:`hw_ip_tlul_generic_dv_tb_tb_sv`                             
+:ref:`hw_dv_sv_usb20_agent_seq_lib_usb20_base_seq_sv`             
+:ref:`hw_ip_prim_rtl_prim_rom_pkg_sv`                             
+:ref:`hw_ip_prim_rtl_prim_lc_sender_sv`                           
+:ref:`hw_ip_sram_ctrl_dv_env_sram_ctrl_env_pkg_sv`                
+:ref:`hw_dv_sv_usb20_agent_usb20_monitor_sv`                      
+:ref:`hw_dv_sv_kmac_app_agent_kmac_app_sequencer_sv`              
+:ref:`hw_ip_prim_rtl_prim_ram_1p_pkg_sv`                          
+:ref:`hw_ip_edn_dv_env_edn_env_cov_sv`                            
+:ref:`hw_ip_usbdev_dv_env_usbdev_env_cov_sv`                      
+:ref:`hw_ip_flash_ctrl_dv_env_flash_ctrl_env_cov_sv`              
+:ref:`hw_ip_aon_timer_dv_env_aon_timer_env_cov_sv`                
+:ref:`hw_ip_clkmgr_dv_env_clkmgr_env_cfg_sv`                      
+:ref:`hw_dv_sv_pwm_agent_pwm_driver_sv`                           
+:ref:`hw_dv_sv_tl_agent_dv_tests_tl_agent_base_test_sv`           
+:ref:`hw_dv_sv_tl_agent_dv_env_tl_agent_virtual_sequencer_sv`     
+:ref:`hw_dv_sv_kmac_app_agent_kmac_app_driver_sv`                 
+:ref:`hw_dv_sv_csrng_agent_csrng_driver_sv`                       
+:ref:`hw_ip_flash_ctrl_dv_tests_flash_ctrl_base_test_sv`          
+:ref:`hw_ip_flash_ctrl_dv_env_flash_ctrl_virtual_sequencer_sv`    
+:ref:`hw_ip_aon_timer_dv_tests_aon_timer_base_test_sv`            
+:ref:`hw_ip_aon_timer_dv_env_aon_timer_virtual_sequencer_sv`      
+:ref:`hw_ip_sram_ctrl_dv_tests_sram_ctrl_base_test_sv`            
+:ref:`hw_ip_sram_ctrl_dv_env_sram_ctrl_virtual_sequencer_sv`      
+:ref:`hw_ip_clkmgr_dv_tests_clkmgr_base_test_sv`                  
+:ref:`hw_ip_clkmgr_dv_env_clkmgr_virtual_sequencer_sv`            
+:ref:`hw_ip_tlul_generic_dv_env_xbar_virtual_sequencer_sv`        
+:ref:`hw_ip_otbn_dv_uvm_tests_otbn_base_test_sv`                  
+:ref:`hw_ip_otbn_dv_uvm_env_otbn_virtual_sequencer_sv`            
+:ref:`hw_ip_rom_ctrl_dv_tests_rom_ctrl_base_test_sv`              
+:ref:`hw_ip_rom_ctrl_dv_env_rom_ctrl_virtual_sequencer_sv`        
+:ref:`hw_ip_lc_ctrl_dv_tests_lc_ctrl_base_test_sv`                
+:ref:`hw_ip_aes_dv_env_aes_virtual_sequencer_sv`                  
+:ref:`hw_ip_pattgen_dv_env_pattgen_virtual_sequencer_sv`          
+:ref:`hw_ip_pwrmgr_dv_tests_pwrmgr_base_test_sv`                  
+:ref:`hw_ip_pwrmgr_dv_env_pwrmgr_virtual_sequencer_sv`            
+:ref:`hw_ip_kmac_dv_tests_kmac_base_test_sv`                      
+:ref:`hw_ip_kmac_dv_env_kmac_virtual_sequencer_sv`                
+:ref:`hw_ip_hmac_dv_tests_hmac_base_test_sv`                      
+:ref:`hw_dv_sv_jtag_riscv_agent_jtag_riscv_monitor_sv`            
+:ref:`hw_ip_edn_dv_env_seq_lib_edn_common_vseq_sv`                
+:ref:`hw_ip_usbdev_dv_env_seq_lib_usbdev_common_vseq_sv`          
+:ref:`hw_ip_aon_timer_dv_env_seq_lib_aon_timer_common_vseq_sv`    
+:ref:`hw_ip_sram_ctrl_dv_env_seq_lib_sram_ctrl_common_vseq_sv`    
+:ref:`hw_ip_clkmgr_dv_env_seq_lib_clkmgr_common_vseq_sv`          
+:ref:`hw_ip_otbn_dv_uvm_env_seq_lib_otbn_common_vseq_sv`          
+:ref:`hw_ip_otp_ctrl_dv_env_seq_lib_otp_ctrl_macro_errs_vseq_sv`  
+:ref:`hw_ip_rom_ctrl_dv_env_seq_lib_rom_ctrl_smoke_vseq_sv`       
+:ref:`hw_ip_rom_ctrl_dv_env_seq_lib_rom_ctrl_common_vseq_sv`      
+:ref:`hw_ip_lc_ctrl_dv_env_seq_lib_lc_ctrl_common_vseq_sv`        
+:ref:`hw_ip_pwrmgr_dv_env_seq_lib_pwrmgr_common_vseq_sv`          
+:ref:`hw_ip_adc_ctrl_dv_env_seq_lib_adc_ctrl_common_vseq_sv`      
+:ref:`hw_ip_kmac_dv_env_seq_lib_kmac_common_vseq_sv`              
+:ref:`hw_ip_hmac_dv_env_seq_lib_hmac_common_vseq_sv`              
+:ref:`hw_ip_gpio_dv_env_seq_lib_gpio_common_vseq_sv`              
+:ref:`hw_ip_lc_ctrl_dv_env_seq_lib_lc_ctrl_prog_failure_vseq_sv`  
+:ref:`hw_dv_sv_uart_agent_seq_lib_uart_default_seq_sv`            
+:ref:`hw_ip_kmac_dv_env_seq_lib_kmac_sideload_vseq_sv`            
+:ref:`hw_dv_sv_jtag_riscv_agent_jtag_riscv_sequencer_sv`          `RULE#1 <https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation>`_ 
+:ref:`hw_ip_otbn_dv_uvm_env_otbn_env_cfg_sv`                      
+:ref:`hw_ip_rom_ctrl_dv_env_rom_ctrl_env_cov_sv`                  
+:ref:`hw_ip_lc_ctrl_dv_env_lc_ctrl_env_cov_sv`                    
+:ref:`hw_ip_aes_dv_env_aes_env_cov_sv`                            
+:ref:`hw_ip_pattgen_dv_env_pattgen_env_cov_sv`                    
+:ref:`hw_ip_pwrmgr_dv_env_pwrmgr_env_cfg_sv`                      
+:ref:`hw_ip_pwrmgr_dv_env_pwrmgr_env_cov_sv`                      
+:ref:`hw_ip_kmac_dv_env_kmac_env_cov_sv`                          
+:ref:`hw_ip_hmac_dv_env_hmac_env_cfg_sv`                          
+:ref:`hw_ip_rom_ctrl_dv_env_rom_ctrl_env_cfg_sv`                  
+:ref:`hw_dv_sv_kmac_app_agent_seq_lib_kmac_app_host_seq_sv`       
+================================================================= ==============================
+
+.. _hw_ip_aes_rtl_aes_mix_columns_sv:
+
+hw/ip/aes/rtl/aes_mix_columns.sv
+--------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -21,9 +21,9 @@
+      // Individually mix columns
+      for (genvar i = 0; i < 4; i++) begin : gen_mix_column
+        aes_mix_single_column u_aes_mix_column_i (
+   -      .op_i   ( op_i                 ),
+   -      .data_i ( data_i_transposed[i] ),
+   -      .data_o ( data_o_transposed[i] )
+   +      .op_i  (op_i),
+   +      .data_i(data_i_transposed[i]),
+   +      .data_o(data_o_transposed[i])
+        );
+      end
+    
+
+.. _hw_ip_usb_fs_nb_pe_rtl_usb_fs_tx_mux_sv:
+
+hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv
+---------------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -6,12 +6,12 @@
+    
+    module usb_fs_tx_mux (
+      // interface to IN Protocol Engine
+   -  input  logic in_tx_pkt_start_i,
+   -  input  logic [3:0] in_tx_pid_i,
+   +  input logic in_tx_pkt_start_i,
+   +  input logic [3:0] in_tx_pid_i,
+    
+      // interface to OUT Protocol Engine
+   -  input  logic out_tx_pkt_start_i,
+   -  input  logic [3:0] out_tx_pid_i,
+   +  input logic out_tx_pkt_start_i,
+   +  input logic [3:0] out_tx_pid_i,
+    
+      // interface to tx module
+      output logic tx_pkt_start_o,
+
+.. _hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_if_sv:
+
+hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv
+---------------------------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -13,13 +13,13 @@
+    );
+    
+      // Inputs to DUT
+   -  logic                     start;        // Start the operation
+   -  logic [ImemAddrWidth-1:0] start_addr;   // Start byte address in IMEM
+   +  logic                     start;  // Start the operation
+   +  logic [ImemAddrWidth-1:0] start_addr;  // Start byte address in IMEM
+    
+      // Outputs from DUT
+   -  bit                       done;         // Operation done
+   -  bit                       err;          // Something went wrong
+   -  bit [31:0]                stop_pc;      // PC at end of operation
+   +  bit                       done;  // Operation done
+   +  bit                       err;  // Something went wrong
+   +  bit   [             31:0] stop_pc;  // PC at end of operation
+    
+      // Wait until done goes high. Stops early on reset
+      task automatic wait_done();
+
+.. _hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_item_sv:
+
+hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv
+-----------------------------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -15,10 +15,10 @@
+      string                 mnemonic;
+    
+      `uvm_object_utils_begin(otbn_model_item)
+   -    `uvm_field_enum   (otbn_model_item_type_e, item_type, UVM_DEFAULT)
+   -    `uvm_field_int    (err, UVM_DEFAULT)
+   -    `uvm_field_int    (insn_addr, UVM_DEFAULT | UVM_HEX)
+   -    `uvm_field_string (mnemonic, UVM_DEFAULT)
+   +    `uvm_field_enum(otbn_model_item_type_e, item_type, UVM_DEFAULT)
+   +    `uvm_field_int(err, UVM_DEFAULT)
+   +    `uvm_field_int(insn_addr, UVM_DEFAULT | UVM_HEX)
+   +    `uvm_field_string(mnemonic, UVM_DEFAULT)
+      `uvm_object_utils_end
+    
+      `uvm_object_new
+
+.. _hw_ip_rom_ctrl_rtl_rom_ctrl_pkg_sv:
+
+hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv
+----------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -13,14 +13,11 @@
+        logic good;
+      } pwrmgr_data_t;
+    
+   -  parameter pwrmgr_data_t PWRMGR_DATA_DEFAULT = '{
+   -    done: 1'b1,
+   -    good: 1'b1
+   -  };
+   +  parameter pwrmgr_data_t PWRMGR_DATA_DEFAULT = '{done: 1'b1, good: 1'b1};
+    
+      typedef struct packed {
+        logic [255:0] data;
+   -    logic         valid;
+   +    logic valid;
+      } keymgr_data_t;
+    
+    endpackage
+
+.. _hw_ip_kmac_dv_env_seq_lib_kmac_stress_all_vseq_sv:
+
+hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv
+-------------------------------------------------
+
+
+
+
+.. code-block:: diff
+
+   @@ -27,10 +27,10 @@
+      task body();
+        `uvm_info(`gfn, $sformatf("Running %0d random sequences", num_trans), UVM_LOW)
+        for (int i = 0; i < num_trans; i++) begin
+   -      uvm_sequence    seq;
+   -      kmac_base_vseq  kmac_vseq;
+   -      uint            seq_idx = $urandom_range(0, vseq_names.size() - 1);
+   -      string          cur_vseq_name = vseq_names[seq_idx];
+   +      uvm_sequence   seq;
+   +      kmac_base_vseq kmac_vseq;
+   +      uint           seq_idx = $urandom_range(0, vseq_names.size() - 1);
+   +      string         cur_vseq_name = vseq_names[seq_idx];
+    
+          seq = create_seq_by_name(cur_vseq_name);
+          `downcast(kmac_vseq, seq)
+
+.. _hw_ip_pattgen_rtl_pattgen_ctrl_pkg_sv:
+
+hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv
+-------------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -5,12 +5,12 @@
+    package pattgen_ctrl_pkg;
+    
+      typedef struct packed {
+   -    logic        enable;
+   -    logic        polarity;
+   +    logic enable;
+   +    logic polarity;
+        logic [31:0] prediv;
+        logic [63:0] data;
+   -    logic [5:0]  len;
+   -    logic [9:0]  reps;
+   +    logic [5:0] len;
+   +    logic [9:0] reps;
+      } pattgen_chan_ctrl_t;
+    
+    endpackage : pattgen_ctrl_pkg
+
+.. _hw_dv_sv_cip_lib_cip_base_test_sv:
+
+hw/dv/sv/cip_lib/cip_base_test.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,9 +2,11 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class cip_base_test #(type CFG_T = cip_base_env_cfg,
+   -                      type ENV_T = cip_base_env) extends dv_base_test #(CFG_T, ENV_T);
+   -  `uvm_component_param_utils(cip_base_test #(CFG_T, ENV_T))
+   +class cip_base_test #(
+   +  type CFG_T = cip_base_env_cfg,
+   +  type ENV_T = cip_base_env
+   +) extends dv_base_test #(CFG_T, ENV_T);
+   +  `uvm_component_param_utils(cip_base_test#(CFG_T, ENV_T))
+    
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_rng_agent_rng_monitor_sv:
+
+hw/dv/sv/rng_agent/rng_monitor.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class rng_monitor extends dv_base_monitor #(
+   -    .ITEM_T (rng_item),
+   -    .CFG_T  (rng_agent_cfg),
+   -    .COV_T  (rng_agent_cov)
+   -  );
+   +  .ITEM_T(rng_item),
+   +  .CFG_T (rng_agent_cfg),
+   +  .COV_T (rng_agent_cov)
+   +);
+      `uvm_component_utils(rng_monitor)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_dv_sv_rng_agent_seq_lib_rng_base_seq_sv:
+
+hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class rng_base_seq extends dv_base_seq #(
+   -    .REQ         (rng_item),
+   -    .CFG_T       (rng_agent_cfg),
+   -    .SEQUENCER_T (rng_sequencer)
+   -  );
+   +  .REQ        (rng_item),
+   +  .CFG_T      (rng_agent_cfg),
+   +  .SEQUENCER_T(rng_sequencer)
+   +);
+      `uvm_object_utils(rng_base_seq)
+    
+      `uvm_object_new
+
+.. _hw_dv_sv_pwm_agent_pwm_monitor_sv:
+
+hw/dv/sv/pwm_agent/pwm_monitor.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pwm_monitor extends dv_base_monitor #(
+   -    .ITEM_T (pwm_item),
+   -    .CFG_T  (pwm_agent_cfg),
+   -    .COV_T  (pwm_agent_cov)
+   -  );
+   +  .ITEM_T(pwm_item),
+   +  .CFG_T (pwm_agent_cfg),
+   +  .COV_T (pwm_agent_cov)
+   +);
+      `uvm_component_utils(pwm_monitor)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_dv_sv_kmac_app_agent_seq_lib_kmac_app_base_seq_sv:
+
+hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv
+----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class kmac_app_base_seq extends dv_base_seq #(
+   -    .REQ         (kmac_app_item),
+   -    .CFG_T       (kmac_app_agent_cfg),
+   -    .SEQUENCER_T (kmac_app_sequencer)
+   -  );
+   +  .REQ        (kmac_app_item),
+   +  .CFG_T      (kmac_app_agent_cfg),
+   +  .SEQUENCER_T(kmac_app_sequencer)
+   +);
+      `uvm_object_utils(kmac_app_base_seq)
+    
+      `uvm_object_new
+
+.. _hw_dv_sv_csrng_agent_csrng_sequencer_sv:
+
+hw/dv/sv/csrng_agent/csrng_sequencer.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,13 +3,13 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class csrng_sequencer extends dv_base_sequencer #(
+   -    .ITEM_T (csrng_item),
+   -    .CFG_T  (csrng_agent_cfg)
+   +  .ITEM_T(csrng_item),
+   +  .CFG_T (csrng_agent_cfg)
+    );
+      `uvm_component_param_utils(csrng_sequencer)
+    
+   -  push_pull_sequencer#(.HostDataWidth(csrng_pkg::CSRNG_CMD_WIDTH))          m_cmd_push_sequencer;
+   -  push_pull_sequencer#(.HostDataWidth(csrng_pkg::FIPS_GENBITS_BUS_WIDTH))   m_genbits_push_sequencer;
+   +  push_pull_sequencer #(.HostDataWidth(csrng_pkg::CSRNG_CMD_WIDTH))        m_cmd_push_sequencer;
+   +  push_pull_sequencer #(.HostDataWidth(csrng_pkg::FIPS_GENBITS_BUS_WIDTH)) m_genbits_push_sequencer;
+    
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_csrng_agent_seq_lib_csrng_base_seq_sv:
+
+hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv
+----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class csrng_base_seq extends dv_base_seq #(
+   -    .REQ         (csrng_item),
+   -    .CFG_T       (csrng_agent_cfg),
+   -    .SEQUENCER_T (csrng_sequencer)
+   -  );
+   +  .REQ        (csrng_item),
+   +  .CFG_T      (csrng_agent_cfg),
+   +  .SEQUENCER_T(csrng_sequencer)
+   +);
+      `uvm_object_utils(csrng_base_seq)
+    
+      `uvm_object_new
+
+.. _hw_dv_sv_uart_agent_seq_lib_uart_base_seq_sv:
+
+hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv
+--------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class uart_base_seq extends dv_base_seq #(
+   -    .REQ         (uart_item),
+   -    .CFG_T       (uart_agent_cfg),
+   -    .SEQUENCER_T (uart_sequencer)
+   -  );
+   +  .REQ        (uart_item),
+   +  .CFG_T      (uart_agent_cfg),
+   +  .SEQUENCER_T(uart_sequencer)
+   +);
+      `uvm_object_utils(uart_base_seq)
+    
+      `uvm_object_new
+
+.. _hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_agent_sv:
+
+hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv
+------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class otbn_model_agent extends dv_base_agent #(
+   -  .CFG_T          (otbn_model_agent_cfg),
+   -  .MONITOR_T      (otbn_model_monitor),
+   -  .DRIVER_T       (otbn_dummy_driver),
+   -  .SEQUENCER_T    (otbn_dummy_sequencer)
+   +  .CFG_T      (otbn_model_agent_cfg),
+   +  .MONITOR_T  (otbn_model_monitor),
+   +  .DRIVER_T   (otbn_dummy_driver),
+   +  .SEQUENCER_T(otbn_dummy_sequencer)
+    );
+    
+      `uvm_component_utils(otbn_model_agent)
+
+.. _hw_ip_otbn_dv_uvm_env_otbn_trace_monitor_sv:
+
+hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv
+-------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class otbn_trace_monitor extends dv_base_monitor #(
+   -    .ITEM_T (otbn_trace_item),
+   -    .CFG_T (otbn_env_cfg),
+   -    .COV_T (otbn_env_cov)
+   -  );
+   +  .ITEM_T(otbn_trace_item),
+   +  .CFG_T (otbn_env_cfg),
+   +  .COV_T (otbn_env_cov)
+   +);
+    
+      `uvm_component_utils(otbn_trace_monitor)
+      `uvm_component_new
+
+.. _hw_dv_sv_rng_agent_rng_agent_sv:
+
+hw/dv/sv/rng_agent/rng_agent.sv
+-------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class rng_agent extends dv_base_agent #(
+   -  .CFG_T          (rng_agent_cfg),
+   -  .DRIVER_T       (rng_driver),
+   -  .SEQUENCER_T    (rng_sequencer),
+   -  .MONITOR_T      (rng_monitor),
+   -  .COV_T          (rng_agent_cov)
+   +  .CFG_T      (rng_agent_cfg),
+   +  .DRIVER_T   (rng_driver),
+   +  .SEQUENCER_T(rng_sequencer),
+   +  .MONITOR_T  (rng_monitor),
+   +  .COV_T      (rng_agent_cov)
+    );
+    
+      `uvm_component_utils(rng_agent)
+
+.. _hw_dv_sv_pattgen_agent_pattgen_agent_sv:
+
+hw/dv/sv/pattgen_agent/pattgen_agent.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pattgen_agent extends dv_base_agent #(
+   -  .CFG_T           (pattgen_agent_cfg),
+   -  .DRIVER_T        (pattgen_driver),
+   -  .SEQUENCER_T     (pattgen_sequencer),
+   -  .MONITOR_T       (pattgen_monitor),
+   -  .COV_T           (pattgen_agent_cov)
+   +  .CFG_T      (pattgen_agent_cfg),
+   +  .DRIVER_T   (pattgen_driver),
+   +  .SEQUENCER_T(pattgen_sequencer),
+   +  .MONITOR_T  (pattgen_monitor),
+   +  .COV_T      (pattgen_agent_cov)
+    );
+      `uvm_component_utils(pattgen_agent)
+      `uvm_component_new
+
+.. _hw_dv_sv_pwm_agent_pwm_agent_sv:
+
+hw/dv/sv/pwm_agent/pwm_agent.sv
+-------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pwm_agent extends dv_base_agent #(
+   -  .CFG_T          (pwm_agent_cfg),
+   -  .DRIVER_T       (pwm_driver),
+   -  .SEQUENCER_T    (pwm_sequencer),
+   -  .MONITOR_T      (pwm_monitor),
+   -  .COV_T          (pwm_agent_cov)
+   +  .CFG_T      (pwm_agent_cfg),
+   +  .DRIVER_T   (pwm_driver),
+   +  .SEQUENCER_T(pwm_sequencer),
+   +  .MONITOR_T  (pwm_monitor),
+   +  .COV_T      (pwm_agent_cov)
+    );
+    
+      `uvm_component_utils(pwm_agent)
+
+.. _hw_dv_sv_push_pull_agent_push_pull_agent_cov_sv:
+
+hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,11 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class push_pull_agent_cov #(parameter int HostDataWidth = 32,
+   -                            parameter int DeviceDataWidth = HostDataWidth)
+   -  extends dv_base_agent_cov #(
+   -    push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth)
+   -);
+   +class push_pull_agent_cov #(
+   +  parameter int HostDataWidth   = 32,
+   +  parameter int DeviceDataWidth = HostDataWidth
+   +) extends dv_base_agent_cov #(push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth));
+    
+      `uvm_component_param_utils(push_pull_agent_cov#(HostDataWidth, DeviceDataWidth))
+    
+
+.. _hw_ip_otbn_dv_uvm_env_otbn_env_sv:
+
+hw/ip/otbn/dv/uvm/env/otbn_env.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class otbn_env extends cip_base_env #(
+   -    .CFG_T              (otbn_env_cfg),
+   -    .COV_T              (otbn_env_cov),
+   -    .VIRTUAL_SEQUENCER_T(otbn_virtual_sequencer),
+   -    .SCOREBOARD_T       (otbn_scoreboard)
+   -  );
+   +  .CFG_T              (otbn_env_cfg),
+   +  .COV_T              (otbn_env_cov),
+   +  .VIRTUAL_SEQUENCER_T(otbn_virtual_sequencer),
+   +  .SCOREBOARD_T       (otbn_scoreboard)
+   +);
+      `uvm_component_utils(otbn_env)
+    
+      otbn_model_agent   model_agent;
+   @@ -31,16 +31,19 @@
+        if (!uvm_config_db#(virtual otbn_loop_if)::get(this, "", "loop_vif", cfg.loop_vif)) begin
+          `uvm_fatal(`gfn, "failed to get otbn_loop_if handle from uvm_config_db")
+        end
+   -    if (!uvm_config_db#(virtual otbn_alu_bignum_if)::get(this, "", "alu_bignum_vif",
+   -                                                         cfg.alu_bignum_vif)) begin
+   +    if (!uvm_config_db#(virtual otbn_alu_bignum_if)::get(
+   +            this, "", "alu_bignum_vif", cfg.alu_bignum_vif
+   +        )) begin
+          `uvm_fatal(`gfn, "failed to get otbn_alu_bignum_if handle from uvm_config_db")
+        end
+   -    if (!uvm_config_db#(virtual otbn_mac_bignum_if)::get(this, "", "mac_bignum_vif",
+   -                                                         cfg.mac_bignum_vif)) begin
+   +    if (!uvm_config_db#(virtual otbn_mac_bignum_if)::get(
+   +            this, "", "mac_bignum_vif", cfg.mac_bignum_vif
+   +        )) begin
+          `uvm_fatal(`gfn, "failed to get otbn_mac_bignum_if handle from uvm_config_db")
+        end
+   -    if (!uvm_config_db#(virtual otbn_rf_base_if)::get(this, "", "rf_base_vif",
+   -                                                      cfg.rf_base_vif)) begin
+   +    if (!uvm_config_db#(virtual otbn_rf_base_if)::get(
+   +            this, "", "rf_base_vif", cfg.rf_base_vif
+   +        )) begin
+          `uvm_fatal(`gfn, "failed to get otbn_rf_base_if handle from uvm_config_db")
+        end
+    
+
+.. _hw_ip_aes_dv_env_aes_env_sv:
+
+hw/ip/aes/dv/env/aes_env.sv
+---------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class aes_env extends cip_base_env #(
+   -    .CFG_T              (aes_env_cfg),
+   -    .COV_T              (aes_env_cov),
+   -    .VIRTUAL_SEQUENCER_T(aes_virtual_sequencer),
+   -    .SCOREBOARD_T       (aes_scoreboard)
+   -  );
+   +  .CFG_T              (aes_env_cfg),
+   +  .COV_T              (aes_env_cov),
+   +  .VIRTUAL_SEQUENCER_T(aes_virtual_sequencer),
+   +  .SCOREBOARD_T       (aes_scoreboard)
+   +);
+      `uvm_component_utils(aes_env)
+    
+      `uvm_component_new
+
+.. _hw_ip_pattgen_dv_env_pattgen_env_sv:
+
+hw/ip/pattgen/dv/env/pattgen_env.sv
+-----------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,11 +3,11 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pattgen_env extends cip_base_env #(
+   -    .CFG_T               (pattgen_env_cfg),
+   -    .COV_T               (pattgen_env_cov),
+   -    .VIRTUAL_SEQUENCER_T (pattgen_virtual_sequencer),
+   -    .SCOREBOARD_T        (pattgen_scoreboard)
+   -  );
+   +  .CFG_T              (pattgen_env_cfg),
+   +  .COV_T              (pattgen_env_cov),
+   +  .VIRTUAL_SEQUENCER_T(pattgen_virtual_sequencer),
+   +  .SCOREBOARD_T       (pattgen_scoreboard)
+   +);
+      `uvm_component_utils(pattgen_env)
+      `uvm_component_new
+    
+
+.. _hw_ip_hmac_dv_env_hmac_env_sv:
+
+hw/ip/hmac/dv/env/hmac_env.sv
+-----------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,10 +2,12 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class hmac_env extends cip_base_env #(.CFG_T               (hmac_env_cfg),
+   -                                      .COV_T               (hmac_env_cov),
+   -                                      .VIRTUAL_SEQUENCER_T (hmac_virtual_sequencer),
+   -                                      .SCOREBOARD_T        (hmac_scoreboard));
+   +class hmac_env extends cip_base_env #(
+   +  .CFG_T              (hmac_env_cfg),
+   +  .COV_T              (hmac_env_cov),
+   +  .VIRTUAL_SEQUENCER_T(hmac_virtual_sequencer),
+   +  .SCOREBOARD_T       (hmac_scoreboard)
+   +);
+      `uvm_component_utils(hmac_env)
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_jtag_riscv_agent_jtag_riscv_agent_sv:
+
+hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,12 +3,12 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class jtag_riscv_agent extends dv_base_agent #(
+   -      .CFG_T       (jtag_riscv_agent_cfg),
+   -      .SEQUENCER_T (jtag_riscv_sequencer),
+   -      .DRIVER_T    (jtag_riscv_driver),
+   -      .MONITOR_T   (jtag_riscv_monitor),
+   -      .COV_T       (jtag_riscv_agent_cov)
+   -  );
+   +  .CFG_T      (jtag_riscv_agent_cfg),
+   +  .SEQUENCER_T(jtag_riscv_sequencer),
+   +  .DRIVER_T   (jtag_riscv_driver),
+   +  .MONITOR_T  (jtag_riscv_monitor),
+   +  .COV_T      (jtag_riscv_agent_cov)
+   +);
+    
+      `uvm_component_utils(jtag_riscv_agent)
+      `uvm_component_new
+
+.. _hw_dv_sv_jtag_agent_jtag_agent_sv:
+
+hw/dv/sv/jtag_agent/jtag_agent.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,12 +3,12 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class jtag_agent extends dv_base_agent #(
+   -      .CFG_T          (jtag_agent_cfg),
+   -      .DRIVER_T       (jtag_driver),
+   -      .SEQUENCER_T    (jtag_sequencer),
+   -      .MONITOR_T      (jtag_monitor),
+   -      .COV_T          (jtag_agent_cov)
+   -  );
+   +  .CFG_T      (jtag_agent_cfg),
+   +  .DRIVER_T   (jtag_driver),
+   +  .SEQUENCER_T(jtag_sequencer),
+   +  .MONITOR_T  (jtag_monitor),
+   +  .COV_T      (jtag_agent_cov)
+   +);
+    
+      `uvm_component_utils(jtag_agent)
+    
+
+.. _hw_dv_sv_push_pull_agent_push_pull_sequencer_sv:
+
+hw/dv/sv/push_pull_agent/push_pull_sequencer.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,11 +2,12 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class push_pull_sequencer #(parameter int HostDataWidth = 32,
+   -                            parameter int DeviceDataWidth = HostDataWidth)
+   -  extends dv_base_sequencer #(
+   -    .ITEM_T (push_pull_item#(HostDataWidth, DeviceDataWidth)),
+   -    .CFG_T  (push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth))
+   +class push_pull_sequencer #(
+   +  parameter int HostDataWidth   = 32,
+   +  parameter int DeviceDataWidth = HostDataWidth
+   +) extends dv_base_sequencer #(
+   +  .ITEM_T(push_pull_item #(HostDataWidth, DeviceDataWidth)),
+   +  .CFG_T (push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth))
+    );
+      `uvm_component_param_utils(push_pull_sequencer#(HostDataWidth, DeviceDataWidth))
+      `uvm_component_new
+
+.. _hw_dv_sv_dv_lib_dv_base_seq_sv:
+
+hw/dv/sv/dv_lib/dv_base_seq.sv
+------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,11 +2,13 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class dv_base_seq #(type REQ         = uvm_sequence_item,
+   -                    type RSP         = REQ,
+   -                    type CFG_T       = dv_base_agent_cfg,
+   -                    type SEQUENCER_T = dv_base_sequencer) extends uvm_sequence#(REQ, RSP);
+   -  `uvm_object_param_utils(dv_base_seq #(REQ, RSP, CFG_T, SEQUENCER_T))
+   +class dv_base_seq #(
+   +  type REQ         = uvm_sequence_item,
+   +  type RSP         = REQ,
+   +  type CFG_T       = dv_base_agent_cfg,
+   +  type SEQUENCER_T = dv_base_sequencer
+   +) extends uvm_sequence #(REQ, RSP);
+   +  `uvm_object_param_utils(dv_base_seq#(REQ, RSP, CFG_T, SEQUENCER_T))
+      `uvm_declare_p_sequencer(SEQUENCER_T)
+    
+      CFG_T cfg;
+
+.. _hw_dv_sv_tl_agent_tl_agent_sv:
+
+hw/dv/sv/tl_agent/tl_agent.sv
+-----------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,15 +5,15 @@
+    // ---------------------------------------------
+    // TileLink agent
+    // ---------------------------------------------
+   -class tl_agent extends dv_base_agent#(
+   -    .CFG_T           (tl_agent_cfg),
+   -    .DRIVER_T        (tl_base_driver),
+   -    .HOST_DRIVER_T   (tl_host_driver),
+   -    .DEVICE_DRIVER_T (tl_device_driver),
+   -    .SEQUENCER_T     (tl_sequencer),
+   -    .MONITOR_T       (tl_monitor),
+   -    .COV_T           (tl_agent_cov)
+   -  );
+   +class tl_agent extends dv_base_agent #(
+   +  .CFG_T          (tl_agent_cfg),
+   +  .DRIVER_T       (tl_base_driver),
+   +  .HOST_DRIVER_T  (tl_host_driver),
+   +  .DEVICE_DRIVER_T(tl_device_driver),
+   +  .SEQUENCER_T    (tl_sequencer),
+   +  .MONITOR_T      (tl_monitor),
+   +  .COV_T          (tl_agent_cov)
+   +);
+    
+      `uvm_component_utils(tl_agent)
+    
+
+.. _hw_dv_sv_dv_lib_dv_base_virtual_sequencer_sv:
+
+hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv
+--------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,12 +2,14 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class dv_base_virtual_sequencer #(type CFG_T = dv_base_env_cfg,
+   -                                  type COV_T = dv_base_env_cov) extends uvm_sequencer;
+   -  `uvm_component_param_utils(dv_base_virtual_sequencer #(CFG_T, COV_T))
+   +class dv_base_virtual_sequencer #(
+   +  type CFG_T = dv_base_env_cfg,
+   +  type COV_T = dv_base_env_cov
+   +) extends uvm_sequencer;
+   +  `uvm_component_param_utils(dv_base_virtual_sequencer#(CFG_T, COV_T))
+    
+   -  CFG_T         cfg;
+   -  COV_T         cov;
+   +  CFG_T cfg;
+   +  COV_T cov;
+    
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_uart_agent_uart_agent_sv:
+
+hw/dv/sv/uart_agent/uart_agent.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,13 +2,13 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class uart_agent extends dv_base_agent#(
+   -    .CFG_T          (uart_agent_cfg),
+   -    .DRIVER_T       (uart_driver),
+   -    .SEQUENCER_T    (uart_sequencer),
+   -    .MONITOR_T      (uart_monitor),
+   -    .COV_T          (uart_agent_cov)
+   -  );
+   +class uart_agent extends dv_base_agent #(
+   +  .CFG_T      (uart_agent_cfg),
+   +  .DRIVER_T   (uart_driver),
+   +  .SEQUENCER_T(uart_sequencer),
+   +  .MONITOR_T  (uart_monitor),
+   +  .COV_T      (uart_agent_cov)
+   +);
+      `uvm_component_utils(uart_agent)
+    
+      uart_logger m_logger;
+
+.. _hw_ip_edn_dv_tests_edn_base_test_sv:
+
+hw/ip/edn/dv/tests/edn_base_test.sv
+-----------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,18 +3,18 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class edn_base_test extends cip_base_test #(
+   -    .CFG_T(edn_env_cfg),
+   -    .ENV_T(edn_env)
+   -  );
+   +  .CFG_T(edn_env_cfg),
+   +  .ENV_T(edn_env)
+   +);
+    
+      `uvm_component_utils(edn_base_test)
+      `uvm_component_new
+    
+   -   virtual function void build_phase(uvm_phase phase);
+   -     super.build_phase(phase);
+   +  virtual function void build_phase(uvm_phase phase);
+   +    super.build_phase(phase);
+    
+   -     configure_env();
+   -   endfunction // build_phase
+   +    configure_env();
+   +  endfunction  // build_phase
+    
+      // the base class dv_base_test creates the following instances:
+      // edn_env_cfg: cfg
+
+.. _hw_ip_edn_dv_env_edn_virtual_sequencer_sv:
+
+hw/ip/edn/dv/env/edn_virtual_sequencer.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,15 +3,16 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class edn_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(edn_env_cfg),
+   -    .COV_T(edn_env_cov)
+   -  );
+   +  .CFG_T(edn_env_cfg),
+   +  .COV_T(edn_env_cov)
+   +);
+      `uvm_component_utils(edn_virtual_sequencer)
+    
+   -  push_pull_sequencer#(.HostDataWidth(edn_pkg::FIPS_ENDPOINT_BUS_WIDTH))
+   -       endpoint_sequencer_h[NUM_ENDPOINTS-1:0];
+   +  push_pull_sequencer #(
+   +    .HostDataWidth(edn_pkg::FIPS_ENDPOINT_BUS_WIDTH)
+   +  ) endpoint_sequencer_h[NUM_ENDPOINTS-1:0];
+    
+   -  csrng_sequencer   csrng_sequencer_h;
+   +  csrng_sequencer csrng_sequencer_h;
+    
+      `uvm_component_new
+    
+
+.. _hw_ip_lc_ctrl_dv_env_lc_ctrl_virtual_sequencer_sv:
+
+hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,14 +3,16 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class lc_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(lc_ctrl_env_cfg),
+   -    .COV_T(lc_ctrl_env_cov)
+   -  );
+   +  .CFG_T(lc_ctrl_env_cfg),
+   +  .COV_T(lc_ctrl_env_cov)
+   +);
+      `uvm_component_utils(lc_ctrl_virtual_sequencer)
+    
+   -  push_pull_sequencer#(.HostDataWidth(OTP_PROG_HDATA_WIDTH),
+   -                       .DeviceDataWidth(OTP_PROG_DDATA_WIDTH))    otp_prog_pull_sequencer_h;
+   -  push_pull_sequencer#(.HostDataWidth(lc_ctrl_state_pkg::LcTokenWidth)) otp_token_pull_sequencer_h;
+   +  push_pull_sequencer #(
+   +    .HostDataWidth  (OTP_PROG_HDATA_WIDTH),
+   +    .DeviceDataWidth(OTP_PROG_DDATA_WIDTH)
+   +  ) otp_prog_pull_sequencer_h;
+   +  push_pull_sequencer #(.HostDataWidth(lc_ctrl_state_pkg::LcTokenWidth)) otp_token_pull_sequencer_h;
+    
+      alert_esc_sequencer esc_wipe_secrets_sequencer_h;
+      alert_esc_sequencer esc_scrap_state_sequencer_h;
+
+.. _hw_dv_sv_push_pull_agent_seq_lib_push_pull_base_seq_sv:
+
+hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv
+------------------------------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -2,13 +2,14 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class push_pull_base_seq #(parameter int HostDataWidth = 32,
+   -                           parameter int DeviceDataWidth = HostDataWidth)
+   -  extends dv_base_seq #(
+   -    .REQ         (push_pull_item#(HostDataWidth, DeviceDataWidth)),
+   -    .CFG_T       (push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth)),
+   -    .SEQUENCER_T (push_pull_sequencer#(HostDataWidth, DeviceDataWidth))
+   -  );
+   +class push_pull_base_seq #(
+   +  parameter int HostDataWidth   = 32,
+   +  parameter int DeviceDataWidth = HostDataWidth
+   +) extends dv_base_seq #(
+   +  .REQ        (push_pull_item #(HostDataWidth, DeviceDataWidth)),
+   +  .CFG_T      (push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth)),
+   +  .SEQUENCER_T(push_pull_sequencer #(HostDataWidth, DeviceDataWidth))
+   +);
+      `uvm_object_param_utils(push_pull_base_seq#(HostDataWidth, DeviceDataWidth))
+    
+      `uvm_object_new
+
+.. _hw_ip_kmac_dv_env_kmac_sideload_if_sv:
+
+hw/ip/kmac/dv/env/kmac_sideload_if.sv
+-------------------------------------
+
+Space between wait and open parenthesis?
+
+
+.. code-block:: diff
+
+   @@ -17,7 +17,7 @@
+                                        logic [keymgr_pkg::KeyWidth-1:0] share1 = '0);
+        keymgr_pkg::hw_key_req_t key;
+    
+   -    `DV_CHECK_STD_RANDOMIZE_WITH_FATAL(key, key.valid == key_valid;, , path)
+   +    `DV_CHECK_STD_RANDOMIZE_WITH_FATAL(key, key.valid == key_valid;,, path)
+        key[0] = (key_valid) ? share0 : 'hx;
+        key[1] = (key_valid) ? share1 : 'hx;
+    
+   @@ -25,7 +25,7 @@
+      endtask
+    
+      task automatic wait_valid(logic is_valid);
+   -    wait (sideload_key.valid === is_valid);
+   +    wait(sideload_key.valid === is_valid);
+      endtask
+    
+    endinterface
+
+.. _hw_ip_trial1_dv_bus_pkg_sv:
+
+hw/ip/trial1/dv/bus_pkg.sv
+--------------------------
+
+expand structs (with typedef)
+
+
+.. code-block:: diff
+
+   @@ -7,12 +7,10 @@
+      typedef struct packed {
+        logic [11:0] addr;
+        logic [31:0] wdata;
+   -    logic        write;
+   +    logic write;
+      } bus_reg_t;
+    
+   -  typedef struct packed {
+   -    logic [31:0] rdata;
+   -  } reg_bus_t;
+   +  typedef struct packed {logic [31:0] rdata;} reg_bus_t;
+    
+    endpackage
+    
+
+.. _hw_ip_prim_rtl_prim_esc_pkg_sv:
+
+hw/ip/prim/rtl/prim_esc_pkg.sv
+------------------------------
+
+Expand or fit in one line?
+
+.. code-block:: diff
+
+   @@ -14,11 +14,9 @@
+        logic resp_n;
+      } esc_rx_t;
+    
+   -  parameter esc_tx_t ESC_TX_DEFAULT = '{esc_p:  1'b0,
+   -                                        esc_n:  1'b1};
+   +  parameter esc_tx_t ESC_TX_DEFAULT = '{esc_p: 1'b0, esc_n: 1'b1};
+    
+   -  parameter esc_rx_t ESC_RX_DEFAULT = '{resp_p: 1'b0,
+   -                                        resp_n: 1'b1};
+   +  parameter esc_rx_t ESC_RX_DEFAULT = '{resp_p: 1'b0, resp_n: 1'b1};
+    
+    endpackage : prim_esc_pkg
+    
+
+.. _hw_ip_prim_rtl_prim_alert_pkg_sv:
+
+hw/ip/prim/rtl/prim_alert_pkg.sv
+--------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -16,8 +16,7 @@
+        logic ack_n;
+      } alert_rx_t;
+    
+   -  parameter alert_tx_t ALERT_TX_DEFAULT = '{alert_p:  1'b0,
+   -                                            alert_n:  1'b1};
+   +  parameter alert_tx_t ALERT_TX_DEFAULT = '{alert_p: 1'b0, alert_n: 1'b1};
+    
+      parameter alert_rx_t ALERT_RX_DEFAULT = '{ping_p: 1'b0,
+                                                ping_n: 1'b1,
+
+.. _hw_ip_keymgr_dv_env_keymgr_env_pkg_sv:
+
+hw/ip/keymgr/dv/env/keymgr_env_pkg.sv
+-------------------------------------
+
+No space between commas
+
+
+.. code-block:: diff
+
+   @@ -46,7 +46,7 @@
+        if (next_state >= int'(keymgr_pkg::StDisabled)) begin
+          return keymgr_pkg::StDisabled;
+        end else begin
+   -      `downcast(get_next_state, next_state, , , msg_id);
+   +      `downcast(get_next_state, next_state,,, msg_id);
+        end
+      endfunction
+    
+
+.. _hw_dv_sv_jtag_riscv_agent_jtag_riscv_agent_cfg_sv:
+
+hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv
+-------------------------------------------------
+
+Space between operator new and open parenthesis?
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,7 @@
+    
+      jtag_agent_cfg m_jtag_agent_cfg;
+    
+   -  function new (string name="");
+   +  function new(string name = "");
+        super.new(name);
+    
+        // This is a high level agent and will use jtag_agent's driver.
+
+.. _hw_ip_otbn_dv_uvm_otbn_model_agent_otbn_model_agent_cfg_sv:
+
+hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv
+----------------------------------------------------------
+
+Space between operator new and open parenthesis?
+
+
+.. code-block:: diff
+
+   @@ -10,7 +10,7 @@
+      `uvm_object_utils_begin(otbn_model_agent_cfg)
+      `uvm_object_utils_end
+    
+   -  function new (string name="");
+   +  function new(string name = "");
+        super.new(name);
+        // This agent is always passive.
+        this.is_active = 1'b0;
+
+.. _hw_dv_sv_scoreboard_scoreboard_pkg_sv:
+
+hw/dv/sv/scoreboard/scoreboard_pkg.sv
+-------------------------------------
+
+Should be aligned?
+
+
+.. code-block:: diff
+
+   @@ -14,7 +14,7 @@
+      } port_dir_e;
+    
+      typedef enum bit [1:0] {
+   -    kInOrderCheck = 2'b0,
+   +    kInOrderCheck    = 2'b0,
+        kOutOfOrderCheck,
+        kCustomCheck
+      } checking_policy_e;
+
+.. _hw_ip_otbn_dv_uvm_env_seq_lib_otbn_smoke_vseq_sv:
+
+hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv
+------------------------------------------------
+
+Constraints, space inside: {xx} or { xx }?
+
+
+.. code-block:: diff
+
+   @@ -9,7 +9,7 @@
+      `uvm_object_utils(otbn_smoke_vseq)
+      `uvm_object_new
+    
+   -  constraint do_backdoor_load_c { do_backdoor_load == 1'b0; }
+   +  constraint do_backdoor_load_c {do_backdoor_load == 1'b0;}
+    
+      // Override pick_elf_path to always choose "smoke.elf"
+      protected function string pick_elf_path();
+
+.. _hw_ip_pattgen_rtl_pattgen_sv:
+
+hw/ip/pattgen/rtl/pattgen.sv
+----------------------------
+
+Should be aligned?
+
+
+.. code-block:: diff
+
+   @@ -43,13 +43,10 @@
+        .reg2hw,
+        .hw2reg,
+        .intg_err_o(alerts[0]),
+   -    .devmode_i(1'b1)
+   +    .devmode_i (1'b1)
+      );
+    
+   -  assign alert_test = {
+   -    reg2hw.alert_test.q &
+   -    reg2hw.alert_test.qe
+   -  };
+   +  assign alert_test = {reg2hw.alert_test.q & reg2hw.alert_test.qe};
+    
+      for (genvar i = 0; i < NumAlerts; i++) begin : gen_alert_tx
+        prim_alert_sender #(
+   @@ -58,12 +55,12 @@
+        ) u_prim_alert_sender (
+          .clk_i,
+          .rst_ni,
+   -      .alert_test_i  ( alert_test[i] ),
+   -      .alert_req_i   ( alerts[0]     ),
+   -      .alert_ack_o   (               ),
+   -      .alert_state_o (               ),
+   -      .alert_rx_i    ( alert_rx_i[i] ),
+   -      .alert_tx_o    ( alert_tx_o[i] )
+   +      .alert_test_i (alert_test[i]),
+   +      .alert_req_i  (alerts[0]),
+   +      .alert_ack_o  (),
+   +      .alert_state_o(),
+   +      .alert_rx_i   (alert_rx_i[i]),
+   +      .alert_tx_o   (alert_tx_o[i])
+        );
+      end
+    
+
+.. _hw_ip_pwm_dv_env_seq_lib_pwm_common_vseq_sv:
+
+hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv
+-------------------------------------------
+
+Constraints, space around [:], bug?
+
+
+.. code-block:: diff
+
+   @@ -6,7 +6,7 @@
+      `uvm_object_utils(pwm_common_vseq)
+      `uvm_object_new
+    
+   -  constraint num_trans_c { num_trans inside {[1:2]}; }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+    
+      // for this vseq, $value$plusargs "+en_scb=0" is defined in pwm_sim_cfg.hjson
+      // disable pwm_monitor and pwm_scoreboard since they can not handle this test
+
+.. _hw_ip_pattgen_dv_env_seq_lib_pattgen_common_vseq_sv:
+
+hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv
+---------------------------------------------------
+
+Constraints, space around [:], bug?
+
+
+
+.. code-block:: diff
+
+   @@ -6,7 +6,7 @@
+      `uvm_object_utils(pattgen_common_vseq)
+      `uvm_object_new
+    
+   -  constraint num_trans_c { num_trans inside {[1:2]}; }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+    
+      // for this vseq, $value$plusargs "+en_scb=0" is defined in pattgen_sim_cfg.hjson
+      // disable pattgen_monitor and pattgen_scoreboard since they can not handle this test
+
+.. _hw_dv_sv_common_ifs_clk_if_sv:
+
+hw/dv/sv/common_ifs/clk_if.sv
+-----------------------------
+
+Always expand port list (interfaces too)?
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+    //
+    //------------------------------------------------------------------------------
+    
+   -interface clk_if(input logic clk);
+   +interface clk_if (
+   +  input logic clk
+   +);
+    
+      clocking cb @(posedge clk);
+      endclocking
+
+.. _hw_ip_tlul_generic_dv_tb_tb_sv:
+
+hw/ip/tlul/generic_dv/tb/tb.sv
+------------------------------
+
+
+
+
+.. code-block:: diff
+
+   @@ -12,7 +12,10 @@
+      wire clk, rst_n;
+      // reference clock for scb/seq and this clock isn't connected to any design clock
+      // TODO, reset is the combined all the resets. Re-visit this if partial reset is needed
+   -  clk_rst_if clk_rst_if(.clk(clk), .rst_n(rst_n));
+   +  clk_rst_if clk_rst_if (
+   +    .clk  (clk),
+   +    .rst_n(rst_n)
+   +  );
+    
+      // this file is auto-generated and the path to this file should be provided in xbar_*_sim.core
+      `include "tb__xbar_connect.sv"
+
+.. _hw_dv_sv_usb20_agent_seq_lib_usb20_base_seq_sv:
+
+hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv
+----------------------------------------------
+
+Alignment
+
+.. code-block:: diff
+
+   @@ -3,8 +3,8 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class usb20_base_seq extends dv_base_seq #(
+   -  .CFG_T       (usb20_agent_cfg),
+   -  .SEQUENCER_T (usb20_sequencer)
+   +  .CFG_T      (usb20_agent_cfg),
+   +  .SEQUENCER_T(usb20_sequencer)
+    );
+      `uvm_object_utils(usb20_base_seq)
+    
+
+.. _hw_ip_prim_rtl_prim_rom_pkg_sv:
+
+hw/ip/prim/rtl/prim_rom_pkg.sv
+------------------------------
+
+
+.. code-block:: diff
+
+   @@ -6,11 +6,11 @@
+    package prim_rom_pkg;
+    
+      typedef struct packed {
+   -    logic       cfg_en;
+   +    logic cfg_en;
+        logic [3:0] cfg;
+      } rom_cfg_t;
+    
+      parameter rom_cfg_t ROM_CFG_DEFAULT = '0;
+    
+   -endpackage // prim_rom_pkg
+   +endpackage  // prim_rom_pkg
+    
+
+.. _hw_ip_prim_rtl_prim_lc_sender_sv:
+
+hw/ip/prim/rtl/prim_lc_sender.sv
+--------------------------------
+
+
+.. code-block:: diff
+
+   @@ -26,8 +26,8 @@
+      ) u_prim_flop (
+        .clk_i,
+        .rst_ni,
+   -    .d_i   ( lc_en     ),
+   -    .q_o   ( lc_en_out )
+   +    .d_i(lc_en),
+   +    .q_o(lc_en_out)
+      );
+    
+      assign lc_en_o = lc_ctrl_pkg::lc_tx_t'(lc_en_out);
+
+.. _hw_ip_sram_ctrl_dv_env_sram_ctrl_env_pkg_sv:
+
+hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv
+-------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -24,8 +24,8 @@
+      `include "dv_macros.svh"
+    
+      // parameters
+   -  parameter string LIST_OF_ALERTS[] = { "fatal_intg_error", "fatal_parity_error"};
+   -  parameter uint   NUM_ALERTS = 2;
+   +  parameter string LIST_OF_ALERTS[] = {"fatal_intg_error", "fatal_parity_error"};
+   +  parameter uint NUM_ALERTS = 2;
+    
+      // Number of bits in the otp_ctrl_pkg::sram_otp_key_rsp_t struct:
+      // 1 bit for valid, SramKeyWidth bits for the key, SramNonceWidth bits for the nonce.
+
+.. _hw_dv_sv_usb20_agent_usb20_monitor_sv:
+
+hw/dv/sv/usb20_agent/usb20_monitor.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class usb20_monitor extends dv_base_monitor #(
+   -  .ITEM_T (usb20_item),
+   -  .CFG_T  (usb20_agent_cfg),
+   -  .COV_T  (usb20_agent_cov)
+   +  .ITEM_T(usb20_item),
+   +  .CFG_T (usb20_agent_cfg),
+   +  .COV_T (usb20_agent_cov)
+    );
+      `uvm_component_utils(usb20_monitor)
+    
+
+.. _hw_dv_sv_kmac_app_agent_kmac_app_sequencer_sv:
+
+hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,12 +3,12 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class kmac_app_sequencer extends dv_base_sequencer #(
+   -    .ITEM_T (kmac_app_item),
+   -    .CFG_T  (kmac_app_agent_cfg)
+   +  .ITEM_T(kmac_app_item),
+   +  .CFG_T (kmac_app_agent_cfg)
+    );
+      `uvm_component_param_utils(kmac_app_sequencer)
+    
+   -  push_pull_sequencer#(`CONNECT_DATA_WIDTH) m_push_pull_sequencer;
+   +  push_pull_sequencer #(`CONNECT_DATA_WIDTH) m_push_pull_sequencer;
+    
+      `uvm_component_new
+    
+
+.. _hw_ip_prim_rtl_prim_ram_1p_pkg_sv:
+
+hw/ip/prim/rtl/prim_ram_1p_pkg.sv
+---------------------------------
+
+
+
+
+
+.. code-block:: diff
+
+   @@ -6,16 +6,16 @@
+    package prim_ram_1p_pkg;
+    
+      typedef struct packed {
+   -    logic       cfg_en;
+   +    logic cfg_en;
+        logic [3:0] cfg;
+      } cfg_t;
+    
+      typedef struct packed {
+        cfg_t ram_cfg;  // configuration for ram
+   -    cfg_t rf_cfg;   // configuration for regfile
+   +    cfg_t rf_cfg;  // configuration for regfile
+      } ram_1p_cfg_t;
+    
+      parameter ram_1p_cfg_t RAM_1P_CFG_DEFAULT = '0;
+    
+   -endpackage // prim_ram_1p_pkg
+   +endpackage  // prim_ram_1p_pkg
+    
+
+.. _hw_ip_edn_dv_env_edn_env_cov_sv:
+
+hw/ip/edn/dv/env/edn_env_cov.sv
+-------------------------------
+
+Should that be expanded?
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class edn_env_cov extends cip_base_env_cov #(.CFG_T(edn_env_cfg));
+   +class edn_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(edn_env_cfg)
+   +);
+      `uvm_component_utils(edn_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_usbdev_dv_env_usbdev_env_cov_sv:
+
+hw/ip/usbdev/dv/env/usbdev_env_cov.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class usbdev_env_cov extends cip_base_env_cov #(.CFG_T(usbdev_env_cfg));
+   +class usbdev_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(usbdev_env_cfg)
+   +);
+      `uvm_component_utils(usbdev_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_flash_ctrl_dv_env_flash_ctrl_env_cov_sv:
+
+hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class flash_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(flash_ctrl_env_cfg));
+   +class flash_ctrl_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(flash_ctrl_env_cfg)
+   +);
+      `uvm_component_utils(flash_ctrl_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_aon_timer_dv_env_aon_timer_env_cov_sv:
+
+hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv
+-------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class aon_timer_env_cov extends cip_base_env_cov #(.CFG_T(aon_timer_env_cfg));
+   +class aon_timer_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(aon_timer_env_cfg)
+   +);
+      `uvm_component_utils(aon_timer_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_clkmgr_dv_env_clkmgr_env_cfg_sv:
+
+hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_dv_sv_pwm_agent_pwm_driver_sv:
+
+hw/dv/sv/pwm_agent/pwm_driver.sv
+--------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,8 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class pwm_driver extends dv_base_driver #(.ITEM_T(pwm_item),
+   -                                          .CFG_T (pwm_agent_cfg));
+   +class pwm_driver extends dv_base_driver #(
+   +  .ITEM_T(pwm_item),
+   +  .CFG_T (pwm_agent_cfg)
+   +);
+      `uvm_component_utils(pwm_driver)
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_tl_agent_dv_tests_tl_agent_base_test_sv:
+
+hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv
+------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class tl_agent_base_test extends dv_base_test #(.ENV_T(tl_agent_env), .CFG_T(tl_agent_env_cfg));
+   +class tl_agent_base_test extends dv_base_test #(
+   +  .ENV_T(tl_agent_env),
+   +  .CFG_T(tl_agent_env_cfg)
+   +);
+      `uvm_component_utils(tl_agent_base_test)
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_tl_agent_dv_env_tl_agent_virtual_sequencer_sv:
+
+hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv
+------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,8 +5,10 @@
+    // ---------------------------------------------
+    // tl_agent environment virtual sequencer
+    // ---------------------------------------------
+   -class tl_agent_virtual_sequencer extends dv_base_virtual_sequencer #(.CFG_T(tl_agent_env_cfg),
+   -                                                                     .COV_T(tl_agent_env_cov));
+   +class tl_agent_virtual_sequencer extends dv_base_virtual_sequencer #(
+   +  .CFG_T(tl_agent_env_cfg),
+   +  .COV_T(tl_agent_env_cov)
+   +);
+    
+      tl_sequencer host_seqr;
+      tl_sequencer device_seqr;
+
+.. _hw_dv_sv_kmac_app_agent_kmac_app_driver_sv:
+
+hw/dv/sv/kmac_app_agent/kmac_app_driver.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,8 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class kmac_app_driver extends dv_base_driver #(.ITEM_T(kmac_app_item),
+   -                                                  .CFG_T (kmac_app_agent_cfg));
+   +class kmac_app_driver extends dv_base_driver #(
+   +  .ITEM_T(kmac_app_item),
+   +  .CFG_T (kmac_app_agent_cfg)
+   +);
+      `uvm_component_utils(kmac_app_driver)
+    
+      `uvm_component_new
+
+.. _hw_dv_sv_csrng_agent_csrng_driver_sv:
+
+hw/dv/sv/csrng_agent/csrng_driver.sv
+------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,8 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class csrng_driver extends dv_base_driver #(.ITEM_T(csrng_item),
+   -                                            .CFG_T (csrng_agent_cfg));
+   +class csrng_driver extends dv_base_driver #(
+   +  .ITEM_T(csrng_item),
+   +  .CFG_T (csrng_agent_cfg)
+   +);
+      `uvm_component_utils(csrng_driver)
+    
+      `uvm_component_new
+
+.. _hw_ip_flash_ctrl_dv_tests_flash_ctrl_base_test_sv:
+
+hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class flash_ctrl_base_test extends cip_base_test #(
+   -    .CFG_T(flash_ctrl_env_cfg),
+   -    .ENV_T(flash_ctrl_env)
+   -  );
+   +  .CFG_T(flash_ctrl_env_cfg),
+   +  .ENV_T(flash_ctrl_env)
+   +);
+    
+      `uvm_component_utils(flash_ctrl_base_test)
+      `uvm_component_new
+
+.. _hw_ip_flash_ctrl_dv_env_flash_ctrl_virtual_sequencer_sv:
+
+hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv
+-------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class flash_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(flash_ctrl_env_cfg),
+   -    .COV_T(flash_ctrl_env_cov)
+   -  );
+   +  .CFG_T(flash_ctrl_env_cfg),
+   +  .COV_T(flash_ctrl_env_cov)
+   +);
+      `uvm_component_utils(flash_ctrl_virtual_sequencer)
+    
+      tl_sequencer eflash_tl_sequencer_h;
+
+.. _hw_ip_aon_timer_dv_tests_aon_timer_base_test_sv:
+
+hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class aon_timer_base_test extends cip_base_test #(
+   -    .CFG_T(aon_timer_env_cfg),
+   -    .ENV_T(aon_timer_env)
+   -  );
+   +  .CFG_T(aon_timer_env_cfg),
+   +  .ENV_T(aon_timer_env)
+   +);
+    
+      `uvm_component_utils(aon_timer_base_test)
+      `uvm_component_new
+
+.. _hw_ip_aon_timer_dv_env_aon_timer_virtual_sequencer_sv:
+
+hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv
+-----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class aon_timer_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(aon_timer_env_cfg),
+   -    .COV_T(aon_timer_env_cov)
+   -  );
+   +  .CFG_T(aon_timer_env_cfg),
+   +  .COV_T(aon_timer_env_cov)
+   +);
+      `uvm_component_utils(aon_timer_virtual_sequencer)
+    
+    
+
+.. _hw_ip_sram_ctrl_dv_tests_sram_ctrl_base_test_sv:
+
+hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class sram_ctrl_base_test extends cip_base_test #(
+   -    .CFG_T(sram_ctrl_env_cfg),
+   -    .ENV_T(sram_ctrl_env)
+   -  );
+   +  .CFG_T(sram_ctrl_env_cfg),
+   +  .ENV_T(sram_ctrl_env)
+   +);
+    
+      `uvm_component_utils(sram_ctrl_base_test)
+      `uvm_component_new
+
+.. _hw_ip_sram_ctrl_dv_env_sram_ctrl_virtual_sequencer_sv:
+
+hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv
+-----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class sram_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(sram_ctrl_env_cfg),
+   -    .COV_T(sram_ctrl_env_cov)
+   -  );
+   +  .CFG_T(sram_ctrl_env_cfg),
+   +  .COV_T(sram_ctrl_env_cov)
+   +);
+      `uvm_component_utils(sram_ctrl_virtual_sequencer)
+    
+      tl_sequencer sram_tl_sequencer_h;
+
+.. _hw_ip_clkmgr_dv_tests_clkmgr_base_test_sv:
+
+hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_clkmgr_dv_env_clkmgr_virtual_sequencer_sv:
+
+hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_tlul_generic_dv_env_xbar_virtual_sequencer_sv:
+
+hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv
+---------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,8 +5,10 @@
+    // ---------------------------------------------
+    // Xbar environment virtual sequencer
+    // ---------------------------------------------
+   -class xbar_virtual_sequencer extends dv_base_virtual_sequencer #(.CFG_T(xbar_env_cfg),
+   -                                                                 .COV_T(xbar_env_cov));
+   +class xbar_virtual_sequencer extends dv_base_virtual_sequencer #(
+   +  .CFG_T(xbar_env_cfg),
+   +  .COV_T(xbar_env_cov)
+   +);
+    
+      tl_sequencer host_seqr[];
+      tl_sequencer device_seqr[];
+
+.. _hw_ip_otbn_dv_uvm_tests_otbn_base_test_sv:
+
+hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class otbn_base_test extends cip_base_test #(
+   -    .CFG_T(otbn_env_cfg),
+   -    .ENV_T(otbn_env)
+   -  );
+   +  .CFG_T(otbn_env_cfg),
+   +  .ENV_T(otbn_env)
+   +);
+    
+      `uvm_component_utils(otbn_base_test)
+      `uvm_component_new
+
+.. _hw_ip_otbn_dv_uvm_env_otbn_virtual_sequencer_sv:
+
+hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class otbn_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(otbn_env_cfg),
+   -    .COV_T(otbn_env_cov)
+   -  );
+   +  .CFG_T(otbn_env_cfg),
+   +  .COV_T(otbn_env_cov)
+   +);
+      `uvm_component_utils(otbn_virtual_sequencer)
+      `uvm_component_new
+    
+
+.. _hw_ip_rom_ctrl_dv_tests_rom_ctrl_base_test_sv:
+
+hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class rom_ctrl_base_test extends cip_base_test #(
+   -    .CFG_T(rom_ctrl_env_cfg),
+   -    .ENV_T(rom_ctrl_env)
+   -  );
+   +  .CFG_T(rom_ctrl_env_cfg),
+   +  .ENV_T(rom_ctrl_env)
+   +);
+    
+      `uvm_component_utils(rom_ctrl_base_test)
+      `uvm_component_new
+
+.. _hw_ip_rom_ctrl_dv_env_rom_ctrl_virtual_sequencer_sv:
+
+hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv
+---------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class rom_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(rom_ctrl_env_cfg),
+   -    .COV_T(rom_ctrl_env_cov)
+   -  );
+   +  .CFG_T(rom_ctrl_env_cfg),
+   +  .COV_T(rom_ctrl_env_cov)
+   +);
+      `uvm_component_utils(rom_ctrl_virtual_sequencer)
+    
+      kmac_app_sequencer kmac_sequencer_h;
+
+.. _hw_ip_lc_ctrl_dv_tests_lc_ctrl_base_test_sv:
+
+hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv
+-------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class lc_ctrl_base_test extends cip_base_test #(
+   -    .CFG_T(lc_ctrl_env_cfg),
+   -    .ENV_T(lc_ctrl_env)
+   -  );
+   +  .CFG_T(lc_ctrl_env_cfg),
+   +  .ENV_T(lc_ctrl_env)
+   +);
+    
+      `uvm_component_utils(lc_ctrl_base_test)
+      `uvm_component_new
+
+.. _hw_ip_aes_dv_env_aes_virtual_sequencer_sv:
+
+hw/ip/aes/dv/env/aes_virtual_sequencer.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,8 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class aes_virtual_sequencer extends cip_base_virtual_sequencer #(.CFG_T(aes_env_cfg),
+   -                                                                 .COV_T(aes_env_cov));
+   +class aes_virtual_sequencer extends cip_base_virtual_sequencer #(
+   +  .CFG_T(aes_env_cfg),
+   +  .COV_T(aes_env_cov)
+   +);
+    
+      `uvm_component_utils(aes_virtual_sequencer)
+    
+
+.. _hw_ip_pattgen_dv_env_pattgen_virtual_sequencer_sv:
+
+hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pattgen_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(pattgen_env_cfg),
+   -    .COV_T(pattgen_env_cov)
+   -  );
+   +  .CFG_T(pattgen_env_cfg),
+   +  .COV_T(pattgen_env_cov)
+   +);
+      `uvm_component_utils(pattgen_virtual_sequencer)
+      `uvm_component_new
+    
+
+.. _hw_ip_pwrmgr_dv_tests_pwrmgr_base_test_sv:
+
+hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_pwrmgr_dv_env_pwrmgr_virtual_sequencer_sv:
+
+hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_kmac_dv_tests_kmac_base_test_sv:
+
+hw/ip/kmac/dv/tests/kmac_base_test.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class kmac_base_test extends cip_base_test #(
+   -    .CFG_T(kmac_env_cfg),
+   -    .ENV_T(kmac_env)
+   -  );
+   +  .CFG_T(kmac_env_cfg),
+   +  .ENV_T(kmac_env)
+   +);
+    
+      `uvm_component_utils(kmac_base_test)
+      `uvm_component_new
+
+.. _hw_ip_kmac_dv_env_kmac_virtual_sequencer_sv:
+
+hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv
+-------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -3,9 +3,9 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class kmac_virtual_sequencer extends cip_base_virtual_sequencer #(
+   -    .CFG_T(kmac_env_cfg),
+   -    .COV_T(kmac_env_cov)
+   -  );
+   +  .CFG_T(kmac_env_cfg),
+   +  .COV_T(kmac_env_cov)
+   +);
+      `uvm_component_utils(kmac_virtual_sequencer)
+    
+      `uvm_component_new
+
+.. _hw_ip_hmac_dv_tests_hmac_base_test_sv:
+
+hw/ip/hmac/dv/tests/hmac_base_test.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,8 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class hmac_base_test extends cip_base_test #(.ENV_T(hmac_env),
+   -                                             .CFG_T(hmac_env_cfg));
+   +class hmac_base_test extends cip_base_test #(
+   +  .ENV_T(hmac_env),
+   +  .CFG_T(hmac_env_cfg)
+   +);
+      `uvm_component_utils(hmac_base_test)
+      `uvm_component_new
+    
+
+.. _hw_dv_sv_jtag_riscv_agent_jtag_riscv_monitor_sv:
+
+hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv
+-----------------------------------------------
+
+
+
+
+
+.. code-block:: diff
+
+   @@ -3,10 +3,10 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class jtag_riscv_monitor extends dv_base_monitor #(
+   -    .ITEM_T (jtag_riscv_item),
+   -    .CFG_T  (jtag_riscv_agent_cfg),
+   -    .COV_T  (jtag_riscv_agent_cov)
+   -  );
+   +  .ITEM_T(jtag_riscv_item),
+   +  .CFG_T (jtag_riscv_agent_cfg),
+   +  .COV_T (jtag_riscv_agent_cov)
+   +);
+      `uvm_component_utils(jtag_riscv_monitor)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_edn_dv_env_seq_lib_edn_common_vseq_sv:
+
+hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv
+-------------------------------------------
+
+Constraints...
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class edn_common_vseq extends edn_base_vseq;
+      `uvm_object_utils(edn_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task pre_start();
+
+.. _hw_ip_usbdev_dv_env_seq_lib_usbdev_common_vseq_sv:
+
+hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class usbdev_common_vseq extends usbdev_base_vseq;
+      `uvm_object_utils(usbdev_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      task pre_start();
+
+.. _hw_ip_aon_timer_dv_env_seq_lib_aon_timer_common_vseq_sv:
+
+hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv
+-------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class aon_timer_common_vseq extends aon_timer_base_vseq;
+      `uvm_object_utils(aon_timer_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task body();
+
+.. _hw_ip_sram_ctrl_dv_env_seq_lib_sram_ctrl_common_vseq_sv:
+
+hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv
+-------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class sram_ctrl_common_vseq extends sram_ctrl_base_vseq;
+      `uvm_object_utils(sram_ctrl_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task pre_start();
+
+.. _hw_ip_clkmgr_dv_env_seq_lib_clkmgr_common_vseq_sv:
+
+hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_otbn_dv_uvm_env_seq_lib_otbn_common_vseq_sv:
+
+hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class otbn_common_vseq extends otbn_base_vseq;
+      `uvm_object_utils(otbn_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task body();
+
+.. _hw_ip_otp_ctrl_dv_env_seq_lib_otp_ctrl_macro_errs_vseq_sv:
+
+hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv
+---------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -10,9 +10,7 @@
+    
+      `uvm_object_new
+    
+   -  constraint ecc_otp_err_c {
+   -    ecc_otp_err inside {OtpEccCorrErr, OtpEccUncorrErr};
+   -  }
+   +  constraint ecc_otp_err_c {ecc_otp_err inside {OtpEccCorrErr, OtpEccUncorrErr};}
+    
+    endclass
+    
+
+.. _hw_ip_rom_ctrl_dv_env_seq_lib_rom_ctrl_smoke_vseq_sv:
+
+hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv
+----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -11,9 +11,7 @@
+      // Indicates the number of memory accesses to be performed
+      rand int num_mem_reads;
+    
+   -  constraint num_mem_reads_c {
+   -    num_mem_reads inside {[20 : 50]};
+   -  }
+   +  constraint num_mem_reads_c {num_mem_reads inside {[20 : 50]};}
+    
+      task body();
+        `DV_CHECK_MEMBER_RANDOMIZE_FATAL(num_mem_reads)
+
+.. _hw_ip_rom_ctrl_dv_env_seq_lib_rom_ctrl_common_vseq_sv:
+
+hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv
+-----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class rom_ctrl_common_vseq extends rom_ctrl_base_vseq;
+      `uvm_object_utils(rom_ctrl_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task body();
+
+.. _hw_ip_lc_ctrl_dv_env_seq_lib_lc_ctrl_common_vseq_sv:
+
+hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv
+---------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class lc_ctrl_common_vseq extends lc_ctrl_base_vseq;
+      `uvm_object_utils(lc_ctrl_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task body();
+
+.. _hw_ip_pwrmgr_dv_env_seq_lib_pwrmgr_common_vseq_sv:
+
+hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv
+-------------------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_adc_ctrl_dv_env_seq_lib_adc_ctrl_common_vseq_sv:
+
+hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv
+-----------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class adc_ctrl_common_vseq extends adc_ctrl_base_vseq;
+      `uvm_object_utils(adc_ctrl_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task body();
+
+.. _hw_ip_kmac_dv_env_seq_lib_kmac_common_vseq_sv:
+
+hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -5,9 +5,7 @@
+    class kmac_common_vseq extends kmac_base_vseq;
+      `uvm_object_utils(kmac_common_vseq)
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:2]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 2]};}
+      `uvm_object_new
+    
+      virtual task pre_start();
+
+.. _hw_ip_hmac_dv_env_seq_lib_hmac_common_vseq_sv:
+
+hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -6,9 +6,7 @@
+      `uvm_object_utils(hmac_common_vseq)
+      `uvm_object_new
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:3]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 3]};}
+    
+      virtual task pre_start();
+        do_hmac_init = 1'b0;
+
+.. _hw_ip_gpio_dv_env_seq_lib_gpio_common_vseq_sv:
+
+hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv
+---------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -6,16 +6,14 @@
+      `uvm_object_utils(gpio_common_vseq)
+      `uvm_object_new
+    
+   -  constraint num_trans_c {
+   -    num_trans inside {[1:3]};
+   -  }
+   +  constraint num_trans_c {num_trans inside {[1 : 3]};}
+    
+      virtual task dut_init(string reset_kind = "HARD");
+        // Implement gpio pulldown for csr tests for avoiding comparison
+        // mismatch for DATA_IN register checks
+        set_gpio_pulls(.pu(1'b0), .pd(1'b1));
+        super.dut_init(reset_kind);
+   -  endtask: dut_init
+   +  endtask : dut_init
+    
+      virtual task body();
+        run_common_vseq_wrapper(num_trans);
+
+.. _hw_ip_lc_ctrl_dv_env_seq_lib_lc_ctrl_prog_failure_vseq_sv:
+
+hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv
+---------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,15 +9,13 @@
+    
+      `uvm_object_new
+    
+   -  constraint otp_prog_err_c {
+   -    otp_prog_err == 1;
+   -  }
+   +  constraint otp_prog_err_c {otp_prog_err == 1;}
+    
+      virtual task post_start();
+        // trigger dut_init to make sure always on alert is not firing forever
+        if (do_apply_reset) begin
+          dut_init();
+   -    end else wait(0); // wait until upper seq resets and kills this seq
+   +    end else wait(0);  // wait until upper seq resets and kills this seq
+    
+        // delay to avoid race condition when sending item and checking no item after reset occur
+        // at the same time
+
+.. _hw_dv_sv_uart_agent_seq_lib_uart_default_seq_sv:
+
+hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -6,12 +6,8 @@
+    class uart_default_seq extends uart_seq;
+      `uvm_object_utils(uart_default_seq)
+    
+   -  constraint parity_err_c {
+   -    parity_err == 0;
+   -  }
+   -  constraint frame_err_c {
+   -    frame_err == 0;
+   -  }
+   +  constraint parity_err_c {parity_err == 0;}
+   +  constraint frame_err_c {frame_err == 0;}
+    
+      `uvm_object_new
+    
+
+.. _hw_ip_kmac_dv_env_seq_lib_kmac_sideload_vseq_sv:
+
+hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv
+-----------------------------------------------
+
+
+
+
+
+.. code-block:: diff
+
+   @@ -10,13 +10,9 @@
+    
+      // We want a shorter message than the base long_msg test,
+      // but still somewhat long
+   -  constraint msg_c {
+   -    msg.size() inside {[0 : 1000]};
+   -  }
+   +  constraint msg_c {msg.size() inside {[0 : 1000]};}
+    
+   -  constraint en_sideload_c {
+   -    en_sideload == 1;
+   -  }
+   +  constraint en_sideload_c {en_sideload == 1;}
+    
+    endclass
+    
+
+.. _hw_dv_sv_jtag_riscv_agent_jtag_riscv_sequencer_sv:
+
+hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv
+-------------------------------------------------
+
+Should be formatted same way as module?
+
+.. note::
+   Corresponding style rules:
+   https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+
+.. code-block:: diff
+
+   @@ -3,8 +3,8 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class jtag_riscv_sequencer extends dv_base_sequencer #(
+   -    .ITEM_T (jtag_riscv_item),
+   -    .CFG_T  (jtag_riscv_agent_cfg)
+   +  .ITEM_T(jtag_riscv_item),
+   +  .CFG_T (jtag_riscv_agent_cfg)
+    );
+      `uvm_component_utils(jtag_riscv_sequencer)
+    
+
+.. _hw_ip_otbn_dv_uvm_env_otbn_env_cfg_sv:
+
+hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,9 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class otbn_env_cfg extends cip_base_env_cfg #(.RAL_T(otbn_reg_block));
+   +class otbn_env_cfg extends cip_base_env_cfg #(
+   +  .RAL_T(otbn_reg_block)
+   +);
+    
+      // ext component cfgs
+      rand otbn_model_agent_cfg model_agent_cfg;
+   @@ -21,23 +23,23 @@
+    
+      // The directory in which to look for ELF files (set by the test in build_phase; controlled by the
+      // +otbn_elf_dir plusarg).
+   -  string otbn_elf_dir;
+   +  string                     otbn_elf_dir;
+    
+      // An OtbnMemUtil handle for loading ELF files (set by the test in build_phase)
+   -  chandle mem_util;
+   +  chandle                    mem_util;
+    
+      // What fraction of the time should sequences use a back-door method to load up the ELF, rather
+      // than generating memory transactions?
+   -  int unsigned backdoor_load_pct = 50;
+   +  int unsigned               backdoor_load_pct  = 50;
+    
+      // The hierarchical scope of the DUT instance in the testbench. This is used when constructing the
+      // DPI wrapper (in otbn_env::build_phase) to tell it where to find the DUT for backdoor loading
+      // memories. The default value matches the block-level testbench, but it can be overridden in a
+      // test class for e.g. system level tests.
+   -  string dut_instance_hier = "tb.dut";
+   +  string                     dut_instance_hier  = "tb.dut";
+    
+      // Copied from dv_base_agent_cfg so that we can use a monitor without defining a separate agent.
+   -  int ok_to_end_delay_ns = 1000;
+   +  int                        ok_to_end_delay_ns = 1000;
+    
+      function void initialize(bit [31:0] csr_base_addr = '1);
+        // Tell the CIP base code not to look for a "devmode" interface. OTBN doesn't have one.
+
+.. _hw_ip_rom_ctrl_dv_env_rom_ctrl_env_cov_sv:
+
+hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv
+-----------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class rom_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(rom_ctrl_env_cfg));
+   +class rom_ctrl_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(rom_ctrl_env_cfg)
+   +);
+      `uvm_component_utils(rom_ctrl_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_lc_ctrl_dv_env_lc_ctrl_env_cov_sv:
+
+hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class lc_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(lc_ctrl_env_cfg));
+   +class lc_ctrl_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(lc_ctrl_env_cfg)
+   +);
+      `uvm_component_utils(lc_ctrl_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_aes_dv_env_aes_env_cov_sv:
+
+hw/ip/aes/dv/env/aes_env_cov.sv
+-------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,9 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class aes_env_cov extends cip_base_env_cov #(.CFG_T(aes_env_cfg));
+   +class aes_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(aes_env_cfg)
+   +);
+      `uvm_component_utils(aes_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_pattgen_dv_env_pattgen_env_cov_sv:
+
+hw/ip/pattgen/dv/env/pattgen_env_cov.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -8,7 +8,9 @@
+     * Covergroups may also be wrapped inside helper classes if needed.
+     */
+    
+   -class pattgen_env_cov extends cip_base_env_cov #(.CFG_T(pattgen_env_cfg));
+   +class pattgen_env_cov extends cip_base_env_cov #(
+   +  .CFG_T(pattgen_env_cfg)
+   +);
+      `uvm_component_utils(pattgen_env_cov)
+    
+      // the base class provides the following handles for use:
+
+.. _hw_ip_pwrmgr_dv_env_pwrmgr_env_cfg_sv:
+
+hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_pwrmgr_dv_env_pwrmgr_env_cov_sv:
+
+hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv
+-------------------------------------
+
+
+.. code-block:: diff
+
+
+.. _hw_ip_kmac_dv_env_kmac_env_cov_sv:
+
+hw/ip/kmac/dv/env/kmac_env_cov.sv
+---------------------------------
+
+
+.. _hw_ip_hmac_dv_env_hmac_env_cfg_sv:
+
+hw/ip/hmac/dv/env/hmac_env_cfg.sv
+---------------------------------
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,9 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class hmac_env_cfg extends cip_base_env_cfg #(.RAL_T(hmac_reg_block));
+   +class hmac_env_cfg extends cip_base_env_cfg #(
+   +  .RAL_T(hmac_reg_block)
+   +);
+    
+      `uvm_object_utils(hmac_env_cfg)
+      `uvm_object_new
+
+.. _hw_ip_rom_ctrl_dv_env_rom_ctrl_env_cfg_sv:
+
+hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv
+-----------------------------------------
+
+
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,9 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class rom_ctrl_env_cfg extends cip_base_env_cfg #(.RAL_T(rom_ctrl_regs_reg_block));
+   +class rom_ctrl_env_cfg extends cip_base_env_cfg #(
+   +  .RAL_T(rom_ctrl_regs_reg_block)
+   +);
+    
+      // ext component cfgs
+      kmac_app_agent_cfg m_kmac_agent_cfg;
+
+.. _hw_dv_sv_kmac_app_agent_seq_lib_kmac_app_host_seq_sv:
+
+hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv
+----------------------------------------------------
+
+Spaces around dimensions?
+
+
+
+.. code-block:: diff
+
+   @@ -33,15 +33,15 @@
+          bit req_last = 0;
+    
+          // create push_pull_host_seq
+   -      push_pull_host_seq#(`CONNECT_DATA_WIDTH) host_seq;
+   +      push_pull_host_seq #(`CONNECT_DATA_WIDTH) host_seq;
+          `uvm_create_on(host_seq, p_sequencer.m_push_pull_sequencer);
+          `DV_CHECK_RANDOMIZE_FATAL(host_seq)
+    
+          // Assemble the message chunk and strb
+   -      for (int i = 0; i < KmacDataIfWidth / 8; i ++) begin
+   +      for (int i = 0; i < KmacDataIfWidth / 8; i++) begin
+            if (msg_size_bytes == 0) break;
+    
+   -        req_data[i*8 +: 8] = 8'(req.byte_data_q.pop_front());
+   +        req_data[i*8+:8] = 8'(req.byte_data_q.pop_front());
+    
+            req_strb[i] = 1'b1;
+    
+

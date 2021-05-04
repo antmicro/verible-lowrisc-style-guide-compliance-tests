@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Contents &mdash; Verible status report  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OpenTitan formatting status" href="ot.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Verible status report
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">LowRISC style compliance report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_confirmed.html">Correct formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_bugs.html">Incorrect formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_unconfirmed.html">Unconfirmed formatting (119 entries)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Verible status report</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Contents</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generated on Thu Aug  5 10:57:50 2021 UTC <br /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verible version:
+v0.0-1213-g9e5c085b <br />
+Commit       2021-05-04 <br />
+Built        2021-06-17T12:11:44Z <br /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OpenTitan info: <br />
+Commit: 8551f3fd98628a37451f9fd4acf3728b85b6c814 <br />
+Commited date: Thu Aug  5 10:45:22 2021 <br />
+Authored date: Tue Aug  3 16:33:27 2021 <br /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Style Tester (Verible) version:
+v0.0-1046-g7411001 <br />
+Commit       2021-04-08 <br />
+Built        2021-04-11T10:48:58Z <br /></p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otfs.html">OpenTitan fileset (1449 entries)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="allow.html">Verible-formatted fileset (202 entries)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wip.html">Work-In-Progress list (244 entries)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autogen.html">Auto-generated (skipped) (2 entries)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="todo.html">OpenTitan TODO list (980 entries)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">LowRISC style compliance report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="style.html#constraint-blocks">Constraint blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#expand-expression-containing-brackets-if-statement">Expand expression containing brackets (if-statement)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#expand-expression-containing-brackets">Expand expression containing brackets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#expand-blocks-with-two-or-more-expressions-two-statements">Expand blocks with two or more expressions (two statements)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#compact-constraint-blocks-with-one-expression">Compact constraint blocks with one expression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#compact-blocks-with-one-expression-column-limited-to-40">Compact blocks with one expression (column limited to 40)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#compact-blocks-with-one-expression-function-call">Compact blocks with one expression (function call)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#compact-blocks-with-one-expression">Compact blocks with one expression</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#functional-coverage">Functional coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#import-declarations">Import declarations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#id1">Import declarations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#continuous-assignments">Continuous assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#continuous-assignment-should-be-in-one-line-if-fits">Continuous assignment should be in one line (if fits)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#continuous-assignment-column-limited-to-40">Continuous assignment (column limited to 40)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#module-declaration">Module declaration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#module-parameters">Module parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#module-port-list">Module port list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="style.html#module-with-ports-and-parameters">Module with ports and parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#binary-operators">Binary operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#id2">Binary operators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#ternary-operators">Ternary operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#labels">Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#when-labeling-code-blocks-add-one-space-before-and-after-the-colon">When labeling code blocks, add one space before and after the colon.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#line-wrapping">Line wrapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="style.html#open-syntax-characters-such-as-or-that-end-one-line-of-a-multi-line-expression-should-be-terminated-with-close-characters-on-their-own-line">Open syntax characters such as { or ( that end one line of a multi-line expression should be terminated with close characters (}, )) on their own line.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#nested-function-calls">Nested function calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#alignment">Alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_confirmed.html">Correct formatting (39 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-cip-lib-cip-macros-svh">hw/dv/sv/cip_lib/cip_macros.svh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-pwm-agent-pwm-agent-cfg-sv">hw/dv/sv/pwm_agent/pwm_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-generic-rtl-prim-generic-clock-buf-sv">hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-otbn-dv-memutil-otbn-memutil-pkg-sv">hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-cip-lib-cip-base-pkg-sv">hw/dv/sv/cip_lib/cip_base_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-generic-rtl-prim-generic-clock-mux2-sv">hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-pattgen-agent-pattgen-item-sv">hw/dv/sv/pattgen_agent/pattgen_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-pwm-agent-pwm-item-sv">hw/dv/sv/pwm_agent/pwm_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-csrng-agent-csrng-agent-cov-sv">hw/dv/sv/csrng_agent/csrng_agent_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-uart-agent-uart-sequencer-sv">hw/dv/sv/uart_agent/uart_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-single-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-dv-sv-tl-agent-tl-sequencer-sv">hw/dv/sv/tl_agent/tl_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-39-32-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-22-16-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-64-57-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-72-64-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-28-22-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-hamming-22-16-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-72-64-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-hamming-39-32-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-64-57-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-hamming-72-64-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-39-32-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-28-22-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-fpv-vip-prim-secded-22-16-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-hamming-72-64-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-64-57-dec-sv">hw/ip/prim/rtl/prim_secded_64_57_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-72-64-dec-sv">hw/ip/prim/rtl/prim_secded_72_64_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-39-32-dec-sv">hw/ip/prim/rtl/prim_secded_39_32_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-22-16-dec-sv">hw/ip/prim/rtl/prim_secded_22_16_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-hamming-39-32-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-28-22-dec-sv">hw/ip/prim/rtl/prim_secded_28_22_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-secded-hamming-22-16-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-otbn-dv-uvm-otbn-trace-uvm-injector-sv">hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-subreg-ext-sv">hw/ip/prim/rtl/prim_subreg_ext.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_confirmed.html#hw-ip-prim-rtl-prim-msb-extend-sv">hw/ip/prim/rtl/prim_msb_extend.sv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-cip-lib-seq-lib-cip-base-vseq-sv">hw/dv/sv/cip_lib/seq_lib/cip_base_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-cip-lib-seq-lib-cip-base-vseq-tl-errors-svh">hw/dv/sv/cip_lib/seq_lib/cip_base_vseq__tl_errors.svh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-mem-bkdr-util-mem-bkdr-util-rom-sv">hw/dv/sv/mem_bkdr_util/mem_bkdr_util__rom.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-mem-bkdr-util-mem-bkdr-util-otp-sv">hw/dv/sv/mem_bkdr_util/mem_bkdr_util__otp.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-mem-bkdr-util-mem-bkdr-util-sram-sv">hw/dv/sv/mem_bkdr_util/mem_bkdr_util__sram.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-dv-sv-tl-agent-tl-seq-item-sv">hw/dv/sv/tl_agent/tl_seq_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-edn-dv-env-edn-env-cfg-sv">hw/ip/edn/dv/env/edn_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-flash-ctrl-dv-env-seq-lib-flash-ctrl-base-vseq-sv">hw/ip/flash_ctrl/dv/env/seq_lib/flash_ctrl_base_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-gpio-dv-env-gpio-scoreboard-sv">hw/ip/gpio/dv/env/gpio_scoreboard.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-rv-timer-dv-env-rv-timer-scoreboard-sv">hw/ip/rv_timer/dv/env/rv_timer_scoreboard.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-rv-timer-dv-env-seq-lib-rv-timer-base-vseq-sv">hw/ip/rv_timer/dv/env/seq_lib/rv_timer_base_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-otp-ctrl-dv-tb-sv">hw/ip/otp_ctrl/dv/tb.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-otp-ctrl-dv-env-otp-ctrl-env-sv">hw/ip/otp_ctrl/dv/env/otp_ctrl_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-otp-ctrl-dv-env-otp-ctrl-scoreboard-sv">hw/ip/otp_ctrl/dv/env/otp_ctrl_scoreboard.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-otp-ctrl-dv-env-otp-ctrl-if-sv">hw/ip/otp_ctrl/dv/env/otp_ctrl_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-lc-ctrl-dv-tb-sv">hw/ip/lc_ctrl/dv/tb.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-lc-ctrl-dv-env-lc-ctrl-scoreboard-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_scoreboard.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-lc-ctrl-dv-env-lc-ctrl-env-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-spi-device-rtl-spi-device-sv">hw/ip/spi_device/rtl/spi_device.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-uart-dv-env-seq-lib-uart-base-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_base_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-pinmux-rtl-pinmux-wkup-sv">hw/ip/pinmux/rtl/pinmux_wkup.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-kmac-dv-env-kmac-env-cov-sv">hw/ip/kmac/dv/env/kmac_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-kmac-dv-env-kmac-scoreboard-sv">hw/ip/kmac/dv/env/kmac_scoreboard.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html#hw-ip-keymgr-dv-env-keymgr-scoreboard-sv">hw/ip/keymgr/dv/env/keymgr_scoreboard.sv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examined_bugs.html">Incorrect formatting (39 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-kmac-app-agent-kmac-app-device-driver-sv">hw/dv/sv/kmac_app_agent/kmac_app_device_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-kmac-dv-env-seq-lib-kmac-test-vectors-shake-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_test_vectors_shake_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-aes-dv-cov-aes-cov-bind-sv">hw/ip/aes/dv/cov/aes_cov_bind.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-alert-rxtx-fatal-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-alert-rxtx-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-fatal-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-tl-agent-dv-env-tl-agent-env-pkg-sv">hw/dv/sv/tl_agent/dv/env/tl_agent_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-gpio-dv-env-gpio-env-pkg-sv">hw/ip/gpio/dv/env/gpio_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-multiple-keys-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_multiple_keys_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-stress-pipeline-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_stress_pipeline_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-aes-dv-env-seq-lib-aes-stress-vseq-sv">hw/ip/aes/dv/env/seq_lib/aes_stress_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-keymgr-dv-env-seq-lib-keymgr-direct-to-disabled-vseq-sv">hw/ip/keymgr/dv/env/seq_lib/keymgr_direct_to_disabled_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-spi-agent-seq-lib-spi-host-dummy-seq-sv">hw/dv/sv/spi_agent/seq_lib/spi_host_dummy_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-usbdev-dv-env-usbdev-env-sv">hw/ip/usbdev/dv/env/usbdev_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-rng-agent-rng-agent-cfg-sv">hw/dv/sv/rng_agent/rng_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-otbn-dv-uvm-sva-otbn-idle-checker-sv">hw/ip/otbn/dv/uvm/sva/otbn_idle_checker.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-jtag-agent-seq-lib-jtag-dr-seq-sv">hw/dv/sv/jtag_agent/seq_lib/jtag_dr_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-device-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_device_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-csrng-agent-csrng-item-sv">hw/dv/sv/csrng_agent/csrng_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-alert-esc-agent-alert-monitor-sv">hw/dv/sv/alert_esc_agent/alert_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-dv-lib-dv-base-driver-sv">hw/dv/sv/dv_lib/dv_base_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-uart-agent-seq-lib-uart-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-bus-params-pkg-bus-params-pkg-sv">hw/dv/sv/bus_params_pkg/bus_params_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-edn-dv-env-edn-env-pkg-sv">hw/ip/edn/dv/env/edn_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-prim-fpv-vip-prim-esc-rxtx-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-check-fail-vseq-sv">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_check_fail_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-aes-rtl-aes-shift-rows-sv">hw/ip/aes/rtl/aes_shift_rows.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-pattgen-dv-cov-pattgen-cov-if-sv">hw/ip/pattgen/dv/cov/pattgen_cov_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-uart-dv-env-seq-lib-uart-tx-ovrd-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_tx_ovrd_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-uart-dv-env-seq-lib-uart-noise-filter-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_noise_filter_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-uart-dv-env-seq-lib-uart-rx-start-bit-filter-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_rx_start_bit_filter_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-ip-entropy-src-dv-env-entropy-src-env-sv">hw/ip/entropy_src/dv/env/entropy_src_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-tl-agent-seq-lib-tl-host-custom-seq-sv">hw/dv/sv/tl_agent/seq_lib/tl_host_custom_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-tl-agent-seq-lib-tl-host-protocol-err-seq-sv">hw/dv/sv/tl_agent/seq_lib/tl_host_protocol_err_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_bugs.html#hw-dv-sv-dv-lib-dv-base-agent-cov-sv">hw/dv/sv/dv_lib/dv_base_agent_cov.sv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examined_unconfirmed.html">Unconfirmed formatting (119 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aes-rtl-aes-mix-columns-sv">hw/ip/aes/rtl/aes_mix_columns.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-usb-fs-nb-pe-rtl-usb-fs-tx-mux-sv">hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-if-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-item-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-rtl-rom-ctrl-pkg-sv">hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-seq-lib-kmac-stress-all-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-rtl-pattgen-ctrl-pkg-sv">hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-cip-lib-cip-base-test-sv">hw/dv/sv/cip_lib/cip_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-rng-agent-rng-monitor-sv">hw/dv/sv/rng_agent/rng_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-rng-agent-seq-lib-rng-base-seq-sv">hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-pwm-agent-pwm-monitor-sv">hw/dv/sv/pwm_agent/pwm_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-base-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-csrng-agent-csrng-sequencer-sv">hw/dv/sv/csrng_agent/csrng_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-csrng-agent-seq-lib-csrng-base-seq-sv">hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-uart-agent-seq-lib-uart-base-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-otbn-trace-monitor-sv">hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-rng-agent-rng-agent-sv">hw/dv/sv/rng_agent/rng_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-pattgen-agent-pattgen-agent-sv">hw/dv/sv/pattgen_agent/pattgen_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-pwm-agent-pwm-agent-sv">hw/dv/sv/pwm_agent/pwm_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-push-pull-agent-push-pull-agent-cov-sv">hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-otbn-env-sv">hw/ip/otbn/dv/uvm/env/otbn_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aes-dv-env-aes-env-sv">hw/ip/aes/dv/env/aes_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-dv-env-pattgen-env-sv">hw/ip/pattgen/dv/env/pattgen_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-hmac-dv-env-hmac-env-sv">hw/ip/hmac/dv/env/hmac_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-jtag-agent-jtag-agent-sv">hw/dv/sv/jtag_agent/jtag_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-push-pull-agent-push-pull-sequencer-sv">hw/dv/sv/push_pull_agent/push_pull_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-dv-lib-dv-base-seq-sv">hw/dv/sv/dv_lib/dv_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-tl-agent-tl-agent-sv">hw/dv/sv/tl_agent/tl_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-dv-lib-dv-base-virtual-sequencer-sv">hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-uart-agent-uart-agent-sv">hw/dv/sv/uart_agent/uart_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-edn-dv-tests-edn-base-test-sv">hw/ip/edn/dv/tests/edn_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-edn-dv-env-edn-virtual-sequencer-sv">hw/ip/edn/dv/env/edn_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-lc-ctrl-dv-env-lc-ctrl-virtual-sequencer-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-push-pull-agent-seq-lib-push-pull-base-seq-sv">hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-kmac-sideload-if-sv">hw/ip/kmac/dv/env/kmac_sideload_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-trial1-dv-bus-pkg-sv">hw/ip/trial1/dv/bus_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-prim-rtl-prim-esc-pkg-sv">hw/ip/prim/rtl/prim_esc_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-prim-rtl-prim-alert-pkg-sv">hw/ip/prim/rtl/prim_alert_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-keymgr-dv-env-keymgr-env-pkg-sv">hw/ip/keymgr/dv/env/keymgr_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-cfg-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-cfg-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-scoreboard-scoreboard-pkg-sv">hw/dv/sv/scoreboard/scoreboard_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-smoke-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-rtl-pattgen-sv">hw/ip/pattgen/rtl/pattgen.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwm-dv-env-seq-lib-pwm-common-vseq-sv">hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-dv-env-seq-lib-pattgen-common-vseq-sv">hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-common-ifs-clk-if-sv">hw/dv/sv/common_ifs/clk_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-tlul-generic-dv-tb-tb-sv">hw/ip/tlul/generic_dv/tb/tb.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-usb20-agent-seq-lib-usb20-base-seq-sv">hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-prim-rtl-prim-rom-pkg-sv">hw/ip/prim/rtl/prim_rom_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-prim-rtl-prim-lc-sender-sv">hw/ip/prim/rtl/prim_lc_sender.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-sram-ctrl-dv-env-sram-ctrl-env-pkg-sv">hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-usb20-agent-usb20-monitor-sv">hw/dv/sv/usb20_agent/usb20_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-kmac-app-agent-kmac-app-sequencer-sv">hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-prim-rtl-prim-ram-1p-pkg-sv">hw/ip/prim/rtl/prim_ram_1p_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-edn-dv-env-edn-env-cov-sv">hw/ip/edn/dv/env/edn_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-usbdev-dv-env-usbdev-env-cov-sv">hw/ip/usbdev/dv/env/usbdev_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-flash-ctrl-dv-env-flash-ctrl-env-cov-sv">hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aon-timer-dv-env-aon-timer-env-cov-sv">hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-clkmgr-dv-env-clkmgr-env-cfg-sv">hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-pwm-agent-pwm-driver-sv">hw/dv/sv/pwm_agent/pwm_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-tl-agent-dv-tests-tl-agent-base-test-sv">hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-tl-agent-dv-env-tl-agent-virtual-sequencer-sv">hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-kmac-app-agent-kmac-app-driver-sv">hw/dv/sv/kmac_app_agent/kmac_app_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-csrng-agent-csrng-driver-sv">hw/dv/sv/csrng_agent/csrng_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-flash-ctrl-dv-tests-flash-ctrl-base-test-sv">hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-flash-ctrl-dv-env-flash-ctrl-virtual-sequencer-sv">hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aon-timer-dv-tests-aon-timer-base-test-sv">hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aon-timer-dv-env-aon-timer-virtual-sequencer-sv">hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-sram-ctrl-dv-tests-sram-ctrl-base-test-sv">hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-sram-ctrl-dv-env-sram-ctrl-virtual-sequencer-sv">hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-clkmgr-dv-tests-clkmgr-base-test-sv">hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-clkmgr-dv-env-clkmgr-virtual-sequencer-sv">hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-tlul-generic-dv-env-xbar-virtual-sequencer-sv">hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-tests-otbn-base-test-sv">hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-otbn-virtual-sequencer-sv">hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-tests-rom-ctrl-base-test-sv">hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-env-rom-ctrl-virtual-sequencer-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-lc-ctrl-dv-tests-lc-ctrl-base-test-sv">hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aes-dv-env-aes-virtual-sequencer-sv">hw/ip/aes/dv/env/aes_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-dv-env-pattgen-virtual-sequencer-sv">hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwrmgr-dv-tests-pwrmgr-base-test-sv">hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwrmgr-dv-env-pwrmgr-virtual-sequencer-sv">hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-tests-kmac-base-test-sv">hw/ip/kmac/dv/tests/kmac_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-kmac-virtual-sequencer-sv">hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-hmac-dv-tests-hmac-base-test-sv">hw/ip/hmac/dv/tests/hmac_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-jtag-riscv-agent-jtag-riscv-monitor-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-edn-dv-env-seq-lib-edn-common-vseq-sv">hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-usbdev-dv-env-seq-lib-usbdev-common-vseq-sv">hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aon-timer-dv-env-seq-lib-aon-timer-common-vseq-sv">hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-common-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-clkmgr-dv-env-seq-lib-clkmgr-common-vseq-sv">hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-common-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-macro-errs-vseq-sv">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-smoke-vseq-sv">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-common-vseq-sv">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-common-vseq-sv">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwrmgr-dv-env-seq-lib-pwrmgr-common-vseq-sv">hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-adc-ctrl-dv-env-seq-lib-adc-ctrl-common-vseq-sv">hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-seq-lib-kmac-common-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-hmac-dv-env-seq-lib-hmac-common-vseq-sv">hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-gpio-dv-env-seq-lib-gpio-common-vseq-sv">hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-prog-failure-vseq-sv">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-uart-agent-seq-lib-uart-default-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-seq-lib-kmac-sideload-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-jtag-riscv-agent-jtag-riscv-sequencer-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-otbn-dv-uvm-env-otbn-env-cfg-sv">hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cov-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-lc-ctrl-dv-env-lc-ctrl-env-cov-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-aes-dv-env-aes-env-cov-sv">hw/ip/aes/dv/env/aes_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pattgen-dv-env-pattgen-env-cov-sv">hw/ip/pattgen/dv/env/pattgen_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwrmgr-dv-env-pwrmgr-env-cfg-sv">hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-pwrmgr-dv-env-pwrmgr-env-cov-sv">hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-kmac-dv-env-kmac-env-cov-sv">hw/ip/kmac/dv/env/kmac_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-hmac-dv-env-hmac-env-cfg-sv">hw/ip/hmac/dv/env/hmac_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cfg-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examined_unconfirmed.html#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-host-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ot.html" class="btn btn-neutral float-right" title="OpenTitan formatting status" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2021, The Verible Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

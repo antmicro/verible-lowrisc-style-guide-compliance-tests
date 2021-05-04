@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>LowRISC style compliance report &mdash; Verible status report  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OpenTitan no-change fileset (0 entries)" href="verible_zero_effort.html" />
+    <link rel="prev" title="OpenTitan TODO list (980 entries)" href="todo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Verible status report
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LowRISC style compliance report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#constraint-blocks">Constraint blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#expand-expression-containing-brackets-if-statement">Expand expression containing brackets (if-statement)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expand-expression-containing-brackets">Expand expression containing brackets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expand-blocks-with-two-or-more-expressions-two-statements">Expand blocks with two or more expressions (two statements)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compact-constraint-blocks-with-one-expression">Compact constraint blocks with one expression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compact-blocks-with-one-expression-column-limited-to-40">Compact blocks with one expression (column limited to 40)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compact-blocks-with-one-expression-function-call">Compact blocks with one expression (function call)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compact-blocks-with-one-expression">Compact blocks with one expression</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functional-coverage">Functional coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-declarations">Import declarations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Import declarations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#continuous-assignments">Continuous assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-assignment-should-be-in-one-line-if-fits">Continuous assignment should be in one line (if fits)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-assignment-column-limited-to-40">Continuous assignment (column limited to 40)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-declaration">Module declaration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-parameters">Module parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-port-list">Module port list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-with-ports-and-parameters">Module with ports and parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#binary-operators">Binary operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Binary operators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ternary-operators">Ternary operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#labels">Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-labeling-code-blocks-add-one-space-before-and-after-the-colon">When labeling code blocks, add one space before and after the colon.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#line-wrapping">Line wrapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-syntax-characters-such-as-or-that-end-one-line-of-a-multi-line-expression-should-be-terminated-with-close-characters-on-their-own-line">Open syntax characters such as { or ( that end one line of a multi-line expression should be terminated with close characters (}, )) on their own line.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nested-function-calls">Nested function calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alignment">Alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_confirmed.html">Correct formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_bugs.html">Incorrect formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_unconfirmed.html">Unconfirmed formatting (119 entries)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Verible status report</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>LowRISC style compliance report</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/style.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lowrisc-style-compliance-report">
+<h1>LowRISC style compliance report<a class="headerlink" href="#lowrisc-style-compliance-report" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="constraint-blocks">
+<h2>Constraint blocks<a class="headerlink" href="#constraint-blocks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="expand-expression-containing-brackets-if-statement">
+<h3>Expand expression containing brackets (if-statement)<a class="headerlink" href="#expand-expression-containing-brackets-if-statement" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">c_iv</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">fixed_iv_en</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">aes_iv</span> <span class="o">==</span> <span class="n">fixed_iv</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">c_iv</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">fixed_iv_en</span><span class="p">)</span>
+  <span class="p">{</span><span class="n">aes_iv</span> <span class="o">==</span> <span class="n">fixed_iv</span><span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="expand-expression-containing-brackets">
+<h3>Expand expression containing brackets<a class="headerlink" href="#expand-expression-containing-brackets" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">data_size_c</span> <span class="p">{</span>
+  <span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="ow">inside</span> <span class="p">{[</span><span class="mi">1</span><span class="o">:</span><span class="mi">65536</span><span class="p">]};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">data_size_c</span> <span class="p">{</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="ow">inside</span> <span class="p">{[</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">65536</span><span class="p">]};}</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="expand-blocks-with-two-or-more-expressions-two-statements">
+<h3>Expand blocks with two or more expressions (two statements)<a class="headerlink" href="#expand-blocks-with-two-or-more-expressions-two-statements" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">param_c</span> <span class="p">{</span>
+  <span class="n">a_param</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">d_param</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="compact-constraint-blocks-with-one-expression">
+<h3>Compact constraint blocks with one expression<a class="headerlink" href="#compact-constraint-blocks-with-one-expression" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">only_vec_instr_c</span> <span class="p">{</span><span class="k">soft</span> <span class="n">only_vec_instr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;}</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="compact-blocks-with-one-expression-column-limited-to-40">
+<h3>Compact blocks with one expression (column limited to 40)<a class="headerlink" href="#compact-blocks-with-one-expression-column-limited-to-40" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">only_vec_instr_c</span> <span class="p">{</span><span class="k">soft</span> <span class="n">only_vec_instr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;}</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="compact-blocks-with-one-expression-function-call">
+<h3>Compact blocks with one expression (function call)<a class="headerlink" href="#compact-blocks-with-one-expression-function-call" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">mask_contiguous_c</span> <span class="p">{</span>
+  <span class="p">$</span><span class="n">countones</span><span class="p">(</span><span class="n">a_mask</span> <span class="o">^</span> <span class="p">{</span><span class="n">a_mask</span><span class="p">[</span><span class="n">MaskWidth</span><span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">],</span> <span class="mb">1&#39;b0</span><span class="p">})</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">mask_contiguous_c</span> <span class="p">{</span>
+  <span class="p">$</span><span class="n">countones</span><span class="p">(</span>
+      <span class="n">a_mask</span> <span class="o">^</span> <span class="p">{</span><span class="n">a_mask</span><span class="p">[</span><span class="n">MaskWidth</span><span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">],</span> <span class="mb">1&#39;b0</span><span class="p">}</span>
+  <span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="compact-blocks-with-one-expression">
+<h3>Compact blocks with one expression<a class="headerlink" href="#compact-blocks-with-one-expression" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">d_opcode_c</span> <span class="p">{</span>
+  <span class="n">d_opcode</span> <span class="ow">inside</span> <span class="p">{</span><span class="n">AccessAckData</span><span class="p">,</span> <span class="n">AccessAck</span><span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">constraint</span> <span class="n">d_opcode_c</span> <span class="p">{</span><span class="n">d_opcode</span> <span class="ow">inside</span> <span class="p">{</span><span class="n">AccessAckData</span><span class="p">,</span> <span class="n">AccessAck</span><span class="p">};}</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="functional-coverage">
+<h2>Functional coverage<a class="headerlink" href="#functional-coverage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">covergroup</span> <span class="n">intr_cg</span> <span class="p">(</span><span class="n">uint</span> <span class="n">num_interrupts</span><span class="p">)</span> <span class="k">with</span> <span class="k">function</span> <span class="n">sample</span><span class="p">(</span><span class="n">uint</span> <span class="n">intr</span><span class="p">,</span>
+                                                              <span class="kt">bit</span> <span class="n">intr_en</span><span class="p">,</span>
+                                                              <span class="kt">bit</span> <span class="n">intr_state</span><span class="p">);</span>
+<span class="k">endgroup</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">covergroup</span> <span class="n">intr_cg</span><span class="p">(</span>
+    <span class="n">uint</span> <span class="n">num_interrupts</span>
+<span class="p">)</span> <span class="k">with</span> <span class="k">function</span> <span class="n">sample</span> <span class="p">(</span>
+    <span class="n">uint</span> <span class="n">intr</span><span class="p">,</span> <span class="kt">bit</span> <span class="n">intr_en</span><span class="p">,</span> <span class="kt">bit</span> <span class="n">intr_state</span>
+<span class="p">);</span>
+<span class="k">endgroup</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="import-declarations">
+<h2>Import declarations<a class="headerlink" href="#import-declarations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Import declarations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span>import &quot;DPI-C&quot;
+function chandle spidpi_create(input string name, input int mode,
+                               input int loglevel);
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span>import &quot;DPI-C&quot; function chandle spidpi_create(input string name, input int mode,
+                                              input int loglevel);
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span>import &quot;DPI-C&quot;
+function void dmidpi_tick(input chandle ctx, output bit dmi_req_valid,
+                          input bit dmi_req_ready, output bit [6:0] dmi_req_addr,
+                          output bit [1:0] dmi_req_op, output bit [31:0] dmi_req_data,
+                          input bit dmi_rsp_valid, output bit dmi_rsp_ready,
+                          input bit [31:0] dmi_rsp_data, input bit [1:0] dmi_rsp_resp,
+                          output bit dmi_rst_n);
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span>import &quot;DPI-C&quot; function void dmidpi_tick(
+    input chandle ctx, output bit dmi_req_valid, input bit dmi_req_ready,
+    output bit [6:0] dmi_req_addr, output bit [1:0] dmi_req_op, output bit [31:0] dmi_req_data,
+    input bit dmi_rsp_valid, output bit dmi_rsp_ready, input bit [31:0] dmi_rsp_data,
+    input bit [1:0] dmi_rsp_resp, output bit dmi_rst_n);
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="continuous-assignments">
+<h2>Continuous assignments<a class="headerlink" href="#continuous-assignments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="continuous-assignment-should-be-in-one-line-if-fits">
+<h3>Continuous assignment should be in one line (if fits)<a class="headerlink" href="#continuous-assignment-should-be-in-one-line-if-fits" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">assign</span> <span class="n">d2p</span> <span class="o">=</span> <span class="p">{</span><span class="n">spi_device_sdo_i</span><span class="p">,</span> <span class="n">spi_device_sdo_en_i</span><span class="p">};</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="continuous-assignment-column-limited-to-40">
+<h3>Continuous assignment (column limited to 40)<a class="headerlink" href="#continuous-assignment-column-limited-to-40" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">assign</span> <span class="n">d2p</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">spi_device_sdo_i</span><span class="p">,</span>
+  <span class="n">spi_device_sdo_en_i</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">assign</span> <span class="n">d2p</span> <span class="o">=</span> <span class="p">{</span><span class="n">spi_device_sdo_i</span><span class="p">,</span> <span class="n">spi_device_sdo_en_i</span><span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">assign</span> <span class="n">d2p</span> <span class="o">=</span> <span class="p">{</span><span class="n">spi_device_sdo_i</span><span class="p">,</span> <span class="n">spi_device_sdo_en_i</span><span class="p">};</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="module-declaration">
+<h2>Module declaration<a class="headerlink" href="#module-declaration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-parameters">
+<h3>Module parameters<a class="headerlink" href="#module-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span> <span class="n">spidpi</span> <span class="p">#(</span>
+    <span class="k">parameter</span> <span class="kt">string</span> <span class="n">NAME</span>      <span class="o">=</span> <span class="s">&quot;spi0&quot;</span><span class="p">,</span>
+    <span class="k">parameter</span>        <span class="n">MODE</span>      <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="k">parameter</span>        <span class="n">LOG_LEVEL</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="p">);</span>
+<span class="k">endmodule</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="module-port-list">
+<h3>Module port list<a class="headerlink" href="#module-port-list" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span> <span class="n">spidpi</span> <span class="p">(</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">clk_i</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">rst_ni</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sck_o</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_csb_o</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sdi_o</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_i</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_en_i</span>
+<span class="p">);</span>
+<span class="k">endmodule</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="module-with-ports-and-parameters">
+<h3>Module with ports and parameters<a class="headerlink" href="#module-with-ports-and-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span> <span class="n">spidpi</span> <span class="p">#(</span>
+  <span class="k">parameter</span> <span class="kt">string</span> <span class="n">NAME</span>      <span class="o">=</span> <span class="s">&quot;spi0&quot;</span><span class="p">,</span>
+  <span class="k">parameter</span>        <span class="n">MODE</span>      <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="k">parameter</span>        <span class="n">LOG_LEVEL</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="p">)</span> <span class="p">(</span>
+  <span class="k">input</span>  <span class="kt">logic</span> <span class="n">clk_i</span><span class="p">,</span>
+  <span class="k">input</span>  <span class="kt">logic</span> <span class="n">rst_ni</span><span class="p">,</span>
+  <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sck_o</span><span class="p">,</span>
+  <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_csb_o</span><span class="p">,</span>
+  <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sdi_o</span><span class="p">,</span>
+  <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_i</span><span class="p">,</span>
+  <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_en_i</span>
+<span class="p">);</span>
+<span class="k">endmodule</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span> <span class="n">spidpi</span> <span class="p">#(</span>
+    <span class="k">parameter</span> <span class="kt">string</span> <span class="n">NAME</span>      <span class="o">=</span> <span class="s">&quot;spi0&quot;</span><span class="p">,</span>
+    <span class="k">parameter</span>        <span class="n">MODE</span>      <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="k">parameter</span>        <span class="n">LOG_LEVEL</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="p">)</span> <span class="p">(</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">clk_i</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">rst_ni</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sck_o</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_csb_o</span><span class="p">,</span>
+    <span class="k">output</span> <span class="kt">logic</span> <span class="n">spi_device_sdi_o</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_i</span><span class="p">,</span>
+    <span class="k">input</span>  <span class="kt">logic</span> <span class="n">spi_device_sdo_en_i</span>
+<span class="p">);</span>
+<span class="k">endmodule</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="binary-operators">
+<h2>Binary operators<a class="headerlink" href="#binary-operators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Binary operators<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">parameter</span>
+    <span class="kt">int</span> <span class="n">KMAC_REQ_DATA_WIDTH</span> <span class="o">=</span> <span class="n">keymgr_pkg</span><span class="o">::</span><span class="n">KmacDataIfWidth</span> <span class="o">+</span> <span class="n">keymgr_pkg</span><span class="o">::</span><span class="n">KmacDataIfWidth</span> <span class="o">/</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">parameter</span>
+    <span class="kt">int</span> <span class="n">KMAC_REQ_DATA_WIDTH</span> <span class="o">=</span> <span class="n">keymgr_pkg</span><span class="o">::</span><span class="n">KmacDataIfWidth</span> <span class="o">+</span> <span class="n">keymgr_pkg</span><span class="o">::</span><span class="n">KmacDataIfWidth</span> <span class="o">/</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">csr_aliasing_seq</span> <span class="kd">extends</span> <span class="nc">csr_base_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">body</span><span class="p">();</span>
+      <span class="k">foreach</span> <span class="p">(</span><span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="k">begin</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">is_excl</span><span class="p">(</span><span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">CsrExclInitCheck</span><span class="p">,</span> <span class="n">CsrAliasingTest</span><span class="p">)</span> <span class="o">||</span>
+            <span class="n">is_excl</span><span class="p">(</span><span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">CsrExclWriteCheck</span><span class="p">,</span> <span class="n">CsrAliasingTest</span><span class="p">))</span> <span class="k">begin</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">csr_aliasing_seq</span> <span class="kd">extends</span> <span class="nc">csr_base_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">body</span><span class="p">();</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="k">begin</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">is_excl</span><span class="p">(</span>
+              <span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">CsrExclInitCheck</span><span class="p">,</span> <span class="n">CsrAliasingTest</span>
+          <span class="p">)</span> <span class="o">||</span> <span class="n">is_excl</span><span class="p">(</span>
+              <span class="n">all_csrs</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">CsrExclWriteCheck</span><span class="p">,</span> <span class="n">CsrAliasingTest</span>
+          <span class="p">))</span> <span class="k">begin</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="ternary-operators">
+<h2>Ternary operators<a class="headerlink" href="#ternary-operators" title="Permalink to this headline">¶</a></h2>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">esc_receiver_driver</span> <span class="kd">extends</span> <span class="nc">alert_esc_base_driver</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">drive_esc_resp</span><span class="p">(</span><span class="n">alert_esc_seq_item</span> <span class="n">req</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">toggle_cycle</span> <span class="o">=</span> <span class="n">req</span><span class="p">.</span><span class="n">int_err</span> <span class="o">?</span> <span class="n">cfg</span><span class="p">.</span><span class="n">ping_timeout_cycle</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">alert_receiver_driver</span> <span class="kd">extends</span> <span class="nc">alert_esc_base_driver</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">drive_alert_ping</span><span class="p">(</span><span class="n">alert_esc_seq_item</span> <span class="n">req</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="kt">unsigned</span> <span class="n">ping_delay</span> <span class="o">=</span> <span class="p">(</span><span class="n">cfg</span><span class="p">.</span><span class="n">use_seq_item_ping_delay</span><span class="p">)</span> <span class="o">?</span> <span class="n">req</span><span class="p">.</span><span class="n">ping_delay</span> <span class="o">:</span>
+                               <span class="p">$</span><span class="n">urandom_range</span><span class="p">(</span><span class="n">cfg</span><span class="p">.</span><span class="n">ping_delay_max</span><span class="p">,</span> <span class="n">cfg</span><span class="p">.</span><span class="n">ping_delay_min</span><span class="p">);</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">alert_receiver_driver</span> <span class="kd">extends</span> <span class="nc">alert_esc_base_driver</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">drive_alert_ping</span><span class="p">(</span><span class="n">alert_esc_seq_item</span> <span class="n">req</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="kt">unsigned</span> <span class="n">ping_delay</span> <span class="o">=</span> <span class="p">(</span><span class="n">cfg</span><span class="p">.</span><span class="n">use_seq_item_ping_delay</span><span class="p">)</span> <span class="o">?</span> <span class="n">req</span><span class="p">.</span><span class="n">ping_delay</span> <span class="o">:</span> <span class="p">$</span><span class="n">urandom_range</span><span class="p">(</span>
+        <span class="n">cfg</span><span class="p">.</span><span class="n">ping_delay_max</span><span class="p">,</span> <span class="n">cfg</span><span class="p">.</span><span class="n">ping_delay_min</span>
+    <span class="p">);</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="labels">
+<h2>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="when-labeling-code-blocks-add-one-space-before-and-after-the-colon">
+<h3>When labeling code blocks, add one space before and after the colon.<a class="headerlink" href="#when-labeling-code-blocks-add-one-space-before-and-after-the-colon" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="n">push_pull_agent_pkg</span><span class="p">;</span>
+<span class="k">endpackage</span> <span class="o">:</span> <span class="n">push_pull_agent_pkg</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">dv_base_monitor</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">task</span> <span class="n">watchdog_ok_to_end</span><span class="p">(</span><span class="n">uvm_phase</span> <span class="n">run_phase</span><span class="p">);</span>
+    <span class="k">fork</span>
+      <span class="k">begin</span> <span class="o">:</span> <span class="n">isolation_fork</span>
+      <span class="k">end</span> <span class="o">:</span> <span class="n">isolation_fork</span>
+    <span class="k">join</span>
+  <span class="k">endtask</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="line-wrapping">
+<h2>Line wrapping<a class="headerlink" href="#line-wrapping" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="open-syntax-characters-such-as-or-that-end-one-line-of-a-multi-line-expression-should-be-terminated-with-close-characters-on-their-own-line">
+<h3>Open syntax characters such as { or ( that end one line of a multi-line expression should be terminated with close characters (}, )) on their own line.<a class="headerlink" href="#open-syntax-characters-such-as-or-that-end-one-line-of-a-multi-line-expression-should-be-terminated-with-close-characters-on-their-own-line" title="Permalink to this headline">¶</a></h3>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">push_pull_item</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">string</span> <span class="n">convert2string</span><span class="p">();</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;h_data = 0x%0x &quot;</span><span class="p">,</span> <span class="n">h_data</span><span class="p">),</span>
+      <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;d_data = 0x%0x &quot;</span><span class="p">,</span> <span class="n">d_data</span><span class="p">),</span>
+      <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;host_delay = 0x%0x &quot;</span><span class="p">,</span> <span class="n">host_delay</span><span class="p">),</span>
+      <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;device_delay = 0x%0x &quot;</span><span class="p">,</span> <span class="n">device_delay</span><span class="p">)</span>
+    <span class="p">};</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">uart_agent_cov</span><span class="p">;</span>
+  <span class="k">covergroup</span> <span class="n">uart_reset_cg</span><span class="p">;</span>
+    <span class="nl">cp_dir:</span> <span class="k">coverpoint</span> <span class="n">dir</span><span class="p">;</span>
+    <span class="nl">cp_rst_pos:</span> <span class="k">coverpoint</span> <span class="n">bit_position</span> <span class="p">{</span><span class="k">bins</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{[</span><span class="mi">0</span> <span class="o">:</span> <span class="n">NUM_UART_XFER_BITS_WO_PARITY</span><span class="p">]};}</span>
+    <span class="k">cross</span> <span class="n">cp_dir</span><span class="p">,</span> <span class="n">cp_rst_pos</span><span class="p">;</span>
+  <span class="k">endgroup</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">uart_agent_cov</span><span class="p">;</span>
+  <span class="k">covergroup</span> <span class="n">uart_reset_cg</span><span class="p">;</span>
+    <span class="nl">cp_dir:</span> <span class="k">coverpoint</span> <span class="n">dir</span><span class="p">;</span>
+    <span class="nl">cp_rst_pos:</span> <span class="k">coverpoint</span> <span class="n">bit_position</span> <span class="p">{</span><span class="k">bins</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{[</span><span class="mi">0</span> <span class="o">:</span> <span class="n">NUM_UART_XFER_BITS_WO_PARITY</span><span class="p">]};}</span>
+    <span class="k">cross</span> <span class="n">cp_dir</span><span class="p">,</span> <span class="n">cp_rst_pos</span><span class="p">;</span>
+  <span class="k">endgroup</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">uart_agent_cov</span><span class="p">;</span>
+  <span class="k">covergroup</span> <span class="n">uart_reset_cg</span><span class="p">;</span>
+    <span class="nl">cp_dir:</span> <span class="k">coverpoint</span> <span class="n">dir</span><span class="p">;</span>
+    <span class="nl">cp_rst_pos:</span> <span class="k">coverpoint</span> <span class="n">bit_position</span> <span class="p">{</span><span class="k">bins</span> <span class="n">values</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{[</span><span class="mi">0</span> <span class="o">:</span> <span class="n">NUM_UART_XFER_BITS_WO_PARITY</span><span class="p">]};}</span>
+    <span class="k">cross</span> <span class="n">cp_dir</span><span class="p">,</span> <span class="n">cp_rst_pos</span><span class="p">;</span>
+  <span class="k">endgroup</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">covergroup</span> <span class="n">intr_test_cg</span><span class="p">;</span>  <span class="k">cross</span> <span class="n">cp_intr</span><span class="p">,</span> <span class="n">cp_intr_test</span><span class="p">,</span> <span class="n">cp_intr_en</span><span class="p">,</span> <span class="n">cp_intr_state</span> <span class="p">{</span>
+    <span class="k">illegal_bins</span> <span class="n">test_1_state_0</span> <span class="o">=</span> <span class="k">binsof</span><span class="p">(</span><span class="n">cp_intr_test</span><span class="p">)</span> <span class="k">intersect</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span> <span class="o">&amp;&amp;</span>
+                                  <span class="k">binsof</span><span class="p">(</span><span class="n">cp_intr_state</span><span class="p">)</span> <span class="k">intersect</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="p">}</span>
+<span class="k">endgroup</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="k">covergroup</span> <span class="n">intr_test_cg</span><span class="p">;</span>
+  <span class="k">cross</span> <span class="n">cp_intr</span><span class="p">,</span> <span class="n">cp_intr_test</span><span class="p">,</span> <span class="n">cp_intr_en</span><span class="p">,</span> <span class="n">cp_intr_state</span><span class="p">{</span>
+    <span class="k">illegal_bins</span> <span class="n">test_1_state_0</span> <span class="o">=</span> <span class="k">binsof</span> <span class="p">(</span><span class="n">cp_intr_test</span><span class="p">)</span> <span class="k">intersect</span> <span class="p">{</span>
+      <span class="mi">1</span>
+    <span class="p">}</span> <span class="o">&amp;&amp;</span> <span class="k">binsof</span> <span class="p">(</span><span class="n">cp_intr_state</span><span class="p">)</span> <span class="k">intersect</span> <span class="p">{</span>
+      <span class="mi">0</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="k">endgroup</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">sha_file_list</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&quot;vectors/sha/sha256/SHA256ShortMsg.rsp&quot;</span><span class="p">,</span> <span class="s">&quot;vectors/sha/sha256/SHA256LongMsg.rsp&quot;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">sha_file_list</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&quot;vectors/sha/sha256/SHA256ShortMsg.rsp&quot;</span><span class="p">,</span> <span class="s">&quot;vectors/sha/sha256/SHA256LongMsg.rsp&quot;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">tl_host_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">void</span> <span class="n">randomize_req</span><span class="p">(</span><span class="n">REQ</span> <span class="n">req</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">randomize</span><span class="p">()</span> <span class="k">with</span> <span class="p">{</span><span class="n">a_valid_delay</span> <span class="ow">inside</span> <span class="p">{[</span><span class="n">min_req_delay</span> <span class="o">:</span> <span class="n">max_req_delay</span><span class="p">]};}))</span> <span class="k">begin</span>
+      <span class="no">`uvm_fatal</span><span class="p">(</span><span class="no">`gfn</span><span class="p">,</span> <span class="s">&quot;Cannot randomize req&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">tl_host_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">void</span> <span class="n">randomize_req</span><span class="p">(</span><span class="n">REQ</span> <span class="n">req</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">randomize</span><span class="p">()</span> <span class="k">with</span> <span class="p">{</span>
+          <span class="n">a_valid_delay</span> <span class="ow">inside</span> <span class="p">{[</span><span class="n">min_req_delay</span> <span class="o">:</span> <span class="n">max_req_delay</span><span class="p">]};}))</span> <span class="k">begin</span>
+      <span class="no">`uvm_fatal</span><span class="p">(</span><span class="no">`gfn</span><span class="p">,</span> <span class="s">&quot;Cannot randomize req&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">tl_host_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">void</span> <span class="n">randomize_req</span><span class="p">(</span><span class="n">REQ</span> <span class="n">req</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">randomize</span><span class="p">()</span> <span class="k">with</span> <span class="p">{</span><span class="n">a_valid_delay</span> <span class="ow">inside</span> <span class="p">{[</span><span class="n">min_req_delay</span> <span class="o">:</span> <span class="n">max_req_delay</span><span class="p">]};}))</span> <span class="k">begin</span>
+      <span class="no">`uvm_fatal</span><span class="p">(</span><span class="no">`gfn</span><span class="p">,</span> <span class="s">&quot;Cannot randomize req&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+<div class="section" id="nested-function-calls">
+<h2>Nested function calls<a class="headerlink" href="#nested-function-calls" title="Permalink to this headline">¶</a></h2>
+<p>Example code:</p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="no">`uvm_info</span><span class="p">(</span><span class="no">`gtn</span><span class="p">,</span> <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;Verifying reset value of register %0s&quot;</span><span class="p">,</span> <span class="n">test_csrs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">get_full_name</span><span class="p">()),</span>
+          <span class="n">UVM_MEDIUM</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="no">`uvm_info</span><span class="p">(</span><span class="no">`gtn</span><span class="p">,</span> <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;Verifying reset value of register %0s&quot;</span><span class="p">,</span>
+                          <span class="n">test_csrs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">get_full_name</span><span class="p">()),</span> <span class="n">UVM_MEDIUM</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="no">`uvm_info</span><span class="p">(</span><span class="no">`gtn</span><span class="p">,</span> <span class="p">$</span><span class="n">sformatf</span><span class="p">(</span><span class="s">&quot;Verifying reset value of register %0s&quot;</span><span class="p">,</span> <span class="n">test_csrs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">get_full_name</span><span class="p">()),</span>
+          <span class="n">UVM_MEDIUM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+<div class="section" id="alignment">
+<h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">csr_bit_bash_seq</span> <span class="kd">extends</span> <span class="nc">csr_base_seq</span><span class="p">;</span>
+  <span class="k">task</span> <span class="n">bash_kth_bit</span><span class="p">;</span>
+    <span class="k">repeat</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">csr_rd_check</span><span class="p">(.</span><span class="n">ptr</span>           <span class="p">(</span><span class="n">rg</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">blocking</span>      <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">compare</span>       <span class="p">(</span><span class="o">!</span><span class="n">external_checker</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">compare_vs_ral</span><span class="p">(</span><span class="mb">1&#39;b1</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">compare_mask</span>  <span class="p">(</span><span class="o">~</span><span class="n">mask</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">err_msg</span>       <span class="p">(</span><span class="n">err_msg</span><span class="p">));</span>
+    <span class="k">end</span>
+  <span class="k">endtask</span><span class="o">:</span> <span class="n">bash_kth_bit</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">csr_bit_bash_seq</span> <span class="kd">extends</span> <span class="nc">csr_base_seq</span><span class="p">;</span>
+  <span class="k">task</span> <span class="n">bash_kth_bit</span><span class="p">;</span>
+    <span class="k">repeat</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">csr_rd_check</span><span class="p">(.</span><span class="n">ptr</span><span class="p">(</span><span class="n">rg</span><span class="p">),</span> <span class="p">.</span><span class="n">blocking</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="o">!</span><span class="n">external_checker</span><span class="p">),</span> <span class="p">.</span><span class="n">compare_vs_ral</span><span class="p">(</span><span class="mb">1&#39;b1</span><span class="p">),</span>
+                   <span class="p">.</span><span class="n">compare_mask</span><span class="p">(</span><span class="o">~</span><span class="n">mask</span><span class="p">),</span> <span class="p">.</span><span class="n">err_msg</span><span class="p">(</span><span class="n">err_msg</span><span class="p">));</span>
+    <span class="k">end</span>
+  <span class="k">endtask</span> <span class="o">:</span> <span class="n">bash_kth_bit</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">kmac_app_device_seq</span> <span class="kd">extends</span> <span class="nc">kmac_app_base_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">void</span> <span class="n">randomize_item</span><span class="p">(</span><span class="n">REQ</span> <span class="n">item</span><span class="p">);</span>
+    <span class="no">`DV_CHECK_RANDOMIZE_WITH_FATAL</span><span class="p">(</span>
+        <span class="n">item</span><span class="p">,</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cfg</span><span class="p">.</span><span class="n">zero_delays</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">rsp_delay</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">rsp_delay</span> <span class="ow">inside</span> <span class="p">{[</span><span class="n">cfg</span><span class="p">.</span><span class="n">rsp_delay_min</span> <span class="o">:</span> <span class="n">cfg</span><span class="p">.</span><span class="n">rsp_delay_max</span><span class="p">]};</span>
+        <span class="p">}</span>
+        <span class="n">is_kmac_rsp_err</span> <span class="ow">dist</span> <span class="p">{</span><span class="mi">1</span> <span class="o">:/</span> <span class="n">cfg</span><span class="p">.</span><span class="n">error_rsp_pct</span><span class="p">,</span>
+                              <span class="mi">0</span> <span class="o">:/</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">cfg</span><span class="p">.</span><span class="n">error_rsp_pct</span><span class="p">};)</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<blockquote>
+<div><p>Formatter generated output:</p>
+</div></blockquote>
+<div class="highlight-systemverilog notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">kmac_app_device_seq</span> <span class="kd">extends</span> <span class="nc">kmac_app_base_seq</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="k">function</span> <span class="kt">void</span> <span class="n">randomize_item</span><span class="p">(</span><span class="n">REQ</span> <span class="n">item</span><span class="p">);</span>
+    <span class="no">`DV_CHECK_RANDOMIZE_WITH_FATAL</span><span class="p">(</span><span class="n">item</span><span class="p">,</span>
+                                   <span class="k">if</span> <span class="p">(</span><span class="n">cfg</span><span class="p">.</span><span class="n">zero_delays</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">rsp_delay</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">rsp_delay</span> <span class="ow">inside</span> <span class="p">{[</span><span class="n">cfg</span><span class="p">.</span><span class="n">rsp_delay_min</span> <span class="o">:</span> <span class="n">cfg</span><span class="p">.</span><span class="n">rsp_delay_max</span><span class="p">]};</span>
+      <span class="p">}</span>
+      <span class="n">is_kmac_rsp_err</span> <span class="ow">dist</span> <span class="p">{</span><span class="mi">1</span> <span class="o">:/</span> <span class="n">cfg</span><span class="p">.</span><span class="n">error_rsp_pct</span><span class="p">,</span>
+                            <span class="mi">0</span> <span class="o">:/</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">cfg</span><span class="p">.</span><span class="n">error_rsp_pct</span><span class="p">};)</span>
+  <span class="k">endfunction</span>
+<span class="kd">endclass</span>
+</pre></div>
+</div>
+</div>
+<p><hr /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="verible_zero_effort.html" class="btn btn-neutral float-right" title="OpenTitan no-change fileset (0 entries)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="todo.html" class="btn btn-neutral float-left" title="OpenTitan TODO list (980 entries)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2021, The Verible Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

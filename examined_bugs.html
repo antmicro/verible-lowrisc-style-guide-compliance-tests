@@ -1,0 +1,1884 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Incorrect formatting (39 entries) &mdash; Verible status report  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unconfirmed formatting (119 entries)" href="examined_unconfirmed.html" />
+    <link rel="prev" title="OpenTitan error fileset (24 entries)" href="error.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Verible status report
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">LowRISC style compliance report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_confirmed.html">Correct formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Incorrect formatting (39 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-device-driver-sv">hw/dv/sv/kmac_app_agent/kmac_app_device_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-test-vectors-shake-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_test_vectors_shake_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-dv-cov-aes-cov-bind-sv">hw/ip/aes/dv/cov/aes_cov_bind.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-fatal-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-fatal-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-bind-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-env-pkg-sv">hw/dv/sv/tl_agent/dv/env/tl_agent_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-gpio-dv-env-gpio-env-pkg-sv">hw/ip/gpio/dv/env/gpio_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-multiple-keys-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_multiple_keys_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-stress-pipeline-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_stress_pipeline_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-dv-env-seq-lib-aes-stress-vseq-sv">hw/ip/aes/dv/env/seq_lib/aes_stress_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-keymgr-dv-env-seq-lib-keymgr-direct-to-disabled-vseq-sv">hw/ip/keymgr/dv/env/seq_lib/keymgr_direct_to_disabled_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-spi-agent-seq-lib-spi-host-dummy-seq-sv">hw/dv/sv/spi_agent/seq_lib/spi_host_dummy_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-usbdev-dv-env-usbdev-env-sv">hw/ip/usbdev/dv/env/usbdev_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-agent-cfg-sv">hw/dv/sv/rng_agent/rng_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-sva-otbn-idle-checker-sv">hw/ip/otbn/dv/uvm/sva/otbn_idle_checker.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-agent-seq-lib-jtag-dr-seq-sv">hw/dv/sv/jtag_agent/seq_lib/jtag_dr_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-device-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_device_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-item-sv">hw/dv/sv/csrng_agent/csrng_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-alert-esc-agent-alert-monitor-sv">hw/dv/sv/alert_esc_agent/alert_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-driver-sv">hw/dv/sv/dv_lib/dv_base_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-bus-params-pkg-bus-params-pkg-sv">hw/dv/sv/bus_params_pkg/bus_params_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-edn-dv-env-edn-env-pkg-sv">hw/ip/edn/dv/env/edn_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-esc-rxtx-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-check-fail-vseq-sv">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_check_fail_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-rtl-aes-shift-rows-sv">hw/ip/aes/rtl/aes_shift_rows.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-dv-cov-pattgen-cov-if-sv">hw/ip/pattgen/dv/cov/pattgen_cov_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-tx-ovrd-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_tx_ovrd_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-noise-filter-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_noise_filter_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-rx-start-bit-filter-vseq-sv">hw/ip/uart/dv/env/seq_lib/uart_rx_start_bit_filter_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-entropy-src-dv-env-entropy-src-env-sv">hw/ip/entropy_src/dv/env/entropy_src_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-custom-seq-sv">hw/dv/sv/tl_agent/seq_lib/tl_host_custom_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-protocol-err-seq-sv">hw/dv/sv/tl_agent/seq_lib/tl_host_protocol_err_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-agent-cov-sv">hw/dv/sv/dv_lib/dv_base_agent_cov.sv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examined_unconfirmed.html">Unconfirmed formatting (119 entries)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Verible status report</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Incorrect formatting (39 entries)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/examined_bugs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="incorrect-formatting-39-entries">
+<h1>Incorrect formatting (39 entries)<a class="headerlink" href="#incorrect-formatting-39-entries" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename</p></th>
+<th class="head"><p>Related</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-device-driver-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/kmac_app_device_driver.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-test-vectors-shake-vseq-sv"><span class="std std-ref">hw/ip/kmac/dv/env/seq_lib/kmac_test_vectors_shake_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aes-dv-cov-aes-cov-bind-sv"><span class="std std-ref">hw/ip/aes/dv/cov/aes_cov_bind.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/432">GH#432</a> <a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-fatal-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-fatal-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-bind-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-env-pkg-sv"><span class="std std-ref">hw/dv/sv/tl_agent/dv/env/tl_agent_env_pkg.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/850">GH#850</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-gpio-dv-env-gpio-env-pkg-sv"><span class="std std-ref">hw/ip/gpio/dv/env/gpio_env_pkg.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/850">GH#850</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-multiple-keys-vseq-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_multiple_keys_vseq.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/494">GH#494</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-stress-pipeline-vseq-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_stress_pipeline_vseq.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/494">GH#494</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aes-dv-env-seq-lib-aes-stress-vseq-sv"><span class="std std-ref">hw/ip/aes/dv/env/seq_lib/aes_stress_vseq.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/30">GH#30</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-keymgr-dv-env-seq-lib-keymgr-direct-to-disabled-vseq-sv"><span class="std std-ref">hw/ip/keymgr/dv/env/seq_lib/keymgr_direct_to_disabled_vseq.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/30">GH#30</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-spi-agent-seq-lib-spi-host-dummy-seq-sv"><span class="std std-ref">hw/dv/sv/spi_agent/seq_lib/spi_host_dummy_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-usbdev-dv-env-usbdev-env-sv"><span class="std std-ref">hw/ip/usbdev/dv/env/usbdev_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-agent-cfg-sv"><span class="std std-ref">hw/dv/sv/rng_agent/rng_agent_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-sva-otbn-idle-checker-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/sva/otbn_idle_checker.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-agent-seq-lib-jtag-dr-seq-sv"><span class="std std-ref">hw/dv/sv/jtag_agent/seq_lib/jtag_dr_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-device-seq-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_device_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-item-sv"><span class="std std-ref">hw/dv/sv/csrng_agent/csrng_item.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-alert-esc-agent-alert-monitor-sv"><span class="std std-ref">hw/dv/sv/alert_esc_agent/alert_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-driver-sv"><span class="std std-ref">hw/dv/sv/dv_lib/dv_base_driver.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-seq-sv"><span class="std std-ref">hw/dv/sv/uart_agent/seq_lib/uart_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-bus-params-pkg-bus-params-pkg-sv"><span class="std std-ref">hw/dv/sv/bus_params_pkg/bus_params_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-edn-dv-env-edn-env-pkg-sv"><span class="std std-ref">hw/ip/edn/dv/env/edn_env_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-esc-rxtx-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-check-fail-vseq-sv"><span class="std std-ref">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_check_fail_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aes-rtl-aes-shift-rows-sv"><span class="std std-ref">hw/ip/aes/rtl/aes_shift_rows.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pattgen-dv-cov-pattgen-cov-if-sv"><span class="std std-ref">hw/ip/pattgen/dv/cov/pattgen_cov_if.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-tx-ovrd-vseq-sv"><span class="std std-ref">hw/ip/uart/dv/env/seq_lib/uart_tx_ovrd_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-noise-filter-vseq-sv"><span class="std std-ref">hw/ip/uart/dv/env/seq_lib/uart_noise_filter_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-uart-dv-env-seq-lib-uart-rx-start-bit-filter-vseq-sv"><span class="std std-ref">hw/ip/uart/dv/env/seq_lib/uart_rx_start_bit_filter_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-entropy-src-dv-env-entropy-src-env-sv"><span class="std std-ref">hw/ip/entropy_src/dv/env/entropy_src_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-custom-seq-sv"><span class="std std-ref">hw/dv/sv/tl_agent/seq_lib/tl_host_custom_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-protocol-err-seq-sv"><span class="std std-ref">hw/dv/sv/tl_agent/seq_lib/tl_host_protocol_err_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-agent-cov-sv"><span class="std std-ref">hw/dv/sv/dv_lib/dv_base_agent_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="hw-dv-sv-kmac-app-agent-kmac-app-device-driver-sv">
+<span id="id11"></span><h2>hw/dv/sv/kmac_app_agent/kmac_app_device_driver.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-kmac-app-device-driver-sv" title="Permalink to this headline">¶</a></h2>
+<p>How that should be formatted?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -32,16 +32,14 @@</span>
+       rsp.set_id_info(req);
+       `uvm_info(`gfn, $sformatf(&quot;rcvd item:\n%0s&quot;, req.sprint()), UVM_HIGH)
+
+<span class="gd">-      `DV_SPINWAIT_EXIT(repeat (rsp.rsp_delay) @(cfg.vif.device_cb);,</span>
+<span class="gd">-                        wait(!cfg.vif.rst_n))</span>
+<span class="gi">+      `DV_SPINWAIT_EXIT(repeat (rsp.rsp_delay) @(cfg.vif.device_cb);, wait(!cfg.vif.rst_n))</span>
+
+       cfg.vif.device_cb.rsp_done          &lt;= 1;
+       cfg.vif.device_cb.rsp_digest_share0 &lt;= rsp.rsp_digest_share0;
+       cfg.vif.device_cb.rsp_digest_share1 &lt;= rsp.rsp_digest_share1;
+       cfg.vif.device_cb.rsp_error         &lt;= rsp.rsp_error;
+
+<span class="gd">-      `DV_SPINWAIT_EXIT(@(cfg.vif.device_cb);,</span>
+<span class="gd">-                        wait(!cfg.vif.rst_n))</span>
+<span class="gi">+      `DV_SPINWAIT_EXIT(@(cfg.vif.device_cb);, wait(!cfg.vif.rst_n))</span>
+       invalidate_signals();
+
+       `uvm_info(`gfn, &quot;item sent&quot;, UVM_HIGH)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-seq-lib-kmac-test-vectors-shake-vseq-sv">
+<span id="id12"></span><h2>hw/ip/kmac/dv/env/seq_lib/kmac_test_vectors_shake_vseq.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-seq-lib-kmac-test-vectors-shake-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -24,15 +24,14 @@</span>
+
+   virtual function void randomize_cfg(test_vectors_pkg::test_vectors_t vector);
+     `DV_CHECK_RANDOMIZE_WITH_FATAL(this,
+<span class="gd">-      hash_mode == sha3_pkg::Shake;</span>
+<span class="gi">+                                   hash_mode == sha3_pkg::Shake;</span>
+       kmac_en == 0;
+       output_len == vector.digest_length_byte;
+       if (vector.security_strength == 128) {
+         strength == sha3_pkg::L128;
+       } else if (vector.security_strength == 256) {
+         strength == sha3_pkg::L256;
+<span class="gd">-      }</span>
+<span class="gd">-    )</span>
+<span class="gi">+      })</span>
+   endfunction
+
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-dv-cov-aes-cov-bind-sv">
+<span id="id13"></span><h2>hw/ip/aes/dv/cov/aes_cov_bind.sv<a class="headerlink" href="#hw-ip-aes-dv-cov-aes-cov-bind-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/432">https://github.com/google/verible/issues/432</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ // Binds UART functional coverage interaface to the top level AES module.
+ module aes_cov_bind;
+
+<span class="gd">-  bind aes aes_cov_if u_aes_cov_if (</span>
+<span class="gd">-    .clk_i           (clk_i)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  bind aes aes_cov_if u_aes_cov_if (.clk_i(clk_i));</span>
+
+ endmodule
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-alert-rxtx-async-bind-fpv-sv">
+<span id="id14"></span><h2>hw/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,8 +5,7 @@</span>
+
+ module prim_alert_rxtx_async_bind_fpv;
+
+<span class="gd">-  bind prim_alert_rxtx_async_fpv</span>
+<span class="gd">-        prim_alert_rxtx_async_assert_fpv prim_alert_rxtx_async_assert_fpv (</span>
+<span class="gi">+  bind prim_alert_rxtx_async_fpv prim_alert_rxtx_async_assert_fpv prim_alert_rxtx_async_assert_fpv (</span>
+     .clk_i,
+     .rst_ni,
+     .ping_err_pi,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-alert-rxtx-fatal-bind-fpv-sv">
+<span id="id15"></span><h2>hw/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-fatal-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,8 +6,7 @@</span>
+ module prim_alert_rxtx_fatal_bind_fpv;
+
+   // this reuses the synchronous VIP.
+<span class="gd">-  bind prim_alert_rxtx_fpv</span>
+<span class="gd">-        prim_alert_rxtx_assert_fpv prim_alert_rxtx_assert_fpv (</span>
+<span class="gi">+  bind prim_alert_rxtx_fpv prim_alert_rxtx_assert_fpv prim_alert_rxtx_assert_fpv (</span>
+     .clk_i,
+     .rst_ni,
+     .ping_err_pi,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-alert-rxtx-bind-fpv-sv">
+<span id="id16"></span><h2>hw/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,8 +5,7 @@</span>
+
+ module prim_alert_rxtx_bind_fpv;
+
+<span class="gd">-  bind prim_alert_rxtx_fpv</span>
+<span class="gd">-        prim_alert_rxtx_assert_fpv prim_alert_rxtx_assert_fpv (</span>
+<span class="gi">+  bind prim_alert_rxtx_fpv prim_alert_rxtx_assert_fpv prim_alert_rxtx_assert_fpv (</span>
+     .clk_i,
+     .rst_ni,
+     .ping_err_pi,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-alert-rxtx-async-fatal-bind-fpv-sv">
+<span id="id17"></span><h2>hw/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-alert-rxtx-async-fatal-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,8 +5,7 @@</span>
+
+ module prim_alert_rxtx_async_fatal_bind_fpv;
+
+<span class="gd">-  bind prim_alert_rxtx_async_fpv</span>
+<span class="gd">-        prim_alert_rxtx_async_assert_fpv prim_alert_rxtx_async_assert_fpv (</span>
+<span class="gi">+  bind prim_alert_rxtx_async_fpv prim_alert_rxtx_async_assert_fpv prim_alert_rxtx_async_assert_fpv (</span>
+     .clk_i,
+     .rst_ni,
+     .ping_err_pi,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-bind-fpv-sv">
+<span id="id18"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,13 +8,7 @@</span>
+
+   bind prim_secded_hamming_72_64_fpv
+     prim_secded_hamming_72_64_assert_fpv prim_secded_hamming_72_64_assert_fpv (
+<span class="gd">-    .clk_i,</span>
+<span class="gd">-    .rst_ni,</span>
+<span class="gd">-    .data_i,</span>
+<span class="gd">-    .data_o,</span>
+<span class="gd">-    .syndrome_o,</span>
+<span class="gd">-    .err_o,</span>
+<span class="gd">-    .error_inject_i</span>
+<span class="gi">+    .clk_i, .rst_ni, .data_i, .data_o, .syndrome_o, .err_o, .error_inject_i</span>
+   );
+
+ endmodule : prim_secded_hamming_72_64_bind_fpv
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-bind-fpv-sv">
+<span id="id19"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,13 +8,7 @@</span>
+
+   bind prim_secded_hamming_39_32_fpv
+     prim_secded_hamming_39_32_assert_fpv prim_secded_hamming_39_32_assert_fpv (
+<span class="gd">-    .clk_i,</span>
+<span class="gd">-    .rst_ni,</span>
+<span class="gd">-    .data_i,</span>
+<span class="gd">-    .data_o,</span>
+<span class="gd">-    .syndrome_o,</span>
+<span class="gd">-    .err_o,</span>
+<span class="gd">-    .error_inject_i</span>
+<span class="gi">+    .clk_i, .rst_ni, .data_i, .data_o, .syndrome_o, .err_o, .error_inject_i</span>
+   );
+
+ endmodule : prim_secded_hamming_39_32_bind_fpv
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-bind-fpv-sv">
+<span id="id20"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-bind-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Formatting of bind statements should behave the same as module/interface instantiations</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,13 +8,7 @@</span>
+
+   bind prim_secded_hamming_22_16_fpv
+     prim_secded_hamming_22_16_assert_fpv prim_secded_hamming_22_16_assert_fpv (
+<span class="gd">-    .clk_i,</span>
+<span class="gd">-    .rst_ni,</span>
+<span class="gd">-    .data_i,</span>
+<span class="gd">-    .data_o,</span>
+<span class="gd">-    .syndrome_o,</span>
+<span class="gd">-    .err_o,</span>
+<span class="gd">-    .error_inject_i</span>
+<span class="gi">+    .clk_i, .rst_ni, .data_i, .data_o, .syndrome_o, .err_o, .error_inject_i</span>
+   );
+
+ endmodule : prim_secded_hamming_22_16_bind_fpv
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-dv-env-tl-agent-env-pkg-sv">
+<span id="id21"></span><h2>hw/dv/sv/tl_agent/dv/env/tl_agent_env_pkg.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-env-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Missing space before hashtag in typedef declaration of parameterized class</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/850">https://github.com/google/verible/issues/850</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -14,7 +14,7 @@</span>
+   import dv_lib_pkg::*;
+
+   typedef class tl_agent_env_cfg;
+<span class="gd">-  typedef dv_base_env_cov #(.CFG_T(tl_agent_env_cfg)) tl_agent_env_cov;</span>
+<span class="gi">+  typedef dv_base_env_cov#(.CFG_T(tl_agent_env_cfg)) tl_agent_env_cov;</span>
+
+   `include &quot;tl_agent_env_cfg.sv&quot;
+   `include &quot;tl_agent_virtual_sequencer.sv&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-gpio-dv-env-gpio-env-pkg-sv">
+<span id="id22"></span><h2>hw/ip/gpio/dv/env/gpio_env_pkg.sv<a class="headerlink" href="#hw-ip-gpio-dv-env-gpio-env-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Missing space before hashtag in typedef declaration of parameterized class</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/850">https://github.com/google/verible/issues/850</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -18,7 +18,7 @@</span>
+   `include &quot;dv_macros.svh&quot;
+
+   // no. of gpio pins
+<span class="gd">-  parameter uint NUM_GPIOS     = 32;</span>
+<span class="gi">+  parameter uint NUM_GPIOS = 32;</span>
+   // no. of cycles for noise filter
+   parameter uint FILTER_CYCLES = 16;
+   // No. of alerts
+<span class="gu">@@ -28,7 +28,7 @@</span>
+   typedef virtual pins_if #(NUM_GPIOS) gpio_vif;
+   typedef class gpio_env_cfg;
+   typedef class gpio_env_cov;
+<span class="gd">-  typedef cip_base_virtual_sequencer #(gpio_env_cfg, gpio_env_cov) gpio_virtual_sequencer;</span>
+<span class="gi">+  typedef cip_base_virtual_sequencer#(gpio_env_cfg, gpio_env_cov) gpio_virtual_sequencer;</span>
+
+   // structure to indicate gpio pin transition and type of transition
+   // transition_occurred: 1-yes, 0-no
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-multiple-keys-vseq-sv">
+<span id="id23"></span><h2>hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_multiple_keys_vseq.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-multiple-keys-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Align colon inside dimension ranges</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/494">https://github.com/google/verible/issues/494</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -10,7 +10,7 @@</span>
+   // Use 2 as the low end since `num_trans == 1` is the default for the smoke test.
+   constraint num_trans_c {
+     num_trans dist {
+<span class="gd">-      [2  : 13] :/ 2,</span>
+<span class="gi">+      [2 : 13]  :/ 2,</span>
+       [14 : 25] :/ 3,
+       [25 : 37] :/ 4,
+       [38 : 50] :/ 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-stress-pipeline-vseq-sv">
+<span id="id24"></span><h2>hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_stress_pipeline_vseq.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-stress-pipeline-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Align colon inside dimension ranges (inside constraint block)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/494">https://github.com/google/verible/issues/494</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -11,7 +11,7 @@</span>
+   // to prevent simulations taking forever
+   constraint num_ops_c {
+     num_ops dist {
+<span class="gd">-      [1 : 1000] :/ 1,</span>
+<span class="gi">+      [1 : 1000]    :/ 1,</span>
+       [1001 : 2500] :/ 6,
+       [2501 : 4000] :/ 2,
+       [4001 : 5000] :/ 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-dv-env-seq-lib-aes-stress-vseq-sv">
+<span id="id25"></span><h2>hw/ip/aes/dv/env/seq_lib/aes_stress_vseq.sv<a class="headerlink" href="#hw-ip-aes-dv-env-seq-lib-aes-stress-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/30">https://github.com/google/verible/issues/30</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -10,8 +10,8 @@</span>
+   aes_message_item my_message;
+
+   task body();
+<span class="gd">-    `uvm_info(`gfn, $sformatf(&quot;\n\n\t ----| STARTING AES MAIN SEQUENCE |----\n %s&quot;,</span>
+<span class="gd">-                              cfg.convert2string()), UVM_LOW)</span>
+<span class="gi">+    `uvm_info(`gfn, $sformatf(</span>
+<span class="gi">+              &quot;\n\n\t ----| STARTING AES MAIN SEQUENCE |----\n %s&quot;, cfg.convert2string()), UVM_LOW)</span>
+
+     // generate list of messages //
+     generate_message_queue();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-keymgr-dv-env-seq-lib-keymgr-direct-to-disabled-vseq-sv">
+<span id="id26"></span><h2>hw/ip/keymgr/dv/env/seq_lib/keymgr_direct_to_disabled_vseq.sv<a class="headerlink" href="#hw-ip-keymgr-dv-env-seq-lib-keymgr-direct-to-disabled-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/30">https://github.com/google/verible/issues/30</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -11,7 +11,9 @@</span>
+     `uvm_info(`gfn, &quot;Start seq&quot;, UVM_HIGH)
+     // Advance any state after StReset
+     // if it&#39;s at StReset. OpDisable is invalid, which is tested at keymgr_init
+<span class="gd">-    repeat ($urandom_range(1, 4)) begin</span>
+<span class="gi">+    repeat ($urandom_range(</span>
+<span class="gi">+        1, 4</span>
+<span class="gi">+    )) begin</span>
+       keymgr_operations(.advance_state(1));
+     end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-spi-agent-seq-lib-spi-host-dummy-seq-sv">
+<span id="id27"></span><h2>hw/dv/sv/spi_agent/seq_lib/spi_host_dummy_seq.sv<a class="headerlink" href="#hw-dv-sv-spi-agent-seq-lib-spi-host-dummy-seq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Improper indentation caused by comment. Propably caused by
+parenthesis appended to comment partition (tree_unwrapper.cc) and
+wrapped in later stage (line_wrap_search?)</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -12,7 +12,7 @@</span>
+     `DV_CHECK_RANDOMIZE_WITH_FATAL(req,
+                                    item_type inside {SpiTransSckNoCsb, SpiTransCsbNoScb};
+                                    data.size() == 1; // no used, set to 1 to simpify randomization
+<span class="gd">-                                   )</span>
+<span class="gi">+)</span>
+     finish_item(req);
+     get_response(rsp);
+   endtask
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-usbdev-dv-env-usbdev-env-sv">
+<span id="id28"></span><h2>hw/ip/usbdev/dv/env/usbdev_env.sv<a class="headerlink" href="#hw-ip-usbdev-dv-env-usbdev-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -17,8 +17,9 @@</span>
+   function void build_phase(uvm_phase phase);
+     super.build_phase(phase);
+     // get vifs
+<span class="gd">-    if (!uvm_config_db#(virtual clk_rst_if)::get(this, &quot;&quot;, &quot;usb_clk_rst_vif&quot;,</span>
+<span class="gd">-        cfg.usb_clk_rst_vif)) begin</span>
+<span class="gi">+    if (!uvm_config_db#(virtual clk_rst_if)::get(</span>
+<span class="gi">+            this, &quot;&quot;, &quot;usb_clk_rst_vif&quot;, cfg.usb_clk_rst_vif</span>
+<span class="gi">+        )) begin</span>
+       `uvm_fatal(get_full_name(), &quot;failed to get usb_clk_rst_if from uvm_config_db&quot;)
+     end
+     cfg.usb_clk_rst_vif.set_freq_mhz(cfg.usb_clk_freq_mhz);
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-rng-agent-rng-agent-cfg-sv">
+<span id="id29"></span><h2>hw/dv/sv/rng_agent/rng_agent_cfg.sv<a class="headerlink" href="#hw-dv-sv-rng-agent-rng-agent-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Alignment</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+   // interface handle used by driver, monitor &amp; the sequencer, via cfg handle
+   virtual rng_if vif;
+
+<span class="gd">-  entropy_type_t   entropy_type = RAND;</span>
+<span class="gd">-  uint             entropy_hold_clks, entropy_ok_delay_clks;</span>
+<span class="gi">+  entropy_type_t entropy_type       = RAND;</span>
+<span class="gi">+  uint           entropy_hold_clks,         entropy_ok_delay_clks;</span>
+
+   `uvm_object_utils_begin(rng_agent_cfg)
+   `uvm_object_utils_end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-sva-otbn-idle-checker-sv">
+<span id="id30"></span><h2>hw/ip/otbn/dv/uvm/sva/otbn_idle_checker.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-sva-otbn-idle-checker-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,13 +7,13 @@</span>
+ module otbn_idle_checker
+   import otbn_reg_pkg::*;
+ (
+<span class="gd">-  input logic         clk_i,</span>
+<span class="gd">-  input logic         rst_ni,</span>
+<span class="gi">+  input logic clk_i,</span>
+<span class="gi">+  input logic rst_ni,</span>
+
+   input otbn_reg2hw_t reg2hw,
+   input logic         done_i,
+
+<span class="gd">-  input logic         idle_o_i</span>
+<span class="gi">+  input logic idle_o_i</span>
+ );
+
+   // Detect writes of 1 to CMD.START (the &quot;start&quot; bit has been eaten by reggen because the register
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-agent-seq-lib-jtag-dr-seq-sv">
+<span id="id31"></span><h2>hw/dv/sv/jtag_agent/seq_lib/jtag_dr_seq.sv<a class="headerlink" href="#hw-dv-sv-jtag-agent-seq-lib-jtag-dr-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -13,12 +13,11 @@</span>
+
+   virtual function void randomize_req(jtag_item req);
+     `DV_CHECK_RANDOMIZE_WITH_FATAL(req,
+<span class="gd">-        ir_len    == 0;</span>
+<span class="gi">+                                   ir_len    == 0;</span>
+         dr_len    == local::dr_len;
+         ir        == 0;
+         dr        == local::dr;
+<span class="gd">-        select_ir == 0;</span>
+<span class="gd">-    )</span>
+<span class="gi">+        select_ir == 0;)</span>
+   endfunction
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-device-seq-sv">
+<span id="id32"></span><h2>hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_device_seq.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-device-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -20,14 +20,13 @@</span>
+
+   virtual function void randomize_item(REQ item);
+     `DV_CHECK_RANDOMIZE_WITH_FATAL(item,
+<span class="gd">-      if (cfg.zero_delays) {</span>
+<span class="gi">+                                   if (cfg.zero_delays) {</span>
+         rsp_delay == 0;
+       } else {
+         rsp_delay inside {[cfg.rsp_delay_min : cfg.rsp_delay_max]};
+       }
+       is_kmac_rsp_err dist {1 :/ cfg.error_rsp_pct,
+<span class="gd">-                            0 :/ 100 - cfg.error_rsp_pct};</span>
+<span class="gd">-    )</span>
+<span class="gi">+                            0 :/ 100 - cfg.error_rsp_pct};)</span>
+   endfunction
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-csrng-agent-csrng-item-sv">
+<span id="id33"></span><h2>hw/dv/sv/csrng_agent/csrng_item.sv<a class="headerlink" href="#hw-dv-sv-csrng-agent-csrng-item-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,63 +9,62 @@</span>
+
+   `uvm_object_new
+
+<span class="gd">-  rand acmd_e       acmd;</span>
+<span class="gd">-  rand bit [3:0]    clen, flags;</span>
+<span class="gd">-  rand bit [18:0]   glen;</span>
+<span class="gd">-  rand bit [31:0]   cmd_data_q[$];</span>
+<span class="gi">+  rand acmd_e     acmd;</span>
+<span class="gi">+  rand bit [3:0]  clen,          flags;</span>
+<span class="gi">+  rand bit [18:0] glen;</span>
+<span class="gi">+  rand bit [31:0] cmd_data_q[$];</span>
+
+   // TODO: Try clen &gt; 12
+<span class="gd">-  constraint c_clen {</span>
+<span class="gd">-    clen inside {[0:12]};</span>
+<span class="gd">-  };</span>
+<span class="gi">+  constraint c_clen {clen inside {[0 : 12]};}</span>
+<span class="gi">+  ;</span>
+
+   constraint c_cmd_data {
+     solve clen before cmd_data_q;
+
+     cmd_data_q.size() == clen;
+<span class="gd">-  };</span>
+<span class="gi">+  }</span>
+<span class="gi">+  ;</span>
+
+<span class="gd">-  constraint c_flags {</span>
+<span class="gd">-    flags inside {[0:1]};</span>
+<span class="gd">-  };</span>
+<span class="gi">+  constraint c_flags {flags inside {[0 : 1]};}</span>
+<span class="gi">+  ;</span>
+
+<span class="gd">-// TODO: add/fix glen constraint</span>
+<span class="gd">-//  constraint c_glen {</span>
+<span class="gd">-//    solve acmd before glen;</span>
+<span class="gd">-//</span>
+<span class="gd">-//    if (acmd != csrng_pkg::GEN)</span>
+<span class="gd">-//      glen == &#39;h0;</span>
+<span class="gd">-//  };</span>
+<span class="gi">+  // TODO: add/fix glen constraint</span>
+<span class="gi">+  //  constraint c_glen {</span>
+<span class="gi">+  //    solve acmd before glen;</span>
+<span class="gi">+  //</span>
+<span class="gi">+  //    if (acmd != csrng_pkg::GEN)</span>
+<span class="gi">+  //      glen == &#39;h0;</span>
+<span class="gi">+  //  };</span>
+
+<span class="gd">-   //--------------------------------------------------------------------</span>
+<span class="gd">-   // do_copy</span>
+<span class="gd">-   //--------------------------------------------------------------------</span>
+<span class="gd">-   virtual function void do_copy(uvm_object rhs);</span>
+<span class="gd">-      csrng_item   rhs_;</span>
+<span class="gd">-      $cast(rhs_, rhs);</span>
+<span class="gd">-      super.do_copy(rhs);</span>
+<span class="gi">+  //--------------------------------------------------------------------</span>
+<span class="gi">+  // do_copy</span>
+<span class="gi">+  //--------------------------------------------------------------------</span>
+<span class="gi">+  virtual function void do_copy(uvm_object rhs);</span>
+<span class="gi">+    csrng_item rhs_;</span>
+<span class="gi">+    $cast(rhs_, rhs);</span>
+<span class="gi">+    super.do_copy(rhs);</span>
+
+<span class="gd">-      this.acmd       = rhs_.acmd;</span>
+<span class="gd">-      this.clen       = rhs_.clen;</span>
+<span class="gd">-      this.flags      = rhs_.flags;</span>
+<span class="gd">-      this.glen       = rhs_.glen;</span>
+<span class="gd">-      this.cmd_data_q = rhs_.cmd_data_q;</span>
+<span class="gd">-   endfunction</span>
+<span class="gi">+    this.acmd       = rhs_.acmd;</span>
+<span class="gi">+    this.clen       = rhs_.clen;</span>
+<span class="gi">+    this.flags      = rhs_.flags;</span>
+<span class="gi">+    this.glen       = rhs_.glen;</span>
+<span class="gi">+    this.cmd_data_q = rhs_.cmd_data_q;</span>
+<span class="gi">+  endfunction</span>
+
+   virtual function string convert2string();
+     string str = &quot;&quot;;
+     str = {str, &quot;\n&quot;};
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |*********** csrng_item ************| \t&quot;)                   };</span>
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |* acmd           :  %4s          *| \t&quot;, acmd.name())       };</span>
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |* clen           :   0x%0h          *| \t&quot;, clen)           };</span>
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |* flags          :   0x%0h          *| \t&quot;, flags)          };</span>
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |* glen           :   0x%5h      *| \t&quot;, glen)               };</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |*********** csrng_item ************| \t&quot;)};</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |* acmd           :  %4s          *| \t&quot;, acmd.name())};</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |* clen           :   0x%0h          *| \t&quot;, clen)};</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |* flags          :   0x%0h          *| \t&quot;, flags)};</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |* glen           :   0x%5h      *| \t&quot;, glen)};</span>
+     if (cmd_data_q.size()) begin
+       for (int i = 0; i &lt; cmd_data_q.size(); i++) begin
+<span class="gd">-        str = {str,  $sformatf(&quot;\n\t |* cmd_data_q[%2d] :   0x%8h   *| \t&quot;, i, cmd_data_q[i]) };</span>
+<span class="gi">+        str = {str, $sformatf(&quot;\n\t |* cmd_data_q[%2d] :   0x%8h   *| \t&quot;, i, cmd_data_q[i])};</span>
+       end
+     end
+<span class="gd">-    str = {str,  $sformatf(&quot;\n\t |***********************************| \t&quot;)                   };</span>
+<span class="gi">+    str = {str, $sformatf(&quot;\n\t |***********************************| \t&quot;)};</span>
+     str = {str, &quot;\n&quot;};
+     return str;
+   endfunction
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-alert-esc-agent-alert-monitor-sv">
+<span id="id34"></span><h2>hw/dv/sv/alert_esc_agent/alert_monitor.sv<a class="headerlink" href="#hw-dv-sv-alert-esc-agent-alert-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -32,132 +32,142 @@</span>
+
+   virtual task ping_thread();
+     alert_esc_seq_item req;
+<span class="gd">-    bit                ping_p, alert_p;</span>
+<span class="gd">-    forever @(cfg.vif.monitor_cb) begin</span>
+<span class="gd">-      if (ping_p != cfg.vif.monitor_cb.alert_rx_final.ping_p) begin</span>
+<span class="gd">-        under_ping_rsp = 1;</span>
+<span class="gd">-        req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gd">-        req.alert_esc_type = AlertEscPingTrans;</span>
+<span class="gd">-</span>
+<span class="gd">-        fork</span>
+<span class="gd">-          begin : isolation_fork</span>
+<span class="gd">-            fork</span>
+<span class="gd">-              begin : wait_ping_timeout</span>
+<span class="gd">-                repeat (cfg.ping_timeout_cycle - 1) @(cfg.vif.monitor_cb);</span>
+<span class="gd">-                req.ping_timeout = 1&#39;b1;</span>
+<span class="gd">-              end</span>
+<span class="gd">-              begin : wait_ping_handshake</span>
+<span class="gd">-                // in case there is an alert happened before ping</span>
+<span class="gd">-                if (alert_p != 0) wait_alert_complete();</span>
+<span class="gd">-                // TODO: could use &quot;wait_alert()&quot; but right now scb needs to be cycle accurate to</span>
+<span class="gd">-                // predict esc_cnt.</span>
+<span class="gd">-                while (cfg.vif.alert_tx_final.alert_p !== 1&#39;b1) @(cfg.vif.monitor_cb);</span>
+<span class="gd">-                req.alert_handshake_sta = AlertReceived;</span>
+<span class="gd">-                wait_ack();</span>
+<span class="gd">-                req.alert_handshake_sta = AlertAckReceived;</span>
+<span class="gd">-                under_ping_rsp = 0;</span>
+<span class="gd">-              end</span>
+<span class="gd">-              begin</span>
+<span class="gd">-                wait(under_reset);</span>
+<span class="gd">-              end</span>
+<span class="gd">-            join_any</span>
+<span class="gd">-            // wait 1ps in case &#39;wait_ping_handshake&#39; and &#39;wait_ping_timeout&#39; thread finish at the</span>
+<span class="gd">-            // same clock cycle, and give 1ps to make sure both threads are able to update info</span>
+<span class="gd">-            if (!under_reset) #1ps;</span>
+<span class="gd">-            disable fork;</span>
+<span class="gd">-          end : isolation_fork</span>
+<span class="gd">-        join</span>
+<span class="gd">-</span>
+<span class="gd">-        `uvm_info(&quot;alert_monitor&quot;, $sformatf(&quot;[%s]: handshake status is %s&quot;,</span>
+<span class="gd">-            req.alert_esc_type.name(), req.alert_handshake_sta.name()), UVM_HIGH)</span>
+<span class="gd">-        if (!under_reset) begin</span>
+<span class="gd">-          alert_esc_port.write(req);</span>
+<span class="gd">-          if (cfg.en_cov &amp;&amp; cfg.en_ping_cov) cov.m_alert_esc_trans_cg.sample(req.alert_esc_type);</span>
+<span class="gd">-</span>
+<span class="gd">-          // spurious alert error, can only happen one clock after timeout. Detail please see</span>
+<span class="gd">-          // discussion on Issue #2321</span>
+<span class="gd">-          if (req.ping_timeout &amp;&amp; req.alert_handshake_sta == AlertReceived) begin</span>
+<span class="gd">-            @(cfg.vif.monitor_cb);</span>
+<span class="gd">-            if (cfg.vif.alert_rx_final.ack_p == 1&#39;b1) alert_esc_port.write(req);</span>
+<span class="gi">+    bit ping_p, alert_p;</span>
+<span class="gi">+    forever</span>
+<span class="gi">+      @(cfg.vif.monitor_cb) begin</span>
+<span class="gi">+        if (ping_p != cfg.vif.monitor_cb.alert_rx_final.ping_p) begin</span>
+<span class="gi">+          under_ping_rsp = 1;</span>
+<span class="gi">+          req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gi">+          req.alert_esc_type = AlertEscPingTrans;</span>
+<span class="gi">+</span>
+<span class="gi">+          fork</span>
+<span class="gi">+            begin : isolation_fork</span>
+<span class="gi">+              fork</span>
+<span class="gi">+                begin : wait_ping_timeout</span>
+<span class="gi">+                  repeat (cfg.ping_timeout_cycle - 1) @(cfg.vif.monitor_cb);</span>
+<span class="gi">+                  req.ping_timeout = 1&#39;b1;</span>
+<span class="gi">+                end</span>
+<span class="gi">+                begin : wait_ping_handshake</span>
+<span class="gi">+                  // in case there is an alert happened before ping</span>
+<span class="gi">+                  if (alert_p != 0) wait_alert_complete();</span>
+<span class="gi">+                  // TODO: could use &quot;wait_alert()&quot; but right now scb needs to be cycle accurate to</span>
+<span class="gi">+                  // predict esc_cnt.</span>
+<span class="gi">+                  while (cfg.vif.alert_tx_final.alert_p !== 1&#39;b1) @(cfg.vif.monitor_cb);</span>
+<span class="gi">+                  req.alert_handshake_sta = AlertReceived;</span>
+<span class="gi">+                  wait_ack();</span>
+<span class="gi">+                  req.alert_handshake_sta = AlertAckReceived;</span>
+<span class="gi">+                  under_ping_rsp = 0;</span>
+<span class="gi">+                end</span>
+<span class="gi">+                begin</span>
+<span class="gi">+                  wait(under_reset);</span>
+<span class="gi">+                end</span>
+<span class="gi">+              join_any</span>
+<span class="gi">+              // wait 1ps in case &#39;wait_ping_handshake&#39; and &#39;wait_ping_timeout&#39; thread finish at the</span>
+<span class="gi">+              // same clock cycle, and give 1ps to make sure both threads are able to update info</span>
+<span class="gi">+              if (!under_reset) #1ps;</span>
+<span class="gi">+              disable fork;</span>
+<span class="gi">+            end : isolation_fork</span>
+<span class="gi">+          join</span>
+<span class="gi">+</span>
+<span class="gi">+          `uvm_info(&quot;alert_monitor&quot;, $sformatf(</span>
+<span class="gi">+                    &quot;[%s]: handshake status is %s&quot;,</span>
+<span class="gi">+                    req.alert_esc_type.name(),</span>
+<span class="gi">+                    req.alert_handshake_sta.name()</span>
+<span class="gi">+                    ), UVM_HIGH)</span>
+<span class="gi">+          if (!under_reset) begin</span>
+<span class="gi">+            alert_esc_port.write(req);</span>
+<span class="gi">+            if (cfg.en_cov &amp;&amp; cfg.en_ping_cov) cov.m_alert_esc_trans_cg.sample(req.alert_esc_type);</span>
+<span class="gi">+</span>
+<span class="gi">+            // spurious alert error, can only happen one clock after timeout. Detail please see</span>
+<span class="gi">+            // discussion on Issue #2321</span>
+<span class="gi">+            if (req.ping_timeout &amp;&amp; req.alert_handshake_sta == AlertReceived) begin</span>
+<span class="gi">+              @(cfg.vif.monitor_cb);</span>
+<span class="gi">+              if (cfg.vif.alert_rx_final.ack_p == 1&#39;b1) alert_esc_port.write(req);</span>
+<span class="gi">+            end</span>
+           end
+<span class="gi">+          under_ping_rsp = 0;</span>
+         end
+<span class="gd">-        under_ping_rsp = 0;</span>
+<span class="gi">+        ping_p  = cfg.vif.monitor_cb.alert_rx_final.ping_p;</span>
+<span class="gi">+        alert_p = cfg.vif.monitor_cb.alert_tx_final.alert_p;</span>
+       end
+<span class="gd">-      ping_p = cfg.vif.monitor_cb.alert_rx_final.ping_p;</span>
+<span class="gd">-      alert_p = cfg.vif.monitor_cb.alert_tx_final.alert_p;</span>
+<span class="gd">-    end</span>
+   endtask : ping_thread
+
+   virtual task alert_thread();
+     alert_esc_seq_item req;
+<span class="gd">-    bit                alert_p, ping_p;</span>
+<span class="gd">-    forever @(cfg.vif.monitor_cb) begin</span>
+<span class="gd">-      // If ping and alert are triggered at the same clock cycle, the alert is considered a ping</span>
+<span class="gd">-      // response</span>
+<span class="gd">-      if (!alert_p &amp;&amp; is_valid_alert() &amp;&amp; !under_ping_rsp &amp;&amp;</span>
+<span class="gi">+    bit alert_p, ping_p;</span>
+<span class="gi">+    forever</span>
+<span class="gi">+      @(cfg.vif.monitor_cb) begin</span>
+<span class="gi">+        // If ping and alert are triggered at the same clock cycle, the alert is considered a ping</span>
+<span class="gi">+        // response</span>
+<span class="gi">+        if (!alert_p &amp;&amp; is_valid_alert() &amp;&amp; !under_ping_rsp &amp;&amp;</span>
+           ping_p == cfg.vif.monitor_cb.alert_rx_final.ping_p) begin
+<span class="gd">-        req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gd">-        req.alert_esc_type = AlertEscSigTrans;</span>
+<span class="gd">-        req.alert_handshake_sta = AlertReceived;</span>
+<span class="gd">-</span>
+<span class="gd">-        // Write alert packet to scb when receiving alert signal</span>
+<span class="gd">-        alert_esc_port.write(req);</span>
+<span class="gd">-</span>
+<span class="gd">-        // Duplicate req for writing alert packet at the end of alert handshake</span>
+<span class="gd">-        `downcast(req, req.clone())</span>
+<span class="gd">-</span>
+<span class="gd">-        fork</span>
+<span class="gd">-          begin : isolation_fork</span>
+<span class="gd">-            fork</span>
+<span class="gd">-              begin : alert_timeout</span>
+<span class="gd">-                repeat (cfg.handshake_timeout_cycle) @(cfg.vif.monitor_cb);</span>
+<span class="gd">-                req.ping_timeout = 1&#39;b1;</span>
+<span class="gd">-              end</span>
+<span class="gd">-              begin : wait_alert_handshake</span>
+<span class="gd">-                wait_ack();</span>
+<span class="gd">-                req.alert_handshake_sta = AlertAckReceived;</span>
+<span class="gd">-                wait_alert_complete();</span>
+<span class="gd">-                req.alert_handshake_sta = AlertComplete;</span>
+<span class="gd">-                wait_ack_complete();</span>
+<span class="gd">-                req.alert_handshake_sta = AlertAckComplete;</span>
+<span class="gd">-              end</span>
+<span class="gd">-              begin</span>
+<span class="gd">-                wait(under_reset);</span>
+<span class="gd">-              end</span>
+<span class="gd">-            join_any</span>
+<span class="gd">-            disable fork;</span>
+<span class="gd">-          end : isolation_fork</span>
+<span class="gd">-        join</span>
+<span class="gd">-</span>
+<span class="gd">-        `uvm_info(&quot;alert_monitor&quot;, $sformatf(&quot;[%s]: handshake status is %s&quot;,</span>
+<span class="gd">-            req.alert_esc_type.name(), req.alert_handshake_sta.name()), UVM_HIGH)</span>
+<span class="gd">-        if (!under_reset) alert_esc_port.write(req);</span>
+<span class="gd">-        if (cfg.en_cov) begin</span>
+<span class="gd">-          cov.m_alert_handshake_complete_cg.sample(req.alert_esc_type, req.alert_handshake_sta);</span>
+<span class="gd">-          if (cfg.en_ping_cov) cov.m_alert_esc_trans_cg.sample(req.alert_esc_type);</span>
+<span class="gd">-        end</span>
+<span class="gd">-      end  // end while loop</span>
+<span class="gd">-      ping_p = cfg.vif.monitor_cb.alert_rx_final.ping_p;</span>
+<span class="gd">-      alert_p = cfg.vif.monitor_cb.alert_tx_final.alert_p;</span>
+<span class="gd">-    end</span>
+<span class="gi">+          req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gi">+          req.alert_esc_type = AlertEscSigTrans;</span>
+<span class="gi">+          req.alert_handshake_sta = AlertReceived;</span>
+<span class="gi">+</span>
+<span class="gi">+          // Write alert packet to scb when receiving alert signal</span>
+<span class="gi">+          alert_esc_port.write(req);</span>
+<span class="gi">+</span>
+<span class="gi">+          // Duplicate req for writing alert packet at the end of alert handshake</span>
+<span class="gi">+          `downcast(req, req.clone())</span>
+<span class="gi">+</span>
+<span class="gi">+          fork</span>
+<span class="gi">+            begin : isolation_fork</span>
+<span class="gi">+              fork</span>
+<span class="gi">+                begin : alert_timeout</span>
+<span class="gi">+                  repeat (cfg.handshake_timeout_cycle) @(cfg.vif.monitor_cb);</span>
+<span class="gi">+                  req.ping_timeout = 1&#39;b1;</span>
+<span class="gi">+                end</span>
+<span class="gi">+                begin : wait_alert_handshake</span>
+<span class="gi">+                  wait_ack();</span>
+<span class="gi">+                  req.alert_handshake_sta = AlertAckReceived;</span>
+<span class="gi">+                  wait_alert_complete();</span>
+<span class="gi">+                  req.alert_handshake_sta = AlertComplete;</span>
+<span class="gi">+                  wait_ack_complete();</span>
+<span class="gi">+                  req.alert_handshake_sta = AlertAckComplete;</span>
+<span class="gi">+                end</span>
+<span class="gi">+                begin</span>
+<span class="gi">+                  wait(under_reset);</span>
+<span class="gi">+                end</span>
+<span class="gi">+              join_any</span>
+<span class="gi">+              disable fork;</span>
+<span class="gi">+            end : isolation_fork</span>
+<span class="gi">+          join</span>
+<span class="gi">+</span>
+<span class="gi">+          `uvm_info(&quot;alert_monitor&quot;, $sformatf(</span>
+<span class="gi">+                    &quot;[%s]: handshake status is %s&quot;,</span>
+<span class="gi">+                    req.alert_esc_type.name(),</span>
+<span class="gi">+                    req.alert_handshake_sta.name()</span>
+<span class="gi">+                    ), UVM_HIGH)</span>
+<span class="gi">+          if (!under_reset) alert_esc_port.write(req);</span>
+<span class="gi">+          if (cfg.en_cov) begin</span>
+<span class="gi">+            cov.m_alert_handshake_complete_cg.sample(req.alert_esc_type, req.alert_handshake_sta);</span>
+<span class="gi">+            if (cfg.en_ping_cov) cov.m_alert_esc_trans_cg.sample(req.alert_esc_type);</span>
+<span class="gi">+          end</span>
+<span class="gi">+        end  // end while loop</span>
+<span class="gi">+        ping_p  = cfg.vif.monitor_cb.alert_rx_final.ping_p;</span>
+<span class="gi">+        alert_p = cfg.vif.monitor_cb.alert_tx_final.alert_p;</span>
+<span class="gi">+      end</span>
+   endtask : alert_thread
+
+   virtual task int_fail_thread();
+     alert_esc_seq_item req;
+     bit prev_err;
+<span class="gd">-    forever @(cfg.vif.monitor_cb) begin</span>
+<span class="gd">-      // use prev_err to exclude the async clk skew</span>
+<span class="gd">-      if (!under_reset &amp;&amp; is_sig_int_err() &amp;&amp; (!cfg.is_async || prev_err != 0)) begin</span>
+<span class="gd">-        fork</span>
+<span class="gd">-          begin</span>
+<span class="gd">-            req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gd">-            req.alert_esc_type = AlertEscIntFail;</span>
+<span class="gd">-            alert_esc_port.write(req);</span>
+<span class="gd">-          end</span>
+<span class="gd">-        join_none;</span>
+<span class="gi">+    forever</span>
+<span class="gi">+      @(cfg.vif.monitor_cb) begin</span>
+<span class="gi">+        // use prev_err to exclude the async clk skew</span>
+<span class="gi">+        if (!under_reset &amp;&amp; is_sig_int_err() &amp;&amp; (!cfg.is_async || prev_err != 0)) begin</span>
+<span class="gi">+          fork</span>
+<span class="gi">+            begin</span>
+<span class="gi">+              req = alert_esc_seq_item::type_id::create(&quot;req&quot;);</span>
+<span class="gi">+              req.alert_esc_type = AlertEscIntFail;</span>
+<span class="gi">+              alert_esc_port.write(req);</span>
+<span class="gi">+            end</span>
+<span class="gi">+          join_none</span>
+<span class="gi">+          ;</span>
+<span class="gi">+        end</span>
+<span class="gi">+        prev_err = is_sig_int_err();</span>
+       end
+<span class="gd">-      prev_err = is_sig_int_err();</span>
+<span class="gd">-    end</span>
+   endtask : int_fail_thread
+
+   virtual task wait_alert();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-dv-lib-dv-base-driver-sv">
+<span id="id35"></span><h2>hw/dv/sv/dv_lib/dv_base_driver.sv<a class="headerlink" href="#hw-dv-sv-dv-lib-dv-base-driver-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,14 +2,21 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class dv_base_driver #(type ITEM_T     = uvm_sequence_item,</span>
+<span class="gd">-                       type CFG_T      = dv_base_agent_cfg,</span>
+<span class="gd">-                       type RSP_ITEM_T = ITEM_T)</span>
+<span class="gd">-  extends uvm_driver #(.REQ(ITEM_T), .RSP(RSP_ITEM_T));</span>
+<span class="gi">+class dv_base_driver #(</span>
+<span class="gi">+  type ITEM_T     = uvm_sequence_item,</span>
+<span class="gi">+  type CFG_T      = dv_base_agent_cfg,</span>
+<span class="gi">+  type RSP_ITEM_T = ITEM_T</span>
+<span class="gi">+) extends uvm_driver #(</span>
+<span class="gi">+  .REQ(ITEM_T),</span>
+<span class="gi">+  .RSP(RSP_ITEM_T)</span>
+<span class="gi">+);</span>
+
+<span class="gd">-  `uvm_component_param_utils(dv_base_driver #(.ITEM_T     (ITEM_T),</span>
+<span class="gd">-                                              .CFG_T      (CFG_T),</span>
+<span class="gd">-                                              .RSP_ITEM_T (RSP_ITEM_T)))</span>
+<span class="gi">+  `uvm_component_param_utils(</span>
+<span class="gi">+  dv_base_driver#(</span>
+<span class="gi">+  .ITEM_T    (ITEM_T),</span>
+<span class="gi">+  .CFG_T     (CFG_T),</span>
+<span class="gi">+  .RSP_ITEM_T(RSP_ITEM_T)</span>
+<span class="gi">+                             ))</span>
+
+   bit   under_reset;
+   CFG_T cfg;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-uart-agent-seq-lib-uart-seq-sv">
+<span id="id36"></span><h2>hw/dv/sv/uart_agent/seq_lib/uart_seq.sv<a class="headerlink" href="#hw-dv-sv-uart-agent-seq-lib-uart-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -25,10 +25,9 @@</span>
+     start_item(req);
+     req.stop_bit_c.constraint_mode(0);
+     `DV_CHECK_RANDOMIZE_WITH_FATAL(req,
+<span class="gd">-        data     == local::data;</span>
+<span class="gi">+                                   data     == local::data;</span>
+         parity   == local::parity;
+<span class="gd">-        stop_bit == !frame_err;</span>
+<span class="gd">-        )</span>
+<span class="gi">+        stop_bit == !frame_err;)</span>
+     finish_item(req);
+     get_response(rsp);
+     `uvm_info(`gfn, &quot;uart rx byte xfer done&quot;, UVM_HIGH)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-bus-params-pkg-bus-params-pkg-sv">
+<span id="id37"></span><h2>hw/dv/sv/bus_params_pkg/bus_params_pkg.sv<a class="headerlink" href="#hw-dv-sv-bus-params-pkg-bus-params-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -32,28 +32,28 @@</span>
+   parameter int BUS_SZW = top_pkg::TL_SZW;
+ `endif
+
+<span class="gd">-// Set the bus address info (source) width.</span>
+<span class="gi">+  // Set the bus address info (source) width.</span>
+ `ifdef BUS_AIW
+   parameter int BUS_AIW = `BUS_AIW;
+ `else
+   parameter int BUS_AIW = top_pkg::TL_AIW;
+ `endif
+
+<span class="gd">-// Set the bus data info (source) width.</span>
+<span class="gi">+  // Set the bus data info (source) width.</span>
+ `ifdef BUS_DIW
+   parameter int BUS_DIW = `BUS_DIW;
+ `else
+   parameter int BUS_DIW = top_pkg::TL_DIW;
+ `endif
+
+<span class="gd">-// Set the bus a channel user width.</span>
+<span class="gi">+  // Set the bus a channel user width.</span>
+ `ifdef BUS_AUW
+   parameter int BUS_AUW = `BUS_AUW;
+ `else
+   parameter int BUS_AUW = top_pkg::TL_AUW;
+ `endif
+
+<span class="gd">-// Set the bus d channel user width.</span>
+<span class="gi">+  // Set the bus d channel user width.</span>
+ `ifdef BUS_DUW
+   parameter int BUS_DUW = `BUS_DUW;
+ `else
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-edn-dv-env-edn-env-pkg-sv">
+<span id="id38"></span><h2>hw/ip/edn/dv/env/edn_env_pkg.sv<a class="headerlink" href="#hw-ip-edn-dv-env-edn-env-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -20,9 +20,9 @@</span>
+   `include &quot;dv_macros.svh&quot;
+
+   // parameters
+<span class="gd">-  parameter uint     NUM_ENDPOINTS = 1;</span>
+<span class="gd">-  parameter string   LIST_OF_ALERTS[] = {&quot;fatal_alert&quot;};</span>
+<span class="gd">-  parameter uint     NUM_ALERTS = 1;</span>
+<span class="gi">+  parameter uint NUM_ENDPOINTS = 1;</span>
+<span class="gi">+  parameter string LIST_OF_ALERTS[] = {&quot;fatal_alert&quot;};</span>
+<span class="gi">+  parameter uint NUM_ALERTS = 1;</span>
+
+   // types
+   typedef enum int {
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-esc-rxtx-assert-fpv-sv">
+<span id="id39"></span><h2>hw/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-esc-rxtx-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,26 +8,23 @@</span>
+ `include &quot;prim_assert.sv&quot;
+
+ module prim_esc_rxtx_assert_fpv (
+<span class="gd">-  input        clk_i,</span>
+<span class="gd">-  input        rst_ni,</span>
+<span class="gi">+  input clk_i,</span>
+<span class="gi">+  input rst_ni,</span>
+   // for sigint error injection only
+<span class="gd">-  input        resp_err_pi,</span>
+<span class="gd">-  input        resp_err_ni,</span>
+<span class="gd">-  input        esc_err_pi,</span>
+<span class="gd">-  input        esc_err_ni,</span>
+<span class="gi">+  input resp_err_pi,</span>
+<span class="gi">+  input resp_err_ni,</span>
+<span class="gi">+  input esc_err_pi,</span>
+<span class="gi">+  input esc_err_ni,</span>
+   // normal I/Os
+<span class="gd">-  input        esc_req_i,</span>
+<span class="gd">-  input        ping_req_i,</span>
+<span class="gd">-  input        ping_ok_o,</span>
+<span class="gd">-  input        integ_fail_o,</span>
+<span class="gd">-  input        esc_en_o</span>
+<span class="gi">+  input esc_req_i,</span>
+<span class="gi">+  input ping_req_i,</span>
+<span class="gi">+  input ping_ok_o,</span>
+<span class="gi">+  input integ_fail_o,</span>
+<span class="gi">+  input esc_en_o</span>
+ );
+
+   logic error_present;
+<span class="gd">-  assign error_present = resp_err_pi ||</span>
+<span class="gd">-                         resp_err_ni ||</span>
+<span class="gd">-                         esc_err_pi  ||</span>
+<span class="gd">-                         esc_err_ni;</span>
+<span class="gi">+  assign error_present = resp_err_pi || resp_err_ni || esc_err_pi || esc_err_ni;</span>
+
+   // tracks whether any error has been injected so far
+   logic error_d, error_q;
+<span class="gu">@@ -52,119 +49,76 @@</span>
+   end
+
+   // ping will stay high until ping ok received, then it must be deasserted
+<span class="gd">-  `ASSUME_FPV(PingReqDeassert_M,</span>
+<span class="gd">-      ping_req_i &amp;&amp;</span>
+<span class="gd">-      ping_ok_o</span>
+<span class="gd">-      |=&gt;</span>
+<span class="gd">-      !ping_req_i)</span>
+<span class="gd">-  `ASSUME_FPV(PingReqStaysAsserted0_M,</span>
+<span class="gd">-      ping_req_i &amp;&amp;</span>
+<span class="gd">-      !ping_ok_o</span>
+<span class="gd">-      |=&gt;</span>
+<span class="gd">-      ping_req_i)</span>
+<span class="gi">+  `ASSUME_FPV(PingReqDeassert_M, ping_req_i &amp;&amp; ping_ok_o |=&gt; !ping_req_i)</span>
+<span class="gi">+  `ASSUME_FPV(PingReqStaysAsserted0_M, ping_req_i &amp;&amp; !ping_ok_o |=&gt; ping_req_i)</span>
+   // this timing is guaranteed by the lfsr ping timer.
+<span class="gd">-  `ASSUME_FPV(PingReqStaysLowFor3Cycles_M,</span>
+<span class="gd">-      $fell(ping_req_i)</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      !ping_req_i [*3])</span>
+<span class="gi">+  `ASSUME_FPV(PingReqStaysLowFor3Cycles_M, $fell(ping_req_i) |-&gt; !ping_req_i [* 3])</span>
+
+
+   // assume that escalation enable signal will eventually be deasserted
+   // for more than 3 cycles (this assumption is needed such that the FSM liveness
+   // assertion below can be proven).
+<span class="gd">-  `ASSUME_FPV(FiniteEsc_M,</span>
+<span class="gd">-      esc_req_i</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      strong(##[1:$] !esc_req_i [*3]))</span>
+<span class="gi">+  `ASSUME_FPV(FiniteEsc_M, esc_req_i |-&gt; strong (##[1:$] !esc_req_i [* 3]))</span>
+
+   // check that ping response time is bounded if no error has occurred so far, and
+   // no escalation is being requested.
+<span class="gd">-  `ASSERT(PingRespCheck_A,</span>
+<span class="gd">-      $rose(ping_req_i) &amp;&amp;</span>
+<span class="gd">-      !esc_req_i</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      ##[0:4] ping_ok_o,</span>
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      !rst_ni ||</span>
+<span class="gd">-      error_d ||</span>
+<span class="gd">-      esc_req_i)</span>
+<span class="gi">+  `ASSERT(PingRespCheck_A, $rose(ping_req_i) &amp;&amp; !esc_req_i |-&gt; ##[0:4] ping_ok_o, clk_i,</span>
+<span class="gi">+          !rst_ni || error_d || esc_req_i)</span>
+
+   // check escalation response toggles.
+   `ASSERT(EscRespCheck_A,
+<span class="gd">-      ##1 esc_req_i</span>
+<span class="gi">+          ##1 esc_req_i</span>
+       |-&gt;
+       ##[0:1] prim_esc_rxtx_fpv.esc_rx_out.resp_p
+       ##1 !prim_esc_rxtx_fpv.esc_rx_out.resp_p,
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      !rst_ni ||</span>
+<span class="gd">-      error_present)</span>
+<span class="gi">+          clk_i, !rst_ni || error_present)</span>
+
+   // check correct transmission of escalation within 0-1 cycles
+<span class="gd">-  `ASSERT(EscCheck_A,</span>
+<span class="gd">-      ##1 esc_req_i</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      ##[0:1] esc_en_o,</span>
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      !rst_ni ||</span>
+<span class="gd">-      error_present)</span>
+<span class="gi">+  `ASSERT(EscCheck_A, ##1 esc_req_i |-&gt; ##[0:1] esc_en_o, clk_i, !rst_ni || error_present)</span>
+
+   // check that a single error on the diffpairs is detected
+   `ASSERT(SingleSigIntDetected0_A,
+<span class="gd">-      {esc_err_pi, esc_err_ni} == &#39;0 ##1</span>
+<span class="gd">-      $onehot({resp_err_pi, resp_err_ni})</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      integ_fail_o)</span>
+<span class="gi">+          {esc_err_pi, esc_err_ni} == &#39;0 ##1 $onehot({resp_err_pi, resp_err_ni}) |-&gt; integ_fail_o)</span>
+   `ASSERT(SingleSigIntDetected1_A,
+<span class="gd">-      $onehot({esc_err_pi, esc_err_ni}) ##1</span>
+<span class="gd">-      {resp_err_pi, resp_err_ni} == &#39;0</span>
+<span class="gd">-      |-&gt;</span>
+<span class="gd">-      integ_fail_o)</span>
+<span class="gi">+          $onehot({esc_err_pi, esc_err_ni}) ##1{resp_err_pi, resp_err_ni} == &#39;0 |-&gt; integ_fail_o)</span>
+
+   // basic liveness of sender FSM
+   `ASSERT(FsmLivenessSender_A,
+<span class="gd">-      (prim_esc_rxtx_fpv.u_prim_esc_sender.state_q !=</span>
+<span class="gi">+          (prim_esc_rxtx_fpv.u_prim_esc_sender.state_q !=</span>
+       prim_esc_rxtx_fpv.u_prim_esc_sender.Idle)
+       |-&gt;
+       strong(##[1:$] (prim_esc_rxtx_fpv.u_prim_esc_sender.state_q
+       == prim_esc_rxtx_fpv.u_prim_esc_sender.Idle)))
+   // basic liveness of sender FSM (can only be guaranteed if no error is present)
+   `ASSERT(FsmLivenessReceiver_A,
+<span class="gd">-      (prim_esc_rxtx_fpv.u_prim_esc_receiver.state_q !=</span>
+<span class="gi">+          (prim_esc_rxtx_fpv.u_prim_esc_receiver.state_q !=</span>
+       prim_esc_rxtx_fpv.u_prim_esc_receiver.Idle)
+       |-&gt;
+       strong(##[1:$] (prim_esc_rxtx_fpv.u_prim_esc_receiver.state_q
+       == prim_esc_rxtx_fpv.u_prim_esc_receiver.Idle)),
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      rst_ni ||</span>
+<span class="gd">-      error_present)</span>
+<span class="gi">+          clk_i, rst_ni || error_present)</span>
+
+   // check that auto escalation timeout does not trigger prematurely.
+   // this requires that no errors have been present so far.
+   `ASSERT(AutoEscalation0_A,
+<span class="gd">-      ping_req_i &amp;&amp;</span>
+<span class="gi">+          ping_req_i &amp;&amp;</span>
+       ping_ok_o &amp;&amp;
+       !esc_en_o ##1
+       !ping_req_i [*0 : 2**prim_esc_rxtx_fpv.u_prim_esc_receiver.TimeoutCntDw - 4]
+       |-&gt;
+       !esc_en_o,
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      !rst_ni ||</span>
+<span class="gd">-      error_d ||</span>
+<span class="gd">-      esc_d)</span>
+<span class="gi">+          clk_i, !rst_ni || error_d || esc_d)</span>
+
+   // check that auto escalation timeout kicks in if pings are absent for too long.
+   // this requires that no errors have been present so far.
+   `ASSERT(AutoEscalation1_A,
+<span class="gd">-      ping_req_i &amp;&amp;</span>
+<span class="gi">+          ping_req_i &amp;&amp;</span>
+       ping_ok_o &amp;&amp;
+       !esc_en_o ##1
+       !ping_req_i [* 2**prim_esc_rxtx_fpv.u_prim_esc_receiver.TimeoutCntDw - 3 : $]
+       |-&gt;
+       esc_en_o,
+<span class="gd">-      clk_i,</span>
+<span class="gd">-      !rst_ni ||</span>
+<span class="gd">-      error_d ||</span>
+<span class="gd">-      esc_d)</span>
+<span class="gi">+          clk_i, !rst_ni || error_d || esc_d)</span>
+
+
+ endmodule : prim_esc_rxtx_assert_fpv
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-check-fail-vseq-sv">
+<span id="id40"></span><h2>hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_check_fail_vseq.sv<a class="headerlink" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-check-fail-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -14,15 +14,20 @@</span>
+   constraint ecc_chk_err_c {
+     // TODO: currently only max to 1 error bits, once implemetned ECC in mem_bkdr_util, we can
+     // fully randomize num of error bits
+<span class="gd">-    ecc_chk_err dist {OtpNoEccErr   :/ 1,</span>
+<span class="gd">-                      OtpEccCorrErr :/ 1};</span>
+<span class="gi">+    ecc_chk_err dist {</span>
+<span class="gi">+      OtpNoEccErr   :/ 1,</span>
+<span class="gi">+      OtpEccCorrErr :/ 1</span>
+<span class="gi">+    };</span>
+   }
+
+   // 50% chance of having a check timeout
+   constraint check_timeout_val_c {
+<span class="gd">-    ecc_chk_err == OtpNoEccErr   -&gt; check_timeout_val dist {[1 : CHK_TIMEOUT_CYC] :/ 1,</span>
+<span class="gd">-                                                            [100_000 :&#39;1]         :/ 1};</span>
+<span class="gd">-    ecc_chk_err == OtpEccCorrErr -&gt; check_timeout_val inside {[100_000 :&#39;1]};</span>
+<span class="gi">+    ecc_chk_err == OtpNoEccErr -&gt;</span>
+<span class="gi">+    check_timeout_val dist {</span>
+<span class="gi">+      [1 : CHK_TIMEOUT_CYC] :/ 1,</span>
+<span class="gi">+      [100_000 : &#39;1]        :/ 1</span>
+<span class="gi">+    };</span>
+<span class="gi">+    ecc_chk_err == OtpEccCorrErr -&gt; check_timeout_val inside {[100_000 : &#39;1]};</span>
+   }
+
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-rtl-aes-shift-rows-sv">
+<span id="id41"></span><h2>hw/ip/aes/rtl/aes_shift_rows.sv<a class="headerlink" href="#hw-ip-aes-rtl-aes-shift-rows-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -19,12 +19,18 @@</span>
+   assign data_o[2] = aes_circ_byte_shift(data_i[2], 2&#39;h2);
+
+   // Row 1
+<span class="gd">-  assign data_o[1] = (op_i == CIPH_FWD) ? aes_circ_byte_shift(data_i[1], 2&#39;h3)</span>
+<span class="gd">-                                        : aes_circ_byte_shift(data_i[1], 2&#39;h1);</span>
+<span class="gi">+  assign data_o[1] = (op_i == CIPH_FWD) ? aes_circ_byte_shift(</span>
+<span class="gi">+      data_i[1], 2&#39;h3</span>
+<span class="gi">+  ) : aes_circ_byte_shift(</span>
+<span class="gi">+      data_i[1], 2&#39;h1</span>
+<span class="gi">+  );</span>
+
+   // Row 3
+<span class="gd">-  assign data_o[3] = (op_i == CIPH_FWD) ? aes_circ_byte_shift(data_i[3], 2&#39;h1)</span>
+<span class="gd">-                                        : aes_circ_byte_shift(data_i[3], 2&#39;h3);</span>
+<span class="gi">+  assign data_o[3] = (op_i == CIPH_FWD) ? aes_circ_byte_shift(</span>
+<span class="gi">+      data_i[3], 2&#39;h1</span>
+<span class="gi">+  ) : aes_circ_byte_shift(</span>
+<span class="gi">+      data_i[3], 2&#39;h3</span>
+<span class="gi">+  );</span>
+
+ endmodule
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-dv-cov-pattgen-cov-if-sv">
+<span id="id42"></span><h2>hw/ip/pattgen/dv/cov/pattgen_cov_if.sv<a class="headerlink" href="#hw-ip-pattgen-dv-cov-pattgen-cov-if-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -19,60 +19,70 @@</span>
+   assign en_intg_cov_loc = en_full_cov | en_intg_cov;
+
+   bit ch0_perf, ch1_perf;
+<span class="gd">-  assign ch0_perf = {u_pattgen_core.ch0_ctrl.len,</span>
+<span class="gd">-                     u_pattgen_core.ch0_ctrl.reps,</span>
+<span class="gd">-                     u_pattgen_core.ch0_ctrl.prediv} == &#39;h0;</span>
+<span class="gd">-  assign ch1_perf = {u_pattgen_core.ch1_ctrl.len,</span>
+<span class="gd">-                     u_pattgen_core.ch1_ctrl.reps,</span>
+<span class="gd">-                     u_pattgen_core.ch1_ctrl.prediv} == &#39;h0;</span>
+<span class="gi">+  assign ch0_perf = {</span>
+<span class="gi">+    u_pattgen_core.ch0_ctrl.len, u_pattgen_core.ch0_ctrl.reps, u_pattgen_core.ch0_ctrl.prediv</span>
+<span class="gi">+  } == &#39;h0;</span>
+<span class="gi">+  assign ch1_perf = {</span>
+<span class="gi">+    u_pattgen_core.ch1_ctrl.len, u_pattgen_core.ch1_ctrl.reps, u_pattgen_core.ch1_ctrl.prediv</span>
+<span class="gi">+  } == &#39;h0;</span>
+
+   covergroup pattgen_op_cg @(u_pattgen_core.ch0_ctrl.enable or u_pattgen_core.ch1_ctrl.enable);
+<span class="gd">-    option.name         = &quot;pattgen_op_cg&quot;;</span>
+<span class="gd">-    option.comment      = &quot;PATTGEN CH0 and CH1 operation&quot;;</span>
+<span class="gi">+    option.name = &quot;pattgen_op_cg&quot;;</span>
+<span class="gi">+    option.comment = &quot;PATTGEN CH0 and CH1 operation&quot;;</span>
+     option.per_instance = 1;
+
+     // Channel 0 coverpoints
+<span class="gd">-    cp_enable: coverpoint {u_pattgen_core.ch1_ctrl.enable, u_pattgen_core.ch0_ctrl.enable} {</span>
+<span class="gd">-      bins CH0_ENABLE  = (2&#39;b00 =&gt; 2&#39;b01);</span>
+<span class="gi">+    cp_enable: coverpoint {</span>
+<span class="gi">+      u_pattgen_core.ch1_ctrl.enable, u_pattgen_core.ch0_ctrl.enable</span>
+<span class="gi">+    } {</span>
+<span class="gi">+      bins CH0_ENABLE = (2&#39;b00 =&gt; 2&#39;b01);</span>
+       bins CH0_DISABLE = (2&#39;b01 =&gt; 2&#39;b00);
+<span class="gd">-      bins CH1_ENABLE  = (2&#39;b00 =&gt; 2&#39;b10);</span>
+<span class="gi">+      bins CH1_ENABLE = (2&#39;b00 =&gt; 2&#39;b10);</span>
+       bins CH1_DISABLE = (2&#39;b10 =&gt; 2&#39;b00);
+<span class="gd">-      bins CHX_ENABLE  = (2&#39;b00 =&gt; 2&#39;b11);  // CHX: dual channels</span>
+<span class="gi">+      bins CHX_ENABLE = (2&#39;b00 =&gt; 2&#39;b11);  // CHX: dual channels</span>
+       bins CHX_DISABLE = (2&#39;b11 =&gt; 2&#39;b00);
+<span class="gd">-      bins CHX_OTHERS  = default;</span>
+<span class="gi">+      bins CHX_OTHERS = default;</span>
+     }
+     // Channel 0 coverpoints
+<span class="gd">-    cp_ch0_perf: coverpoint {ch0_perf} {</span>
+<span class="gi">+    cp_ch0_perf: coverpoint {</span>
+<span class="gi">+      ch0_perf</span>
+<span class="gi">+    } {</span>
+       bins LOW_PERF = {&#39;h0};
+       bins TYP_PERF = {!&#39;h0};
+     }
+<span class="gd">-    cp_ch0_polarity: coverpoint {u_pattgen_core.ch0_ctrl.polarity} {</span>
+<span class="gi">+    cp_ch0_polarity: coverpoint {</span>
+<span class="gi">+      u_pattgen_core.ch0_ctrl.polarity</span>
+<span class="gi">+    } {</span>
+       bins TX_CLK_FALL = {1&#39;b0};
+       bins TX_CLK_RISE = {1&#39;b1};
+     }
+
+     // Channel 1 coverpoints
+<span class="gd">-    cp_ch1_perf: coverpoint {ch1_perf} {</span>
+<span class="gi">+    cp_ch1_perf: coverpoint {</span>
+<span class="gi">+      ch1_perf</span>
+<span class="gi">+    } {</span>
+       bins LOW_PERF = {&#39;h0};
+       bins TYP_PERF = {!&#39;h0};
+     }
+<span class="gd">-    cp_ch1_polarity: coverpoint {u_pattgen_core.ch1_ctrl.polarity} {</span>
+<span class="gi">+    cp_ch1_polarity: coverpoint {</span>
+<span class="gi">+      u_pattgen_core.ch1_ctrl.polarity</span>
+<span class="gi">+    } {</span>
+       bins TX_CLK_FALL = {1&#39;b0};
+       bins TX_CLK_RISE = {1&#39;b1};
+     }
+
+     // Cross coverpoints
+<span class="gd">-    cr_ch0_op: cross cp_enable, cp_ch0_polarity, cp_ch0_perf {</span>
+<span class="gd">-      bins CH0_OP_ENABLE  = binsof(cp_enable.CH0_ENABLE);</span>
+<span class="gd">-      bins CH0_OP_DISABLE = binsof(cp_enable.CH0_DISABLE);</span>
+<span class="gi">+    cr_ch0_op: cross cp_enable, cp_ch0_polarity, cp_ch0_perf{</span>
+<span class="gi">+      bins CH0_OP_ENABLE = binsof (cp_enable.CH0_ENABLE);</span>
+<span class="gi">+      bins CH0_OP_DISABLE = binsof (cp_enable.CH0_DISABLE);</span>
+     }
+<span class="gd">-    cr_ch1_op: cross cp_enable, cp_ch1_polarity, cp_ch1_perf {</span>
+<span class="gd">-      bins CH1_OP_ENABLE  = binsof(cp_enable.CH1_ENABLE);</span>
+<span class="gd">-      bins CH1_OP_DISABLE = binsof(cp_enable.CH1_DISABLE);</span>
+<span class="gi">+    cr_ch1_op: cross cp_enable, cp_ch1_polarity, cp_ch1_perf{</span>
+<span class="gi">+      bins CH1_OP_ENABLE = binsof (cp_enable.CH1_ENABLE);</span>
+<span class="gi">+      bins CH1_OP_DISABLE = binsof (cp_enable.CH1_DISABLE);</span>
+     }
+<span class="gd">-    cr_chx_op: cross cp_enable, cp_ch0_polarity, cp_ch0_perf, cp_ch1_polarity, cp_ch1_perf {</span>
+<span class="gd">-      bins CHX_OP_ENABLE  = binsof(cp_enable.CHX_ENABLE);</span>
+<span class="gd">-      bins CHX_OP_DISABLE = binsof(cp_enable.CHX_DISABLE);</span>
+<span class="gi">+    cr_chx_op: cross cp_enable, cp_ch0_polarity, cp_ch0_perf, cp_ch1_polarity, cp_ch1_perf{</span>
+<span class="gi">+      bins CHX_OP_ENABLE = binsof (cp_enable.CHX_ENABLE);</span>
+<span class="gi">+      bins CHX_OP_DISABLE = binsof (cp_enable.CHX_DISABLE);</span>
+     }
+
+   endgroup : pattgen_op_cg
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-uart-dv-env-seq-lib-uart-tx-ovrd-vseq-sv">
+<span id="id43"></span><h2>hw/ip/uart/dv/env/seq_lib/uart_tx_ovrd_vseq.sv<a class="headerlink" href="#hw-ip-uart-dv-env-seq-lib-uart-tx-ovrd-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -19,13 +19,15 @@</span>
+
+     // disable monitor as monitor can&#39;t handle this
+     cfg.m_uart_agent_cfg.en_tx_monitor = 0;
+<span class="gd">-    repeat ($urandom_range(1, 5)) begin</span>
+<span class="gi">+    repeat ($urandom_range(</span>
+<span class="gi">+        1, 5</span>
+<span class="gi">+    )) begin</span>
+       `DV_CHECK_STD_RANDOMIZE_FATAL(en_ovrd)
+       `DV_CHECK_STD_RANDOMIZE_FATAL(txval)
+       `DV_CHECK_MEMBER_RANDOMIZE_FATAL(dly_to_next_trans)
+
+       if (en_ovrd) exp = txval;
+<span class="gd">-      else         exp = 1;</span>
+<span class="gi">+      else exp = 1;</span>
+       csr_wr(.ptr(ral.ovrd), .value({txval, en_ovrd}));
+       cfg.clk_rst_vif.wait_clks(1);
+       if (!cfg.under_reset) `DV_CHECK_EQ(cfg.m_uart_agent_cfg.vif.uart_tx, exp)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-uart-dv-env-seq-lib-uart-noise-filter-vseq-sv">
+<span id="id44"></span><h2>hw/ip/uart/dv/env/seq_lib/uart_noise_filter_vseq.sv<a class="headerlink" href="#hw-ip-uart-dv-env-seq-lib-uart-noise-filter-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -18,11 +18,13 @@</span>
+     if (en_noise_filter) begin
+       // uart clk is much slower than core clk
+       // need large number to check if the glitch has no impact to uart
+<span class="gd">-      repeat ($urandom_range(1, 10_000)) begin</span>
+<span class="gd">-        cfg.m_uart_agent_cfg.vif.drive_uart_rx_glitch(</span>
+<span class="gd">-            .max_glitch_ps(core_clk_period_ps), // 1 core clk</span>
+<span class="gd">-            // need 3 core clk cycles to push out the glitch before next drive</span>
+<span class="gd">-            .stable_ps_after_glitch(core_clk_period_ps * 3));</span>
+<span class="gi">+      repeat ($urandom_range(</span>
+<span class="gi">+          1, 10_000</span>
+<span class="gi">+      )) begin</span>
+<span class="gi">+        cfg.m_uart_agent_cfg.vif.drive_uart_rx_glitch(.max_glitch_ps(core_clk_period_ps)</span>
+<span class="gi">+                                                      ,  // 1 core clk</span>
+<span class="gi">+                                                      // need 3 core clk cycles to push out the glitch before next drive</span>
+<span class="gi">+                                                      .stable_ps_after_glitch(core_clk_period_ps * 3));</span>
+       end
+       csr_rd_check(.ptr(ral.status.rxidle), .compare_value(1));
+     end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-uart-dv-env-seq-lib-uart-rx-start-bit-filter-vseq-sv">
+<span id="id45"></span><h2>hw/ip/uart/dv/env/seq_lib/uart_rx_start_bit_filter_vseq.sv<a class="headerlink" href="#hw-ip-uart-dv-env-seq-lib-uart-rx-start-bit-filter-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -16,13 +16,14 @@</span>
+
+     // monitor doesn&#39;t have start bit filter, need to disable it while driving filtered start bit
+     cfg.m_uart_agent_cfg.en_rx_monitor = 0;
+<span class="gd">-    repeat ($urandom_range(10, 100)) begin</span>
+<span class="gi">+    repeat ($urandom_range(</span>
+<span class="gi">+        10, 100</span>
+<span class="gi">+    )) begin</span>
+       // drive 0 for up to 0.4 uart clk and 1 for 0.8 clk. Design samples start bit (0) first,
+       // after 0.5 clk, design will sample 1 and should drop this start bit
+       // need stable period &gt; 0.5, use 0.8 clk to have enough margin
+<span class="gd">-      cfg.m_uart_agent_cfg.vif.drive_uart_rx_glitch(</span>
+<span class="gd">-          .max_glitch_ps(uart_clk_period_ps * 0.4),</span>
+<span class="gd">-          .stable_ps_after_glitch(uart_clk_period_ps * 0.8));</span>
+<span class="gi">+      cfg.m_uart_agent_cfg.vif.drive_uart_rx_glitch(.max_glitch_ps(uart_clk_period_ps * 0.4),</span>
+<span class="gi">+                                                    .stable_ps_after_glitch(uart_clk_period_ps * 0.8));</span>
+     end
+     cfg.m_uart_agent_cfg.en_rx_monitor = 1;
+     csr_rd_check(.ptr(ral.status.rxidle), .compare_value(1));
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-entropy-src-dv-env-entropy-src-env-sv">
+<span id="id46"></span><h2>hw/ip/entropy_src/dv/env/entropy_src_env.sv<a class="headerlink" href="#hw-ip-entropy-src-dv-env-entropy-src-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,39 +3,47 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class entropy_src_env extends cip_base_env #(
+<span class="gd">-    .CFG_T              (entropy_src_env_cfg),</span>
+<span class="gd">-    .COV_T              (entropy_src_env_cov),</span>
+<span class="gd">-    .VIRTUAL_SEQUENCER_T(entropy_src_virtual_sequencer),</span>
+<span class="gd">-    .SCOREBOARD_T       (entropy_src_scoreboard)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T              (entropy_src_env_cfg),</span>
+<span class="gi">+  .COV_T              (entropy_src_env_cov),</span>
+<span class="gi">+  .VIRTUAL_SEQUENCER_T(entropy_src_virtual_sequencer),</span>
+<span class="gi">+  .SCOREBOARD_T       (entropy_src_scoreboard)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(entropy_src_env)
+
+<span class="gd">-   push_pull_agent#(.HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH))         m_rng_agent;</span>
+<span class="gd">-   push_pull_agent#(.HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH))  m_csrng_agent;</span>
+<span class="gi">+  push_pull_agent #(.HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH))        m_rng_agent;</span>
+<span class="gi">+  push_pull_agent #(.HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH)) m_csrng_agent;</span>
+
+   `uvm_component_new
+
+   function void build_phase(uvm_phase phase);
+     super.build_phase(phase);
+
+<span class="gd">-    m_rng_agent = push_pull_agent#(.HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH))::type_id::</span>
+<span class="gd">-                  create(&quot;m_rng_agent&quot;, this);</span>
+<span class="gd">-    uvm_config_db#(push_pull_agent_cfg#(.HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH)))::set</span>
+<span class="gd">-                  (this, &quot;m_rng_agent*&quot;, &quot;cfg&quot;, cfg.m_rng_agent_cfg);</span>
+<span class="gi">+    m_rng_agent = push_pull_agent#(</span>
+<span class="gi">+      .HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH)</span>
+<span class="gi">+    )::type_id::create(</span>
+<span class="gi">+        &quot;m_rng_agent&quot;, this</span>
+<span class="gi">+    );</span>
+<span class="gi">+    uvm_config_db#(push_pull_agent_cfg#(.HostDataWidth(entropy_src_pkg::RNG_BUS_WIDTH)))::set(</span>
+<span class="gi">+                                        this, &quot;m_rng_agent*&quot;, &quot;cfg&quot;, cfg.m_rng_agent_cfg);</span>
+     cfg.m_rng_agent_cfg.agent_type = push_pull_agent_pkg::PushAgent;
+<span class="gd">-    cfg.m_rng_agent_cfg.if_mode    = dv_utils_pkg::Host;</span>
+<span class="gi">+    cfg.m_rng_agent_cfg.if_mode = dv_utils_pkg::Host;</span>
+     cfg.m_rng_agent_cfg.host_delay_min = 6;
+     cfg.m_rng_agent_cfg.host_delay_max = 12;
+
+<span class="gd">-    m_csrng_agent = push_pull_agent#(.HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH))::type_id::</span>
+<span class="gd">-                    create(&quot;m_csrng_agent&quot;, this);</span>
+<span class="gd">-    uvm_config_db#(push_pull_agent_cfg#(.HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH)))::set</span>
+<span class="gd">-                  (this, &quot;m_csrng_agent*&quot;, &quot;cfg&quot;, cfg.m_csrng_agent_cfg);</span>
+<span class="gi">+    m_csrng_agent = push_pull_agent#(</span>
+<span class="gi">+      .HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH)</span>
+<span class="gi">+    )::type_id::create(</span>
+<span class="gi">+        &quot;m_csrng_agent&quot;, this</span>
+<span class="gi">+    );</span>
+<span class="gi">+    uvm_config_db#(push_pull_agent_cfg#(.HostDataWidth(entropy_src_pkg::FIPS_CSRNG_BUS_WIDTH)</span>
+<span class="gi">+                                        ))::set(</span>
+<span class="gi">+                                        this, &quot;m_csrng_agent*&quot;, &quot;cfg&quot;, cfg.m_csrng_agent_cfg);</span>
+     cfg.m_csrng_agent_cfg.agent_type = push_pull_agent_pkg::PullAgent;
+     cfg.m_csrng_agent_cfg.if_mode    = dv_utils_pkg::Host;
+
+<span class="gd">-    if (!uvm_config_db#(virtual pins_if)::get(this, &quot;&quot;, &quot;efuse_es_sw_reg_en_vif&quot;,</span>
+<span class="gd">-                                              cfg.efuse_es_sw_reg_en_vif)) begin</span>
+<span class="gi">+    if (!uvm_config_db#(virtual pins_if)::get(</span>
+<span class="gi">+            this, &quot;&quot;, &quot;efuse_es_sw_reg_en_vif&quot;, cfg.efuse_es_sw_reg_en_vif</span>
+<span class="gi">+        )) begin</span>
+       `uvm_fatal(get_full_name(), &quot;failed to get efuse_es_sw_reg_en_vif from uvm_config_db&quot;)
+     end
+   endfunction
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-seq-lib-tl-host-custom-seq-sv">
+<span id="id47"></span><h2>hw/dv/sv/tl_agent/seq_lib/tl_host_custom_seq.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-custom-seq-sv" title="Permalink to this headline">¶</a></h2>
+<p>space before hashtag</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -4,9 +4,11 @@</span>
+
+ // Disable TL protocol related constraint on a_chan to create a fully customized tl_item for error
+ // cases
+<span class="gd">-class tl_host_custom_seq #(type REQ_T = tl_seq_item) extends tl_host_single_seq #(REQ_T);</span>
+<span class="gi">+class tl_host_custom_seq #(</span>
+<span class="gi">+  type REQ_T = tl_seq_item</span>
+<span class="gi">+) extends tl_host_single_seq #(REQ_T);</span>
+
+<span class="gd">-  `uvm_object_param_utils(tl_host_custom_seq #(REQ_T))</span>
+<span class="gi">+  `uvm_object_param_utils(tl_host_custom_seq#(REQ_T))</span>
+   `uvm_object_new
+
+   virtual function void randomize_req(REQ req, int idx);
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-seq-lib-tl-host-protocol-err-seq-sv">
+<span id="id48"></span><h2>hw/dv/sv/tl_agent/seq_lib/tl_host_protocol_err_seq.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-seq-lib-tl-host-protocol-err-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ // This seq will send an item that triggers d_error due to protocol violation
+<span class="gd">-class tl_host_protocol_err_seq #(type REQ_T = tl_seq_item) extends tl_host_single_seq #(REQ_T);</span>
+<span class="gi">+class tl_host_protocol_err_seq #(</span>
+<span class="gi">+  type REQ_T = tl_seq_item</span>
+<span class="gi">+) extends tl_host_single_seq #(REQ_T);</span>
+
+<span class="gd">-  `uvm_object_param_utils(tl_host_protocol_err_seq #(REQ_T))</span>
+<span class="gi">+  `uvm_object_param_utils(tl_host_protocol_err_seq#(REQ_T))</span>
+   `uvm_object_new
+
+   // forever randomize the item until we find one that violates the TL protocol
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-dv-lib-dv-base-agent-cov-sv">
+<span id="id49"></span><h2>hw/dv/sv/dv_lib/dv_base_agent_cov.sv<a class="headerlink" href="#hw-dv-sv-dv-lib-dv-base-agent-cov-sv" title="Permalink to this headline">¶</a></h2>
+<p>space before hashtag, improper macro indentation?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class dv_base_agent_cov #(type CFG_T = dv_base_agent_cfg) extends uvm_component;</span>
+<span class="gd">-  `uvm_component_param_utils(dv_base_agent_cov #(CFG_T))</span>
+<span class="gi">+class dv_base_agent_cov #(</span>
+<span class="gi">+  type CFG_T = dv_base_agent_cfg</span>
+<span class="gi">+) extends uvm_component;</span>
+<span class="gi">+  `uvm_component_param_utils(dv_base_agent_cov#(CFG_T))</span>
+
+   CFG_T cfg;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="examined_unconfirmed.html" class="btn btn-neutral float-right" title="Unconfirmed formatting (119 entries)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="error.html" class="btn btn-neutral float-left" title="OpenTitan error fileset (24 entries)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2021, The Verible Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

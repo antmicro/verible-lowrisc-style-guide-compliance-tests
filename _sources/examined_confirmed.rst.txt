@@ -1,0 +1,886 @@
+Correct formatting (39 entries)
+===============================
+
+================================================================= ==============================
+Filename                                                          Related
+================================================================= ==============================
+:ref:`hw_dv_sv_cip_lib_cip_macros_svh`                            
+:ref:`hw_dv_sv_pwm_agent_pwm_agent_cfg_sv`                        
+:ref:`hw_ip_prim_generic_rtl_prim_generic_clock_buf_sv`           
+:ref:`hw_ip_otbn_dv_memutil_otbn_memutil_pkg_sv`                  
+:ref:`hw_dv_sv_cip_lib_cip_base_pkg_sv`                           
+:ref:`hw_ip_prim_generic_rtl_prim_generic_clock_mux2_sv`          
+:ref:`hw_dv_sv_pattgen_agent_pattgen_item_sv`                     
+:ref:`hw_dv_sv_pwm_agent_pwm_item_sv`                             
+:ref:`hw_dv_sv_csrng_agent_csrng_agent_cov_sv`                    
+:ref:`hw_dv_sv_uart_agent_uart_sequencer_sv`                      
+:ref:`hw_ip_otbn_dv_uvm_env_seq_lib_otbn_single_vseq_sv`          `GH#445 <https://github.com/google/verible/issues/445>`_ 
+:ref:`hw_dv_sv_tl_agent_tl_sequencer_sv`                          `GH#444 <https://github.com/google/verible/issues/444>`_ 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_39_32_fpv_sv`                 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_22_16_fpv_sv`                 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_64_57_fpv_sv`                 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_72_64_fpv_sv`                 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_hamming_72_64_fpv_sv`         
+:ref:`hw_ip_prim_fpv_tb_prim_secded_28_22_fpv_sv`                 
+:ref:`hw_ip_prim_fpv_tb_prim_secded_hamming_22_16_fpv_sv`         
+:ref:`hw_ip_prim_fpv_tb_prim_secded_hamming_39_32_fpv_sv`         
+:ref:`hw_ip_prim_fpv_vip_prim_secded_hamming_22_16_assert_fpv_sv` 
+:ref:`hw_ip_prim_fpv_vip_prim_secded_72_64_assert_fpv_sv`         
+:ref:`hw_ip_prim_fpv_vip_prim_secded_hamming_39_32_assert_fpv_sv` 
+:ref:`hw_ip_prim_fpv_vip_prim_secded_64_57_assert_fpv_sv`         
+:ref:`hw_ip_prim_fpv_vip_prim_secded_hamming_72_64_assert_fpv_sv` 
+:ref:`hw_ip_prim_fpv_vip_prim_secded_39_32_assert_fpv_sv`         
+:ref:`hw_ip_prim_fpv_vip_prim_secded_28_22_assert_fpv_sv`         
+:ref:`hw_ip_prim_fpv_vip_prim_secded_22_16_assert_fpv_sv`         
+:ref:`hw_ip_prim_rtl_prim_secded_hamming_72_64_dec_sv`            
+:ref:`hw_ip_prim_rtl_prim_secded_64_57_dec_sv`                    
+:ref:`hw_ip_prim_rtl_prim_secded_72_64_dec_sv`                    
+:ref:`hw_ip_prim_rtl_prim_secded_39_32_dec_sv`                    
+:ref:`hw_ip_prim_rtl_prim_secded_22_16_dec_sv`                    
+:ref:`hw_ip_prim_rtl_prim_secded_hamming_39_32_dec_sv`            
+:ref:`hw_ip_prim_rtl_prim_secded_28_22_dec_sv`                    
+:ref:`hw_ip_prim_rtl_prim_secded_hamming_22_16_dec_sv`            
+:ref:`hw_ip_otbn_dv_uvm_otbn_trace_uvm_injector_sv`               `RULE#1 <https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration>`_ 
+:ref:`hw_ip_prim_rtl_prim_subreg_ext_sv`                          
+:ref:`hw_ip_prim_rtl_prim_msb_extend_sv`                          
+================================================================= ==============================
+
+.. _hw_dv_sv_cip_lib_cip_macros_svh:
+
+hw/dv/sv/cip_lib/cip_macros.svh
+-------------------------------
+
+Comments, two spaces
+
+
+.. code-block:: diff
+
+   @@ -42,5 +42,5 @@
+      end
+    `endif
+    
+   -`endif // __CIP_MACROS_SVH__
+   +`endif  // __CIP_MACROS_SVH__
+    
+
+.. _hw_dv_sv_pwm_agent_pwm_agent_cfg_sv:
+
+hw/dv/sv/pwm_agent/pwm_agent_cfg.sv
+-----------------------------------
+
+Comments, two spaces
+
+
+.. code-block:: diff
+
+   @@ -4,7 +4,7 @@
+    
+    class pwm_agent_cfg extends dv_base_agent_cfg;
+    
+   -  bit en_monitor = 1'b1; // enable monitor
+   +  bit en_monitor = 1'b1;  // enable monitor
+    
+      // interface handle used by driver, monitor & the sequencer, via cfg handle
+      virtual pwm_if vif;
+
+.. _hw_ip_prim_generic_rtl_prim_generic_clock_buf_sv:
+
+hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv
+------------------------------------------------
+
+Comments, two spaces
+
+
+.. code-block:: diff
+
+   @@ -11,5 +11,5 @@
+    
+      assign clk_o = clk_i;
+    
+   -endmodule // prim_generic_clock_buf
+   +endmodule  // prim_generic_clock_buf
+    
+
+.. _hw_ip_otbn_dv_memutil_otbn_memutil_pkg_sv:
+
+hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv
+-----------------------------------------
+
+Comments, two spaces
+
+
+.. code-block:: diff
+
+   @@ -27,5 +27,5 @@
+      import "DPI-C" function int OtbnMemUtilGetExpEndAddr(chandle mem_util);
+    
+    endpackage
+   -`endif // SYNTHESIS
+   +`endif  // SYNTHESIS
+    
+
+.. _hw_dv_sv_cip_lib_cip_base_pkg_sv:
+
+hw/dv/sv/cip_lib/cip_base_pkg.sv
+--------------------------------
+
+Comments, two spaces
+
+
+.. code-block:: diff
+
+   @@ -24,7 +24,7 @@
+      // package variables
+      string msg_id = "cip_base_pkg";
+      parameter uint EDN_BUS_WIDTH = 32;
+   -  parameter uint EDN_DATA_WIDTH = EDN_BUS_WIDTH + 1; // 32 bits bus data, 1 bit fips
+   +  parameter uint EDN_DATA_WIDTH = EDN_BUS_WIDTH + 1;  // 32 bits bus data, 1 bit fips
+      parameter uint MAX_TL_ECC_ERRORS = 3;
+    
+      typedef enum {
+   @@ -43,11 +43,13 @@
+    
+      // functions
+      function automatic tl_intg_err_e get_tl_intg_err_type(bit is_cmd_ok, bit is_data_ok);
+   -    case ({is_cmd_ok, is_data_ok})
+   -      2'b11: return TlIntgErrNone;
+   -      2'b01: return TlIntgErrCmd;
+   -      2'b10: return TlIntgErrData;
+   -      2'b00: return TlIntgErrBoth;
+   +    case ({
+   +      is_cmd_ok, is_data_ok
+   +    })
+   +      2'b11:   return TlIntgErrNone;
+   +      2'b01:   return TlIntgErrCmd;
+   +      2'b10:   return TlIntgErrData;
+   +      2'b00:   return TlIntgErrBoth;
+          default: ;
+        endcase
+      endfunction
+   @@ -55,14 +57,13 @@
+      // get mem attributes to know what error cases can be triggered
+      function automatic void get_all_mem_attrs(input dv_base_reg_block reg_block,
+                                                output bit has_mem_byte_access_err,
+   -                                            output bit has_wo_mem,
+   -                                            output bit has_ro_mem);
+   +                                            output bit has_wo_mem, output bit has_ro_mem);
+        uvm_mem mems[$];
+        reg_block.get_memories(mems);
+    
+        foreach (mems[i]) begin
+          dv_base_mem dv_mem;
+   -      `downcast(dv_mem, mems[i], , , msg_id)
+   +      `downcast(dv_mem, mems[i],,, msg_id)
+          if (!dv_mem.get_mem_partial_write_support()) has_mem_byte_access_err = 1;
+          if (dv_mem.get_access() == "WO") has_wo_mem = 1;
+          if (dv_mem.get_access() == "RO") has_ro_mem = 1;
+
+.. _hw_ip_prim_generic_rtl_prim_generic_clock_mux2_sv:
+
+hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv
+-------------------------------------------------
+
+Comments, two spaces
+
+
+
+.. code-block:: diff
+
+   @@ -5,7 +5,7 @@
+    `include "prim_assert.sv"
+    
+    module prim_generic_clock_mux2 #(
+   -  parameter bit NoFpgaBufG = 1'b0 // this parameter serves no function in the generic model
+   +  parameter bit NoFpgaBufG = 1'b0  // this parameter serves no function in the generic model
+    ) (
+      input        clk0_i,
+      input        clk1_i,
+
+.. _hw_dv_sv_pattgen_agent_pattgen_item_sv:
+
+hw/dv/sv/pattgen_agent/pattgen_item.sv
+--------------------------------------
+
+Space between type and variable name - unaligned
+
+
+.. code-block:: diff
+
+   @@ -3,7 +3,7 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pattgen_item extends uvm_sequence_item;
+   -  bit  data_q[$];
+   +  bit data_q[$];
+    
+      `uvm_object_utils_begin(pattgen_item);
+        `uvm_field_queue_int(data_q, UVM_DEFAULT)
+
+.. _hw_dv_sv_pwm_agent_pwm_item_sv:
+
+hw/dv/sv/pwm_agent/pwm_item.sv
+------------------------------
+
+Space between type and variable name - unaligned
+
+
+
+.. code-block:: diff
+
+   @@ -3,7 +3,7 @@
+    // SPDX-License-Identifier: Apache-2.0
+    
+    class pwm_item extends uvm_sequence_item;
+   -  bit  data_q[$];
+   +  bit data_q[$];
+    
+      `uvm_object_utils_begin(pwm_item)
+        `uvm_field_queue_int(data_q, UVM_DEFAULT)
+
+.. _hw_dv_sv_csrng_agent_csrng_agent_cov_sv:
+
+hw/dv/sv/csrng_agent/csrng_agent_cov.sv
+---------------------------------------
+
+Space before hashtag in class name
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,7 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class csrng_agent_cov extends dv_base_agent_cov#(csrng_agent_cfg);
+   +class csrng_agent_cov extends dv_base_agent_cov #(csrng_agent_cfg);
+      `uvm_component_utils(csrng_agent_cov)
+    
+      // covergroups
+
+.. _hw_dv_sv_uart_agent_uart_sequencer_sv:
+
+hw/dv/sv/uart_agent/uart_sequencer.sv
+-------------------------------------
+
+Space before hashtag in class name
+
+
+
+.. code-block:: diff
+
+   @@ -2,7 +2,7 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class uart_sequencer extends dv_base_sequencer#(uart_item, uart_agent_cfg);
+   +class uart_sequencer extends dv_base_sequencer #(uart_item, uart_agent_cfg);
+      `uvm_component_utils(uart_sequencer)
+    
+      `uvm_component_new
+
+.. _hw_ip_otbn_dv_uvm_env_seq_lib_otbn_single_vseq_sv:
+
+hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv
+-------------------------------------------------
+
+Exapand constraints
+
+
+
+
+.. note::
+   Related issues:
+   https://github.com/google/verible/issues/445
+
+.. code-block:: diff
+
+   @@ -13,8 +13,10 @@
+      rand bit do_backdoor_load;
+    
+      constraint do_backdoor_load_c {
+   -    do_backdoor_load dist { 1'b1 := cfg.backdoor_load_pct,
+   -                            1'b0 := 100 - cfg.backdoor_load_pct };
+   +    do_backdoor_load dist {
+   +      1'b1 := cfg.backdoor_load_pct,
+   +      1'b0 := 100 - cfg.backdoor_load_pct
+   +    };
+      }
+    
+      task body();
+
+.. _hw_dv_sv_tl_agent_tl_sequencer_sv:
+
+hw/dv/sv/tl_agent/tl_sequencer.sv
+---------------------------------
+
+
+
+.. note::
+   Related issues:
+   https://github.com/google/verible/issues/444
+
+.. code-block:: diff
+
+   @@ -2,10 +2,10 @@
+    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+    // SPDX-License-Identifier: Apache-2.0
+    
+   -class tl_sequencer extends dv_base_sequencer#(tl_seq_item, tl_agent_cfg);
+   +class tl_sequencer extends dv_base_sequencer #(tl_seq_item, tl_agent_cfg);
+      `uvm_component_utils(tl_sequencer)
+    
+   -  uvm_tlm_analysis_fifo#(tl_seq_item) a_chan_req_fifo;
+   +  uvm_tlm_analysis_fifo #(tl_seq_item) a_chan_req_fifo;
+    
+      `uvm_component_new
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_39_32_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv
+------------------------------------------
+
+Dimensions alignment
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [31:0] data_i,
+      output logic [31:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [38:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_22_16_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [15:0] data_i,
+      output logic [15:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [21:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_64_57_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [56:0] data_i,
+      output logic [56:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [63:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_72_64_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [63:0] data_i,
+      output logic [63:0] data_o,
+   -  output logic [7:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 7:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [71:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_hamming_72_64_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [63:0] data_i,
+      output logic [63:0] data_o,
+   -  output logic [7:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 7:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [71:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_28_22_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv
+------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [21:0] data_i,
+      output logic [21:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [27:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_hamming_22_16_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [15:0] data_i,
+      output logic [15:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [21:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_tb_prim_secded_hamming_39_32_fpv_sv:
+
+hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input               rst_ni,
+      input        [31:0] data_i,
+      output logic [31:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0]  err_o,
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o,
+      input        [38:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_hamming_22_16_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv
+----------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [15:0] data_i,
+      input [15:0] data_o,
+   -  input [5:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 5:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [21:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_72_64_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [63:0] data_i,
+      input [63:0] data_o,
+   -  input [7:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 7:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [71:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_hamming_39_32_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv
+----------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [31:0] data_i,
+      input [31:0] data_o,
+   -  input [6:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 6:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [38:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_64_57_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [56:0] data_i,
+      input [56:0] data_o,
+   -  input [6:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 6:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [63:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_hamming_72_64_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv
+----------------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [63:0] data_i,
+      input [63:0] data_o,
+   -  input [7:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 7:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [71:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_39_32_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [31:0] data_i,
+      input [31:0] data_o,
+   -  input [6:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 6:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [38:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_28_22_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [21:0] data_i,
+      input [21:0] data_o,
+   -  input [5:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 5:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [27:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_fpv_vip_prim_secded_22_16_assert_fpv_sv:
+
+hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv
+--------------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -9,8 +9,8 @@
+      input        rst_ni,
+      input [15:0] data_i,
+      input [15:0] data_o,
+   -  input [5:0] syndrome_o,
+   -  input [1:0]  err_o,
+   +  input [ 5:0] syndrome_o,
+   +  input [ 1:0] err_o,
+      input [21:0] error_inject_i
+    );
+    
+
+.. _hw_ip_prim_rtl_prim_secded_hamming_72_64_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_hamming_72_64_dec (
+      input        [71:0] data_i,
+      output logic [63:0] data_o,
+   -  output logic [7:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 7:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+    
+
+.. _hw_ip_prim_rtl_prim_secded_64_57_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_64_57_dec.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_64_57_dec (
+      input        [63:0] data_i,
+      output logic [56:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+      logic single_error;
+
+.. _hw_ip_prim_rtl_prim_secded_72_64_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_72_64_dec.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_72_64_dec (
+      input        [71:0] data_i,
+      output logic [63:0] data_o,
+   -  output logic [7:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 7:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+      logic single_error;
+
+.. _hw_ip_prim_rtl_prim_secded_39_32_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_39_32_dec.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_39_32_dec (
+      input        [38:0] data_i,
+      output logic [31:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+      logic single_error;
+
+.. _hw_ip_prim_rtl_prim_secded_22_16_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_22_16_dec.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_22_16_dec (
+      input        [21:0] data_i,
+      output logic [15:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+      logic single_error;
+
+.. _hw_ip_prim_rtl_prim_secded_hamming_39_32_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv
+-----------------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_hamming_39_32_dec (
+      input        [38:0] data_i,
+      output logic [31:0] data_o,
+   -  output logic [6:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 6:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+    
+
+.. _hw_ip_prim_rtl_prim_secded_28_22_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_28_22_dec.sv
+---------------------------------------
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_28_22_dec (
+      input        [27:0] data_i,
+      output logic [21:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+      logic single_error;
+
+.. _hw_ip_prim_rtl_prim_secded_hamming_22_16_dec_sv:
+
+hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv
+-----------------------------------------------
+
+
+
+
+.. code-block:: diff
+
+   @@ -7,8 +7,8 @@
+    module prim_secded_hamming_22_16_dec (
+      input        [21:0] data_i,
+      output logic [15:0] data_o,
+   -  output logic [5:0] syndrome_o,
+   -  output logic [1:0] err_o
+   +  output logic [ 5:0] syndrome_o,
+   +  output logic [ 1:0] err_o
+    );
+    
+    
+
+.. _hw_ip_otbn_dv_uvm_otbn_trace_uvm_injector_sv:
+
+hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv
+--------------------------------------------
+
+The opening parenthesis should be on the same line as the module declaration,
+and the first port should be declared on the following line.
+
+The closing parenthesis should be on its own line, in column zero.
+
+
+.. note::
+   Corresponding style rules:
+   https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration
+
+.. _hw_ip_prim_rtl_prim_subreg_ext_sv:
+
+hw/ip/prim/rtl/prim_subreg_ext.sv
+---------------------------------
+
+
+
+.. code-block:: diff
+
+   @@ -20,9 +20,9 @@
+      output logic [DW-1:0] qs
+    );
+    
+   -  assign qs = d;
+   -  assign q = wd;
+   -  assign qe = we;
+   +  assign qs  = d;
+   +  assign q   = wd;
+   +  assign qe  = we;
+      assign qre = re;
+    
+    endmodule
+
+.. _hw_ip_prim_rtl_prim_msb_extend_sv:
+
+hw/ip/prim/rtl/prim_msb_extend.sv
+---------------------------------
+
+
+
+
+
+.. code-block:: diff
+
+   @@ -6,11 +6,11 @@
+    
+    `include "prim_assert.sv"
+    
+   -module prim_msb_extend # (
+   -  parameter int InWidth = 2,
+   +module prim_msb_extend #(
+   +  parameter int InWidth  = 2,
+      parameter int OutWidth = 2
+    ) (
+   -  input [InWidth-1:0] in_i,
+   +  input  [ InWidth-1:0] in_i,
+      output [OutWidth-1:0] out_o
+    );
+    
+

@@ -1,0 +1,27 @@
+.. |hr| raw:: html
+
+    <hr />
+
+OpenTitan formatting status
+===========================
+
+.. toctree::
+   :maxdepth: 3
+
+   otfs
+   allow
+   wip
+   autogen
+   todo
+
+============================== ==============================
+Fileset                        Number
+============================== ==============================
+OpenTitan                      1449
+Verible-formatted              202
+Work-In-Progress               244
+Auto-generated (skipped)       2
+Error                          24
+TODO                           **980**
+============================== ==============================
+

@@ -1,0 +1,1024 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Correct formatting (39 entries) &mdash; Verible status report  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OpenTitan error fileset (24 entries)" href="error.html" />
+    <link rel="prev" title="OpenTitan no-change fileset (0 entries)" href="verible_zero_effort.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Verible status report
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">LowRISC style compliance report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Correct formatting (39 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-macros-svh">hw/dv/sv/cip_lib/cip_macros.svh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-agent-cfg-sv">hw/dv/sv/pwm_agent/pwm_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-generic-rtl-prim-generic-clock-buf-sv">hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-memutil-otbn-memutil-pkg-sv">hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-base-pkg-sv">hw/dv/sv/cip_lib/cip_base_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-generic-rtl-prim-generic-clock-mux2-sv">hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pattgen-agent-pattgen-item-sv">hw/dv/sv/pattgen_agent/pattgen_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-item-sv">hw/dv/sv/pwm_agent/pwm_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-agent-cov-sv">hw/dv/sv/csrng_agent/csrng_agent_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-uart-agent-uart-sequencer-sv">hw/dv/sv/uart_agent/uart_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-single-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-tl-sequencer-sv">hw/dv/sv/tl_agent/tl_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-39-32-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-22-16-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-64-57-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-72-64-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-28-22-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-fpv-sv">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-22-16-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-72-64-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-39-32-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-64-57-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-72-64-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-39-32-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-28-22-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-22-16-assert-fpv-sv">hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-72-64-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-64-57-dec-sv">hw/ip/prim/rtl/prim_secded_64_57_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-72-64-dec-sv">hw/ip/prim/rtl/prim_secded_72_64_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-39-32-dec-sv">hw/ip/prim/rtl/prim_secded_39_32_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-22-16-dec-sv">hw/ip/prim/rtl/prim_secded_22_16_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-39-32-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-28-22-dec-sv">hw/ip/prim/rtl/prim_secded_28_22_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-22-16-dec-sv">hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-trace-uvm-injector-sv">hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-subreg-ext-sv">hw/ip/prim/rtl/prim_subreg_ext.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-msb-extend-sv">hw/ip/prim/rtl/prim_msb_extend.sv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_bugs.html">Incorrect formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_unconfirmed.html">Unconfirmed formatting (119 entries)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Verible status report</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Correct formatting (39 entries)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/examined_confirmed.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="correct-formatting-39-entries">
+<h1>Correct formatting (39 entries)<a class="headerlink" href="#correct-formatting-39-entries" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename</p></th>
+<th class="head"><p>Related</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-macros-svh"><span class="std std-ref">hw/dv/sv/cip_lib/cip_macros.svh</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-agent-cfg-sv"><span class="std std-ref">hw/dv/sv/pwm_agent/pwm_agent_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-generic-rtl-prim-generic-clock-buf-sv"><span class="std std-ref">hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-memutil-otbn-memutil-pkg-sv"><span class="std std-ref">hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-base-pkg-sv"><span class="std std-ref">hw/dv/sv/cip_lib/cip_base_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-generic-rtl-prim-generic-clock-mux2-sv"><span class="std std-ref">hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-pattgen-agent-pattgen-item-sv"><span class="std std-ref">hw/dv/sv/pattgen_agent/pattgen_item.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-item-sv"><span class="std std-ref">hw/dv/sv/pwm_agent/pwm_item.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-agent-cov-sv"><span class="std std-ref">hw/dv/sv/csrng_agent/csrng_agent_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-uart-agent-uart-sequencer-sv"><span class="std std-ref">hw/dv/sv/uart_agent/uart_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-single-vseq-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/445">GH#445</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-tl-sequencer-sv"><span class="std std-ref">hw/dv/sv/tl_agent/tl_sequencer.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/google/verible/issues/444">GH#444</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-39-32-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-22-16-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-64-57-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-72-64-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-28-22-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-22-16-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-72-64-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-39-32-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-64-57-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-72-64-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-39-32-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-28-22-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-fpv-vip-prim-secded-22-16-assert-fpv-sv"><span class="std std-ref">hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-72-64-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-64-57-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_64_57_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-72-64-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_72_64_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-39-32-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_39_32_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-22-16-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_22_16_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-39-32-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-28-22-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_28_22_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-secded-hamming-22-16-dec-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-trace-uvm-injector-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration">RULE#1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-subreg-ext-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_subreg_ext.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-msb-extend-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_msb_extend.sv</span></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="hw-dv-sv-cip-lib-cip-macros-svh">
+<span id="id1"></span><h2>hw/dv/sv/cip_lib/cip_macros.svh<a class="headerlink" href="#hw-dv-sv-cip-lib-cip-macros-svh" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -42,5 +42,5 @@</span>
+   end
+ `endif
+
+<span class="gd">-`endif // __CIP_MACROS_SVH__</span>
+<span class="gi">+`endif  // __CIP_MACROS_SVH__</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pwm-agent-pwm-agent-cfg-sv">
+<span id="id2"></span><h2>hw/dv/sv/pwm_agent/pwm_agent_cfg.sv<a class="headerlink" href="#hw-dv-sv-pwm-agent-pwm-agent-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -4,7 +4,7 @@</span>
+
+ class pwm_agent_cfg extends dv_base_agent_cfg;
+
+<span class="gd">-  bit en_monitor = 1&#39;b1; // enable monitor</span>
+<span class="gi">+  bit en_monitor = 1&#39;b1;  // enable monitor</span>
+
+   // interface handle used by driver, monitor &amp; the sequencer, via cfg handle
+   virtual pwm_if vif;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-generic-rtl-prim-generic-clock-buf-sv">
+<span id="id3"></span><h2>hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv<a class="headerlink" href="#hw-ip-prim-generic-rtl-prim-generic-clock-buf-sv" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -11,5 +11,5 @@</span>
+
+   assign clk_o = clk_i;
+
+<span class="gd">-endmodule // prim_generic_clock_buf</span>
+<span class="gi">+endmodule  // prim_generic_clock_buf</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-memutil-otbn-memutil-pkg-sv">
+<span id="id4"></span><h2>hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv<a class="headerlink" href="#hw-ip-otbn-dv-memutil-otbn-memutil-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -27,5 +27,5 @@</span>
+   import &quot;DPI-C&quot; function int OtbnMemUtilGetExpEndAddr(chandle mem_util);
+
+ endpackage
+<span class="gd">-`endif // SYNTHESIS</span>
+<span class="gi">+`endif  // SYNTHESIS</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-cip-lib-cip-base-pkg-sv">
+<span id="id5"></span><h2>hw/dv/sv/cip_lib/cip_base_pkg.sv<a class="headerlink" href="#hw-dv-sv-cip-lib-cip-base-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -24,7 +24,7 @@</span>
+   // package variables
+   string msg_id = &quot;cip_base_pkg&quot;;
+   parameter uint EDN_BUS_WIDTH = 32;
+<span class="gd">-  parameter uint EDN_DATA_WIDTH = EDN_BUS_WIDTH + 1; // 32 bits bus data, 1 bit fips</span>
+<span class="gi">+  parameter uint EDN_DATA_WIDTH = EDN_BUS_WIDTH + 1;  // 32 bits bus data, 1 bit fips</span>
+   parameter uint MAX_TL_ECC_ERRORS = 3;
+
+   typedef enum {
+<span class="gu">@@ -43,11 +43,13 @@</span>
+
+   // functions
+   function automatic tl_intg_err_e get_tl_intg_err_type(bit is_cmd_ok, bit is_data_ok);
+<span class="gd">-    case ({is_cmd_ok, is_data_ok})</span>
+<span class="gd">-      2&#39;b11: return TlIntgErrNone;</span>
+<span class="gd">-      2&#39;b01: return TlIntgErrCmd;</span>
+<span class="gd">-      2&#39;b10: return TlIntgErrData;</span>
+<span class="gd">-      2&#39;b00: return TlIntgErrBoth;</span>
+<span class="gi">+    case ({</span>
+<span class="gi">+      is_cmd_ok, is_data_ok</span>
+<span class="gi">+    })</span>
+<span class="gi">+      2&#39;b11:   return TlIntgErrNone;</span>
+<span class="gi">+      2&#39;b01:   return TlIntgErrCmd;</span>
+<span class="gi">+      2&#39;b10:   return TlIntgErrData;</span>
+<span class="gi">+      2&#39;b00:   return TlIntgErrBoth;</span>
+       default: ;
+     endcase
+   endfunction
+<span class="gu">@@ -55,14 +57,13 @@</span>
+   // get mem attributes to know what error cases can be triggered
+   function automatic void get_all_mem_attrs(input dv_base_reg_block reg_block,
+                                             output bit has_mem_byte_access_err,
+<span class="gd">-                                            output bit has_wo_mem,</span>
+<span class="gd">-                                            output bit has_ro_mem);</span>
+<span class="gi">+                                            output bit has_wo_mem, output bit has_ro_mem);</span>
+     uvm_mem mems[$];
+     reg_block.get_memories(mems);
+
+     foreach (mems[i]) begin
+       dv_base_mem dv_mem;
+<span class="gd">-      `downcast(dv_mem, mems[i], , , msg_id)</span>
+<span class="gi">+      `downcast(dv_mem, mems[i],,, msg_id)</span>
+       if (!dv_mem.get_mem_partial_write_support()) has_mem_byte_access_err = 1;
+       if (dv_mem.get_access() == &quot;WO&quot;) has_wo_mem = 1;
+       if (dv_mem.get_access() == &quot;RO&quot;) has_ro_mem = 1;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-generic-rtl-prim-generic-clock-mux2-sv">
+<span id="id6"></span><h2>hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv<a class="headerlink" href="#hw-ip-prim-generic-rtl-prim-generic-clock-mux2-sv" title="Permalink to this headline">¶</a></h2>
+<p>Comments, two spaces</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,7 +5,7 @@</span>
+ `include &quot;prim_assert.sv&quot;
+
+ module prim_generic_clock_mux2 #(
+<span class="gd">-  parameter bit NoFpgaBufG = 1&#39;b0 // this parameter serves no function in the generic model</span>
+<span class="gi">+  parameter bit NoFpgaBufG = 1&#39;b0  // this parameter serves no function in the generic model</span>
+ ) (
+   input        clk0_i,
+   input        clk1_i,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pattgen-agent-pattgen-item-sv">
+<span id="id7"></span><h2>hw/dv/sv/pattgen_agent/pattgen_item.sv<a class="headerlink" href="#hw-dv-sv-pattgen-agent-pattgen-item-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space between type and variable name - unaligned</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,7 +3,7 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pattgen_item extends uvm_sequence_item;
+<span class="gd">-  bit  data_q[$];</span>
+<span class="gi">+  bit data_q[$];</span>
+
+   `uvm_object_utils_begin(pattgen_item);
+     `uvm_field_queue_int(data_q, UVM_DEFAULT)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pwm-agent-pwm-item-sv">
+<span id="id8"></span><h2>hw/dv/sv/pwm_agent/pwm_item.sv<a class="headerlink" href="#hw-dv-sv-pwm-agent-pwm-item-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space between type and variable name - unaligned</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,7 +3,7 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pwm_item extends uvm_sequence_item;
+<span class="gd">-  bit  data_q[$];</span>
+<span class="gi">+  bit data_q[$];</span>
+
+   `uvm_object_utils_begin(pwm_item)
+     `uvm_field_queue_int(data_q, UVM_DEFAULT)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-csrng-agent-csrng-agent-cov-sv">
+<span id="id9"></span><h2>hw/dv/sv/csrng_agent/csrng_agent_cov.sv<a class="headerlink" href="#hw-dv-sv-csrng-agent-csrng-agent-cov-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space before hashtag in class name</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,7 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class csrng_agent_cov extends dv_base_agent_cov#(csrng_agent_cfg);</span>
+<span class="gi">+class csrng_agent_cov extends dv_base_agent_cov #(csrng_agent_cfg);</span>
+   `uvm_component_utils(csrng_agent_cov)
+
+   // covergroups
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-uart-agent-uart-sequencer-sv">
+<span id="id10"></span><h2>hw/dv/sv/uart_agent/uart_sequencer.sv<a class="headerlink" href="#hw-dv-sv-uart-agent-uart-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space before hashtag in class name</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,7 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class uart_sequencer extends dv_base_sequencer#(uart_item, uart_agent_cfg);</span>
+<span class="gi">+class uart_sequencer extends dv_base_sequencer #(uart_item, uart_agent_cfg);</span>
+   `uvm_component_utils(uart_sequencer)
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-seq-lib-otbn-single-vseq-sv">
+<span id="id11"></span><h2>hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-single-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Exapand constraints</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/445">https://github.com/google/verible/issues/445</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -13,8 +13,10 @@</span>
+   rand bit do_backdoor_load;
+
+   constraint do_backdoor_load_c {
+<span class="gd">-    do_backdoor_load dist { 1&#39;b1 := cfg.backdoor_load_pct,</span>
+<span class="gd">-                            1&#39;b0 := 100 - cfg.backdoor_load_pct };</span>
+<span class="gi">+    do_backdoor_load dist {</span>
+<span class="gi">+      1&#39;b1 := cfg.backdoor_load_pct,</span>
+<span class="gi">+      1&#39;b0 := 100 - cfg.backdoor_load_pct</span>
+<span class="gi">+    };</span>
+   }
+
+   task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-tl-sequencer-sv">
+<span id="id12"></span><h2>hw/dv/sv/tl_agent/tl_sequencer.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-tl-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related issues:
+<a class="reference external" href="https://github.com/google/verible/issues/444">https://github.com/google/verible/issues/444</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,10 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class tl_sequencer extends dv_base_sequencer#(tl_seq_item, tl_agent_cfg);</span>
+<span class="gi">+class tl_sequencer extends dv_base_sequencer #(tl_seq_item, tl_agent_cfg);</span>
+   `uvm_component_utils(tl_sequencer)
+
+<span class="gd">-  uvm_tlm_analysis_fifo#(tl_seq_item) a_chan_req_fifo;</span>
+<span class="gi">+  uvm_tlm_analysis_fifo #(tl_seq_item) a_chan_req_fifo;</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-39-32-fpv-sv">
+<span id="id13"></span><h2>hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-39-32-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<p>Dimensions alignment</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [31:0] data_i,
+   output logic [31:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [38:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-22-16-fpv-sv">
+<span id="id14"></span><h2>hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-22-16-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [15:0] data_i,
+   output logic [15:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [21:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-64-57-fpv-sv">
+<span id="id15"></span><h2>hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-64-57-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [56:0] data_i,
+   output logic [56:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [63:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-72-64-fpv-sv">
+<span id="id16"></span><h2>hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-72-64-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [63:0] data_i,
+   output logic [63:0] data_o,
+<span class="gd">-  output logic [7:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 7:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [71:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-fpv-sv">
+<span id="id17"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-72-64-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [63:0] data_i,
+   output logic [63:0] data_o,
+<span class="gd">-  output logic [7:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 7:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [71:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-28-22-fpv-sv">
+<span id="id18"></span><h2>hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-28-22-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [21:0] data_i,
+   output logic [21:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [27:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-fpv-sv">
+<span id="id19"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-22-16-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [15:0] data_i,
+   output logic [15:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [21:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-fpv-sv">
+<span id="id20"></span><h2>hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-tb-prim-secded-hamming-39-32-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input               rst_ni,
+   input        [31:0] data_i,
+   output logic [31:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0]  err_o,</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o,</span>
+   input        [38:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-hamming-22-16-assert-fpv-sv">
+<span id="id21"></span><h2>hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-22-16-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [15:0] data_i,
+   input [15:0] data_o,
+<span class="gd">-  input [5:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 5:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [21:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-72-64-assert-fpv-sv">
+<span id="id22"></span><h2>hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-72-64-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [63:0] data_i,
+   input [63:0] data_o,
+<span class="gd">-  input [7:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 7:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [71:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-hamming-39-32-assert-fpv-sv">
+<span id="id23"></span><h2>hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-39-32-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [31:0] data_i,
+   input [31:0] data_o,
+<span class="gd">-  input [6:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 6:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [38:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-64-57-assert-fpv-sv">
+<span id="id24"></span><h2>hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-64-57-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [56:0] data_i,
+   input [56:0] data_o,
+<span class="gd">-  input [6:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 6:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [63:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-hamming-72-64-assert-fpv-sv">
+<span id="id25"></span><h2>hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-hamming-72-64-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [63:0] data_i,
+   input [63:0] data_o,
+<span class="gd">-  input [7:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 7:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [71:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-39-32-assert-fpv-sv">
+<span id="id26"></span><h2>hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-39-32-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [31:0] data_i,
+   input [31:0] data_o,
+<span class="gd">-  input [6:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 6:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [38:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-28-22-assert-fpv-sv">
+<span id="id27"></span><h2>hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-28-22-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [21:0] data_i,
+   input [21:0] data_o,
+<span class="gd">-  input [5:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 5:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [27:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-fpv-vip-prim-secded-22-16-assert-fpv-sv">
+<span id="id28"></span><h2>hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv<a class="headerlink" href="#hw-ip-prim-fpv-vip-prim-secded-22-16-assert-fpv-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,8 +9,8 @@</span>
+   input        rst_ni,
+   input [15:0] data_i,
+   input [15:0] data_o,
+<span class="gd">-  input [5:0] syndrome_o,</span>
+<span class="gd">-  input [1:0]  err_o,</span>
+<span class="gi">+  input [ 5:0] syndrome_o,</span>
+<span class="gi">+  input [ 1:0] err_o,</span>
+   input [21:0] error_inject_i
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-hamming-72-64-dec-sv">
+<span id="id29"></span><h2>hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-hamming-72-64-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_hamming_72_64_dec (
+   input        [71:0] data_i,
+   output logic [63:0] data_o,
+<span class="gd">-  output logic [7:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 7:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-64-57-dec-sv">
+<span id="id30"></span><h2>hw/ip/prim/rtl/prim_secded_64_57_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-64-57-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_64_57_dec (
+   input        [63:0] data_i,
+   output logic [56:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+
+   logic single_error;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-72-64-dec-sv">
+<span id="id31"></span><h2>hw/ip/prim/rtl/prim_secded_72_64_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-72-64-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_72_64_dec (
+   input        [71:0] data_i,
+   output logic [63:0] data_o,
+<span class="gd">-  output logic [7:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 7:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+
+   logic single_error;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-39-32-dec-sv">
+<span id="id32"></span><h2>hw/ip/prim/rtl/prim_secded_39_32_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-39-32-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_39_32_dec (
+   input        [38:0] data_i,
+   output logic [31:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+
+   logic single_error;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-22-16-dec-sv">
+<span id="id33"></span><h2>hw/ip/prim/rtl/prim_secded_22_16_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-22-16-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_22_16_dec (
+   input        [21:0] data_i,
+   output logic [15:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+
+   logic single_error;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-hamming-39-32-dec-sv">
+<span id="id34"></span><h2>hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-hamming-39-32-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_hamming_39_32_dec (
+   input        [38:0] data_i,
+   output logic [31:0] data_o,
+<span class="gd">-  output logic [6:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 6:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-28-22-dec-sv">
+<span id="id35"></span><h2>hw/ip/prim/rtl/prim_secded_28_22_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-28-22-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_28_22_dec (
+   input        [27:0] data_i,
+   output logic [21:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+
+   logic single_error;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-secded-hamming-22-16-dec-sv">
+<span id="id36"></span><h2>hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-secded-hamming-22-16-dec-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,8 +7,8 @@</span>
+ module prim_secded_hamming_22_16_dec (
+   input        [21:0] data_i,
+   output logic [15:0] data_o,
+<span class="gd">-  output logic [5:0] syndrome_o,</span>
+<span class="gd">-  output logic [1:0] err_o</span>
+<span class="gi">+  output logic [ 5:0] syndrome_o,</span>
+<span class="gi">+  output logic [ 1:0] err_o</span>
+ );
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-otbn-trace-uvm-injector-sv">
+<span id="id37"></span><h2>hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-otbn-trace-uvm-injector-sv" title="Permalink to this headline">¶</a></h2>
+<p>The opening parenthesis should be on the same line as the module declaration,
+and the first port should be declared on the following line.</p>
+<p>The closing parenthesis should be on its own line, in column zero.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration</a></p>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-subreg-ext-sv">
+<span id="id38"></span><h2>hw/ip/prim/rtl/prim_subreg_ext.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-subreg-ext-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -20,9 +20,9 @@</span>
+   output logic [DW-1:0] qs
+ );
+
+<span class="gd">-  assign qs = d;</span>
+<span class="gd">-  assign q = wd;</span>
+<span class="gd">-  assign qe = we;</span>
+<span class="gi">+  assign qs  = d;</span>
+<span class="gi">+  assign q   = wd;</span>
+<span class="gi">+  assign qe  = we;</span>
+   assign qre = re;
+
+ endmodule
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-msb-extend-sv">
+<span id="id39"></span><h2>hw/ip/prim/rtl/prim_msb_extend.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-msb-extend-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,11 +6,11 @@</span>
+
+ `include &quot;prim_assert.sv&quot;
+
+<span class="gd">-module prim_msb_extend # (</span>
+<span class="gd">-  parameter int InWidth = 2,</span>
+<span class="gi">+module prim_msb_extend #(</span>
+<span class="gi">+  parameter int InWidth  = 2,</span>
+   parameter int OutWidth = 2
+ ) (
+<span class="gd">-  input [InWidth-1:0] in_i,</span>
+<span class="gi">+  input  [ InWidth-1:0] in_i,</span>
+   output [OutWidth-1:0] out_o
+ );
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="error.html" class="btn btn-neutral float-right" title="OpenTitan error fileset (24 entries)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="verible_zero_effort.html" class="btn btn-neutral float-left" title="OpenTitan no-change fileset (0 entries)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2021, The Verible Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

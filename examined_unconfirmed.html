@@ -1,0 +1,2915 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Unconfirmed formatting (119 entries) &mdash; Verible status report  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/contentui.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Incorrect formatting (39 entries)" href="examined_bugs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Verible status report
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ot.html">OpenTitan formatting status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">LowRISC style compliance report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verible_zero_effort.html">OpenTitan no-change fileset (0 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_confirmed.html">Correct formatting (39 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">OpenTitan error fileset (24 entries)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examined_bugs.html">Incorrect formatting (39 entries)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Unconfirmed formatting (119 entries)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-rtl-aes-mix-columns-sv">hw/ip/aes/rtl/aes_mix_columns.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-usb-fs-nb-pe-rtl-usb-fs-tx-mux-sv">hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-if-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-item-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-rtl-rom-ctrl-pkg-sv">hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-stress-all-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-rtl-pattgen-ctrl-pkg-sv">hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-base-test-sv">hw/dv/sv/cip_lib/cip_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-monitor-sv">hw/dv/sv/rng_agent/rng_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-rng-agent-seq-lib-rng-base-seq-sv">hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-monitor-sv">hw/dv/sv/pwm_agent/pwm_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-base-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-sequencer-sv">hw/dv/sv/csrng_agent/csrng_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-csrng-agent-seq-lib-csrng-base-seq-sv">hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-base-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-trace-monitor-sv">hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-agent-sv">hw/dv/sv/rng_agent/rng_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pattgen-agent-pattgen-agent-sv">hw/dv/sv/pattgen_agent/pattgen_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-agent-sv">hw/dv/sv/pwm_agent/pwm_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-push-pull-agent-push-pull-agent-cov-sv">hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-env-sv">hw/ip/otbn/dv/uvm/env/otbn_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-dv-env-aes-env-sv">hw/ip/aes/dv/env/aes_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-env-sv">hw/ip/pattgen/dv/env/pattgen_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-hmac-dv-env-hmac-env-sv">hw/ip/hmac/dv/env/hmac_env.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-agent-jtag-agent-sv">hw/dv/sv/jtag_agent/jtag_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-push-pull-agent-push-pull-sequencer-sv">hw/dv/sv/push_pull_agent/push_pull_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-seq-sv">hw/dv/sv/dv_lib/dv_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-tl-agent-sv">hw/dv/sv/tl_agent/tl_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-virtual-sequencer-sv">hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-uart-agent-uart-agent-sv">hw/dv/sv/uart_agent/uart_agent.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-edn-dv-tests-edn-base-test-sv">hw/ip/edn/dv/tests/edn_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-edn-dv-env-edn-virtual-sequencer-sv">hw/ip/edn/dv/env/edn_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-virtual-sequencer-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-push-pull-agent-seq-lib-push-pull-base-seq-sv">hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-sideload-if-sv">hw/ip/kmac/dv/env/kmac_sideload_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-trial1-dv-bus-pkg-sv">hw/ip/trial1/dv/bus_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-esc-pkg-sv">hw/ip/prim/rtl/prim_esc_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-alert-pkg-sv">hw/ip/prim/rtl/prim_alert_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-keymgr-dv-env-keymgr-env-pkg-sv">hw/ip/keymgr/dv/env/keymgr_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-cfg-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-cfg-sv">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-scoreboard-scoreboard-pkg-sv">hw/dv/sv/scoreboard/scoreboard_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-smoke-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-rtl-pattgen-sv">hw/ip/pattgen/rtl/pattgen.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwm-dv-env-seq-lib-pwm-common-vseq-sv">hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-dv-env-seq-lib-pattgen-common-vseq-sv">hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-common-ifs-clk-if-sv">hw/dv/sv/common_ifs/clk_if.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-tlul-generic-dv-tb-tb-sv">hw/ip/tlul/generic_dv/tb/tb.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-usb20-agent-seq-lib-usb20-base-seq-sv">hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-rom-pkg-sv">hw/ip/prim/rtl/prim_rom_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-lc-sender-sv">hw/ip/prim/rtl/prim_lc_sender.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-env-pkg-sv">hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-usb20-agent-usb20-monitor-sv">hw/dv/sv/usb20_agent/usb20_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-sequencer-sv">hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-prim-rtl-prim-ram-1p-pkg-sv">hw/ip/prim/rtl/prim_ram_1p_pkg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-edn-dv-env-edn-env-cov-sv">hw/ip/edn/dv/env/edn_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-usbdev-dv-env-usbdev-env-cov-sv">hw/ip/usbdev/dv/env/usbdev_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-env-cov-sv">hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aon-timer-dv-env-aon-timer-env-cov-sv">hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-clkmgr-dv-env-clkmgr-env-cfg-sv">hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-driver-sv">hw/dv/sv/pwm_agent/pwm_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-tests-tl-agent-base-test-sv">hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-virtual-sequencer-sv">hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-driver-sv">hw/dv/sv/kmac_app_agent/kmac_app_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-driver-sv">hw/dv/sv/csrng_agent/csrng_driver.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-flash-ctrl-dv-tests-flash-ctrl-base-test-sv">hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-virtual-sequencer-sv">hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aon-timer-dv-tests-aon-timer-base-test-sv">hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aon-timer-dv-env-aon-timer-virtual-sequencer-sv">hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-tests-sram-ctrl-base-test-sv">hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-virtual-sequencer-sv">hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-clkmgr-dv-tests-clkmgr-base-test-sv">hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-clkmgr-dv-env-clkmgr-virtual-sequencer-sv">hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-tlul-generic-dv-env-xbar-virtual-sequencer-sv">hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-tests-otbn-base-test-sv">hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-virtual-sequencer-sv">hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-tests-rom-ctrl-base-test-sv">hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-virtual-sequencer-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-lc-ctrl-dv-tests-lc-ctrl-base-test-sv">hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-dv-env-aes-virtual-sequencer-sv">hw/ip/aes/dv/env/aes_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-virtual-sequencer-sv">hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwrmgr-dv-tests-pwrmgr-base-test-sv">hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-virtual-sequencer-sv">hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-tests-kmac-base-test-sv">hw/ip/kmac/dv/tests/kmac_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-virtual-sequencer-sv">hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-hmac-dv-tests-hmac-base-test-sv">hw/ip/hmac/dv/tests/hmac_base_test.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-monitor-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-edn-dv-env-seq-lib-edn-common-vseq-sv">hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-usbdev-dv-env-seq-lib-usbdev-common-vseq-sv">hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aon-timer-dv-env-seq-lib-aon-timer-common-vseq-sv">hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-common-vseq-sv">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-clkmgr-dv-env-seq-lib-clkmgr-common-vseq-sv">hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-common-vseq-sv">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-macro-errs-vseq-sv">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-smoke-vseq-sv">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-common-vseq-sv">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-common-vseq-sv">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-seq-lib-pwrmgr-common-vseq-sv">hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-adc-ctrl-dv-env-seq-lib-adc-ctrl-common-vseq-sv">hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-common-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-hmac-dv-env-seq-lib-hmac-common-vseq-sv">hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-gpio-dv-env-seq-lib-gpio-common-vseq-sv">hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-prog-failure-vseq-sv">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-default-seq-sv">hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-sideload-vseq-sv">hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-sequencer-sv">hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-env-cfg-sv">hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cov-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-env-cov-sv">hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-aes-dv-env-aes-env-cov-sv">hw/ip/aes/dv/env/aes_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-env-cov-sv">hw/ip/pattgen/dv/env/pattgen_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cfg-sv">hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cov-sv">hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-env-cov-sv">hw/ip/kmac/dv/env/kmac_env_cov.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-hmac-dv-env-hmac-env-cfg-sv">hw/ip/hmac/dv/env/hmac_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cfg-sv">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-host-seq-sv">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Verible status report</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Unconfirmed formatting (119 entries)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/examined_unconfirmed.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unconfirmed-formatting-119-entries">
+<h1>Unconfirmed formatting (119 entries)<a class="headerlink" href="#unconfirmed-formatting-119-entries" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename</p></th>
+<th class="head"><p>Related</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aes-rtl-aes-mix-columns-sv"><span class="std std-ref">hw/ip/aes/rtl/aes_mix_columns.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-usb-fs-nb-pe-rtl-usb-fs-tx-mux-sv"><span class="std std-ref">hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-if-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-item-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-rtl-rom-ctrl-pkg-sv"><span class="std std-ref">hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-stress-all-vseq-sv"><span class="std std-ref">hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pattgen-rtl-pattgen-ctrl-pkg-sv"><span class="std std-ref">hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-cip-lib-cip-base-test-sv"><span class="std std-ref">hw/dv/sv/cip_lib/cip_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-monitor-sv"><span class="std std-ref">hw/dv/sv/rng_agent/rng_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-rng-agent-seq-lib-rng-base-seq-sv"><span class="std std-ref">hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-monitor-sv"><span class="std std-ref">hw/dv/sv/pwm_agent/pwm_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-base-seq-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-sequencer-sv"><span class="std std-ref">hw/dv/sv/csrng_agent/csrng_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-csrng-agent-seq-lib-csrng-base-seq-sv"><span class="std std-ref">hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-base-seq-sv"><span class="std std-ref">hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-trace-monitor-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-rng-agent-rng-agent-sv"><span class="std std-ref">hw/dv/sv/rng_agent/rng_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-pattgen-agent-pattgen-agent-sv"><span class="std std-ref">hw/dv/sv/pattgen_agent/pattgen_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-agent-sv"><span class="std std-ref">hw/dv/sv/pwm_agent/pwm_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-push-pull-agent-push-pull-agent-cov-sv"><span class="std std-ref">hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-env-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/otbn_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aes-dv-env-aes-env-sv"><span class="std std-ref">hw/ip/aes/dv/env/aes_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-env-sv"><span class="std std-ref">hw/ip/pattgen/dv/env/pattgen_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-hmac-dv-env-hmac-env-sv"><span class="std std-ref">hw/ip/hmac/dv/env/hmac_env.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-sv"><span class="std std-ref">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-agent-jtag-agent-sv"><span class="std std-ref">hw/dv/sv/jtag_agent/jtag_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-push-pull-agent-push-pull-sequencer-sv"><span class="std std-ref">hw/dv/sv/push_pull_agent/push_pull_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-seq-sv"><span class="std std-ref">hw/dv/sv/dv_lib/dv_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-tl-agent-sv"><span class="std std-ref">hw/dv/sv/tl_agent/tl_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-dv-lib-dv-base-virtual-sequencer-sv"><span class="std std-ref">hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-uart-agent-uart-agent-sv"><span class="std std-ref">hw/dv/sv/uart_agent/uart_agent.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-edn-dv-tests-edn-base-test-sv"><span class="std std-ref">hw/ip/edn/dv/tests/edn_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-edn-dv-env-edn-virtual-sequencer-sv"><span class="std std-ref">hw/ip/edn/dv/env/edn_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-virtual-sequencer-sv"><span class="std std-ref">hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-push-pull-agent-seq-lib-push-pull-base-seq-sv"><span class="std std-ref">hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-sideload-if-sv"><span class="std std-ref">hw/ip/kmac/dv/env/kmac_sideload_if.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-trial1-dv-bus-pkg-sv"><span class="std std-ref">hw/ip/trial1/dv/bus_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-esc-pkg-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_esc_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-alert-pkg-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_alert_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-keymgr-dv-env-keymgr-env-pkg-sv"><span class="std std-ref">hw/ip/keymgr/dv/env/keymgr_env_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-cfg-sv"><span class="std std-ref">hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-cfg-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-scoreboard-scoreboard-pkg-sv"><span class="std std-ref">hw/dv/sv/scoreboard/scoreboard_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-smoke-vseq-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pattgen-rtl-pattgen-sv"><span class="std std-ref">hw/ip/pattgen/rtl/pattgen.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pwm-dv-env-seq-lib-pwm-common-vseq-sv"><span class="std std-ref">hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pattgen-dv-env-seq-lib-pattgen-common-vseq-sv"><span class="std std-ref">hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-common-ifs-clk-if-sv"><span class="std std-ref">hw/dv/sv/common_ifs/clk_if.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-tlul-generic-dv-tb-tb-sv"><span class="std std-ref">hw/ip/tlul/generic_dv/tb/tb.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-usb20-agent-seq-lib-usb20-base-seq-sv"><span class="std std-ref">hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-rom-pkg-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_rom_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-lc-sender-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_lc_sender.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-env-pkg-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-usb20-agent-usb20-monitor-sv"><span class="std std-ref">hw/dv/sv/usb20_agent/usb20_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-sequencer-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-prim-rtl-prim-ram-1p-pkg-sv"><span class="std std-ref">hw/ip/prim/rtl/prim_ram_1p_pkg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-edn-dv-env-edn-env-cov-sv"><span class="std std-ref">hw/ip/edn/dv/env/edn_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-usbdev-dv-env-usbdev-env-cov-sv"><span class="std std-ref">hw/ip/usbdev/dv/env/usbdev_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-env-cov-sv"><span class="std std-ref">hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aon-timer-dv-env-aon-timer-env-cov-sv"><span class="std std-ref">hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-clkmgr-dv-env-clkmgr-env-cfg-sv"><span class="std std-ref">hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-pwm-agent-pwm-driver-sv"><span class="std std-ref">hw/dv/sv/pwm_agent/pwm_driver.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-tests-tl-agent-base-test-sv"><span class="std std-ref">hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-virtual-sequencer-sv"><span class="std std-ref">hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-kmac-app-driver-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/kmac_app_driver.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-csrng-agent-csrng-driver-sv"><span class="std std-ref">hw/dv/sv/csrng_agent/csrng_driver.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-flash-ctrl-dv-tests-flash-ctrl-base-test-sv"><span class="std std-ref">hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-virtual-sequencer-sv"><span class="std std-ref">hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-aon-timer-dv-tests-aon-timer-base-test-sv"><span class="std std-ref">hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-aon-timer-dv-env-aon-timer-virtual-sequencer-sv"><span class="std std-ref">hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-tests-sram-ctrl-base-test-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-virtual-sequencer-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-clkmgr-dv-tests-clkmgr-base-test-sv"><span class="std std-ref">hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-clkmgr-dv-env-clkmgr-virtual-sequencer-sv"><span class="std std-ref">hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-tlul-generic-dv-env-xbar-virtual-sequencer-sv"><span class="std std-ref">hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-tests-otbn-base-test-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-virtual-sequencer-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-tests-rom-ctrl-base-test-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-virtual-sequencer-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-lc-ctrl-dv-tests-lc-ctrl-base-test-sv"><span class="std std-ref">hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-aes-dv-env-aes-virtual-sequencer-sv"><span class="std std-ref">hw/ip/aes/dv/env/aes_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-virtual-sequencer-sv"><span class="std std-ref">hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pwrmgr-dv-tests-pwrmgr-base-test-sv"><span class="std std-ref">hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-virtual-sequencer-sv"><span class="std std-ref">hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-tests-kmac-base-test-sv"><span class="std std-ref">hw/ip/kmac/dv/tests/kmac_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-virtual-sequencer-sv"><span class="std std-ref">hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-hmac-dv-tests-hmac-base-test-sv"><span class="std std-ref">hw/ip/hmac/dv/tests/hmac_base_test.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-monitor-sv"><span class="std std-ref">hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-edn-dv-env-seq-lib-edn-common-vseq-sv"><span class="std std-ref">hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-usbdev-dv-env-seq-lib-usbdev-common-vseq-sv"><span class="std std-ref">hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-aon-timer-dv-env-seq-lib-aon-timer-common-vseq-sv"><span class="std std-ref">hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-common-vseq-sv"><span class="std std-ref">hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-clkmgr-dv-env-seq-lib-clkmgr-common-vseq-sv"><span class="std std-ref">hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-common-vseq-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-macro-errs-vseq-sv"><span class="std std-ref">hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-smoke-vseq-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-common-vseq-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-common-vseq-sv"><span class="std std-ref">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-seq-lib-pwrmgr-common-vseq-sv"><span class="std std-ref">hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-adc-ctrl-dv-env-seq-lib-adc-ctrl-common-vseq-sv"><span class="std std-ref">hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-common-vseq-sv"><span class="std std-ref">hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-hmac-dv-env-seq-lib-hmac-common-vseq-sv"><span class="std std-ref">hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-gpio-dv-env-seq-lib-gpio-common-vseq-sv"><span class="std std-ref">hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-prog-failure-vseq-sv"><span class="std std-ref">hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-uart-agent-seq-lib-uart-default-seq-sv"><span class="std std-ref">hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-seq-lib-kmac-sideload-vseq-sv"><span class="std std-ref">hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-sequencer-sv"><span class="std std-ref">hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv</span></a></p></td>
+<td><p><a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">RULE#1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-otbn-dv-uvm-env-otbn-env-cfg-sv"><span class="std std-ref">hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cov-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-env-cov-sv"><span class="std std-ref">hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-aes-dv-env-aes-env-cov-sv"><span class="std std-ref">hw/ip/aes/dv/env/aes_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pattgen-dv-env-pattgen-env-cov-sv"><span class="std std-ref">hw/ip/pattgen/dv/env/pattgen_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cfg-sv"><span class="std std-ref">hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cov-sv"><span class="std std-ref">hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-kmac-dv-env-kmac-env-cov-sv"><span class="std std-ref">hw/ip/kmac/dv/env/kmac_env_cov.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-ip-hmac-dv-env-hmac-env-cfg-sv"><span class="std std-ref">hw/ip/hmac/dv/env/hmac_env_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cfg-sv"><span class="std std-ref">hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-host-seq-sv"><span class="std std-ref">hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv</span></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="hw-ip-aes-rtl-aes-mix-columns-sv">
+<span id="id1"></span><h2>hw/ip/aes/rtl/aes_mix_columns.sv<a class="headerlink" href="#hw-ip-aes-rtl-aes-mix-columns-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -21,9 +21,9 @@</span>
+   // Individually mix columns
+   for (genvar i = 0; i &lt; 4; i++) begin : gen_mix_column
+     aes_mix_single_column u_aes_mix_column_i (
+<span class="gd">-      .op_i   ( op_i                 ),</span>
+<span class="gd">-      .data_i ( data_i_transposed[i] ),</span>
+<span class="gd">-      .data_o ( data_o_transposed[i] )</span>
+<span class="gi">+      .op_i  (op_i),</span>
+<span class="gi">+      .data_i(data_i_transposed[i]),</span>
+<span class="gi">+      .data_o(data_o_transposed[i])</span>
+     );
+   end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-usb-fs-nb-pe-rtl-usb-fs-tx-mux-sv">
+<span id="id2"></span><h2>hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv<a class="headerlink" href="#hw-ip-usb-fs-nb-pe-rtl-usb-fs-tx-mux-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,12 +6,12 @@</span>
+
+ module usb_fs_tx_mux (
+   // interface to IN Protocol Engine
+<span class="gd">-  input  logic in_tx_pkt_start_i,</span>
+<span class="gd">-  input  logic [3:0] in_tx_pid_i,</span>
+<span class="gi">+  input logic in_tx_pkt_start_i,</span>
+<span class="gi">+  input logic [3:0] in_tx_pid_i,</span>
+
+   // interface to OUT Protocol Engine
+<span class="gd">-  input  logic out_tx_pkt_start_i,</span>
+<span class="gd">-  input  logic [3:0] out_tx_pid_i,</span>
+<span class="gi">+  input logic out_tx_pkt_start_i,</span>
+<span class="gi">+  input logic [3:0] out_tx_pid_i,</span>
+
+   // interface to tx module
+   output logic tx_pkt_start_o,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-if-sv">
+<span id="id3"></span><h2>hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-if-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -13,13 +13,13 @@</span>
+ );
+
+   // Inputs to DUT
+<span class="gd">-  logic                     start;        // Start the operation</span>
+<span class="gd">-  logic [ImemAddrWidth-1:0] start_addr;   // Start byte address in IMEM</span>
+<span class="gi">+  logic                     start;  // Start the operation</span>
+<span class="gi">+  logic [ImemAddrWidth-1:0] start_addr;  // Start byte address in IMEM</span>
+
+   // Outputs from DUT
+<span class="gd">-  bit                       done;         // Operation done</span>
+<span class="gd">-  bit                       err;          // Something went wrong</span>
+<span class="gd">-  bit [31:0]                stop_pc;      // PC at end of operation</span>
+<span class="gi">+  bit                       done;  // Operation done</span>
+<span class="gi">+  bit                       err;  // Something went wrong</span>
+<span class="gi">+  bit   [             31:0] stop_pc;  // PC at end of operation</span>
+
+   // Wait until done goes high. Stops early on reset
+   task automatic wait_done();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-item-sv">
+<span id="id4"></span><h2>hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-item-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -15,10 +15,10 @@</span>
+   string                 mnemonic;
+
+   `uvm_object_utils_begin(otbn_model_item)
+<span class="gd">-    `uvm_field_enum   (otbn_model_item_type_e, item_type, UVM_DEFAULT)</span>
+<span class="gd">-    `uvm_field_int    (err, UVM_DEFAULT)</span>
+<span class="gd">-    `uvm_field_int    (insn_addr, UVM_DEFAULT | UVM_HEX)</span>
+<span class="gd">-    `uvm_field_string (mnemonic, UVM_DEFAULT)</span>
+<span class="gi">+    `uvm_field_enum(otbn_model_item_type_e, item_type, UVM_DEFAULT)</span>
+<span class="gi">+    `uvm_field_int(err, UVM_DEFAULT)</span>
+<span class="gi">+    `uvm_field_int(insn_addr, UVM_DEFAULT | UVM_HEX)</span>
+<span class="gi">+    `uvm_field_string(mnemonic, UVM_DEFAULT)</span>
+   `uvm_object_utils_end
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-rtl-rom-ctrl-pkg-sv">
+<span id="id5"></span><h2>hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv<a class="headerlink" href="#hw-ip-rom-ctrl-rtl-rom-ctrl-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -13,14 +13,11 @@</span>
+     logic good;
+   } pwrmgr_data_t;
+
+<span class="gd">-  parameter pwrmgr_data_t PWRMGR_DATA_DEFAULT = &#39;{</span>
+<span class="gd">-    done: 1&#39;b1,</span>
+<span class="gd">-    good: 1&#39;b1</span>
+<span class="gd">-  };</span>
+<span class="gi">+  parameter pwrmgr_data_t PWRMGR_DATA_DEFAULT = &#39;{done: 1&#39;b1, good: 1&#39;b1};</span>
+
+   typedef struct packed {
+     logic [255:0] data;
+<span class="gd">-    logic         valid;</span>
+<span class="gi">+    logic valid;</span>
+   } keymgr_data_t;
+
+ endpackage
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-seq-lib-kmac-stress-all-vseq-sv">
+<span id="id6"></span><h2>hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-seq-lib-kmac-stress-all-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -27,10 +27,10 @@</span>
+   task body();
+     `uvm_info(`gfn, $sformatf(&quot;Running %0d random sequences&quot;, num_trans), UVM_LOW)
+     for (int i = 0; i &lt; num_trans; i++) begin
+<span class="gd">-      uvm_sequence    seq;</span>
+<span class="gd">-      kmac_base_vseq  kmac_vseq;</span>
+<span class="gd">-      uint            seq_idx = $urandom_range(0, vseq_names.size() - 1);</span>
+<span class="gd">-      string          cur_vseq_name = vseq_names[seq_idx];</span>
+<span class="gi">+      uvm_sequence   seq;</span>
+<span class="gi">+      kmac_base_vseq kmac_vseq;</span>
+<span class="gi">+      uint           seq_idx = $urandom_range(0, vseq_names.size() - 1);</span>
+<span class="gi">+      string         cur_vseq_name = vseq_names[seq_idx];</span>
+
+       seq = create_seq_by_name(cur_vseq_name);
+       `downcast(kmac_vseq, seq)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-rtl-pattgen-ctrl-pkg-sv">
+<span id="id7"></span><h2>hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv<a class="headerlink" href="#hw-ip-pattgen-rtl-pattgen-ctrl-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,12 +5,12 @@</span>
+ package pattgen_ctrl_pkg;
+
+   typedef struct packed {
+<span class="gd">-    logic        enable;</span>
+<span class="gd">-    logic        polarity;</span>
+<span class="gi">+    logic enable;</span>
+<span class="gi">+    logic polarity;</span>
+     logic [31:0] prediv;
+     logic [63:0] data;
+<span class="gd">-    logic [5:0]  len;</span>
+<span class="gd">-    logic [9:0]  reps;</span>
+<span class="gi">+    logic [5:0] len;</span>
+<span class="gi">+    logic [9:0] reps;</span>
+   } pattgen_chan_ctrl_t;
+
+ endpackage : pattgen_ctrl_pkg
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-cip-lib-cip-base-test-sv">
+<span id="id8"></span><h2>hw/dv/sv/cip_lib/cip_base_test.sv<a class="headerlink" href="#hw-dv-sv-cip-lib-cip-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,9 +2,11 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class cip_base_test #(type CFG_T = cip_base_env_cfg,</span>
+<span class="gd">-                      type ENV_T = cip_base_env) extends dv_base_test #(CFG_T, ENV_T);</span>
+<span class="gd">-  `uvm_component_param_utils(cip_base_test #(CFG_T, ENV_T))</span>
+<span class="gi">+class cip_base_test #(</span>
+<span class="gi">+  type CFG_T = cip_base_env_cfg,</span>
+<span class="gi">+  type ENV_T = cip_base_env</span>
+<span class="gi">+) extends dv_base_test #(CFG_T, ENV_T);</span>
+<span class="gi">+  `uvm_component_param_utils(cip_base_test#(CFG_T, ENV_T))</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-rng-agent-rng-monitor-sv">
+<span id="id9"></span><h2>hw/dv/sv/rng_agent/rng_monitor.sv<a class="headerlink" href="#hw-dv-sv-rng-agent-rng-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class rng_monitor extends dv_base_monitor #(
+<span class="gd">-    .ITEM_T (rng_item),</span>
+<span class="gd">-    .CFG_T  (rng_agent_cfg),</span>
+<span class="gd">-    .COV_T  (rng_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .ITEM_T(rng_item),</span>
+<span class="gi">+  .CFG_T (rng_agent_cfg),</span>
+<span class="gi">+  .COV_T (rng_agent_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(rng_monitor)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-rng-agent-seq-lib-rng-base-seq-sv">
+<span id="id10"></span><h2>hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv<a class="headerlink" href="#hw-dv-sv-rng-agent-seq-lib-rng-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class rng_base_seq extends dv_base_seq #(
+<span class="gd">-    .REQ         (rng_item),</span>
+<span class="gd">-    .CFG_T       (rng_agent_cfg),</span>
+<span class="gd">-    .SEQUENCER_T (rng_sequencer)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .REQ        (rng_item),</span>
+<span class="gi">+  .CFG_T      (rng_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(rng_sequencer)</span>
+<span class="gi">+);</span>
+   `uvm_object_utils(rng_base_seq)
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pwm-agent-pwm-monitor-sv">
+<span id="id11"></span><h2>hw/dv/sv/pwm_agent/pwm_monitor.sv<a class="headerlink" href="#hw-dv-sv-pwm-agent-pwm-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pwm_monitor extends dv_base_monitor #(
+<span class="gd">-    .ITEM_T (pwm_item),</span>
+<span class="gd">-    .CFG_T  (pwm_agent_cfg),</span>
+<span class="gd">-    .COV_T  (pwm_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .ITEM_T(pwm_item),</span>
+<span class="gi">+  .CFG_T (pwm_agent_cfg),</span>
+<span class="gi">+  .COV_T (pwm_agent_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(pwm_monitor)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-base-seq-sv">
+<span id="id12"></span><h2>hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class kmac_app_base_seq extends dv_base_seq #(
+<span class="gd">-    .REQ         (kmac_app_item),</span>
+<span class="gd">-    .CFG_T       (kmac_app_agent_cfg),</span>
+<span class="gd">-    .SEQUENCER_T (kmac_app_sequencer)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .REQ        (kmac_app_item),</span>
+<span class="gi">+  .CFG_T      (kmac_app_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(kmac_app_sequencer)</span>
+<span class="gi">+);</span>
+   `uvm_object_utils(kmac_app_base_seq)
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-csrng-agent-csrng-sequencer-sv">
+<span id="id13"></span><h2>hw/dv/sv/csrng_agent/csrng_sequencer.sv<a class="headerlink" href="#hw-dv-sv-csrng-agent-csrng-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,13 +3,13 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class csrng_sequencer extends dv_base_sequencer #(
+<span class="gd">-    .ITEM_T (csrng_item),</span>
+<span class="gd">-    .CFG_T  (csrng_agent_cfg)</span>
+<span class="gi">+  .ITEM_T(csrng_item),</span>
+<span class="gi">+  .CFG_T (csrng_agent_cfg)</span>
+ );
+   `uvm_component_param_utils(csrng_sequencer)
+
+<span class="gd">-  push_pull_sequencer#(.HostDataWidth(csrng_pkg::CSRNG_CMD_WIDTH))          m_cmd_push_sequencer;</span>
+<span class="gd">-  push_pull_sequencer#(.HostDataWidth(csrng_pkg::FIPS_GENBITS_BUS_WIDTH))   m_genbits_push_sequencer;</span>
+<span class="gi">+  push_pull_sequencer #(.HostDataWidth(csrng_pkg::CSRNG_CMD_WIDTH))        m_cmd_push_sequencer;</span>
+<span class="gi">+  push_pull_sequencer #(.HostDataWidth(csrng_pkg::FIPS_GENBITS_BUS_WIDTH)) m_genbits_push_sequencer;</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-csrng-agent-seq-lib-csrng-base-seq-sv">
+<span id="id14"></span><h2>hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv<a class="headerlink" href="#hw-dv-sv-csrng-agent-seq-lib-csrng-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class csrng_base_seq extends dv_base_seq #(
+<span class="gd">-    .REQ         (csrng_item),</span>
+<span class="gd">-    .CFG_T       (csrng_agent_cfg),</span>
+<span class="gd">-    .SEQUENCER_T (csrng_sequencer)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .REQ        (csrng_item),</span>
+<span class="gi">+  .CFG_T      (csrng_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(csrng_sequencer)</span>
+<span class="gi">+);</span>
+   `uvm_object_utils(csrng_base_seq)
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-uart-agent-seq-lib-uart-base-seq-sv">
+<span id="id15"></span><h2>hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv<a class="headerlink" href="#hw-dv-sv-uart-agent-seq-lib-uart-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class uart_base_seq extends dv_base_seq #(
+<span class="gd">-    .REQ         (uart_item),</span>
+<span class="gd">-    .CFG_T       (uart_agent_cfg),</span>
+<span class="gd">-    .SEQUENCER_T (uart_sequencer)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .REQ        (uart_item),</span>
+<span class="gi">+  .CFG_T      (uart_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(uart_sequencer)</span>
+<span class="gi">+);</span>
+   `uvm_object_utils(uart_base_seq)
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-sv">
+<span id="id16"></span><h2>hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class otbn_model_agent extends dv_base_agent #(
+<span class="gd">-  .CFG_T          (otbn_model_agent_cfg),</span>
+<span class="gd">-  .MONITOR_T      (otbn_model_monitor),</span>
+<span class="gd">-  .DRIVER_T       (otbn_dummy_driver),</span>
+<span class="gd">-  .SEQUENCER_T    (otbn_dummy_sequencer)</span>
+<span class="gi">+  .CFG_T      (otbn_model_agent_cfg),</span>
+<span class="gi">+  .MONITOR_T  (otbn_model_monitor),</span>
+<span class="gi">+  .DRIVER_T   (otbn_dummy_driver),</span>
+<span class="gi">+  .SEQUENCER_T(otbn_dummy_sequencer)</span>
+ );
+
+   `uvm_component_utils(otbn_model_agent)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-otbn-trace-monitor-sv">
+<span id="id17"></span><h2>hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-otbn-trace-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class otbn_trace_monitor extends dv_base_monitor #(
+<span class="gd">-    .ITEM_T (otbn_trace_item),</span>
+<span class="gd">-    .CFG_T (otbn_env_cfg),</span>
+<span class="gd">-    .COV_T (otbn_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .ITEM_T(otbn_trace_item),</span>
+<span class="gi">+  .CFG_T (otbn_env_cfg),</span>
+<span class="gi">+  .COV_T (otbn_env_cov)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(otbn_trace_monitor)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-rng-agent-rng-agent-sv">
+<span id="id18"></span><h2>hw/dv/sv/rng_agent/rng_agent.sv<a class="headerlink" href="#hw-dv-sv-rng-agent-rng-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class rng_agent extends dv_base_agent #(
+<span class="gd">-  .CFG_T          (rng_agent_cfg),</span>
+<span class="gd">-  .DRIVER_T       (rng_driver),</span>
+<span class="gd">-  .SEQUENCER_T    (rng_sequencer),</span>
+<span class="gd">-  .MONITOR_T      (rng_monitor),</span>
+<span class="gd">-  .COV_T          (rng_agent_cov)</span>
+<span class="gi">+  .CFG_T      (rng_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T   (rng_driver),</span>
+<span class="gi">+  .SEQUENCER_T(rng_sequencer),</span>
+<span class="gi">+  .MONITOR_T  (rng_monitor),</span>
+<span class="gi">+  .COV_T      (rng_agent_cov)</span>
+ );
+
+   `uvm_component_utils(rng_agent)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pattgen-agent-pattgen-agent-sv">
+<span id="id19"></span><h2>hw/dv/sv/pattgen_agent/pattgen_agent.sv<a class="headerlink" href="#hw-dv-sv-pattgen-agent-pattgen-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pattgen_agent extends dv_base_agent #(
+<span class="gd">-  .CFG_T           (pattgen_agent_cfg),</span>
+<span class="gd">-  .DRIVER_T        (pattgen_driver),</span>
+<span class="gd">-  .SEQUENCER_T     (pattgen_sequencer),</span>
+<span class="gd">-  .MONITOR_T       (pattgen_monitor),</span>
+<span class="gd">-  .COV_T           (pattgen_agent_cov)</span>
+<span class="gi">+  .CFG_T      (pattgen_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T   (pattgen_driver),</span>
+<span class="gi">+  .SEQUENCER_T(pattgen_sequencer),</span>
+<span class="gi">+  .MONITOR_T  (pattgen_monitor),</span>
+<span class="gi">+  .COV_T      (pattgen_agent_cov)</span>
+ );
+   `uvm_component_utils(pattgen_agent)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pwm-agent-pwm-agent-sv">
+<span id="id20"></span><h2>hw/dv/sv/pwm_agent/pwm_agent.sv<a class="headerlink" href="#hw-dv-sv-pwm-agent-pwm-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pwm_agent extends dv_base_agent #(
+<span class="gd">-  .CFG_T          (pwm_agent_cfg),</span>
+<span class="gd">-  .DRIVER_T       (pwm_driver),</span>
+<span class="gd">-  .SEQUENCER_T    (pwm_sequencer),</span>
+<span class="gd">-  .MONITOR_T      (pwm_monitor),</span>
+<span class="gd">-  .COV_T          (pwm_agent_cov)</span>
+<span class="gi">+  .CFG_T      (pwm_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T   (pwm_driver),</span>
+<span class="gi">+  .SEQUENCER_T(pwm_sequencer),</span>
+<span class="gi">+  .MONITOR_T  (pwm_monitor),</span>
+<span class="gi">+  .COV_T      (pwm_agent_cov)</span>
+ );
+
+   `uvm_component_utils(pwm_agent)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-push-pull-agent-push-pull-agent-cov-sv">
+<span id="id21"></span><h2>hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv<a class="headerlink" href="#hw-dv-sv-push-pull-agent-push-pull-agent-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,11 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class push_pull_agent_cov #(parameter int HostDataWidth = 32,</span>
+<span class="gd">-                            parameter int DeviceDataWidth = HostDataWidth)</span>
+<span class="gd">-  extends dv_base_agent_cov #(</span>
+<span class="gd">-    push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth)</span>
+<span class="gd">-);</span>
+<span class="gi">+class push_pull_agent_cov #(</span>
+<span class="gi">+  parameter int HostDataWidth   = 32,</span>
+<span class="gi">+  parameter int DeviceDataWidth = HostDataWidth</span>
+<span class="gi">+) extends dv_base_agent_cov #(push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth));</span>
+
+   `uvm_component_param_utils(push_pull_agent_cov#(HostDataWidth, DeviceDataWidth))
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-otbn-env-sv">
+<span id="id22"></span><h2>hw/ip/otbn/dv/uvm/env/otbn_env.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-otbn-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class otbn_env extends cip_base_env #(
+<span class="gd">-    .CFG_T              (otbn_env_cfg),</span>
+<span class="gd">-    .COV_T              (otbn_env_cov),</span>
+<span class="gd">-    .VIRTUAL_SEQUENCER_T(otbn_virtual_sequencer),</span>
+<span class="gd">-    .SCOREBOARD_T       (otbn_scoreboard)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T              (otbn_env_cfg),</span>
+<span class="gi">+  .COV_T              (otbn_env_cov),</span>
+<span class="gi">+  .VIRTUAL_SEQUENCER_T(otbn_virtual_sequencer),</span>
+<span class="gi">+  .SCOREBOARD_T       (otbn_scoreboard)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(otbn_env)
+
+   otbn_model_agent   model_agent;
+<span class="gu">@@ -31,16 +31,19 @@</span>
+     if (!uvm_config_db#(virtual otbn_loop_if)::get(this, &quot;&quot;, &quot;loop_vif&quot;, cfg.loop_vif)) begin
+       `uvm_fatal(`gfn, &quot;failed to get otbn_loop_if handle from uvm_config_db&quot;)
+     end
+<span class="gd">-    if (!uvm_config_db#(virtual otbn_alu_bignum_if)::get(this, &quot;&quot;, &quot;alu_bignum_vif&quot;,</span>
+<span class="gd">-                                                         cfg.alu_bignum_vif)) begin</span>
+<span class="gi">+    if (!uvm_config_db#(virtual otbn_alu_bignum_if)::get(</span>
+<span class="gi">+            this, &quot;&quot;, &quot;alu_bignum_vif&quot;, cfg.alu_bignum_vif</span>
+<span class="gi">+        )) begin</span>
+       `uvm_fatal(`gfn, &quot;failed to get otbn_alu_bignum_if handle from uvm_config_db&quot;)
+     end
+<span class="gd">-    if (!uvm_config_db#(virtual otbn_mac_bignum_if)::get(this, &quot;&quot;, &quot;mac_bignum_vif&quot;,</span>
+<span class="gd">-                                                         cfg.mac_bignum_vif)) begin</span>
+<span class="gi">+    if (!uvm_config_db#(virtual otbn_mac_bignum_if)::get(</span>
+<span class="gi">+            this, &quot;&quot;, &quot;mac_bignum_vif&quot;, cfg.mac_bignum_vif</span>
+<span class="gi">+        )) begin</span>
+       `uvm_fatal(`gfn, &quot;failed to get otbn_mac_bignum_if handle from uvm_config_db&quot;)
+     end
+<span class="gd">-    if (!uvm_config_db#(virtual otbn_rf_base_if)::get(this, &quot;&quot;, &quot;rf_base_vif&quot;,</span>
+<span class="gd">-                                                      cfg.rf_base_vif)) begin</span>
+<span class="gi">+    if (!uvm_config_db#(virtual otbn_rf_base_if)::get(</span>
+<span class="gi">+            this, &quot;&quot;, &quot;rf_base_vif&quot;, cfg.rf_base_vif</span>
+<span class="gi">+        )) begin</span>
+       `uvm_fatal(`gfn, &quot;failed to get otbn_rf_base_if handle from uvm_config_db&quot;)
+     end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-dv-env-aes-env-sv">
+<span id="id23"></span><h2>hw/ip/aes/dv/env/aes_env.sv<a class="headerlink" href="#hw-ip-aes-dv-env-aes-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class aes_env extends cip_base_env #(
+<span class="gd">-    .CFG_T              (aes_env_cfg),</span>
+<span class="gd">-    .COV_T              (aes_env_cov),</span>
+<span class="gd">-    .VIRTUAL_SEQUENCER_T(aes_virtual_sequencer),</span>
+<span class="gd">-    .SCOREBOARD_T       (aes_scoreboard)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T              (aes_env_cfg),</span>
+<span class="gi">+  .COV_T              (aes_env_cov),</span>
+<span class="gi">+  .VIRTUAL_SEQUENCER_T(aes_virtual_sequencer),</span>
+<span class="gi">+  .SCOREBOARD_T       (aes_scoreboard)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(aes_env)
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-dv-env-pattgen-env-sv">
+<span id="id24"></span><h2>hw/ip/pattgen/dv/env/pattgen_env.sv<a class="headerlink" href="#hw-ip-pattgen-dv-env-pattgen-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,11 +3,11 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pattgen_env extends cip_base_env #(
+<span class="gd">-    .CFG_T               (pattgen_env_cfg),</span>
+<span class="gd">-    .COV_T               (pattgen_env_cov),</span>
+<span class="gd">-    .VIRTUAL_SEQUENCER_T (pattgen_virtual_sequencer),</span>
+<span class="gd">-    .SCOREBOARD_T        (pattgen_scoreboard)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T              (pattgen_env_cfg),</span>
+<span class="gi">+  .COV_T              (pattgen_env_cov),</span>
+<span class="gi">+  .VIRTUAL_SEQUENCER_T(pattgen_virtual_sequencer),</span>
+<span class="gi">+  .SCOREBOARD_T       (pattgen_scoreboard)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(pattgen_env)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-hmac-dv-env-hmac-env-sv">
+<span id="id25"></span><h2>hw/ip/hmac/dv/env/hmac_env.sv<a class="headerlink" href="#hw-ip-hmac-dv-env-hmac-env-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,10 +2,12 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class hmac_env extends cip_base_env #(.CFG_T               (hmac_env_cfg),</span>
+<span class="gd">-                                      .COV_T               (hmac_env_cov),</span>
+<span class="gd">-                                      .VIRTUAL_SEQUENCER_T (hmac_virtual_sequencer),</span>
+<span class="gd">-                                      .SCOREBOARD_T        (hmac_scoreboard));</span>
+<span class="gi">+class hmac_env extends cip_base_env #(</span>
+<span class="gi">+  .CFG_T              (hmac_env_cfg),</span>
+<span class="gi">+  .COV_T              (hmac_env_cov),</span>
+<span class="gi">+  .VIRTUAL_SEQUENCER_T(hmac_virtual_sequencer),</span>
+<span class="gi">+  .SCOREBOARD_T       (hmac_scoreboard)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(hmac_env)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-sv">
+<span id="id26"></span><h2>hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv<a class="headerlink" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,12 +3,12 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class jtag_riscv_agent extends dv_base_agent #(
+<span class="gd">-      .CFG_T       (jtag_riscv_agent_cfg),</span>
+<span class="gd">-      .SEQUENCER_T (jtag_riscv_sequencer),</span>
+<span class="gd">-      .DRIVER_T    (jtag_riscv_driver),</span>
+<span class="gd">-      .MONITOR_T   (jtag_riscv_monitor),</span>
+<span class="gd">-      .COV_T       (jtag_riscv_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T      (jtag_riscv_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(jtag_riscv_sequencer),</span>
+<span class="gi">+  .DRIVER_T   (jtag_riscv_driver),</span>
+<span class="gi">+  .MONITOR_T  (jtag_riscv_monitor),</span>
+<span class="gi">+  .COV_T      (jtag_riscv_agent_cov)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(jtag_riscv_agent)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-agent-jtag-agent-sv">
+<span id="id27"></span><h2>hw/dv/sv/jtag_agent/jtag_agent.sv<a class="headerlink" href="#hw-dv-sv-jtag-agent-jtag-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,12 +3,12 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class jtag_agent extends dv_base_agent #(
+<span class="gd">-      .CFG_T          (jtag_agent_cfg),</span>
+<span class="gd">-      .DRIVER_T       (jtag_driver),</span>
+<span class="gd">-      .SEQUENCER_T    (jtag_sequencer),</span>
+<span class="gd">-      .MONITOR_T      (jtag_monitor),</span>
+<span class="gd">-      .COV_T          (jtag_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T      (jtag_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T   (jtag_driver),</span>
+<span class="gi">+  .SEQUENCER_T(jtag_sequencer),</span>
+<span class="gi">+  .MONITOR_T  (jtag_monitor),</span>
+<span class="gi">+  .COV_T      (jtag_agent_cov)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(jtag_agent)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-push-pull-agent-push-pull-sequencer-sv">
+<span id="id28"></span><h2>hw/dv/sv/push_pull_agent/push_pull_sequencer.sv<a class="headerlink" href="#hw-dv-sv-push-pull-agent-push-pull-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,11 +2,12 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class push_pull_sequencer #(parameter int HostDataWidth = 32,</span>
+<span class="gd">-                            parameter int DeviceDataWidth = HostDataWidth)</span>
+<span class="gd">-  extends dv_base_sequencer #(</span>
+<span class="gd">-    .ITEM_T (push_pull_item#(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gd">-    .CFG_T  (push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth))</span>
+<span class="gi">+class push_pull_sequencer #(</span>
+<span class="gi">+  parameter int HostDataWidth   = 32,</span>
+<span class="gi">+  parameter int DeviceDataWidth = HostDataWidth</span>
+<span class="gi">+) extends dv_base_sequencer #(</span>
+<span class="gi">+  .ITEM_T(push_pull_item #(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gi">+  .CFG_T (push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth))</span>
+ );
+   `uvm_component_param_utils(push_pull_sequencer#(HostDataWidth, DeviceDataWidth))
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-dv-lib-dv-base-seq-sv">
+<span id="id29"></span><h2>hw/dv/sv/dv_lib/dv_base_seq.sv<a class="headerlink" href="#hw-dv-sv-dv-lib-dv-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,11 +2,13 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class dv_base_seq #(type REQ         = uvm_sequence_item,</span>
+<span class="gd">-                    type RSP         = REQ,</span>
+<span class="gd">-                    type CFG_T       = dv_base_agent_cfg,</span>
+<span class="gd">-                    type SEQUENCER_T = dv_base_sequencer) extends uvm_sequence#(REQ, RSP);</span>
+<span class="gd">-  `uvm_object_param_utils(dv_base_seq #(REQ, RSP, CFG_T, SEQUENCER_T))</span>
+<span class="gi">+class dv_base_seq #(</span>
+<span class="gi">+  type REQ         = uvm_sequence_item,</span>
+<span class="gi">+  type RSP         = REQ,</span>
+<span class="gi">+  type CFG_T       = dv_base_agent_cfg,</span>
+<span class="gi">+  type SEQUENCER_T = dv_base_sequencer</span>
+<span class="gi">+) extends uvm_sequence #(REQ, RSP);</span>
+<span class="gi">+  `uvm_object_param_utils(dv_base_seq#(REQ, RSP, CFG_T, SEQUENCER_T))</span>
+   `uvm_declare_p_sequencer(SEQUENCER_T)
+
+   CFG_T cfg;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-tl-agent-sv">
+<span id="id30"></span><h2>hw/dv/sv/tl_agent/tl_agent.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-tl-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,15 +5,15 @@</span>
+ // ---------------------------------------------
+ // TileLink agent
+ // ---------------------------------------------
+<span class="gd">-class tl_agent extends dv_base_agent#(</span>
+<span class="gd">-    .CFG_T           (tl_agent_cfg),</span>
+<span class="gd">-    .DRIVER_T        (tl_base_driver),</span>
+<span class="gd">-    .HOST_DRIVER_T   (tl_host_driver),</span>
+<span class="gd">-    .DEVICE_DRIVER_T (tl_device_driver),</span>
+<span class="gd">-    .SEQUENCER_T     (tl_sequencer),</span>
+<span class="gd">-    .MONITOR_T       (tl_monitor),</span>
+<span class="gd">-    .COV_T           (tl_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+class tl_agent extends dv_base_agent #(</span>
+<span class="gi">+  .CFG_T          (tl_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T       (tl_base_driver),</span>
+<span class="gi">+  .HOST_DRIVER_T  (tl_host_driver),</span>
+<span class="gi">+  .DEVICE_DRIVER_T(tl_device_driver),</span>
+<span class="gi">+  .SEQUENCER_T    (tl_sequencer),</span>
+<span class="gi">+  .MONITOR_T      (tl_monitor),</span>
+<span class="gi">+  .COV_T          (tl_agent_cov)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(tl_agent)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-dv-lib-dv-base-virtual-sequencer-sv">
+<span id="id31"></span><h2>hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv<a class="headerlink" href="#hw-dv-sv-dv-lib-dv-base-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,12 +2,14 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class dv_base_virtual_sequencer #(type CFG_T = dv_base_env_cfg,</span>
+<span class="gd">-                                  type COV_T = dv_base_env_cov) extends uvm_sequencer;</span>
+<span class="gd">-  `uvm_component_param_utils(dv_base_virtual_sequencer #(CFG_T, COV_T))</span>
+<span class="gi">+class dv_base_virtual_sequencer #(</span>
+<span class="gi">+  type CFG_T = dv_base_env_cfg,</span>
+<span class="gi">+  type COV_T = dv_base_env_cov</span>
+<span class="gi">+) extends uvm_sequencer;</span>
+<span class="gi">+  `uvm_component_param_utils(dv_base_virtual_sequencer#(CFG_T, COV_T))</span>
+
+<span class="gd">-  CFG_T         cfg;</span>
+<span class="gd">-  COV_T         cov;</span>
+<span class="gi">+  CFG_T cfg;</span>
+<span class="gi">+  COV_T cov;</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-uart-agent-uart-agent-sv">
+<span id="id32"></span><h2>hw/dv/sv/uart_agent/uart_agent.sv<a class="headerlink" href="#hw-dv-sv-uart-agent-uart-agent-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,13 +2,13 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class uart_agent extends dv_base_agent#(</span>
+<span class="gd">-    .CFG_T          (uart_agent_cfg),</span>
+<span class="gd">-    .DRIVER_T       (uart_driver),</span>
+<span class="gd">-    .SEQUENCER_T    (uart_sequencer),</span>
+<span class="gd">-    .MONITOR_T      (uart_monitor),</span>
+<span class="gd">-    .COV_T          (uart_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+class uart_agent extends dv_base_agent #(</span>
+<span class="gi">+  .CFG_T      (uart_agent_cfg),</span>
+<span class="gi">+  .DRIVER_T   (uart_driver),</span>
+<span class="gi">+  .SEQUENCER_T(uart_sequencer),</span>
+<span class="gi">+  .MONITOR_T  (uart_monitor),</span>
+<span class="gi">+  .COV_T      (uart_agent_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(uart_agent)
+
+   uart_logger m_logger;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-edn-dv-tests-edn-base-test-sv">
+<span id="id33"></span><h2>hw/ip/edn/dv/tests/edn_base_test.sv<a class="headerlink" href="#hw-ip-edn-dv-tests-edn-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,18 +3,18 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class edn_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(edn_env_cfg),</span>
+<span class="gd">-    .ENV_T(edn_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(edn_env_cfg),</span>
+<span class="gi">+  .ENV_T(edn_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(edn_base_test)
+   `uvm_component_new
+
+<span class="gd">-   virtual function void build_phase(uvm_phase phase);</span>
+<span class="gd">-     super.build_phase(phase);</span>
+<span class="gi">+  virtual function void build_phase(uvm_phase phase);</span>
+<span class="gi">+    super.build_phase(phase);</span>
+
+<span class="gd">-     configure_env();</span>
+<span class="gd">-   endfunction // build_phase</span>
+<span class="gi">+    configure_env();</span>
+<span class="gi">+  endfunction  // build_phase</span>
+
+   // the base class dv_base_test creates the following instances:
+   // edn_env_cfg: cfg
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-edn-dv-env-edn-virtual-sequencer-sv">
+<span id="id34"></span><h2>hw/ip/edn/dv/env/edn_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-edn-dv-env-edn-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,15 +3,16 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class edn_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(edn_env_cfg),</span>
+<span class="gd">-    .COV_T(edn_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(edn_env_cfg),</span>
+<span class="gi">+  .COV_T(edn_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(edn_virtual_sequencer)
+
+<span class="gd">-  push_pull_sequencer#(.HostDataWidth(edn_pkg::FIPS_ENDPOINT_BUS_WIDTH))</span>
+<span class="gd">-       endpoint_sequencer_h[NUM_ENDPOINTS-1:0];</span>
+<span class="gi">+  push_pull_sequencer #(</span>
+<span class="gi">+    .HostDataWidth(edn_pkg::FIPS_ENDPOINT_BUS_WIDTH)</span>
+<span class="gi">+  ) endpoint_sequencer_h[NUM_ENDPOINTS-1:0];</span>
+
+<span class="gd">-  csrng_sequencer   csrng_sequencer_h;</span>
+<span class="gi">+  csrng_sequencer csrng_sequencer_h;</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-lc-ctrl-dv-env-lc-ctrl-virtual-sequencer-sv">
+<span id="id35"></span><h2>hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,14 +3,16 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class lc_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(lc_ctrl_env_cfg),</span>
+<span class="gd">-    .COV_T(lc_ctrl_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(lc_ctrl_env_cfg),</span>
+<span class="gi">+  .COV_T(lc_ctrl_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(lc_ctrl_virtual_sequencer)
+
+<span class="gd">-  push_pull_sequencer#(.HostDataWidth(OTP_PROG_HDATA_WIDTH),</span>
+<span class="gd">-                       .DeviceDataWidth(OTP_PROG_DDATA_WIDTH))    otp_prog_pull_sequencer_h;</span>
+<span class="gd">-  push_pull_sequencer#(.HostDataWidth(lc_ctrl_state_pkg::LcTokenWidth)) otp_token_pull_sequencer_h;</span>
+<span class="gi">+  push_pull_sequencer #(</span>
+<span class="gi">+    .HostDataWidth  (OTP_PROG_HDATA_WIDTH),</span>
+<span class="gi">+    .DeviceDataWidth(OTP_PROG_DDATA_WIDTH)</span>
+<span class="gi">+  ) otp_prog_pull_sequencer_h;</span>
+<span class="gi">+  push_pull_sequencer #(.HostDataWidth(lc_ctrl_state_pkg::LcTokenWidth)) otp_token_pull_sequencer_h;</span>
+
+   alert_esc_sequencer esc_wipe_secrets_sequencer_h;
+   alert_esc_sequencer esc_scrap_state_sequencer_h;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-push-pull-agent-seq-lib-push-pull-base-seq-sv">
+<span id="id36"></span><h2>hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv<a class="headerlink" href="#hw-dv-sv-push-pull-agent-seq-lib-push-pull-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,13 +2,14 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class push_pull_base_seq #(parameter int HostDataWidth = 32,</span>
+<span class="gd">-                           parameter int DeviceDataWidth = HostDataWidth)</span>
+<span class="gd">-  extends dv_base_seq #(</span>
+<span class="gd">-    .REQ         (push_pull_item#(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gd">-    .CFG_T       (push_pull_agent_cfg#(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gd">-    .SEQUENCER_T (push_pull_sequencer#(HostDataWidth, DeviceDataWidth))</span>
+<span class="gd">-  );</span>
+<span class="gi">+class push_pull_base_seq #(</span>
+<span class="gi">+  parameter int HostDataWidth   = 32,</span>
+<span class="gi">+  parameter int DeviceDataWidth = HostDataWidth</span>
+<span class="gi">+) extends dv_base_seq #(</span>
+<span class="gi">+  .REQ        (push_pull_item #(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gi">+  .CFG_T      (push_pull_agent_cfg #(HostDataWidth, DeviceDataWidth)),</span>
+<span class="gi">+  .SEQUENCER_T(push_pull_sequencer #(HostDataWidth, DeviceDataWidth))</span>
+<span class="gi">+);</span>
+   `uvm_object_param_utils(push_pull_base_seq#(HostDataWidth, DeviceDataWidth))
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-kmac-sideload-if-sv">
+<span id="id37"></span><h2>hw/ip/kmac/dv/env/kmac_sideload_if.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-kmac-sideload-if-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space between wait and open parenthesis?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -17,7 +17,7 @@</span>
+                                     logic [keymgr_pkg::KeyWidth-1:0] share1 = &#39;0);
+     keymgr_pkg::hw_key_req_t key;
+
+<span class="gd">-    `DV_CHECK_STD_RANDOMIZE_WITH_FATAL(key, key.valid == key_valid;, , path)</span>
+<span class="gi">+    `DV_CHECK_STD_RANDOMIZE_WITH_FATAL(key, key.valid == key_valid;,, path)</span>
+     key[0] = (key_valid) ? share0 : &#39;hx;
+     key[1] = (key_valid) ? share1 : &#39;hx;
+
+<span class="gu">@@ -25,7 +25,7 @@</span>
+   endtask
+
+   task automatic wait_valid(logic is_valid);
+<span class="gd">-    wait (sideload_key.valid === is_valid);</span>
+<span class="gi">+    wait(sideload_key.valid === is_valid);</span>
+   endtask
+
+ endinterface
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-trial1-dv-bus-pkg-sv">
+<span id="id38"></span><h2>hw/ip/trial1/dv/bus_pkg.sv<a class="headerlink" href="#hw-ip-trial1-dv-bus-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>expand structs (with typedef)</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -7,12 +7,10 @@</span>
+   typedef struct packed {
+     logic [11:0] addr;
+     logic [31:0] wdata;
+<span class="gd">-    logic        write;</span>
+<span class="gi">+    logic write;</span>
+   } bus_reg_t;
+
+<span class="gd">-  typedef struct packed {</span>
+<span class="gd">-    logic [31:0] rdata;</span>
+<span class="gd">-  } reg_bus_t;</span>
+<span class="gi">+  typedef struct packed {logic [31:0] rdata;} reg_bus_t;</span>
+
+ endpackage
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-esc-pkg-sv">
+<span id="id39"></span><h2>hw/ip/prim/rtl/prim_esc_pkg.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-esc-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Expand or fit in one line?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -14,11 +14,9 @@</span>
+     logic resp_n;
+   } esc_rx_t;
+
+<span class="gd">-  parameter esc_tx_t ESC_TX_DEFAULT = &#39;{esc_p:  1&#39;b0,</span>
+<span class="gd">-                                        esc_n:  1&#39;b1};</span>
+<span class="gi">+  parameter esc_tx_t ESC_TX_DEFAULT = &#39;{esc_p: 1&#39;b0, esc_n: 1&#39;b1};</span>
+
+<span class="gd">-  parameter esc_rx_t ESC_RX_DEFAULT = &#39;{resp_p: 1&#39;b0,</span>
+<span class="gd">-                                        resp_n: 1&#39;b1};</span>
+<span class="gi">+  parameter esc_rx_t ESC_RX_DEFAULT = &#39;{resp_p: 1&#39;b0, resp_n: 1&#39;b1};</span>
+
+ endpackage : prim_esc_pkg
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-alert-pkg-sv">
+<span id="id40"></span><h2>hw/ip/prim/rtl/prim_alert_pkg.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-alert-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -16,8 +16,7 @@</span>
+     logic ack_n;
+   } alert_rx_t;
+
+<span class="gd">-  parameter alert_tx_t ALERT_TX_DEFAULT = &#39;{alert_p:  1&#39;b0,</span>
+<span class="gd">-                                            alert_n:  1&#39;b1};</span>
+<span class="gi">+  parameter alert_tx_t ALERT_TX_DEFAULT = &#39;{alert_p: 1&#39;b0, alert_n: 1&#39;b1};</span>
+
+   parameter alert_rx_t ALERT_RX_DEFAULT = &#39;{ping_p: 1&#39;b0,
+                                             ping_n: 1&#39;b1,
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-keymgr-dv-env-keymgr-env-pkg-sv">
+<span id="id41"></span><h2>hw/ip/keymgr/dv/env/keymgr_env_pkg.sv<a class="headerlink" href="#hw-ip-keymgr-dv-env-keymgr-env-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>No space between commas</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -46,7 +46,7 @@</span>
+     if (next_state &gt;= int&#39;(keymgr_pkg::StDisabled)) begin
+       return keymgr_pkg::StDisabled;
+     end else begin
+<span class="gd">-      `downcast(get_next_state, next_state, , , msg_id);</span>
+<span class="gi">+      `downcast(get_next_state, next_state,,, msg_id);</span>
+     end
+   endfunction
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-cfg-sv">
+<span id="id42"></span><h2>hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv<a class="headerlink" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-agent-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space between operator new and open parenthesis?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,7 @@</span>
+
+   jtag_agent_cfg m_jtag_agent_cfg;
+
+<span class="gd">-  function new (string name=&quot;&quot;);</span>
+<span class="gi">+  function new(string name = &quot;&quot;);</span>
+     super.new(name);
+
+     // This is a high level agent and will use jtag_agent&#39;s driver.
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-cfg-sv">
+<span id="id43"></span><h2>hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-otbn-model-agent-otbn-model-agent-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Space between operator new and open parenthesis?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -10,7 +10,7 @@</span>
+   `uvm_object_utils_begin(otbn_model_agent_cfg)
+   `uvm_object_utils_end
+
+<span class="gd">-  function new (string name=&quot;&quot;);</span>
+<span class="gi">+  function new(string name = &quot;&quot;);</span>
+     super.new(name);
+     // This agent is always passive.
+     this.is_active = 1&#39;b0;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-scoreboard-scoreboard-pkg-sv">
+<span id="id44"></span><h2>hw/dv/sv/scoreboard/scoreboard_pkg.sv<a class="headerlink" href="#hw-dv-sv-scoreboard-scoreboard-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<p>Should be aligned?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -14,7 +14,7 @@</span>
+   } port_dir_e;
+
+   typedef enum bit [1:0] {
+<span class="gd">-    kInOrderCheck = 2&#39;b0,</span>
+<span class="gi">+    kInOrderCheck    = 2&#39;b0,</span>
+     kOutOfOrderCheck,
+     kCustomCheck
+   } checking_policy_e;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-seq-lib-otbn-smoke-vseq-sv">
+<span id="id45"></span><h2>hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-smoke-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Constraints, space inside: {xx} or { xx }?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,7 +9,7 @@</span>
+   `uvm_object_utils(otbn_smoke_vseq)
+   `uvm_object_new
+
+<span class="gd">-  constraint do_backdoor_load_c { do_backdoor_load == 1&#39;b0; }</span>
+<span class="gi">+  constraint do_backdoor_load_c {do_backdoor_load == 1&#39;b0;}</span>
+
+   // Override pick_elf_path to always choose &quot;smoke.elf&quot;
+   protected function string pick_elf_path();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-rtl-pattgen-sv">
+<span id="id46"></span><h2>hw/ip/pattgen/rtl/pattgen.sv<a class="headerlink" href="#hw-ip-pattgen-rtl-pattgen-sv" title="Permalink to this headline">¶</a></h2>
+<p>Should be aligned?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -43,13 +43,10 @@</span>
+     .reg2hw,
+     .hw2reg,
+     .intg_err_o(alerts[0]),
+<span class="gd">-    .devmode_i(1&#39;b1)</span>
+<span class="gi">+    .devmode_i (1&#39;b1)</span>
+   );
+
+<span class="gd">-  assign alert_test = {</span>
+<span class="gd">-    reg2hw.alert_test.q &amp;</span>
+<span class="gd">-    reg2hw.alert_test.qe</span>
+<span class="gd">-  };</span>
+<span class="gi">+  assign alert_test = {reg2hw.alert_test.q &amp; reg2hw.alert_test.qe};</span>
+
+   for (genvar i = 0; i &lt; NumAlerts; i++) begin : gen_alert_tx
+     prim_alert_sender #(
+<span class="gu">@@ -58,12 +55,12 @@</span>
+     ) u_prim_alert_sender (
+       .clk_i,
+       .rst_ni,
+<span class="gd">-      .alert_test_i  ( alert_test[i] ),</span>
+<span class="gd">-      .alert_req_i   ( alerts[0]     ),</span>
+<span class="gd">-      .alert_ack_o   (               ),</span>
+<span class="gd">-      .alert_state_o (               ),</span>
+<span class="gd">-      .alert_rx_i    ( alert_rx_i[i] ),</span>
+<span class="gd">-      .alert_tx_o    ( alert_tx_o[i] )</span>
+<span class="gi">+      .alert_test_i (alert_test[i]),</span>
+<span class="gi">+      .alert_req_i  (alerts[0]),</span>
+<span class="gi">+      .alert_ack_o  (),</span>
+<span class="gi">+      .alert_state_o(),</span>
+<span class="gi">+      .alert_rx_i   (alert_rx_i[i]),</span>
+<span class="gi">+      .alert_tx_o   (alert_tx_o[i])</span>
+     );
+   end
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwm-dv-env-seq-lib-pwm-common-vseq-sv">
+<span id="id47"></span><h2>hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv<a class="headerlink" href="#hw-ip-pwm-dv-env-seq-lib-pwm-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Constraints, space around [:], bug?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,7 +6,7 @@</span>
+   `uvm_object_utils(pwm_common_vseq)
+   `uvm_object_new
+
+<span class="gd">-  constraint num_trans_c { num_trans inside {[1:2]}; }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+
+   // for this vseq, $value$plusargs &quot;+en_scb=0&quot; is defined in pwm_sim_cfg.hjson
+   // disable pwm_monitor and pwm_scoreboard since they can not handle this test
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-dv-env-seq-lib-pattgen-common-vseq-sv">
+<span id="id48"></span><h2>hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv<a class="headerlink" href="#hw-ip-pattgen-dv-env-seq-lib-pattgen-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Constraints, space around [:], bug?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,7 +6,7 @@</span>
+   `uvm_object_utils(pattgen_common_vseq)
+   `uvm_object_new
+
+<span class="gd">-  constraint num_trans_c { num_trans inside {[1:2]}; }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+
+   // for this vseq, $value$plusargs &quot;+en_scb=0&quot; is defined in pattgen_sim_cfg.hjson
+   // disable pattgen_monitor and pattgen_scoreboard since they can not handle this test
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-common-ifs-clk-if-sv">
+<span id="id49"></span><h2>hw/dv/sv/common_ifs/clk_if.sv<a class="headerlink" href="#hw-dv-sv-common-ifs-clk-if-sv" title="Permalink to this headline">¶</a></h2>
+<p>Always expand port list (interfaces too)?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+ //
+ //------------------------------------------------------------------------------
+
+<span class="gd">-interface clk_if(input logic clk);</span>
+<span class="gi">+interface clk_if (</span>
+<span class="gi">+  input logic clk</span>
+<span class="gi">+);</span>
+
+   clocking cb @(posedge clk);
+   endclocking
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-tlul-generic-dv-tb-tb-sv">
+<span id="id50"></span><h2>hw/ip/tlul/generic_dv/tb/tb.sv<a class="headerlink" href="#hw-ip-tlul-generic-dv-tb-tb-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -12,7 +12,10 @@</span>
+   wire clk, rst_n;
+   // reference clock for scb/seq and this clock isn&#39;t connected to any design clock
+   // TODO, reset is the combined all the resets. Re-visit this if partial reset is needed
+<span class="gd">-  clk_rst_if clk_rst_if(.clk(clk), .rst_n(rst_n));</span>
+<span class="gi">+  clk_rst_if clk_rst_if (</span>
+<span class="gi">+    .clk  (clk),</span>
+<span class="gi">+    .rst_n(rst_n)</span>
+<span class="gi">+  );</span>
+
+   // this file is auto-generated and the path to this file should be provided in xbar_*_sim.core
+   `include &quot;tb__xbar_connect.sv&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-usb20-agent-seq-lib-usb20-base-seq-sv">
+<span id="id51"></span><h2>hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv<a class="headerlink" href="#hw-dv-sv-usb20-agent-seq-lib-usb20-base-seq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Alignment</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,8 +3,8 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class usb20_base_seq extends dv_base_seq #(
+<span class="gd">-  .CFG_T       (usb20_agent_cfg),</span>
+<span class="gd">-  .SEQUENCER_T (usb20_sequencer)</span>
+<span class="gi">+  .CFG_T      (usb20_agent_cfg),</span>
+<span class="gi">+  .SEQUENCER_T(usb20_sequencer)</span>
+ );
+   `uvm_object_utils(usb20_base_seq)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-rom-pkg-sv">
+<span id="id52"></span><h2>hw/ip/prim/rtl/prim_rom_pkg.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-rom-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,11 +6,11 @@</span>
+ package prim_rom_pkg;
+
+   typedef struct packed {
+<span class="gd">-    logic       cfg_en;</span>
+<span class="gi">+    logic cfg_en;</span>
+     logic [3:0] cfg;
+   } rom_cfg_t;
+
+   parameter rom_cfg_t ROM_CFG_DEFAULT = &#39;0;
+
+<span class="gd">-endpackage // prim_rom_pkg</span>
+<span class="gi">+endpackage  // prim_rom_pkg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-lc-sender-sv">
+<span id="id53"></span><h2>hw/ip/prim/rtl/prim_lc_sender.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-lc-sender-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -26,8 +26,8 @@</span>
+   ) u_prim_flop (
+     .clk_i,
+     .rst_ni,
+<span class="gd">-    .d_i   ( lc_en     ),</span>
+<span class="gd">-    .q_o   ( lc_en_out )</span>
+<span class="gi">+    .d_i(lc_en),</span>
+<span class="gi">+    .q_o(lc_en_out)</span>
+   );
+
+   assign lc_en_o = lc_ctrl_pkg::lc_tx_t&#39;(lc_en_out);
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-env-sram-ctrl-env-pkg-sv">
+<span id="id54"></span><h2>hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-env-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -24,8 +24,8 @@</span>
+   `include &quot;dv_macros.svh&quot;
+
+   // parameters
+<span class="gd">-  parameter string LIST_OF_ALERTS[] = { &quot;fatal_intg_error&quot;, &quot;fatal_parity_error&quot;};</span>
+<span class="gd">-  parameter uint   NUM_ALERTS = 2;</span>
+<span class="gi">+  parameter string LIST_OF_ALERTS[] = {&quot;fatal_intg_error&quot;, &quot;fatal_parity_error&quot;};</span>
+<span class="gi">+  parameter uint NUM_ALERTS = 2;</span>
+
+   // Number of bits in the otp_ctrl_pkg::sram_otp_key_rsp_t struct:
+   // 1 bit for valid, SramKeyWidth bits for the key, SramNonceWidth bits for the nonce.
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-usb20-agent-usb20-monitor-sv">
+<span id="id55"></span><h2>hw/dv/sv/usb20_agent/usb20_monitor.sv<a class="headerlink" href="#hw-dv-sv-usb20-agent-usb20-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class usb20_monitor extends dv_base_monitor #(
+<span class="gd">-  .ITEM_T (usb20_item),</span>
+<span class="gd">-  .CFG_T  (usb20_agent_cfg),</span>
+<span class="gd">-  .COV_T  (usb20_agent_cov)</span>
+<span class="gi">+  .ITEM_T(usb20_item),</span>
+<span class="gi">+  .CFG_T (usb20_agent_cfg),</span>
+<span class="gi">+  .COV_T (usb20_agent_cov)</span>
+ );
+   `uvm_component_utils(usb20_monitor)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-kmac-app-agent-kmac-app-sequencer-sv">
+<span id="id56"></span><h2>hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-kmac-app-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,12 +3,12 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class kmac_app_sequencer extends dv_base_sequencer #(
+<span class="gd">-    .ITEM_T (kmac_app_item),</span>
+<span class="gd">-    .CFG_T  (kmac_app_agent_cfg)</span>
+<span class="gi">+  .ITEM_T(kmac_app_item),</span>
+<span class="gi">+  .CFG_T (kmac_app_agent_cfg)</span>
+ );
+   `uvm_component_param_utils(kmac_app_sequencer)
+
+<span class="gd">-  push_pull_sequencer#(`CONNECT_DATA_WIDTH) m_push_pull_sequencer;</span>
+<span class="gi">+  push_pull_sequencer #(`CONNECT_DATA_WIDTH) m_push_pull_sequencer;</span>
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-prim-rtl-prim-ram-1p-pkg-sv">
+<span id="id57"></span><h2>hw/ip/prim/rtl/prim_ram_1p_pkg.sv<a class="headerlink" href="#hw-ip-prim-rtl-prim-ram-1p-pkg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,16 +6,16 @@</span>
+ package prim_ram_1p_pkg;
+
+   typedef struct packed {
+<span class="gd">-    logic       cfg_en;</span>
+<span class="gi">+    logic cfg_en;</span>
+     logic [3:0] cfg;
+   } cfg_t;
+
+   typedef struct packed {
+     cfg_t ram_cfg;  // configuration for ram
+<span class="gd">-    cfg_t rf_cfg;   // configuration for regfile</span>
+<span class="gi">+    cfg_t rf_cfg;  // configuration for regfile</span>
+   } ram_1p_cfg_t;
+
+   parameter ram_1p_cfg_t RAM_1P_CFG_DEFAULT = &#39;0;
+
+<span class="gd">-endpackage // prim_ram_1p_pkg</span>
+<span class="gi">+endpackage  // prim_ram_1p_pkg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-edn-dv-env-edn-env-cov-sv">
+<span id="id58"></span><h2>hw/ip/edn/dv/env/edn_env_cov.sv<a class="headerlink" href="#hw-ip-edn-dv-env-edn-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<p>Should that be expanded?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class edn_env_cov extends cip_base_env_cov #(.CFG_T(edn_env_cfg));</span>
+<span class="gi">+class edn_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(edn_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(edn_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-usbdev-dv-env-usbdev-env-cov-sv">
+<span id="id59"></span><h2>hw/ip/usbdev/dv/env/usbdev_env_cov.sv<a class="headerlink" href="#hw-ip-usbdev-dv-env-usbdev-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class usbdev_env_cov extends cip_base_env_cov #(.CFG_T(usbdev_env_cfg));</span>
+<span class="gi">+class usbdev_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(usbdev_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(usbdev_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-flash-ctrl-dv-env-flash-ctrl-env-cov-sv">
+<span id="id60"></span><h2>hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv<a class="headerlink" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class flash_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(flash_ctrl_env_cfg));</span>
+<span class="gi">+class flash_ctrl_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(flash_ctrl_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(flash_ctrl_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aon-timer-dv-env-aon-timer-env-cov-sv">
+<span id="id61"></span><h2>hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv<a class="headerlink" href="#hw-ip-aon-timer-dv-env-aon-timer-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class aon_timer_env_cov extends cip_base_env_cov #(.CFG_T(aon_timer_env_cfg));</span>
+<span class="gi">+class aon_timer_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(aon_timer_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(aon_timer_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-clkmgr-dv-env-clkmgr-env-cfg-sv">
+<span id="id62"></span><h2>hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv<a class="headerlink" href="#hw-ip-clkmgr-dv-env-clkmgr-env-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-pwm-agent-pwm-driver-sv">
+<span id="id63"></span><h2>hw/dv/sv/pwm_agent/pwm_driver.sv<a class="headerlink" href="#hw-dv-sv-pwm-agent-pwm-driver-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class pwm_driver extends dv_base_driver #(.ITEM_T(pwm_item),</span>
+<span class="gd">-                                          .CFG_T (pwm_agent_cfg));</span>
+<span class="gi">+class pwm_driver extends dv_base_driver #(</span>
+<span class="gi">+  .ITEM_T(pwm_item),</span>
+<span class="gi">+  .CFG_T (pwm_agent_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(pwm_driver)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-dv-tests-tl-agent-base-test-sv">
+<span id="id64"></span><h2>hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-dv-tests-tl-agent-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class tl_agent_base_test extends dv_base_test #(.ENV_T(tl_agent_env), .CFG_T(tl_agent_env_cfg));</span>
+<span class="gi">+class tl_agent_base_test extends dv_base_test #(</span>
+<span class="gi">+  .ENV_T(tl_agent_env),</span>
+<span class="gi">+  .CFG_T(tl_agent_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(tl_agent_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-tl-agent-dv-env-tl-agent-virtual-sequencer-sv">
+<span id="id65"></span><h2>hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv<a class="headerlink" href="#hw-dv-sv-tl-agent-dv-env-tl-agent-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,8 +5,10 @@</span>
+ // ---------------------------------------------
+ // tl_agent environment virtual sequencer
+ // ---------------------------------------------
+<span class="gd">-class tl_agent_virtual_sequencer extends dv_base_virtual_sequencer #(.CFG_T(tl_agent_env_cfg),</span>
+<span class="gd">-                                                                     .COV_T(tl_agent_env_cov));</span>
+<span class="gi">+class tl_agent_virtual_sequencer extends dv_base_virtual_sequencer #(</span>
+<span class="gi">+  .CFG_T(tl_agent_env_cfg),</span>
+<span class="gi">+  .COV_T(tl_agent_env_cov)</span>
+<span class="gi">+);</span>
+
+   tl_sequencer host_seqr;
+   tl_sequencer device_seqr;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-kmac-app-agent-kmac-app-driver-sv">
+<span id="id66"></span><h2>hw/dv/sv/kmac_app_agent/kmac_app_driver.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-kmac-app-driver-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class kmac_app_driver extends dv_base_driver #(.ITEM_T(kmac_app_item),</span>
+<span class="gd">-                                                  .CFG_T (kmac_app_agent_cfg));</span>
+<span class="gi">+class kmac_app_driver extends dv_base_driver #(</span>
+<span class="gi">+  .ITEM_T(kmac_app_item),</span>
+<span class="gi">+  .CFG_T (kmac_app_agent_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(kmac_app_driver)
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-csrng-agent-csrng-driver-sv">
+<span id="id67"></span><h2>hw/dv/sv/csrng_agent/csrng_driver.sv<a class="headerlink" href="#hw-dv-sv-csrng-agent-csrng-driver-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class csrng_driver extends dv_base_driver #(.ITEM_T(csrng_item),</span>
+<span class="gd">-                                            .CFG_T (csrng_agent_cfg));</span>
+<span class="gi">+class csrng_driver extends dv_base_driver #(</span>
+<span class="gi">+  .ITEM_T(csrng_item),</span>
+<span class="gi">+  .CFG_T (csrng_agent_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(csrng_driver)
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-flash-ctrl-dv-tests-flash-ctrl-base-test-sv">
+<span id="id68"></span><h2>hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv<a class="headerlink" href="#hw-ip-flash-ctrl-dv-tests-flash-ctrl-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class flash_ctrl_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(flash_ctrl_env_cfg),</span>
+<span class="gd">-    .ENV_T(flash_ctrl_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(flash_ctrl_env_cfg),</span>
+<span class="gi">+  .ENV_T(flash_ctrl_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(flash_ctrl_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-flash-ctrl-dv-env-flash-ctrl-virtual-sequencer-sv">
+<span id="id69"></span><h2>hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-flash-ctrl-dv-env-flash-ctrl-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class flash_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(flash_ctrl_env_cfg),</span>
+<span class="gd">-    .COV_T(flash_ctrl_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(flash_ctrl_env_cfg),</span>
+<span class="gi">+  .COV_T(flash_ctrl_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(flash_ctrl_virtual_sequencer)
+
+   tl_sequencer eflash_tl_sequencer_h;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aon-timer-dv-tests-aon-timer-base-test-sv">
+<span id="id70"></span><h2>hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv<a class="headerlink" href="#hw-ip-aon-timer-dv-tests-aon-timer-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class aon_timer_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(aon_timer_env_cfg),</span>
+<span class="gd">-    .ENV_T(aon_timer_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(aon_timer_env_cfg),</span>
+<span class="gi">+  .ENV_T(aon_timer_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(aon_timer_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aon-timer-dv-env-aon-timer-virtual-sequencer-sv">
+<span id="id71"></span><h2>hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-aon-timer-dv-env-aon-timer-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class aon_timer_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(aon_timer_env_cfg),</span>
+<span class="gd">-    .COV_T(aon_timer_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(aon_timer_env_cfg),</span>
+<span class="gi">+  .COV_T(aon_timer_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(aon_timer_virtual_sequencer)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-tests-sram-ctrl-base-test-sv">
+<span id="id72"></span><h2>hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-tests-sram-ctrl-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class sram_ctrl_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(sram_ctrl_env_cfg),</span>
+<span class="gd">-    .ENV_T(sram_ctrl_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(sram_ctrl_env_cfg),</span>
+<span class="gi">+  .ENV_T(sram_ctrl_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(sram_ctrl_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-env-sram-ctrl-virtual-sequencer-sv">
+<span id="id73"></span><h2>hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-env-sram-ctrl-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class sram_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(sram_ctrl_env_cfg),</span>
+<span class="gd">-    .COV_T(sram_ctrl_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(sram_ctrl_env_cfg),</span>
+<span class="gi">+  .COV_T(sram_ctrl_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(sram_ctrl_virtual_sequencer)
+
+   tl_sequencer sram_tl_sequencer_h;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-clkmgr-dv-tests-clkmgr-base-test-sv">
+<span id="id74"></span><h2>hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv<a class="headerlink" href="#hw-ip-clkmgr-dv-tests-clkmgr-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-clkmgr-dv-env-clkmgr-virtual-sequencer-sv">
+<span id="id75"></span><h2>hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-clkmgr-dv-env-clkmgr-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-tlul-generic-dv-env-xbar-virtual-sequencer-sv">
+<span id="id76"></span><h2>hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-tlul-generic-dv-env-xbar-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,8 +5,10 @@</span>
+ // ---------------------------------------------
+ // Xbar environment virtual sequencer
+ // ---------------------------------------------
+<span class="gd">-class xbar_virtual_sequencer extends dv_base_virtual_sequencer #(.CFG_T(xbar_env_cfg),</span>
+<span class="gd">-                                                                 .COV_T(xbar_env_cov));</span>
+<span class="gi">+class xbar_virtual_sequencer extends dv_base_virtual_sequencer #(</span>
+<span class="gi">+  .CFG_T(xbar_env_cfg),</span>
+<span class="gi">+  .COV_T(xbar_env_cov)</span>
+<span class="gi">+);</span>
+
+   tl_sequencer host_seqr[];
+   tl_sequencer device_seqr[];
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-tests-otbn-base-test-sv">
+<span id="id77"></span><h2>hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-tests-otbn-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class otbn_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(otbn_env_cfg),</span>
+<span class="gd">-    .ENV_T(otbn_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(otbn_env_cfg),</span>
+<span class="gi">+  .ENV_T(otbn_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(otbn_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-otbn-virtual-sequencer-sv">
+<span id="id78"></span><h2>hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-otbn-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class otbn_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(otbn_env_cfg),</span>
+<span class="gd">-    .COV_T(otbn_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(otbn_env_cfg),</span>
+<span class="gi">+  .COV_T(otbn_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(otbn_virtual_sequencer)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-tests-rom-ctrl-base-test-sv">
+<span id="id79"></span><h2>hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-tests-rom-ctrl-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class rom_ctrl_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(rom_ctrl_env_cfg),</span>
+<span class="gd">-    .ENV_T(rom_ctrl_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(rom_ctrl_env_cfg),</span>
+<span class="gi">+  .ENV_T(rom_ctrl_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(rom_ctrl_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-env-rom-ctrl-virtual-sequencer-sv">
+<span id="id80"></span><h2>hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class rom_ctrl_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(rom_ctrl_env_cfg),</span>
+<span class="gd">-    .COV_T(rom_ctrl_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(rom_ctrl_env_cfg),</span>
+<span class="gi">+  .COV_T(rom_ctrl_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(rom_ctrl_virtual_sequencer)
+
+   kmac_app_sequencer kmac_sequencer_h;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-lc-ctrl-dv-tests-lc-ctrl-base-test-sv">
+<span id="id81"></span><h2>hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv<a class="headerlink" href="#hw-ip-lc-ctrl-dv-tests-lc-ctrl-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class lc_ctrl_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(lc_ctrl_env_cfg),</span>
+<span class="gd">-    .ENV_T(lc_ctrl_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(lc_ctrl_env_cfg),</span>
+<span class="gi">+  .ENV_T(lc_ctrl_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(lc_ctrl_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-dv-env-aes-virtual-sequencer-sv">
+<span id="id82"></span><h2>hw/ip/aes/dv/env/aes_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-aes-dv-env-aes-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class aes_virtual_sequencer extends cip_base_virtual_sequencer #(.CFG_T(aes_env_cfg),</span>
+<span class="gd">-                                                                 .COV_T(aes_env_cov));</span>
+<span class="gi">+class aes_virtual_sequencer extends cip_base_virtual_sequencer #(</span>
+<span class="gi">+  .CFG_T(aes_env_cfg),</span>
+<span class="gi">+  .COV_T(aes_env_cov)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(aes_virtual_sequencer)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-dv-env-pattgen-virtual-sequencer-sv">
+<span id="id83"></span><h2>hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-pattgen-dv-env-pattgen-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class pattgen_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(pattgen_env_cfg),</span>
+<span class="gd">-    .COV_T(pattgen_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(pattgen_env_cfg),</span>
+<span class="gi">+  .COV_T(pattgen_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(pattgen_virtual_sequencer)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwrmgr-dv-tests-pwrmgr-base-test-sv">
+<span id="id84"></span><h2>hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv<a class="headerlink" href="#hw-ip-pwrmgr-dv-tests-pwrmgr-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwrmgr-dv-env-pwrmgr-virtual-sequencer-sv">
+<span id="id85"></span><h2>hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-pwrmgr-dv-env-pwrmgr-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-tests-kmac-base-test-sv">
+<span id="id86"></span><h2>hw/ip/kmac/dv/tests/kmac_base_test.sv<a class="headerlink" href="#hw-ip-kmac-dv-tests-kmac-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class kmac_base_test extends cip_base_test #(
+<span class="gd">-    .CFG_T(kmac_env_cfg),</span>
+<span class="gd">-    .ENV_T(kmac_env)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(kmac_env_cfg),</span>
+<span class="gi">+  .ENV_T(kmac_env)</span>
+<span class="gi">+);</span>
+
+   `uvm_component_utils(kmac_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-kmac-virtual-sequencer-sv">
+<span id="id87"></span><h2>hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-kmac-virtual-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,9 +3,9 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class kmac_virtual_sequencer extends cip_base_virtual_sequencer #(
+<span class="gd">-    .CFG_T(kmac_env_cfg),</span>
+<span class="gd">-    .COV_T(kmac_env_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .CFG_T(kmac_env_cfg),</span>
+<span class="gi">+  .COV_T(kmac_env_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(kmac_virtual_sequencer)
+
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-hmac-dv-tests-hmac-base-test-sv">
+<span id="id88"></span><h2>hw/ip/hmac/dv/tests/hmac_base_test.sv<a class="headerlink" href="#hw-ip-hmac-dv-tests-hmac-base-test-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,8 +2,10 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class hmac_base_test extends cip_base_test #(.ENV_T(hmac_env),</span>
+<span class="gd">-                                             .CFG_T(hmac_env_cfg));</span>
+<span class="gi">+class hmac_base_test extends cip_base_test #(</span>
+<span class="gi">+  .ENV_T(hmac_env),</span>
+<span class="gi">+  .CFG_T(hmac_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(hmac_base_test)
+   `uvm_component_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-riscv-agent-jtag-riscv-monitor-sv">
+<span id="id89"></span><h2>hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv<a class="headerlink" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-monitor-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,10 +3,10 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class jtag_riscv_monitor extends dv_base_monitor #(
+<span class="gd">-    .ITEM_T (jtag_riscv_item),</span>
+<span class="gd">-    .CFG_T  (jtag_riscv_agent_cfg),</span>
+<span class="gd">-    .COV_T  (jtag_riscv_agent_cov)</span>
+<span class="gd">-  );</span>
+<span class="gi">+  .ITEM_T(jtag_riscv_item),</span>
+<span class="gi">+  .CFG_T (jtag_riscv_agent_cfg),</span>
+<span class="gi">+  .COV_T (jtag_riscv_agent_cov)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(jtag_riscv_monitor)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-edn-dv-env-seq-lib-edn-common-vseq-sv">
+<span id="id90"></span><h2>hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv<a class="headerlink" href="#hw-ip-edn-dv-env-seq-lib-edn-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Constraints…</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class edn_common_vseq extends edn_base_vseq;
+   `uvm_object_utils(edn_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task pre_start();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-usbdev-dv-env-seq-lib-usbdev-common-vseq-sv">
+<span id="id91"></span><h2>hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv<a class="headerlink" href="#hw-ip-usbdev-dv-env-seq-lib-usbdev-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class usbdev_common_vseq extends usbdev_base_vseq;
+   `uvm_object_utils(usbdev_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   task pre_start();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aon-timer-dv-env-seq-lib-aon-timer-common-vseq-sv">
+<span id="id92"></span><h2>hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv<a class="headerlink" href="#hw-ip-aon-timer-dv-env-seq-lib-aon-timer-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class aon_timer_common_vseq extends aon_timer_base_vseq;
+   `uvm_object_utils(aon_timer_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-common-vseq-sv">
+<span id="id93"></span><h2>hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv<a class="headerlink" href="#hw-ip-sram-ctrl-dv-env-seq-lib-sram-ctrl-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class sram_ctrl_common_vseq extends sram_ctrl_base_vseq;
+   `uvm_object_utils(sram_ctrl_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task pre_start();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-clkmgr-dv-env-seq-lib-clkmgr-common-vseq-sv">
+<span id="id94"></span><h2>hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv<a class="headerlink" href="#hw-ip-clkmgr-dv-env-seq-lib-clkmgr-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-seq-lib-otbn-common-vseq-sv">
+<span id="id95"></span><h2>hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-seq-lib-otbn-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class otbn_common_vseq extends otbn_base_vseq;
+   `uvm_object_utils(otbn_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-macro-errs-vseq-sv">
+<span id="id96"></span><h2>hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv<a class="headerlink" href="#hw-ip-otp-ctrl-dv-env-seq-lib-otp-ctrl-macro-errs-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -10,9 +10,7 @@</span>
+
+   `uvm_object_new
+
+<span class="gd">-  constraint ecc_otp_err_c {</span>
+<span class="gd">-    ecc_otp_err inside {OtpEccCorrErr, OtpEccUncorrErr};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint ecc_otp_err_c {ecc_otp_err inside {OtpEccCorrErr, OtpEccUncorrErr};}</span>
+
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-smoke-vseq-sv">
+<span id="id97"></span><h2>hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-smoke-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -11,9 +11,7 @@</span>
+   // Indicates the number of memory accesses to be performed
+   rand int num_mem_reads;
+
+<span class="gd">-  constraint num_mem_reads_c {</span>
+<span class="gd">-    num_mem_reads inside {[20 : 50]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_mem_reads_c {num_mem_reads inside {[20 : 50]};}</span>
+
+   task body();
+     `DV_CHECK_MEMBER_RANDOMIZE_FATAL(num_mem_reads)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-common-vseq-sv">
+<span id="id98"></span><h2>hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-env-seq-lib-rom-ctrl-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class rom_ctrl_common_vseq extends rom_ctrl_base_vseq;
+   `uvm_object_utils(rom_ctrl_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-common-vseq-sv">
+<span id="id99"></span><h2>hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv<a class="headerlink" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class lc_ctrl_common_vseq extends lc_ctrl_base_vseq;
+   `uvm_object_utils(lc_ctrl_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwrmgr-dv-env-seq-lib-pwrmgr-common-vseq-sv">
+<span id="id100"></span><h2>hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv<a class="headerlink" href="#hw-ip-pwrmgr-dv-env-seq-lib-pwrmgr-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-adc-ctrl-dv-env-seq-lib-adc-ctrl-common-vseq-sv">
+<span id="id101"></span><h2>hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv<a class="headerlink" href="#hw-ip-adc-ctrl-dv-env-seq-lib-adc-ctrl-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class adc_ctrl_common_vseq extends adc_ctrl_base_vseq;
+   `uvm_object_utils(adc_ctrl_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task body();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-seq-lib-kmac-common-vseq-sv">
+<span id="id102"></span><h2>hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-seq-lib-kmac-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -5,9 +5,7 @@</span>
+ class kmac_common_vseq extends kmac_base_vseq;
+   `uvm_object_utils(kmac_common_vseq)
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:2]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 2]};}</span>
+   `uvm_object_new
+
+   virtual task pre_start();
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-hmac-dv-env-seq-lib-hmac-common-vseq-sv">
+<span id="id103"></span><h2>hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv<a class="headerlink" href="#hw-ip-hmac-dv-env-seq-lib-hmac-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,9 +6,7 @@</span>
+   `uvm_object_utils(hmac_common_vseq)
+   `uvm_object_new
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:3]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 3]};}</span>
+
+   virtual task pre_start();
+     do_hmac_init = 1&#39;b0;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-gpio-dv-env-seq-lib-gpio-common-vseq-sv">
+<span id="id104"></span><h2>hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv<a class="headerlink" href="#hw-ip-gpio-dv-env-seq-lib-gpio-common-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,16 +6,14 @@</span>
+   `uvm_object_utils(gpio_common_vseq)
+   `uvm_object_new
+
+<span class="gd">-  constraint num_trans_c {</span>
+<span class="gd">-    num_trans inside {[1:3]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint num_trans_c {num_trans inside {[1 : 3]};}</span>
+
+   virtual task dut_init(string reset_kind = &quot;HARD&quot;);
+     // Implement gpio pulldown for csr tests for avoiding comparison
+     // mismatch for DATA_IN register checks
+     set_gpio_pulls(.pu(1&#39;b0), .pd(1&#39;b1));
+     super.dut_init(reset_kind);
+<span class="gd">-  endtask: dut_init</span>
+<span class="gi">+  endtask : dut_init</span>
+
+   virtual task body();
+     run_common_vseq_wrapper(num_trans);
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-prog-failure-vseq-sv">
+<span id="id105"></span><h2>hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv<a class="headerlink" href="#hw-ip-lc-ctrl-dv-env-seq-lib-lc-ctrl-prog-failure-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -9,15 +9,13 @@</span>
+
+   `uvm_object_new
+
+<span class="gd">-  constraint otp_prog_err_c {</span>
+<span class="gd">-    otp_prog_err == 1;</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint otp_prog_err_c {otp_prog_err == 1;}</span>
+
+   virtual task post_start();
+     // trigger dut_init to make sure always on alert is not firing forever
+     if (do_apply_reset) begin
+       dut_init();
+<span class="gd">-    end else wait(0); // wait until upper seq resets and kills this seq</span>
+<span class="gi">+    end else wait(0);  // wait until upper seq resets and kills this seq</span>
+
+     // delay to avoid race condition when sending item and checking no item after reset occur
+     // at the same time
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-uart-agent-seq-lib-uart-default-seq-sv">
+<span id="id106"></span><h2>hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv<a class="headerlink" href="#hw-dv-sv-uart-agent-seq-lib-uart-default-seq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -6,12 +6,8 @@</span>
+ class uart_default_seq extends uart_seq;
+   `uvm_object_utils(uart_default_seq)
+
+<span class="gd">-  constraint parity_err_c {</span>
+<span class="gd">-    parity_err == 0;</span>
+<span class="gd">-  }</span>
+<span class="gd">-  constraint frame_err_c {</span>
+<span class="gd">-    frame_err == 0;</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint parity_err_c {parity_err == 0;}</span>
+<span class="gi">+  constraint frame_err_c {frame_err == 0;}</span>
+
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-seq-lib-kmac-sideload-vseq-sv">
+<span id="id107"></span><h2>hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-seq-lib-kmac-sideload-vseq-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -10,13 +10,9 @@</span>
+
+   // We want a shorter message than the base long_msg test,
+   // but still somewhat long
+<span class="gd">-  constraint msg_c {</span>
+<span class="gd">-    msg.size() inside {[0 : 1000]};</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint msg_c {msg.size() inside {[0 : 1000]};}</span>
+
+<span class="gd">-  constraint en_sideload_c {</span>
+<span class="gd">-    en_sideload == 1;</span>
+<span class="gd">-  }</span>
+<span class="gi">+  constraint en_sideload_c {en_sideload == 1;}</span>
+
+ endclass
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-jtag-riscv-agent-jtag-riscv-sequencer-sv">
+<span id="id108"></span><h2>hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv<a class="headerlink" href="#hw-dv-sv-jtag-riscv-agent-jtag-riscv-sequencer-sv" title="Permalink to this headline">¶</a></h2>
+<p>Should be formatted same way as module?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Corresponding style rules:
+<a class="reference external" href="https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation">https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation</a></p>
+</div>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -3,8 +3,8 @@</span>
+ // SPDX-License-Identifier: Apache-2.0
+
+ class jtag_riscv_sequencer extends dv_base_sequencer #(
+<span class="gd">-    .ITEM_T (jtag_riscv_item),</span>
+<span class="gd">-    .CFG_T  (jtag_riscv_agent_cfg)</span>
+<span class="gi">+  .ITEM_T(jtag_riscv_item),</span>
+<span class="gi">+  .CFG_T (jtag_riscv_agent_cfg)</span>
+ );
+   `uvm_component_utils(jtag_riscv_sequencer)
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-otbn-dv-uvm-env-otbn-env-cfg-sv">
+<span id="id109"></span><h2>hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv<a class="headerlink" href="#hw-ip-otbn-dv-uvm-env-otbn-env-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,9 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class otbn_env_cfg extends cip_base_env_cfg #(.RAL_T(otbn_reg_block));</span>
+<span class="gi">+class otbn_env_cfg extends cip_base_env_cfg #(</span>
+<span class="gi">+  .RAL_T(otbn_reg_block)</span>
+<span class="gi">+);</span>
+
+   // ext component cfgs
+   rand otbn_model_agent_cfg model_agent_cfg;
+<span class="gu">@@ -21,23 +23,23 @@</span>
+
+   // The directory in which to look for ELF files (set by the test in build_phase; controlled by the
+   // +otbn_elf_dir plusarg).
+<span class="gd">-  string otbn_elf_dir;</span>
+<span class="gi">+  string                     otbn_elf_dir;</span>
+
+   // An OtbnMemUtil handle for loading ELF files (set by the test in build_phase)
+<span class="gd">-  chandle mem_util;</span>
+<span class="gi">+  chandle                    mem_util;</span>
+
+   // What fraction of the time should sequences use a back-door method to load up the ELF, rather
+   // than generating memory transactions?
+<span class="gd">-  int unsigned backdoor_load_pct = 50;</span>
+<span class="gi">+  int unsigned               backdoor_load_pct  = 50;</span>
+
+   // The hierarchical scope of the DUT instance in the testbench. This is used when constructing the
+   // DPI wrapper (in otbn_env::build_phase) to tell it where to find the DUT for backdoor loading
+   // memories. The default value matches the block-level testbench, but it can be overridden in a
+   // test class for e.g. system level tests.
+<span class="gd">-  string dut_instance_hier = &quot;tb.dut&quot;;</span>
+<span class="gi">+  string                     dut_instance_hier  = &quot;tb.dut&quot;;</span>
+
+   // Copied from dv_base_agent_cfg so that we can use a monitor without defining a separate agent.
+<span class="gd">-  int ok_to_end_delay_ns = 1000;</span>
+<span class="gi">+  int                        ok_to_end_delay_ns = 1000;</span>
+
+   function void initialize(bit [31:0] csr_base_addr = &#39;1);
+     // Tell the CIP base code not to look for a &quot;devmode&quot; interface. OTBN doesn&#39;t have one.
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cov-sv">
+<span id="id110"></span><h2>hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class rom_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(rom_ctrl_env_cfg));</span>
+<span class="gi">+class rom_ctrl_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(rom_ctrl_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(rom_ctrl_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-lc-ctrl-dv-env-lc-ctrl-env-cov-sv">
+<span id="id111"></span><h2>hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv<a class="headerlink" href="#hw-ip-lc-ctrl-dv-env-lc-ctrl-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class lc_ctrl_env_cov extends cip_base_env_cov #(.CFG_T(lc_ctrl_env_cfg));</span>
+<span class="gi">+class lc_ctrl_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(lc_ctrl_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(lc_ctrl_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-aes-dv-env-aes-env-cov-sv">
+<span id="id112"></span><h2>hw/ip/aes/dv/env/aes_env_cov.sv<a class="headerlink" href="#hw-ip-aes-dv-env-aes-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,9 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class aes_env_cov extends cip_base_env_cov #(.CFG_T(aes_env_cfg));</span>
+<span class="gi">+class aes_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(aes_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(aes_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pattgen-dv-env-pattgen-env-cov-sv">
+<span id="id113"></span><h2>hw/ip/pattgen/dv/env/pattgen_env_cov.sv<a class="headerlink" href="#hw-ip-pattgen-dv-env-pattgen-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -8,7 +8,9 @@</span>
+  * Covergroups may also be wrapped inside helper classes if needed.
+  */
+
+<span class="gd">-class pattgen_env_cov extends cip_base_env_cov #(.CFG_T(pattgen_env_cfg));</span>
+<span class="gi">+class pattgen_env_cov extends cip_base_env_cov #(</span>
+<span class="gi">+  .CFG_T(pattgen_env_cfg)</span>
+<span class="gi">+);</span>
+   `uvm_component_utils(pattgen_env_cov)
+
+   // the base class provides the following handles for use:
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwrmgr-dv-env-pwrmgr-env-cfg-sv">
+<span id="id114"></span><h2>hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv<a class="headerlink" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-pwrmgr-dv-env-pwrmgr-env-cov-sv">
+<span id="id115"></span><h2>hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv<a class="headerlink" href="#hw-ip-pwrmgr-dv-env-pwrmgr-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-kmac-dv-env-kmac-env-cov-sv">
+<span id="id116"></span><h2>hw/ip/kmac/dv/env/kmac_env_cov.sv<a class="headerlink" href="#hw-ip-kmac-dv-env-kmac-env-cov-sv" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="hw-ip-hmac-dv-env-hmac-env-cfg-sv">
+<span id="id117"></span><h2>hw/ip/hmac/dv/env/hmac_env_cfg.sv<a class="headerlink" href="#hw-ip-hmac-dv-env-hmac-env-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,9 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class hmac_env_cfg extends cip_base_env_cfg #(.RAL_T(hmac_reg_block));</span>
+<span class="gi">+class hmac_env_cfg extends cip_base_env_cfg #(</span>
+<span class="gi">+  .RAL_T(hmac_reg_block)</span>
+<span class="gi">+);</span>
+
+   `uvm_object_utils(hmac_env_cfg)
+   `uvm_object_new
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cfg-sv">
+<span id="id118"></span><h2>hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv<a class="headerlink" href="#hw-ip-rom-ctrl-dv-env-rom-ctrl-env-cfg-sv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -2,7 +2,9 @@</span>
+ // Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ // SPDX-License-Identifier: Apache-2.0
+
+<span class="gd">-class rom_ctrl_env_cfg extends cip_base_env_cfg #(.RAL_T(rom_ctrl_regs_reg_block));</span>
+<span class="gi">+class rom_ctrl_env_cfg extends cip_base_env_cfg #(</span>
+<span class="gi">+  .RAL_T(rom_ctrl_regs_reg_block)</span>
+<span class="gi">+);</span>
+
+   // ext component cfgs
+   kmac_app_agent_cfg m_kmac_agent_cfg;
+</pre></div>
+</div>
+</div>
+<div class="section" id="hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-host-seq-sv">
+<span id="id119"></span><h2>hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv<a class="headerlink" href="#hw-dv-sv-kmac-app-agent-seq-lib-kmac-app-host-seq-sv" title="Permalink to this headline">¶</a></h2>
+<p>Spaces around dimensions?</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gu">@@ -33,15 +33,15 @@</span>
+       bit req_last = 0;
+
+       // create push_pull_host_seq
+<span class="gd">-      push_pull_host_seq#(`CONNECT_DATA_WIDTH) host_seq;</span>
+<span class="gi">+      push_pull_host_seq #(`CONNECT_DATA_WIDTH) host_seq;</span>
+       `uvm_create_on(host_seq, p_sequencer.m_push_pull_sequencer);
+       `DV_CHECK_RANDOMIZE_FATAL(host_seq)
+
+       // Assemble the message chunk and strb
+<span class="gd">-      for (int i = 0; i &lt; KmacDataIfWidth / 8; i ++) begin</span>
+<span class="gi">+      for (int i = 0; i &lt; KmacDataIfWidth / 8; i++) begin</span>
+         if (msg_size_bytes == 0) break;
+
+<span class="gd">-        req_data[i*8 +: 8] = 8&#39;(req.byte_data_q.pop_front());</span>
+<span class="gi">+        req_data[i*8+:8] = 8&#39;(req.byte_data_q.pop_front());</span>
+
+         req_strb[i] = 1&#39;b1;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="examined_bugs.html" class="btn btn-neutral float-left" title="Incorrect formatting (39 entries)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2021, The Verible Authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
