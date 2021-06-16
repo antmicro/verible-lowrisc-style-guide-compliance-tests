@@ -1,0 +1,11 @@
+:unconfirmed: xx
+
+:otf: hw/ip/kmac/dv/env/kmac_sideload_if.sv
+Space between wait and open parenthesis?
+
+:otf: hw/ip/trial1/dv/bus_pkg.sv
+expand structs (with typedef)
+
+:otf: hw/ip/prim/rtl/prim_esc_pkg.sv
+Expand or fit in one line?
+:otf: hw/ip/prim/rtl/prim_alert_pkg.sv

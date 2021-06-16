@@ -1,0 +1,5 @@
+:bug: Misc
+
+:otf: hw/dv/sv/kmac_app_agent/kmac_app_device_driver.sv
+How that should be formatted?
+:otf: hw/ip/kmac/dv/env/seq_lib/kmac_test_vectors_shake_vseq.sv

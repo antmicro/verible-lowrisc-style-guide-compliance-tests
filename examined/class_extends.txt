@@ -1,0 +1,31 @@
+:unconfirmed: class extends
+
+:otf: hw/dv/sv/cip_lib/cip_base_test.sv
+:otf: hw/dv/sv/rng_agent/rng_monitor.sv
+:otf: hw/dv/sv/rng_agent/seq_lib/rng_base_seq.sv
+:otf: hw/dv/sv/pwm_agent/pwm_monitor.sv
+:otf: hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_base_seq.sv
+:otf: hw/dv/sv/csrng_agent/csrng_sequencer.sv
+:otf: hw/dv/sv/csrng_agent/seq_lib/csrng_base_seq.sv
+:otf: hw/dv/sv/uart_agent/seq_lib/uart_base_seq.sv
+:otf: hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent.sv
+:otf: hw/ip/otbn/dv/uvm/env/otbn_trace_monitor.sv
+:otf: hw/dv/sv/rng_agent/rng_agent.sv
+:otf: hw/dv/sv/pattgen_agent/pattgen_agent.sv
+:otf: hw/dv/sv/pwm_agent/pwm_agent.sv
+:otf: hw/dv/sv/push_pull_agent/push_pull_agent_cov.sv
+:otf: hw/ip/otbn/dv/uvm/env/otbn_env.sv
+:otf: hw/ip/aes/dv/env/aes_env.sv
+:otf: hw/ip/pattgen/dv/env/pattgen_env.sv
+:otf: hw/ip/hmac/dv/env/hmac_env.sv
+:otf: hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent.sv
+:otf: hw/dv/sv/jtag_agent/jtag_agent.sv
+:otf: hw/dv/sv/push_pull_agent/push_pull_sequencer.sv
+:otf: hw/dv/sv/dv_lib/dv_base_seq.sv
+:otf: hw/dv/sv/tl_agent/tl_agent.sv
+:otf: hw/dv/sv/dv_lib/dv_base_virtual_sequencer.sv
+:otf: hw/dv/sv/uart_agent/uart_agent.sv
+:otf: hw/ip/edn/dv/tests/edn_base_test.sv
+:otf: hw/ip/edn/dv/env/edn_virtual_sequencer.sv
+:otf: hw/ip/lc_ctrl/dv/env/lc_ctrl_virtual_sequencer.sv
+:otf: hw/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv

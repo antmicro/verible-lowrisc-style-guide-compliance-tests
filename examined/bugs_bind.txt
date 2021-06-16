@@ -1,0 +1,34 @@
+:bug: Bind bugs
+
+:otf: hw/ip/aes/dv/cov/aes_cov_bind.sv
+:issue: https://github.com/google/verible/issues/432
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations
+
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Formatting of bind statements should behave the same as module/interface instantiations

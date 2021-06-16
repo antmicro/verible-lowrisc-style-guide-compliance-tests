@@ -1,0 +1,8 @@
+:bugs: Align
+
+:otf: hw/ip/aes/rtl/aes_sbox_lut.sv
+
+:otf: hw/ip/rom_ctrl/dv/env/rom_ctrl_env_pkg.sv
+
+:otf: hw/ip/otbn/dv/uvm/env/otbn_loop_if.sv
+

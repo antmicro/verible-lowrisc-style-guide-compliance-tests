@@ -1,0 +1,17 @@
+*.swp
+__pycache__/
+
+local.conf.json
+
+verible/
+opentitan/
+
+report/
+publish/
+
+file_list_all.txt
+file_list_allow.txt
+file_list_autogen.txt
+file_list_pending.txt
+file_list_err.txt
+file_list_todo.txt

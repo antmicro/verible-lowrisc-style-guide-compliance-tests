@@ -1,0 +1,88 @@
+:confirmed: Confirmed changes
+
+:otf: hw/dv/sv/cip_lib/cip_macros.svh
+Comments, two spaces
+
+:otf: hw/dv/sv/pwm_agent/pwm_agent_cfg.sv
+Comments, two spaces
+
+:otf: hw/ip/prim_generic/rtl/prim_generic_clock_buf.sv
+Comments, two spaces
+
+:otf: hw/ip/otbn/dv/memutil/otbn_memutil_pkg.sv
+Comments, two spaces
+
+:otf: hw/dv/sv/cip_lib/cip_base_pkg.sv
+Comments, two spaces
+
+:otf: hw/ip/prim_generic/rtl/prim_generic_clock_mux2.sv
+Comments, two spaces
+
+
+:otf: hw/dv/sv/pattgen_agent/pattgen_item.sv
+Space between type and variable name - unaligned
+
+:otf: hw/dv/sv/pwm_agent/pwm_item.sv
+Space between type and variable name - unaligned
+
+
+:otf: hw/dv/sv/csrng_agent/csrng_agent_cov.sv
+Space before hashtag in class name
+
+:otf: hw/dv/sv/uart_agent/uart_sequencer.sv
+Space before hashtag in class name
+
+
+:otf: hw/ip/clkmgr/dv/env/seq_lib/clkmgr_peri_vseq.sv
+Remove trailing spaces at the end of the line
+
+:otf: hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv
+:issue: https://github.com/google/verible/issues/445
+Exapand constraints
+
+
+// lines == 2 && sections == 1
+
+:otf: hw/dv/sv/tl_agent/tl_sequencer.sv
+:issue: https://github.com/google/verible/issues/444
+
+:otf: hw/ip/prim/fpv/tb/prim_secded_39_32_fpv.sv
+Dimensions alignment
+
+:otf: hw/ip/prim/fpv/tb/prim_secded_22_16_fpv.sv
+:otf: hw/ip/prim/fpv/tb/prim_secded_64_57_fpv.sv 
+:otf: hw/ip/prim/fpv/tb/prim_secded_72_64_fpv.sv
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_72_64_fpv.sv
+:otf: hw/ip/prim/fpv/tb/prim_secded_28_22_fpv.sv
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_22_16_fpv.sv
+:otf: hw/ip/prim/fpv/tb/prim_secded_hamming_39_32_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv
+:otf: hw/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv
+:otf: hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_64_57_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_72_64_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_39_32_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_22_16_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_28_22_dec.sv
+:otf: hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv
+
+
+:otf: hw/ip/otbn/dv/uvm/otbn_trace_uvm_injector.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration
+The opening parenthesis should be on the same line as the module declaration,
+and the first port should be declared on the following line.
+
+The closing parenthesis should be on its own line, in column zero.
+
+:otf: hw/ip/prim/rtl/prim_subreg_ext.sv
+
+:otf: hw/ip/prim/rtl/prim_msb_extend.sv
+
+

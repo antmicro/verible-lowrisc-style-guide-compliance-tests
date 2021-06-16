@@ -1,0 +1,121 @@
+// Unconfirmed
+:unconfirmed: Unconfirmed changes
+
+:otf: hw/ip/keymgr/dv/env/keymgr_env_pkg.sv
+No space between commas
+
+:otf: hw/dv/sv/jtag_riscv_agent/jtag_riscv_agent_cfg.sv
+Space between operator new and open parenthesis?
+
+:otf: hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_agent_cfg.sv
+Space between operator new and open parenthesis?
+
+:otf: hw/dv/sv/scoreboard/scoreboard_pkg.sv
+Should be aligned?
+
+:otf: hw/ip/otbn/dv/uvm/env/seq_lib/otbn_smoke_vseq.sv
+Constraints, space inside: {xx} or { xx }?
+
+:otf: hw/ip/pattgen/rtl/pattgen.sv
+Should be aligned?
+
+:otf: hw/ip/pwm/dv/env/seq_lib/pwm_common_vseq.sv
+Constraints, space around [:], bug?
+
+:otf: hw/ip/pattgen/dv/env/seq_lib/pattgen_common_vseq.sv
+Constraints, space around [:], bug?
+
+// /////////////
+
+:otf: hw/dv/sv/common_ifs/clk_if.sv
+Always expand port list (interfaces too)?
+:otf: hw/ip/tlul/generic_dv/tb/tb.sv
+
+
+:otf: hw/dv/sv/usb20_agent/seq_lib/usb20_base_seq.sv
+Alignment
+:otf: hw/ip/prim/rtl/prim_rom_pkg.sv
+:otf: hw/ip/prim/rtl/prim_lc_sender.sv
+:otf: hw/ip/sram_ctrl/dv/env/sram_ctrl_env_pkg.sv
+:otf: hw/dv/sv/usb20_agent/usb20_monitor.sv
+:otf: hw/dv/sv/kmac_app_agent/kmac_app_sequencer.sv
+:otf: hw/ip/prim/rtl/prim_ram_1p_pkg.sv
+
+
+
+:otf: hw/ip/edn/dv/env/edn_env_cov.sv
+Should that be expanded?
+:otf: hw/ip/usbdev/dv/env/usbdev_env_cov.sv
+:otf: hw/ip/flash_ctrl/dv/env/flash_ctrl_env_cov.sv
+:otf: hw/ip/aon_timer/dv/env/aon_timer_env_cov.sv
+:otf: hw/ip/clkmgr/dv/env/clkmgr_env_cfg.sv
+:otf: hw/dv/sv/pwm_agent/pwm_driver.sv
+:otf: hw/dv/sv/tl_agent/dv/tests/tl_agent_base_test.sv
+:otf: hw/dv/sv/tl_agent/dv/env/tl_agent_virtual_sequencer.sv
+:otf: hw/dv/sv/kmac_app_agent/kmac_app_driver.sv
+:otf: hw/dv/sv/csrng_agent/csrng_driver.sv
+:otf: hw/ip/flash_ctrl/dv/tests/flash_ctrl_base_test.sv
+:otf: hw/ip/flash_ctrl/dv/env/flash_ctrl_virtual_sequencer.sv
+:otf: hw/ip/aon_timer/dv/tests/aon_timer_base_test.sv
+:otf: hw/ip/aon_timer/dv/env/aon_timer_virtual_sequencer.sv
+:otf: hw/ip/sram_ctrl/dv/tests/sram_ctrl_base_test.sv
+:otf: hw/ip/sram_ctrl/dv/env/sram_ctrl_virtual_sequencer.sv
+:otf: hw/ip/clkmgr/dv/tests/clkmgr_base_test.sv
+:otf: hw/ip/clkmgr/dv/env/clkmgr_virtual_sequencer.sv
+:otf: hw/ip/tlul/generic_dv/env/xbar_virtual_sequencer.sv
+:otf: hw/ip/otbn/dv/uvm/tests/otbn_base_test.sv
+:otf: hw/ip/otbn/dv/uvm/env/otbn_virtual_sequencer.sv
+:otf: hw/ip/rom_ctrl/dv/tests/rom_ctrl_base_test.sv
+:otf: hw/ip/rom_ctrl/dv/env/rom_ctrl_virtual_sequencer.sv
+:otf: hw/ip/lc_ctrl/dv/tests/lc_ctrl_base_test.sv
+:otf: hw/ip/aes/dv/env/aes_virtual_sequencer.sv
+:otf: hw/ip/pattgen/dv/env/pattgen_virtual_sequencer.sv
+:otf: hw/ip/pwrmgr/dv/tests/pwrmgr_base_test.sv
+:otf: hw/ip/pwrmgr/dv/env/pwrmgr_virtual_sequencer.sv
+:otf: hw/ip/kmac/dv/tests/kmac_base_test.sv
+:otf: hw/ip/kmac/dv/env/kmac_virtual_sequencer.sv
+:otf: hw/ip/hmac/dv/tests/hmac_base_test.sv
+:otf: hw/dv/sv/jtag_riscv_agent/jtag_riscv_monitor.sv
+
+
+
+:otf: hw/ip/edn/dv/env/seq_lib/edn_common_vseq.sv
+Constraints...
+:otf: hw/ip/usbdev/dv/env/seq_lib/usbdev_common_vseq.sv
+:otf: hw/ip/aon_timer/dv/env/seq_lib/aon_timer_common_vseq.sv
+:otf: hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_common_vseq.sv
+:otf: hw/ip/clkmgr/dv/env/seq_lib/clkmgr_common_vseq.sv
+:otf: hw/ip/otbn/dv/uvm/env/seq_lib/otbn_common_vseq.sv
+:otf: hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_macro_errs_vseq.sv
+:otf: hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_smoke_vseq.sv
+:otf: hw/ip/rom_ctrl/dv/env/seq_lib/rom_ctrl_common_vseq.sv
+:otf: hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_common_vseq.sv
+:otf: hw/ip/pwrmgr/dv/env/seq_lib/pwrmgr_common_vseq.sv
+:otf: hw/ip/adc_ctrl/dv/env/seq_lib/adc_ctrl_common_vseq.sv
+:otf: hw/ip/kmac/dv/env/seq_lib/kmac_common_vseq.sv
+:otf: hw/ip/hmac/dv/env/seq_lib/hmac_common_vseq.sv
+:otf: hw/ip/gpio/dv/env/seq_lib/gpio_common_vseq.sv
+:otf: hw/ip/lc_ctrl/dv/env/seq_lib/lc_ctrl_prog_failure_vseq.sv
+:otf: hw/dv/sv/uart_agent/seq_lib/uart_default_seq.sv
+:otf: hw/ip/kmac/dv/env/seq_lib/kmac_sideload_vseq.sv
+
+
+
+:otf: hw/dv/sv/jtag_riscv_agent/jtag_riscv_sequencer.sv
+:style: https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation
+Should be formatted same way as module?
+:otf: hw/ip/otbn/dv/uvm/env/otbn_env_cfg.sv
+:otf: hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cov.sv
+:otf: hw/ip/lc_ctrl/dv/env/lc_ctrl_env_cov.sv
+:otf: hw/ip/aes/dv/env/aes_env_cov.sv
+:otf: hw/ip/pattgen/dv/env/pattgen_env_cov.sv
+:otf: hw/ip/pwrmgr/dv/env/pwrmgr_env_cfg.sv
+:otf: hw/ip/pwrmgr/dv/env/pwrmgr_env_cov.sv
+:otf: hw/ip/kmac/dv/env/kmac_env_cov.sv
+:otf: hw/ip/hmac/dv/env/hmac_env_cfg.sv
+:otf: hw/ip/rom_ctrl/dv/env/rom_ctrl_env_cfg.sv
+
+
+:otf: hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_host_seq.sv
+Spaces around dimensions?
+

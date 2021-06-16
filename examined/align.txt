@@ -1,0 +1,17 @@
+:unconfirmed: aligns
+
+:otf: hw/ip/aes/rtl/aes_mix_columns.sv
+
+:otf: hw/ip/usb_fs_nb_pe/rtl/usb_fs_tx_mux.sv
+
+:otf: hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_if.sv
+
+:otf: hw/ip/otbn/dv/uvm/otbn_model_agent/otbn_model_item.sv
+
+:otf: hw/ip/rom_ctrl/rtl/rom_ctrl_pkg.sv
+
+:otf: hw/ip/kmac/dv/env/seq_lib/kmac_stress_all_vseq.sv
+
+:bugs: align
+
+:otf: hw/ip/pattgen/rtl/pattgen_ctrl_pkg.sv

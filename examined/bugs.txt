@@ -1,0 +1,68 @@
+// Bugs
+:bug: Bugs
+
+:otf: hw/dv/sv/tl_agent/dv/env/tl_agent_env_pkg.sv
+:issue: https://github.com/google/verible/issues/850
+Missing space before hashtag in typedef declaration of parameterized class
+
+:otf: hw/ip/gpio/dv/env/gpio_env_pkg.sv
+:issue: https://github.com/google/verible/issues/850
+Missing space before hashtag in typedef declaration of parameterized class
+
+:otf: hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_multiple_keys_vseq.sv
+:issue: https://github.com/google/verible/issues/494
+Align colon inside dimension ranges
+
+:otf: hw/ip/sram_ctrl/dv/env/seq_lib/sram_ctrl_stress_pipeline_vseq.sv
+:issue: https://github.com/google/verible/issues/494
+Align colon inside dimension ranges (inside constraint block)
+
+:otf: hw/ip/aes/dv/env/seq_lib/aes_stress_vseq.sv
+:issue: https://github.com/google/verible/issues/30
+
+:otf: hw/ip/keymgr/dv/env/seq_lib/keymgr_direct_to_disabled_vseq.sv
+:issue: https://github.com/google/verible/issues/30
+
+
+:otf: hw/dv/sv/spi_agent/seq_lib/spi_host_dummy_seq.sv
+Improper indentation caused by comment. Propably caused by
+parenthesis appended to comment partition (tree_unwrapper.cc) and
+wrapped in later stage (line_wrap_search?)
+
+:otf: hw/ip/usbdev/dv/env/usbdev_env.sv
+
+
+// /////////////////////////
+
+
+:otf: hw/dv/sv/rng_agent/rng_agent_cfg.sv
+Alignment
+:otf: hw/ip/otbn/dv/uvm/sva/otbn_idle_checker.sv
+
+
+// ////////////////////////////
+
+:otf: hw/dv/sv/jtag_agent/seq_lib/jtag_dr_seq.sv
+:otf: hw/dv/sv/kmac_app_agent/seq_lib/kmac_app_device_seq.sv
+:otf: hw/dv/sv/csrng_agent/csrng_item.sv
+:otf: hw/dv/sv/alert_esc_agent/alert_monitor.sv
+:otf: hw/dv/sv/dv_lib/dv_base_driver.sv
+:otf: hw/dv/sv/uart_agent/seq_lib/uart_seq.sv
+:otf: hw/dv/sv/bus_params_pkg/bus_params_pkg.sv
+:otf: hw/ip/edn/dv/env/edn_env_pkg.sv
+:otf: hw/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv
+:otf: hw/ip/otp_ctrl/dv/env/seq_lib/otp_ctrl_check_fail_vseq.sv
+:otf: hw/ip/aes/rtl/aes_shift_rows.sv
+:otf: hw/ip/pattgen/dv/cov/pattgen_cov_if.sv
+:otf: hw/ip/uart/dv/env/seq_lib/uart_tx_ovrd_vseq.sv
+:otf: hw/ip/uart/dv/env/seq_lib/uart_noise_filter_vseq.sv
+:otf: hw/ip/uart/dv/env/seq_lib/uart_rx_start_bit_filter_vseq.sv
+:otf: hw/ip/entropy_src/dv/env/entropy_src_env.sv
+
+:otf: hw/dv/sv/tl_agent/seq_lib/tl_host_custom_seq.sv
+space before hashtag
+:otf: hw/dv/sv/tl_agent/seq_lib/tl_host_protocol_err_seq.sv
+
+
+:otf: hw/dv/sv/dv_lib/dv_base_agent_cov.sv
+space before hashtag, improper macro indentation?
