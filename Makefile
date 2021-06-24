@@ -52,7 +52,17 @@ report-prep: report/source/.dir \
 	./process_fileset.py
 	./gen_status_pages.py
 
-report-gen-html:
+.ONESHELL:
+venv/bin/activate:
+	virtualenv venv
+	. venv/bin/activate
+	pip3 install \
+		sphinx_rtd_theme \
+		sphinxcontrib.contentui
+
+.ONESHELL:
+report-gen-html: venv/bin/activate
+	. venv/bin/activate
 	LANG=C LC_ALL=C sphinx-build -M html report/source/ report/
 
 all:: report-prep report-gen-html
@@ -71,5 +81,5 @@ clean::
 
 distclean:: clean
 	rm -f file_list_pending.txt
-	rm -rf __pycache__
+	rm -rf __pycache__ venv
 	#rm -rf verible opentitan
