@@ -33,9 +33,6 @@ Space before hashtag in class name
 Space before hashtag in class name
 
 
-:otf: hw/ip/clkmgr/dv/env/seq_lib/clkmgr_peri_vseq.sv
-Remove trailing spaces at the end of the line
-
 :otf: hw/ip/otbn/dv/uvm/env/seq_lib/otbn_single_vseq.sv
 :issue: https://github.com/google/verible/issues/445
 Exapand constraints

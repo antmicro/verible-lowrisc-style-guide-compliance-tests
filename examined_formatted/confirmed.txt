@@ -1,0 +1,2 @@
+:otf: hw/ip/clkmgr/dv/env/seq_lib/clkmgr_peri_vseq.sv
+Remove trailing spaces at the end of the line
