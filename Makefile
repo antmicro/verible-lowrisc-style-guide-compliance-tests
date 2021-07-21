@@ -28,9 +28,6 @@ report/source/.dir: report/.dir
 report/source/conf.py: report/source/.dir
 	echo "$$sphinx_conf" > $@
 
-report/source/index.rst: report/source/.dir genindex.py
-	./genindex.py
-
 report/source/style.rst: ./verible/verible-verilog-style-tester
 	./verible/verible-verilog-style-tester \
 		--dump_header --dump_internal > $@
@@ -46,10 +43,10 @@ report-prep: report/source/.dir \
 				gen_status_pages.py \
 				file_list_pending.txt \
 				file_list_all.txt \
-				report/source/index.rst \
 				report/source/conf.py \
 				report/source/style.rst
 	./process_fileset.py
+	./genindex.py
 	./gen_status_pages.py
 
 .ONESHELL:
